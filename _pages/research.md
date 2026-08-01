@@ -6,25 +6,15 @@ author_profile: true
 My research focuses on advancing the understanding of structural behavior under extreme loading conditions through the integration of computational mechanics, nonlinear finite element modeling, and experimental investigations. I am particularly interested in the seismic performance of steel and composite structures, with an emphasis on developing reliable analytical and numerical tools for performance assessment, structural resilience, and infrastructure safety. Looking forward, I aim to integrate data-driven approaches and structural health monitoring techniques with computational modeling to support the development of smarter and more resilient civil infrastructure.
 ## Research Interests
 -Structural Engineering
-
 -Earthquake Engineering
-
 -Structural Dynamics
-
 -Structural Health Monitoring
-
 -Computational Structural Mechanics
-
 -Nonlinear Finite Element Analysis
-
 -Experimental Structural Engineering
-
 -Seismic Performance of Steel and Composite Structures
-
 -Structural Retrofitting and Rehabilitation
-
 -Resilient Infrastructure Systems
-
 ## Undergraduate Research
 ### Nonlinear FE Investigation on Behavior of Cold-Formed Stainless-Steel Columns Subject to Cyclic Loading
 Supervisor: Dr. Khan Mahmud Amanat, Professor, Department of Civil Engineering, BUET

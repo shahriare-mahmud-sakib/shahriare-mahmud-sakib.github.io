@@ -8,12 +8,12 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "mint" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "SM SAKIB"
 title_separator          : "-"
 name                     : &name "Shahriare Mahmud Sakib"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://shahriare-mahmud-sakib.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+description              : &description "Academic website of Shahriare Mahmud Sakib, Prospective PhD Student in Structural Engineering"   # Update this with a general description of your site, this is the default if not overridden by a page
+url                      : "https://shahriare-mahmud-sakib.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "shahriare-mahmud-sakib/shahriare-mahmud-sakib.github.io"

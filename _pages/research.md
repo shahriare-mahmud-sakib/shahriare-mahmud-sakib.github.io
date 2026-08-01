@@ -5,7 +5,7 @@ author_profile: true
 ---
 My research focuses on advancing the understanding of structural behavior under extreme loading conditions through the integration of computational mechanics, nonlinear finite element modeling, and experimental investigations. I am particularly interested in the seismic performance of steel and composite structures, with an emphasis on developing reliable analytical and numerical tools for performance assessment, structural resilience, and infrastructure safety. Looking forward, I aim to integrate data-driven approaches and structural health monitoring techniques with computational modeling to support the development of smarter and more resilient civil infrastructure.
 ## Research Interests
---Structural Engineering
+-Structural Engineering
 
 -Earthquake Engineering
 

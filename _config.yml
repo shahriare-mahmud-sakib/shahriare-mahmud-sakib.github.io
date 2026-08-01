@@ -23,7 +23,7 @@ repository               : "shahriare-mahmud-sakib/shahriare-mahmud-sakib.github
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "profile.png"
   name             : "Shahriare Mahmud Sakib"
   pronouns         : # example: "she/her"  
   bio              : "Prospective PhD student in Structural Engineering"

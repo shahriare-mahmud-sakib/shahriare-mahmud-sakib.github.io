@@ -27,7 +27,7 @@ My research focuses on advancing the understanding of structural behavior under 
 
 ## Undergraduate Research
 ### Nonlinear FE Investigation on Behavior of Cold-Formed Stainless-Steel Columns Subject to Cyclic Loading
-Supervisor: Dr. Khan Mahmud Amanat, Professor, Department of Civil Engineering, BUET
+Supervisor: [Dr. Khan Mahmud Amanat](https://ce.buet.ac.bd/khan-mahmud-amanat/), Professor, Department of Civil Engineering, BUET
 
 My undergraduate research addressed the limited understanding of the seismic behavior of cold-formed stainless-steel hollow structural section (HSS) columns subjected to combined axial compression and cyclic bending. To investigate this problem, I developed a three-dimensional nonlinear finite element model using [ANSYS Mechanical APDL](https://www.ansys.com/blog/what-is-apdl), incorporating both geometric and material nonlinearities together with the effects of cold-forming.
 
@@ -45,7 +45,7 @@ This research strengthened my interest in computational structural mechanics and
 
 ## Current & Future Research
 My current research focuses on the experimental and numerical investigation of structural members subjected to seismic loading. I am presently working on the seismic response assessment of steel and composite structural members through shake table testing and advanced nonlinear finite element analysis.
-1. **Seismic response assessment of structural members via shake table testing** - [with Jamil Ahmed Joy, Assistant Professor, Department of CE, UIU].
-2. **Nonlinear numerical investigation of structural members under seismic loading** - [with Jamil Ahmed Joy, Assistant Professor, Department of CE, UIU].
+1. **Seismic response assessment of structural members via shake table testing** - [with [Jamil Ahmed Joy](https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/), Assistant Professor, Department of CE, UIU].
+2. **Nonlinear numerical investigation of structural members under seismic loading** - [with [Jamil Ahmed Joy](https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/), Assistant Professor, Department of CE, UIU].
 
 In the future, I intend to expand my research toward structural health monitoring, machine learning-assisted structural assessment, and performance-based earthquake engineering, integrating computational simulations with experimental observations to develop safer, smarter, and more resilient infrastructure systems.

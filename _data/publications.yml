@@ -48,7 +48,7 @@
 - title: "Experimental and Numerical Investigation of ECC-jacketed Concrete-filled Steel Tube Columns under Seismic Loading using Shake Table"
   authors: "Sakib, S.M. & Joy, J.A."
   highlight: ""
-  venue: "[International Conference on Civil Engineering-ICCE 2026](https://conf.ce.buet.ac.bd/)"
+  venue: "International Conference on Civil Engineering-ICCE 2026"
   year: 2026
   type: "Conference Paper"
   status: "Abstract Accepted"
@@ -60,7 +60,7 @@
     - "ECC"
     - "CFST Column"
     - "Finite Element Analysis"
-  links: 
+  links: "https://conf.ce.buet.ac.bd/"
     paper: ""
     poster: ""
     slides: ""
@@ -68,7 +68,7 @@
 - title: "Numerical Simulation of Cyclic Behavior of Cold-Formed Stainless-steel RHS Columns Subject to Cyclic Bending"
   authors: "Sakib, S.M. & Amanat, K.M."
   highlight: ""
-  venue: "[International Conference on Civil Engineering Research and Innovations-ICCEI 2025](https://icceiruet.org/iccei-2025-2/)"
+  venue: "International Conference on Civil Engineering Research and Innovations-ICCEI 2025"
   year: 2025
   type: "Conference Paper"
   status: "Presented"
@@ -80,7 +80,7 @@
     - "Stainless-steel"
     - "Cyclic Bending"
     - "Hysteretic responses"
-  links: 
+  links: "https://icceiruet.org/iccei-2025-2/"
     paper: "Paper ID: 239"
     poster: ""
     slides: ""
@@ -88,7 +88,7 @@
 - title: "Base isolation: The Revolutionary Measure in Earthquake Protection of Buildings"
   authors: "Sakib, S.M."
   highlight: ""
-  venue: "[Annual Magazine-2024: ASCE Student Chapter, BUET](https://ascesc.ce.buet.ac.bd/publications/)"
+  venue: "Annual Magazine-2024: ASCE Student Chapter, BUET"
   year: 2024
   type: "Academic Article"
   status: "Published"
@@ -98,7 +98,7 @@
   keywords:
     - "Base Isolation"
     - "Earthquake Engineering"
-  links: 
+  links: "https://ascesc.ce.buet.ac.bd/publications/"
     paper: ""
     poster: ""
     slides: ""

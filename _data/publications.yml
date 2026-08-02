@@ -30,7 +30,7 @@
   year: 2026
   type: "Journal Article"
   status: "In preparation"
-  featured: true
+  featured: false
   image: "/images/publications/journal-article.jpg"
   summary: "This paper investigates the seismic behavior of cold-formed stainless-steel HSS columns under combined axial compression and cyclic bending using a validated three-dimensional nonlinear FE model developed in ANSYS. Parametric analyses reveal the effects of key geometric parameters on hysteretic response and local buckling, providing insights for improved seismic design of cold-formed stainless-steel columns."
   keywords:

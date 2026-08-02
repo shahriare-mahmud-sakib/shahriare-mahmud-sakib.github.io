@@ -53,7 +53,7 @@
   type: "Conference Paper"
   status: "Abstract Accepted"
   featured: false
-  image: "/images/publications/conference-paper-ICCE-2026.jpg"
+  image: "/images/publications/conference-paper-icce-2026.jpg"
   summary: "This paper investigates the seismic performance of ECC-jacketed concrete-filled steel tube (CFST) columns through shake table experiments and validated three-dimensional finite element modeling. The results show that ECC confinement improves the dynamic response and seismic resilience of CFST columns while providing a reliable basis for advanced numerical modeling and design of composite structural systems."
   keywords:
     - "Shake Table Test"
@@ -73,7 +73,7 @@
   type: "Conference Paper"
   status: "Presented"
   featured: false
-  image: "/images/publications/conference-paper-ICCEI-2025.jpeg"
+  image: "/images/publications/conference-paper-iccei-2025.jpeg"
   summary: "A validated three-dimensional nonlinear finite element model was developed to investigate the seismic behavior of cold-formed stainless-steel RHS columns under cyclic bending. The model was verified against experimental results and successfully captured the hysteretic response and local buckling behavior, providing valuable insights into the seismic performance of these structural members and supporting the development of improved design approaches."
   keywords:
     - "Cold-Formed"

@@ -85,6 +85,24 @@
     poster: ""
     slides: ""
 
+- title: "Base isolation: The Revolutionary Measure in Earthquake Protection of Buildings"
+  authors: "Sakib, S.M."
+  highlight: ""
+  venue: "Annual Magazine-2024: ASCE Student Chapter, BUET"
+  year: 2024
+  type: "Academic Article"
+  status: "Published"
+  featured: false
+  image: "/images/publications/academic-article.jpg"
+  summary: "This article reviews the application of base isolation systems for improving the seismic performance of buildings by reducing earthquake-induced forces and structural damage. Through a comparative analysis of existing studies and real-world case examples, it demonstrates the effectiveness of various isolation systems in enhancing structural safety and resilience in earthquake-prone regions."
+  keywords:
+    - "Base Isolation"
+    - "Earthquake Engineering"
+  links:
+    paper: ""
+    poster: ""
+    slides: ""
+
 - title: "Replace this with a working paper or research manuscript title"
   authors: "Shahriare Mahmud Sakib, Co-author Name"
   highlight: "Shahriare Mahmud Sakib"

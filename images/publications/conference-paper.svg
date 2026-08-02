@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Conference paper placeholder</title>
+  <desc id="desc">A blue conference publication thumbnail with a presentation board icon.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#315b8a"/>
+      <stop offset="1" stop-color="#5f8fc4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" rx="34" fill="url(#g)"/>
+  <rect x="96" y="120" width="448" height="360" rx="24" fill="#fff" opacity=".96"/>
+  <rect x="145" y="175" width="350" height="20" rx="10" fill="#315b8a"/>
+  <rect x="145" y="230" width="150" height="185" rx="16" fill="#dce9f5"/>
+  <rect x="325" y="230" width="170" height="20" rx="10" fill="#8eb2d6"/>
+  <rect x="325" y="275" width="145" height="14" rx="7" fill="#c6daec"/>
+  <rect x="325" y="312" width="170" height="14" rx="7" fill="#c6daec"/>
+  <rect x="325" y="349" width="125" height="14" rx="7" fill="#c6daec"/>
+  <path d="M250 480v80m-72 45h144" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <text x="320" y="700" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="40" font-weight="700">CONFERENCE PAPER</text>
+</svg>

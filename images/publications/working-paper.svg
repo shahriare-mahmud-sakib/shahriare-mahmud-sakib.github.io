@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Working paper placeholder</title>
+  <desc id="desc">A gray-green working paper thumbnail with an engineering sketch icon.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#466a65"/>
+      <stop offset="1" stop-color="#759b94"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" rx="34" fill="url(#g)"/>
+  <rect x="105" y="110" width="430" height="500" rx="24" fill="#fff" opacity=".96"/>
+  <path d="M175 490h290M195 475l80-155 75 110 70-190 45 250" fill="none" stroke="#466a65" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="275" cy="320" r="17" fill="#759b94"/>
+  <circle cx="350" cy="430" r="17" fill="#759b94"/>
+  <circle cx="420" cy="240" r="17" fill="#759b94"/>
+  <rect x="170" y="175" width="300" height="20" rx="10" fill="#466a65"/>
+  <rect x="170" y="220" width="180" height="13" rx="7" fill="#bed0cc"/>
+  <text x="320" y="700" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="700">WORKING PAPER</text>
+</svg>

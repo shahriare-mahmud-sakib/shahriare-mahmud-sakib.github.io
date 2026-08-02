@@ -1,0 +1,87 @@
+{% assign publication = include.publication %}
+{% assign publication_type = publication.type | default: 'Publication' %}
+{% assign publication_type_slug = publication_type | slugify %}
+{% capture highlighted_name %}<strong>{{ publication.highlight }}</strong>{% endcapture %}
+{% assign searchable_text = publication.title | append: ' ' | append: publication.authors | append: ' ' | append: publication.venue | append: ' ' | append: publication.year | append: ' ' | append: publication_type | append: ' ' | append: publication.status | append: ' ' | append: publication.keywords | downcase | strip_html %}
+
+<article class="publication-card{% if publication.featured %} publication-card--featured{% endif %}"
+         data-publication-card
+         data-type="{{ publication_type_slug }}"
+         data-search="{{ searchable_text | escape }}">
+
+  {% if publication.image and publication.image != '' %}
+    <div class="publication-card__media">
+      <img src="{{ publication.image | relative_url }}"
+           alt="Thumbnail for {{ publication.title | escape }}"
+           loading="lazy">
+    </div>
+  {% endif %}
+
+  <div class="publication-card__content">
+    <div class="publication-card__topline">
+      <span class="publication-card__type">{{ publication_type }}</span>
+      <span class="publication-card__year">{{ publication.year }}</span>
+      {% if publication.status and publication.status != '' %}
+        <span class="publication-card__status">{{ publication.status }}</span>
+      {% endif %}
+      {% if publication.featured %}
+        <span class="publication-card__featured">Featured</span>
+      {% endif %}
+    </div>
+
+    <h2 class="publication-card__title">{{ publication.title }}</h2>
+
+    {% if publication.authors and publication.authors != '' %}
+      <p class="publication-card__authors">
+        {% if publication.highlight and publication.highlight != '' %}
+          {{ publication.authors | replace: publication.highlight, highlighted_name }}
+        {% else %}
+          {{ publication.authors }}
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if publication.venue and publication.venue != '' %}
+      <p class="publication-card__venue"><em>{{ publication.venue }}</em></p>
+    {% endif %}
+
+    {% if publication.summary and publication.summary != '' %}
+      <p class="publication-card__summary">{{ publication.summary }}</p>
+    {% endif %}
+
+    {% if publication.keywords and publication.keywords.size > 0 %}
+      <ul class="publication-card__keywords" aria-label="Research keywords">
+        {% for keyword in publication.keywords %}
+          <li>{{ keyword }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% assign links = publication.links %}
+    {% if links %}
+      <div class="publication-card__links" aria-label="Publication links">
+        {% if links.paper and links.paper != '' %}
+          <a class="publication-button publication-button--primary" href="{{ links.paper }}" target="_blank" rel="noopener">PDF</a>
+        {% endif %}
+        {% if links.preprint and links.preprint != '' %}
+          <a class="publication-button publication-button--primary" href="{{ links.preprint }}" target="_blank" rel="noopener">Preprint</a>
+        {% endif %}
+        {% if links.doi and links.doi != '' %}
+          <a class="publication-button" href="{{ links.doi }}" target="_blank" rel="noopener">DOI</a>
+        {% endif %}
+        {% if links.code and links.code != '' %}
+          <a class="publication-button" href="{{ links.code }}" target="_blank" rel="noopener">Code</a>
+        {% endif %}
+        {% if links.slides and links.slides != '' %}
+          <a class="publication-button" href="{{ links.slides }}" target="_blank" rel="noopener">Slides</a>
+        {% endif %}
+        {% if links.poster and links.poster != '' %}
+          <a class="publication-button" href="{{ links.poster }}" target="_blank" rel="noopener">Poster</a>
+        {% endif %}
+        {% if links.bibtex and links.bibtex != '' %}
+          <a class="publication-button" href="{{ links.bibtex }}" target="_blank" rel="noopener">BibTeX</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</article>

@@ -45,19 +45,21 @@
     slides: ""
     bibtex: ""
 
-- title: "Replace this with a conference paper title"
-  authors: "Shahriare Mahmud Sakib, Co-author Name"
-  highlight: "Shahriare Mahmud Sakib"
-  venue: "Name of Conference"
-  year: 2025
+- title: "Experimental and Numerical Investigation of ECC-jacketed Concrete-filled Steel Tube Columns under Seismic Loading using Shake Table"
+  authors: "Sakib, S.M. & Joy, J.A."
+  highlight: ""
+  venue: "International Conference on Civil Engineering-ICCE 2026"
+  year: 2026
   type: "Conference Paper"
   status: "Presented"
   featured: false
-  image: "/images/publications/conference-paper.svg"
-  summary: "Add a short plain-language description of the conference paper. Mention the structural system, analysis method, experiment, or major finding."
+  image: "/images/publications/conference-paper-icce-2026.jpg"
+  summary: "This paper investigates the seismic performance of ECC-jacketed concrete-filled steel tube (CFST) columns through shake table experiments and validated three-dimensional finite element modeling. The results show that ECC confinement improves the dynamic response and seismic resilience of CFST columns while providing a reliable basis for advanced numerical modeling and design of composite structural systems."
   keywords:
-    - "Cold-Formed Steel"
-    - "Cyclic Loading"
+    - "Shake Table Test"
+    - "ECC"
+    - "CFST Column"
+    - "Finite Element Analysis"
   links:
     paper: ""
     poster: ""

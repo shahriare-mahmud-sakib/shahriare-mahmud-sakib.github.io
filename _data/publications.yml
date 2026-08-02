@@ -93,7 +93,7 @@
   type: "Academic Article"
   status: "Published"
   featured: true
-  image: "/images/publications/journal-article.jpg"
+  image: "/images/publications/academic-article.jpg"
   summary: "This article reviews the application of base isolation systems for improving the seismic performance of buildings by reducing earthquake-induced forces and structural damage. Through a comparative analysis of existing studies and real-world case examples, it demonstrates the effectiveness of various isolation systems in enhancing structural safety and resilience in earthquake-prone regions."
   keywords:
     - "Base Isolation"

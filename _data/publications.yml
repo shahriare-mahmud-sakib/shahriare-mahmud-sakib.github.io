@@ -73,7 +73,7 @@
   type: "Conference Paper"
   status: "Presented"
   featured: false
-  image: "/images/publications/conference-paper-ICCEI-2025.jpg"
+  image: "/images/publications/conference-paper-ICCEI-2025.jpeg"
   summary: "A validated three-dimensional nonlinear finite element model was developed to investigate the seismic behavior of cold-formed stainless-steel RHS columns under cyclic bending. The model was verified against experimental results and successfully captured the hysteretic response and local buckling behavior, providing valuable insights into the seismic performance of these structural members and supporting the development of improved design approaches."
   keywords:
     - "Cold-Formed"

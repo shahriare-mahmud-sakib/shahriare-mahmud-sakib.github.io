@@ -25,7 +25,7 @@
 
 - title: "Nonlinear FE Investigation on Behavior of Cold-Formed Stainless-Steel Columns Subject to Cyclic Loading"
   authors: "Sakib, S.M. & Amanat, K.M."
-  highlight: "Sakib, S.M."
+  highlight: #"Sakib, S.M."
   venue: "Thin-Walled Structures: Journal for Civil and Structural Engineering"
   year: 2026
   type: "Journal Article"
@@ -45,20 +45,40 @@
     slides: ""
     bibtex: ""
 
-- title: "Replace this with a conference paper title"
-  authors: "Shahriare Mahmud Sakib, Co-author Name"
-  highlight: "Shahriare Mahmud Sakib"
-  venue: "Name of Conference"
-  year: 2025
+- title: "Experimental and Numerical Investigation of ECC-jacketed Concrete-filled Steel Tube Columns under Seismic Loading using Shake Table"
+  authors: "Sakib, S.M. & Joy, J.A."
+  highlight: #"Shahriare Mahmud Sakib"
+  venue: "International Conference on Civil Engineering (ICCE 2026)"
+  year: 2026
   type: "Conference Paper"
-  status: "Presented"
+  status: "Abstract Accepted"
   featured: false
-  image: "/images/publications/conference-paper.svg"
+  image: "/images/publications/conference-paper-ICCE-2026.jpg"
   summary: "Add a short plain-language description of the conference paper. Mention the structural system, analysis method, experiment, or major finding."
   keywords:
     - "Cold-Formed Steel"
     - "Cyclic Loading"
   links:
+    paper: ""
+    poster: ""
+    slides: ""
+
+- title: "Numerical Simulation of Cyclic Behavior of Cold-Formed Stainless-steel RHS Columns Subject to Cyclic Bending"
+  authors: "Sakib, S.M. & Amanat, K.M."
+  highlight: #"Shahriare Mahmud Sakib"
+  venue: "International Conference on Civil Engineering Research and Innovations (ICCEI 2025)"
+  year: 2025
+  type: "Conference Paper"
+  status: "Presented"
+  featured: false
+  image: "/images/publications/conference-paper-ICCEI-2025.jpg"
+  summary: "A validated three-dimensional nonlinear finite element model was developed to investigate the seismic behavior of cold-formed stainless-steel RHS columns under cyclic bending. The model was verified against experimental results and successfully captured the hysteretic response and local buckling behavior, providing valuable insights into the seismic performance of these structural members and supporting the development of improved design approaches."
+  keywords:
+    - "Cold-Formed"
+    - "Stainless-steel"
+    - "Cyclic Bending"
+    - "Hysteretic responses"
+  links: "https://icceiruet.org/iccei-2025-2/"
     paper: ""
     poster: ""
     slides: ""

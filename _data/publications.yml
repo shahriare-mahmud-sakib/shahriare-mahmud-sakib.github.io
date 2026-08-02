@@ -85,18 +85,18 @@
     poster: ""
     slides: ""
 
-- title: "Replace this with a working paper or research manuscript title"
-  authors: "Shahriare Mahmud Sakib, Co-author Name"
-  highlight: "Shahriare Mahmud Sakib"
-  venue: "Working Paper"
-  year: 2025
-  type: "Working Paper"
-  status: "Under Review"
-  featured: false
-  image: "/images/publications/working-paper.svg"
-  summary: "Describe the ongoing research briefly. Remove this entry if you do not want to show manuscripts that are not yet published."
-  keywords:
-    - "Structural Engineering"
-    - "Numerical Modeling"
-  links:
-    preprint: ""
+# - title: "Replace this with a working paper or research manuscript title"
+#   authors: "Shahriare Mahmud Sakib, Co-author Name"
+#   highlight: "Shahriare Mahmud Sakib"
+#   venue: "Working Paper"
+#   year: 2025
+#   type: "Working Paper"
+#   status: "Under Review"
+#   featured: false
+#   image: "/images/publications/working-paper.svg"
+#   summary: "Describe the ongoing research briefly. Remove this entry if you do not want to show manuscripts that are not yet published."
+#   keywords:
+#     - "Structural Engineering"
+#     - "Numerical Modeling"
+#   links:
+#     preprint: ""

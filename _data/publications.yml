@@ -63,6 +63,24 @@
     poster: ""
     slides: ""
 
+- title: "Replace this with a conference paper title"
+  authors: "Shahriare Mahmud Sakib, Co-author Name"
+  highlight: "Shahriare Mahmud Sakib"
+  venue: "Name of Conference"
+  year: 2025
+  type: "Conference Paper"
+  status: "Presented"
+  featured: false
+  image: "/images/publications/conference-paper.svg"
+  summary: "Add a short plain-language description of the conference paper. Mention the structural system, analysis method, experiment, or major finding."
+  keywords:
+    - "Cold-Formed Steel"
+    - "Cyclic Loading"
+  links:
+    paper: ""
+    poster: ""
+    slides: ""
+
 - title: "Replace this with a working paper or research manuscript title"
   authors: "Shahriare Mahmud Sakib, Co-author Name"
   highlight: "Shahriare Mahmud Sakib"

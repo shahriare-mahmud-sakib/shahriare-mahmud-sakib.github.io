@@ -23,21 +23,20 @@
 # For another publication, copy one complete entry beginning with "- title:"
 # and paste it below the previous entry.
 
-- title: "Nonlinear FE Investigation on Behavior of Cold-Formed Stainless-Steel Columns Subject to Cyclic Loading"
-  authors: "Sakib, S.M. & Amanat, K.M."
-  highlight: #"Sakib, S.M."
-  venue: "Thin-Walled Structures: Journal for Civil and Structural Engineering"
+- title: "Replace this with your newest publication title"
+  authors: "Shahriare Mahmud Sakib, Co-author One, Co-author Two"
+  highlight: "Shahriare Mahmud Sakib"
+  venue: "Name of Journal or Conference"
   year: 2026
   type: "Journal Article"
-  status: "In preparation"
+  status: "Published"
   featured: true
-  image: "/images/publications/journal-article.jpg"
-  summary: "This paper investigates the seismic behavior of cold-formed stainless-steel HSS columns under combined axial compression and cyclic bending using a validated three-dimensional nonlinear FE model developed in ANSYS. Parametric analyses reveal the effects of key geometric parameters on hysteretic response and local buckling, providing insights for improved seismic design of cold-formed stainless-steel columns."
+  image: "/images/publications/journal-article.svg"
+  summary: "Write two or three sentences explaining the main problem, method, and contribution of this publication. Keep this description concise and understandable."
   keywords:
-    - "Cold-formed Steel Structures"
+    - "Steel Structures"
     - "Finite Element Analysis"
-    - "Cyclic Loading"
-    - "Stainless-steel"
+    - "Seismic Engineering"
   links:
     paper: ""
     doi: ""
@@ -45,78 +44,36 @@
     slides: ""
     bibtex: ""
 
-- title: "Experimental and Numerical Investigation of ECC-jacketed Concrete-filled Steel Tube Columns under Seismic Loading using Shake Table"
-  authors: "Sakib, S.M. & Joy, J.A."
-  highlight: #"Shahriare Mahmud Sakib"
-  venue: "International Conference on Civil Engineering-ICCE 2026"
-  year: 2026
-  type: "Conference Paper"
-  status: "Abstract Accepted"
-  featured: true
-  image: "/images/publications/conference-paper-icce-2026.jpg"
-  summary: "This paper investigates the seismic performance of ECC-jacketed concrete-filled steel tube (CFST) columns through shake table experiments and validated three-dimensional finite element modeling. The results show that ECC confinement improves the dynamic response and seismic resilience of CFST columns while providing a reliable basis for advanced numerical modeling and design of composite structural systems."
-  keywords:
-    - "Shake Table Test"
-    - "ECC"
-    - "CFST Column"
-    - "Finite Element Analysis"
-  links: "https://conf.ce.buet.ac.bd/"
-    paper: ""
-    poster: ""
-    slides: ""
-
-- title: "Numerical Simulation of Cyclic Behavior of Cold-Formed Stainless-steel RHS Columns Subject to Cyclic Bending"
-  authors: "Sakib, S.M. & Amanat, K.M."
-  highlight: #"Shahriare Mahmud Sakib"
-  venue: "International Conference on Civil Engineering Research and Innovations-ICCEI 2025"
+- title: "Replace this with a conference paper title"
+  authors: "Shahriare Mahmud Sakib, Co-author Name"
+  highlight: "Shahriare Mahmud Sakib"
+  venue: "Name of Conference"
   year: 2025
   type: "Conference Paper"
   status: "Presented"
-  featured: true
-  image: "/images/publications/conference-paper-iccei-2025.jpeg"
-  summary: "A validated three-dimensional nonlinear finite element model was developed to investigate the seismic behavior of cold-formed stainless-steel RHS columns under cyclic bending. The model was verified against experimental results and successfully captured the hysteretic response and local buckling behavior, providing valuable insights into the seismic performance of these structural members and supporting the development of improved design approaches."
+  featured: false
+  image: "/images/publications/conference-paper.svg"
+  summary: "Add a short plain-language description of the conference paper. Mention the structural system, analysis method, experiment, or major finding."
   keywords:
-    - "Cold-Formed"
-    - "Stainless-steel"
-    - "Cyclic Bending"
-    - "Hysteretic responses"
-  links: "https://icceiruet.org/iccei-2025-2/"
-    paper: #"Paper ID: 239"
+    - "Cold-Formed Steel"
+    - "Cyclic Loading"
+  links:
+    paper: ""
     poster: ""
     slides: ""
 
-- title: "Base isolation: The Revolutionary Measure in Earthquake Protection of Buildings"
-  authors: "Sakib, S.M."
-  highlight: #"Sakib, S.M."
-  venue: "Annual Magazine-2024: ASCE Student Chapter, BUET"
-  year: 2024
-  type: "Academic Article"
-  status: "Published"
-  featured: true
-  image: "/images/publications/academic-article.jpg"
-  summary: "This article reviews the application of base isolation systems for improving the seismic performance of buildings by reducing earthquake-induced forces and structural damage. Through a comparative analysis of existing studies and real-world case examples, it demonstrates the effectiveness of various isolation systems in enhancing structural safety and resilience in earthquake-prone regions."
+- title: "Replace this with a working paper or research manuscript title"
+  authors: "Shahriare Mahmud Sakib, Co-author Name"
+  highlight: "Shahriare Mahmud Sakib"
+  venue: "Working Paper"
+  year: 2025
+  type: "Working Paper"
+  status: "Under Review"
+  featured: false
+  image: "/images/publications/working-paper.svg"
+  summary: "Describe the ongoing research briefly. Remove this entry if you do not want to show manuscripts that are not yet published."
   keywords:
-    - "Base Isolation"
-    - "Earthquake Engineering"
-  links: "https://ascesc.ce.buet.ac.bd/publications/"
-    paper: ""
-    doi: ""
-    code: ""
-    slides: ""
-    bibtex: ""
-
-# - title: "Replace this with a working paper or research manuscript title"
-#   authors: "Shahriare Mahmud Sakib, Co-author Name"
-#   highlight: "Shahriare Mahmud Sakib"
-#   venue: "Working Paper"
-#   year: 2025
-#   type: "Working Paper"
-#   status: "Under Review"
-#   featured: false
-#   image: "/images/publications/working-paper.svg"
-#   summary: "Describe the ongoing research briefly. Remove this entry if you do not want to show manuscripts that are not yet published."
-#   keywords:
-#     - "Structural Engineering"
-#     - "Numerical Modeling"
-#   links:
-#     preprint: ""
+    - "Structural Engineering"
+    - "Numerical Modeling"
+  links:
+    preprint: ""

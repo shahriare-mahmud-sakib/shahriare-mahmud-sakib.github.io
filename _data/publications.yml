@@ -48,12 +48,12 @@
 - title: "Experimental and Numerical Investigation of ECC-jacketed Concrete-filled Steel Tube Columns under Seismic Loading using Shake Table"
   authors: "Sakib, S.M. & Joy, J.A."
   highlight: ""
-  venue: "International Conference on Civil Engineering-ICCE 2026"
+  venue: "[International Conference on Civil Engineering-ICCE 2026](https://conf.ce.buet.ac.bd/)"
   year: 2026
   type: "Conference Paper"
   status: "Abstract Accepted"
   featured: true
-  image: "[/images/publications/conference-paper-icce-2026.jpg](https://conf.ce.buet.ac.bd/)"
+  image: "/images/publications/conference-paper-icce-2026.jpg"
   summary: "This paper investigates the seismic performance of ECC-jacketed concrete-filled steel tube (CFST) columns through shake table experiments and validated three-dimensional finite element modeling. The results show that ECC confinement improves the dynamic response and seismic resilience of CFST columns while providing a reliable basis for advanced numerical modeling and design of composite structural systems."
   keywords:
     - "Shake Table Test"

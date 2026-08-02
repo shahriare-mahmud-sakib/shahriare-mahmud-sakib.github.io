@@ -54,11 +54,13 @@
   status: "Abstract Accepted"
   featured: false
   image: "/images/publications/conference-paper-ICCE-2026.jpg"
-  summary: "Add a short plain-language description of the conference paper. Mention the structural system, analysis method, experiment, or major finding."
+  summary: "This paper investigates the seismic performance of ECC-jacketed concrete-filled steel tube (CFST) columns through shake table experiments and validated three-dimensional finite element modeling. The results show that ECC confinement improves the dynamic response and seismic resilience of CFST columns while providing a reliable basis for advanced numerical modeling and design of composite structural systems."
   keywords:
-    - "Cold-Formed Steel"
-    - "Cyclic Loading"
-  links:
+    - "Shake Table Test"
+    - "ECC"
+    - "CFST Column"
+    - "Finite Element Analysis"
+  links: "https://conf.ce.buet.ac.bd/"
     paper: ""
     poster: ""
     slides: ""
@@ -79,7 +81,7 @@
     - "Cyclic Bending"
     - "Hysteretic responses"
   links: "https://icceiruet.org/iccei-2025-2/"
-    paper: ""
+    paper: "Paper ID: 239"
     poster: ""
     slides: ""
 

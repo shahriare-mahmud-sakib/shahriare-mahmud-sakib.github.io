@@ -1,0 +1,79 @@
+# ================================================================
+# PUBLICATIONS DATA FILE
+# ================================================================
+# Edit this file to add, remove, or rearrange publications.
+# Keep two spaces before the lines under "links:" and "keywords:".
+# Put text containing a colon (:) inside quotation marks.
+# Newest publications should normally be placed first.
+#
+# Fields you can use:
+#   title       Required. Publication title.
+#   authors     Required. All authors in the order shown by the paper.
+#   highlight   Optional. Your name; it will be shown in bold.
+#   venue       Required. Journal, conference, or repository name.
+#   year        Required. Four-digit year.
+#   type        Required. Used by the filter buttons.
+#   status      Optional. Published, Accepted, Under Review, etc.
+#   featured    Optional. true adds a Featured label.
+#   image       Optional. Path to a thumbnail in /images/publications/.
+#   summary     Optional. One short description of the work.
+#   keywords    Optional. A list of short research keywords.
+#   links       Optional. Add only the links you have.
+#
+# For another publication, copy one complete entry beginning with "- title:"
+# and paste it below the previous entry.
+
+- title: "Replace this with your newest publication title"
+  authors: "Shahriare Mahmud Sakib, Co-author One, Co-author Two"
+  highlight: "Shahriare Mahmud Sakib"
+  venue: "Name of Journal or Conference"
+  year: 2026
+  type: "Journal Article"
+  status: "Published"
+  featured: true
+  image: "/images/publications/journal-article.svg"
+  summary: "Write two or three sentences explaining the main problem, method, and contribution of this publication. Keep this description concise and understandable."
+  keywords:
+    - "Steel Structures"
+    - "Finite Element Analysis"
+    - "Seismic Engineering"
+  links:
+    paper: ""
+    doi: ""
+    code: ""
+    slides: ""
+    bibtex: ""
+
+- title: "Replace this with a conference paper title"
+  authors: "Shahriare Mahmud Sakib, Co-author Name"
+  highlight: "Shahriare Mahmud Sakib"
+  venue: "Name of Conference"
+  year: 2025
+  type: "Conference Paper"
+  status: "Presented"
+  featured: false
+  image: "/images/publications/conference-paper.svg"
+  summary: "Add a short plain-language description of the conference paper. Mention the structural system, analysis method, experiment, or major finding."
+  keywords:
+    - "Cold-Formed Steel"
+    - "Cyclic Loading"
+  links:
+    paper: ""
+    poster: ""
+    slides: ""
+
+- title: "Replace this with a working paper or research manuscript title"
+  authors: "Shahriare Mahmud Sakib, Co-author Name"
+  highlight: "Shahriare Mahmud Sakib"
+  venue: "Working Paper"
+  year: 2025
+  type: "Working Paper"
+  status: "Under Review"
+  featured: false
+  image: "/images/publications/working-paper.svg"
+  summary: "Describe the ongoing research briefly. Remove this entry if you do not want to show manuscripts that are not yet published."
+  keywords:
+    - "Structural Engineering"
+    - "Numerical Modeling"
+  links:
+    preprint: ""

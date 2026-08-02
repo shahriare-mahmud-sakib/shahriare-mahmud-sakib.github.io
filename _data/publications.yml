@@ -68,7 +68,7 @@
 - title: "Numerical Simulation of Cyclic Behavior of Cold-Formed Stainless-steel RHS Columns Subject to Cyclic Bending"
   authors: "Sakib, S.M. & Amanat, K.M."
   highlight: ""
-  venue: "International Conference on Civil Engineering Research and Innovations-ICCEI 2025"
+  venue: "[International Conference on Civil Engineering Research and Innovations-ICCEI 2025](https://icceiruet.org/iccei-2025-2/)"
   year: 2025
   type: "Conference Paper"
   status: "Presented"
@@ -80,15 +80,15 @@
     - "Stainless-steel"
     - "Cyclic Bending"
     - "Hysteretic responses"
-  links: https://icceiruet.org/iccei-2025-2/
-    paper: ""
+  links: 
+    paper: "Paper ID: 239"
     poster: ""
     slides: ""
 
 - title: "Base isolation: The Revolutionary Measure in Earthquake Protection of Buildings"
   authors: "Sakib, S.M."
   highlight: ""
-  venue: "Annual Magazine-2024: ASCE Student Chapter, BUET"
+  venue: "[Annual Magazine-2024: ASCE Student Chapter, BUET](https://ascesc.ce.buet.ac.bd/publications/)"
   year: 2024
   type: "Academic Article"
   status: "Published"
@@ -98,7 +98,7 @@
   keywords:
     - "Base Isolation"
     - "Earthquake Engineering"
-  links: https://ascesc.ce.buet.ac.bd/publications/
+  links: 
     paper: ""
     poster: ""
     slides: ""

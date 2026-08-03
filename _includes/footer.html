@@ -1,32 +1,18 @@
 {% assign footer_data = site.data.site_footer %}
+{% assign intro = footer_data.footer %}
 
 <div class="sms-site-footer" aria-label="Website footer">
-  <!-- COLUMN 1: NAVIGATION. Edit its content in _data/site_footer.yml -->
-  <nav class="sms-site-footer__column" aria-label="Footer navigation">
-    <h2 class="sms-site-footer__heading">
-      {{ footer_data.navigation.heading | default: "NAVIGATION" }}
-    </h2>
-    <ul class="sms-site-footer__text-links">
-      {% for item in footer_data.navigation.links %}
-        <li>
-          {% if item.url and item.url != "" %}
-            <a
-              href="{% if item.url contains '://' or item.url contains 'mailto:' or item.url contains 'tel:' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
-              {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
-            >{{ item.label }}</a>
-          {% else %}
-            <span>{{ item.label }}</span>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+  <!-- COLUMN 1: EDIT in _data/site_footer.yml under footer: -->
+  <section class="sms-site-footer__intro" aria-label="Profile summary">
+    <p class="sms-site-footer__eyebrow">ABOUT</p>
+    <h2 class="sms-site-footer__name">{{ intro.heading | default: site.name | default: site.title }}</h2>
+    {% if intro.role %}<p class="sms-site-footer__role">{{ intro.role }}</p>{% endif %}
+    {% if intro.message %}<p class="sms-site-footer__message">{{ intro.message }}</p>{% endif %}
+  </section>
 
-  <!-- COLUMN 2: PROFILES. Edit its content in _data/site_footer.yml -->
+  <!-- COLUMN 2: EDIT in _data/site_footer.yml under profiles: -->
   <nav class="sms-site-footer__column" aria-label="Academic and professional profiles">
-    <h2 class="sms-site-footer__heading">
-      {{ footer_data.profiles.heading | default: "PROFILES" }}
-    </h2>
+    <h2 class="sms-site-footer__heading">{{ footer_data.profiles.heading | default: "PROFILES" }}</h2>
     <ul class="sms-site-footer__text-links">
       {% for item in footer_data.profiles.links %}
         <li>
@@ -43,12 +29,10 @@
     </ul>
   </nav>
 
-  <!-- COLUMN 3: CONTACT. No logos are used. Edit in _data/site_footer.yml -->
+  <!-- COLUMN 3: EDIT in _data/site_footer.yml under contact: -->
   <section class="sms-site-footer__column" aria-label="Contact information">
-    <h2 class="sms-site-footer__heading">
-      {{ footer_data.contact.heading | default: "CONTACT" }}
-    </h2>
-    <ul class="sms-site-footer__text-links sms-site-footer__contact-links">
+    <h2 class="sms-site-footer__heading">{{ footer_data.contact.heading | default: "CONTACT" }}</h2>
+    <ul class="sms-site-footer__text-links">
       {% for item in footer_data.contact.links %}
         <li>
           {% if item.url and item.url != "" %}
@@ -65,11 +49,18 @@
   </section>
 </div>
 
-{% if footer_data.copyright.show != false %}
-  <div class="sms-site-footer__bottom">
-    <span>&copy; {{ site.time | date: '%Y' }} {{ footer_data.copyright.text | default: site.name | default: site.title }}</span>
-    {% if footer_data.copyright.show_sitemap %}
-      <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
-    {% endif %}
-  </div>
-{% endif %}
+<div class="sms-site-footer__bottom">
+  <span>&copy; {{ site.time | date: '%Y' }} {{ intro.heading | default: site.name | default: site.title }}.</span>
+
+  {% if intro.show_credits %}
+    <span>Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</span>
+  {% endif %}
+
+  {% if intro.show_last_updated %}
+    <span>Last updated {{ "now" | date: '%Y-%m-%d' }}.</span>
+  {% endif %}
+
+  {% if intro.show_sitemap %}
+    <span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a></span>
+  {% endif %}
+</div>

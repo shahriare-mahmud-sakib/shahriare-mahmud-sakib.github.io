@@ -2,49 +2,63 @@
 {% assign profile_data = site.data.profile_contact %}
 {% assign profile = profile_data.profile %}
 
+{%- comment -%}
+SIDEBAR REPAIR:
+Some earlier versions used "items" while another replacement file used
+"sidebar_items". This fallback accepts either name, so the sidebar does not
+vanish because of a data-key mismatch.
+{%- endcomment -%}
+{% assign sidebar_items = profile_data.items | default: profile_data.sidebar_items %}
+
+{% if profile %}
 <div class="sms-author-card" itemscope itemtype="https://schema.org/Person">
-  <div class="author__avatar sms-author-card__avatar">
-    {% if profile.avatar contains "://" %}
-      <img src="{{ profile.avatar }}" alt="{{ profile.name | escape }}" fetchpriority="high" itemprop="image" />
-    {% else %}
-      <img src="{{ profile.avatar | relative_url }}" alt="{{ profile.name | escape }}" fetchpriority="high" itemprop="image" />
-    {% endif %}
-  </div>
+  {% if profile.avatar %}
+    <div class="author__avatar sms-author-card__avatar">
+      {% if profile.avatar contains "://" %}
+        <img src="{{ profile.avatar }}" alt="{{ profile.name | escape }}" fetchpriority="high" itemprop="image" />
+      {% else %}
+        <img src="{{ profile.avatar | relative_url }}" alt="{{ profile.name | escape }}" fetchpriority="high" itemprop="image" />
+      {% endif %}
+    </div>
+  {% endif %}
 
   <div class="author__content sms-author-card__content">
-    <h3 class="author__name" itemprop="name">{{ profile.name }}</h3>
+    {% if profile.name %}<h3 class="author__name" itemprop="name">{{ profile.name }}</h3>{% endif %}
     {% if profile.role %}
       <p class="author__bio sms-author-card__role" itemprop="jobTitle">{{ profile.role }}</p>
     {% endif %}
   </div>
 
-  <div class="author__urls-wrapper sms-author-card__links-wrapper">
-    <button class="btn btn--inverse sms-author-card__follow" type="button">
-      {{ profile.follow_button | default: "Contact & Profiles" }}
-    </button>
+  {% if sidebar_items and sidebar_items.size > 0 %}
+    <div class="author__urls-wrapper sms-author-card__links-wrapper">
+      <button class="btn btn--inverse sms-author-card__follow" type="button">
+        {{ profile.follow_button | default: "Contact & Profiles" }}
+      </button>
 
-    <ul class="author__urls social-icons sms-author-links">
-      {% for item in profile_data.items %}
-        {% if item.sidebar != false %}
-          <li class="sms-author-link{% if item.desktop_only %} author__desktop{% endif %}" style="--sms-icon-color: {{ item.color | default: '#2563eb' }};">
-            {% if item.url and item.url != "" %}
-              <a
-                href="{% if item.url contains '://' or item.url contains 'mailto:' or item.url contains 'tel:' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
-                {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
-                aria-label="{{ item.label | escape }}"
-              >
-                <span class="sms-contact-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
-                <span class="sms-contact-text">{{ item.text | default: item.label }}</span>
-              </a>
-            {% else %}
-              <span class="sms-author-link__plain">
-                <span class="sms-contact-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
-                <span class="sms-contact-text">{{ item.text | default: item.label }}</span>
-              </span>
-            {% endif %}
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+      <ul class="author__urls social-icons sms-author-links">
+        {% for item in sidebar_items %}
+          {% if item.sidebar != false %}
+            <li class="sms-author-link{% if item.desktop_only %} author__desktop{% endif %}" style="--sms-icon-color: {{ item.color | default: '#2563eb' }};">
+              {% if item.url and item.url != "" %}
+                <a
+                  href="{% if item.url contains '://' or item.url contains 'mailto:' or item.url contains 'tel:' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
+                  {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+                  aria-label="{{ item.label | escape }}"
+                >
+                  <span class="sms-contact-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
+                  <span class="sms-contact-text">{{ item.text | default: item.label }}</span>
+                </a>
+              {% else %}
+                <span class="sms-author-link__plain">
+                  <span class="sms-contact-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
+                  <span class="sms-contact-text">{{ item.text | default: item.label }}</span>
+                </span>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 </div>
+{% endif %}

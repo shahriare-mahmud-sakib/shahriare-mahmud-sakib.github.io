@@ -1,0 +1,92 @@
+# =============================================================================
+# EDITABLE THREE-COLUMN FOOTER CONTENT
+# =============================================================================
+# This footer has NO social-media logo buttons.
+# It contains three text columns:
+#   1. NAVIGATION
+#   2. PROFILES
+#   3. CONTACT
+#
+# Edit headings, labels, links, and contact information below.
+# Internal page links normally begin and end with /, for example /research/.
+# External links begin with https:// and normally use new_tab: true.
+# =============================================================================
+
+navigation:
+  heading: "NAVIGATION"                  # EDIT: first column heading
+  links:
+    - label: "Home"
+      url: "/"
+      new_tab: false
+
+    - label: "Publications"
+      url: "/publications/"
+      new_tab: false
+
+    - label: "Research"
+      url: "/research/"
+      new_tab: false
+
+    - label: "Projects"
+      url: "/projects/"
+      new_tab: false
+
+    - label: "Academic"
+      url: "/Academic/"
+      new_tab: false
+
+    - label: "Skills"
+      url: "/skills/"
+      new_tab: false
+
+    - label: "Activities"
+      url: "/year-archive/"
+      new_tab: false
+
+    - label: "CV"
+      url: "/cv/"
+      new_tab: false
+
+    - label: "Contact"
+      url: "/contact/"
+      new_tab: false
+
+profiles:
+  heading: "PROFILES"                    # EDIT: second column heading
+  links:
+    - label: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=rDd7cyAAAAAJ&hl=en"
+      new_tab: true
+
+    - label: "ResearchGate"
+      url: "https://www.researchgate.net/profile/Shahriare-Mahmud-Sakib?ev=hdr_xprf"
+      new_tab: true
+
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/shahriare-mahmud-sakib/"
+      new_tab: true
+
+    - label: "GitHub"
+      url: "https://github.com/shahriare-mahmud-sakib"
+      new_tab: true
+
+contact:
+  heading: "CONTACT"                     # EDIT: third column heading
+  links:
+    - label: "Email: shahriaremahmudsakib@gmail.com"
+      url: "mailto:shahriaremahmudsakib@gmail.com"
+      new_tab: false
+
+    - label: "Dhaka, Bangladesh"
+      url: ""                             # Blank URL displays plain text
+      new_tab: false
+
+    - label: "UIU Faculty Profile"
+      url: "https://ce.uiu.ac.bd/faculty/shahriare-mahmud-sakib/"
+      new_tab: true
+
+# Bottom copyright line
+copyright:
+  show: true                              # Change to false to hide it
+  text: "Shahriare Mahmud Sakib. All rights reserved."
+  show_sitemap: true                      # Change to false to hide Sitemap

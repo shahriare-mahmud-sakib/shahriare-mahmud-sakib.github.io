@@ -1,11 +1,8 @@
 ---
 ---
 
-/*
- * Main stylesheet for Academic Pages.
- * Keep "custom/compact-sidebar-footer" as the FINAL import so its editable
- * sidebar and footer settings override the theme defaults.
- */
+/* Main Academic Pages stylesheet.
+   IMPORTANT: custom/sidebar-footer-fix must remain the LAST import. */
 
 @import
     "vendor/breakpoint/breakpoint",
@@ -35,6 +32,6 @@
     "layout/sidebar",
     "layout/json_cv",
 
-    /* IMPORTANT: keep this import last. */
-    "custom/compact-sidebar-footer"
+    /* KEEP THIS LAST: fixes sidebar visibility and replaces footer layout. */
+    "custom/sidebar-footer-fix"
 ;

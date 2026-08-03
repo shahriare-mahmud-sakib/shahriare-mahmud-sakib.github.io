@@ -1,0 +1,239 @@
+/* ========================================================================== 
+   COLORFUL SIDEBAR CONTACTS + NORMAL BOTTOM FOOTER
+   This file is imported last, so it safely overrides the theme defaults.
+   ========================================================================== */
+
+/* The old theme reserved space for a fixed footer. The new footer is normal. */
+body {
+  padding-bottom: 0;
+}
+
+/* ---------- Sidebar profile ---------- */
+.sms-author-card {
+  width: 100%;
+}
+
+.sms-author-card__role {
+  color: var(--global-text-color-light);
+}
+
+.sms-author-links {
+  width: 100%;
+}
+
+.sms-author-link {
+  margin-bottom: 0.35rem !important;
+  white-space: normal !important;
+}
+
+.sms-author-link > a,
+.sms-author-link__plain {
+  display: flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  min-height: 2.25rem;
+  margin: 0 !important;
+  padding: 0.28rem 0.35rem !important;
+  border-radius: 0.55rem;
+  color: var(--global-text-color) !important;
+  line-height: 1.25;
+  text-decoration: none !important;
+  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.sms-author-link > a:hover,
+.sms-author-link > a:focus-visible {
+  background: var(--global-code-background-color);
+  color: var(--global-link-color) !important;
+  transform: translateX(3px);
+  outline: none;
+}
+
+.sms-contact-icon,
+.sms-footer-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 1.85rem;
+  height: 1.85rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 50%;
+  background: var(--global-code-background-color);
+  color: var(--sms-icon-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+@supports (background: color-mix(in srgb, red 10%, transparent)) {
+  .sms-contact-icon,
+  .sms-footer-icon {
+    background: color-mix(in srgb, var(--sms-icon-color) 12%, var(--global-bg-color));
+    border-color: color-mix(in srgb, var(--sms-icon-color) 35%, var(--global-border-color));
+  }
+}
+
+.sms-contact-icon i,
+.sms-footer-icon i {
+  margin: 0;
+  color: inherit !important;
+  font-size: 0.95rem;
+}
+
+.sms-contact-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Footer: no longer fixed ---------- */
+.page__footer {
+  position: relative !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  float: none !important;
+  clear: both;
+  width: 100%;
+  height: auto !important;
+  margin-top: 4rem;
+  z-index: 20;
+  border-top: 1px solid var(--global-border-color);
+  background: var(--global-footer-bg-color);
+  color: var(--global-text-color-light);
+}
+
+.page__footer footer {
+  max-width: 1280px;
+  margin: 0 auto !important;
+  padding: 2.25rem 1.25rem 1.25rem !important;
+}
+
+.sms-footer-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 2rem 4rem;
+  align-items: start;
+}
+
+.sms-footer-profile__eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--global-link-color);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.sms-footer-profile__name {
+  margin: 0 0 0.45rem;
+  color: inherit;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.sms-footer-profile__role {
+  margin: 0 0 0.65rem;
+  font-weight: 700;
+}
+
+.sms-footer-profile__message {
+  max-width: 46rem;
+  margin: 0;
+  color: inherit;
+  opacity: 0.88;
+  font-size: 0.95rem;
+}
+
+.sms-footer-profile__links ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sms-footer-profile__links li {
+  min-width: 0;
+  margin: 0;
+}
+
+.sms-footer-profile__links a,
+.sms-footer-profile__plain {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  color: inherit !important;
+  font-size: 0.86rem;
+  text-decoration: none !important;
+}
+
+.sms-footer-profile__links a:hover,
+.sms-footer-profile__links a:focus-visible {
+  color: var(--global-link-color) !important;
+  text-decoration: none !important;
+}
+
+.sms-footer-profile__links a span:last-child,
+.sms-footer-profile__plain span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.sms-footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-border-color);
+  color: inherit;
+  opacity: 0.8;
+  font-size: 0.72rem;
+}
+
+.sms-footer-meta a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* The original footer link styles force uppercase/bold. Do not apply them here. */
+.page__footer .sms-footer-profile__links li,
+.page__footer .sms-footer-profile__links a {
+  padding: 0;
+  font-family: inherit;
+  font-weight: 500;
+  text-transform: none;
+}
+
+@media screen and (max-width: 900px) {
+  .sms-footer-profile {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page__footer {
+    margin-top: 2.5rem;
+  }
+
+  .page__footer footer {
+    padding: 1.75rem 1rem 1rem !important;
+  }
+
+  .sms-footer-profile__links ul {
+    grid-template-columns: 1fr;
+  }
+
+  .sms-footer-profile__name {
+    font-size: 1.2rem;
+  }
+}
+
+@media print {
+  .page__footer {
+    display: none !important;
+  }
+}

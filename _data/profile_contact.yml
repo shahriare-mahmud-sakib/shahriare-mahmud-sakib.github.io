@@ -1,43 +1,35 @@
 # =============================================================================
-# SIDEBAR PROFILE, ICONS, TEXT, AND LINKS
+# SIDEBAR PROFILE AND CONTACT ITEMS
 # =============================================================================
-# EDIT THIS FILE when you want to change:
-#   1. your photo, name, or role;
-#   2. the icon beside a sidebar item;
-#   3. the wording beside an icon;
-#   4. the icon color;
-#   5. the destination link;
-#   6. whether an item is visible.
-#
-# IMPORTANT:
-# The SIZE of the icons and text is controlled in:
-#   _sass/custom/_compact-sidebar-footer.scss
-# Look for the large section named "EDITABLE SIZE CONTROLS" at the top.
+# Edit this file to change your sidebar photo, name, role, icons, text, colors,
+# and links. The HTML file accepts BOTH "items" and the older "sidebar_items"
+# name, but use "items" here for consistency.
 # =============================================================================
 
 profile:
-  # Put the image inside the repository's /images/ folder.
-  avatar: "/images/profile.jpg"
+  # Put the image in your repository's /images/ folder.
+  avatar: "/images/profile.png"
   name: "Shahriare Mahmud Sakib"
   role: "Lecturer, Department of Civil Engineering"
+  short_bio: "Civil Engineering graduate from BUET and Lecturer at United International University."
   follow_button: "Contact & Profiles"
 
-# Keep the list reasonably short because the desktop sidebar is fixed and does
-# not have its own scrollbar.
-sidebar_items:
-  - label: "Location"                    # Used for accessibility
-    text: "Dhaka, Bangladesh"            # Visible wording beside the icon
-    icon: "fas fa-location-dot"           # Change the Font Awesome icon here
-    color: "#ef476f"                      # Change the icon color here
-    url: ""                               # Leave blank when no link is needed
+# To hide an item, change sidebar: true to sidebar: false.
+# Use new_tab: true for external websites and false for internal pages/email.
+items:
+  - label: "Location"
+    text: "Dhaka, Bangladesh"
+    icon: "fas fa-location-dot"
+    color: "#E83E8C"
+    url: ""
     new_tab: false
-    sidebar: true                         # Change to false to hide this item
+    sidebar: true
     desktop_only: true
 
   - label: "Affiliation"
     text: "United International University"
     icon: "fas fa-building-columns"
-    color: "#7c4dff"
+    color: "#7C4DFF"
     url: "https://www.uiu.ac.bd/"
     new_tab: true
     sidebar: true
@@ -46,7 +38,7 @@ sidebar_items:
   - label: "Email"
     text: "Email"
     icon: "fas fa-envelope"
-    color: "#ea4335"
+    color: "#EA4335"
     url: "mailto:shahriaremahmudsakib@gmail.com"
     new_tab: false
     sidebar: true
@@ -54,7 +46,7 @@ sidebar_items:
   - label: "Faculty Profile"
     text: "UIU Faculty Profile"
     icon: "fas fa-user-tie"
-    color: "#00a86b"
+    color: "#00A86B"
     url: "https://ce.uiu.ac.bd/faculty/shahriare-mahmud-sakib/"
     new_tab: true
     sidebar: true
@@ -62,7 +54,7 @@ sidebar_items:
   - label: "Google Scholar"
     text: "Google Scholar"
     icon: "ai ai-google-scholar"
-    color: "#4285f4"
+    color: "#4285F4"
     url: "https://scholar.google.com/citations?user=rDd7cyAAAAAJ&hl=en"
     new_tab: true
     sidebar: true
@@ -70,7 +62,7 @@ sidebar_items:
   - label: "ResearchGate"
     text: "ResearchGate"
     icon: "fab fa-researchgate"
-    color: "#00ccbb"
+    color: "#00CCBB"
     url: "https://www.researchgate.net/profile/Shahriare-Mahmud-Sakib?ev=hdr_xprf"
     new_tab: true
     sidebar: true
@@ -78,7 +70,7 @@ sidebar_items:
   - label: "GitHub"
     text: "GitHub"
     icon: "fab fa-github"
-    color: "#6e7681"
+    color: "#6E7681"
     url: "https://github.com/shahriare-mahmud-sakib"
     new_tab: true
     sidebar: true
@@ -86,7 +78,7 @@ sidebar_items:
   - label: "LinkedIn"
     text: "LinkedIn"
     icon: "fab fa-linkedin-in"
-    color: "#0a66c2"
+    color: "#0A66C2"
     url: "https://www.linkedin.com/in/shahriare-mahmud-sakib/"
     new_tab: true
     sidebar: true
@@ -94,7 +86,7 @@ sidebar_items:
   - label: "Curriculum Vitae"
     text: "CV"
     icon: "fas fa-file-lines"
-    color: "#f59e0b"
+    color: "#F59E0B"
     url: "/cv/"
     new_tab: false
     sidebar: true

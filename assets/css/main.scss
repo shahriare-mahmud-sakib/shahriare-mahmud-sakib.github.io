@@ -3,7 +3,8 @@
 
 /*
  * Main stylesheet for Academic Pages.
- * The final import adds the compact fixed sidebar and the bottom-only footer.
+ * The custom footer/sidebar import MUST remain last so it overrides the
+ * theme's original fixed-footer rules.
  */
 
 @import

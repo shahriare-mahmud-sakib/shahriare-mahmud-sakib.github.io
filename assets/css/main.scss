@@ -3,8 +3,7 @@
 
 /*
  * Main stylesheet for Academic Pages.
- * The custom/profile-footer import at the end adds the colorful sidebar
- * contact icons and changes the footer from fixed to normal page flow.
+ * The final import adds the compact fixed sidebar and the bottom-only footer.
  */
 
 @import
@@ -36,5 +35,5 @@
     "layout/sidebar",
     "layout/json_cv",
 
-    "custom/profile-footer"
+    "custom/compact-sidebar-footer"
 ;

@@ -18,5 +18,6 @@ I am currently interested in integrating computational mechanics with experiment
 I am committed to pursuing advanced research that contributes to the development of safer, smarter, and more resilient infrastructure systems through innovative computational modeling, experimental research, and structural engineering applications.
 
 
-![Highlighted points of my profile](/images/shortview.png)
+![Highlighted points of my profile](/images/shortview.png) ![Highlighted points of my profile](/images/shortview.png)
+![Highlighted points of my profile](/images/shortview.png) ![Highlighted points of my profile](/images/shortview.png)
 

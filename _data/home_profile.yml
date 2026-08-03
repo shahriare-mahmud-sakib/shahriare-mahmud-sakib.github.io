@@ -1,0 +1,53 @@
+# ================================================================
+# EDIT THIS FILE TO CHANGE THE FOUR CARDS AND CONTACT BUTTONS.
+# You usually do not need to edit the HTML or CSS files.
+# ================================================================
+
+highlights:
+  eyebrow: "Profile at a Glance"
+  title: "Academic & Professional Highlights"
+  description: "A quick overview of my education, academic performance, professional role, and current research focus."
+
+  # Add, remove, or rearrange cards below.
+  # Internal link example: /research/
+  # External link example: https://www.buet.ac.bd/
+  # Set new_tab: true only when you want the link to open in a new tab.
+  cards:
+    - icon: "🎓"
+      title: "BUET Graduate"
+      subtitle: "BSc in Civil Engineering"
+      url: "/Academic/"
+      new_tab: false
+
+    - icon: "🏆"
+      title: "Top 10%"
+      subtitle: "CGPA 3.89 / 4.00"
+      url: "/Academic/"
+      new_tab: false
+
+    - icon: "🧑‍🏫"
+      title: "Lecturer @ UIU"
+      subtitle: "Department of Civil Engineering"
+      url: "https://ce.uiu.ac.bd/faculty/shahriare-mahmud-sakib/"
+      new_tab: true
+
+    - icon: "🏗️"
+      title: "Structural Engineering"
+      subtitle: "Research, modelling & resilience"
+      url: "/research/"
+      new_tab: false
+
+collaboration:
+  show: true
+  title: "Let's Work Together"
+  text: "Interested in research collaboration, graduate opportunities, structural engineering, computational mechanics, or resilient infrastructure? I would be glad to hear from you."
+
+  primary_button:
+    label: "Connect on LinkedIn"
+    url: "https://www.linkedin.com/in/shahriare-mahmud-sakib/"
+    new_tab: true
+
+  secondary_button:
+    label: "Send Email"
+    url: "mailto:shahriaremahmudsakib@gmail.com"
+    new_tab: false

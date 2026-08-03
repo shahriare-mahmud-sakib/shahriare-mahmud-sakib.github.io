@@ -1,56 +1,75 @@
-{% include base_path %}
-{% assign profile_data = site.data.profile_contact %}
-{% assign profile = profile_data.profile %}
-{% assign footer_data = profile_data.footer %}
+{% assign footer_data = site.data.site_footer %}
 
-<div class="sms-footer-profile">
-  <div class="sms-footer-profile__intro">
-    <p class="sms-footer-profile__eyebrow">Connect</p>
-    <h2 class="sms-footer-profile__name">{{ footer_data.heading | default: profile.name }}</h2>
-    {% if footer_data.role %}
-      <p class="sms-footer-profile__role">{{ footer_data.role }}</p>
-    {% endif %}
-    {% if footer_data.message %}
-      <p class="sms-footer-profile__message">{{ footer_data.message }}</p>
-    {% elsif profile.short_bio %}
-      <p class="sms-footer-profile__message">{{ profile.short_bio }}</p>
-    {% endif %}
-  </div>
-
-  <nav class="sms-footer-profile__links" aria-label="Footer contact and profile links">
-    <ul>
-      {% for item in profile_data.items %}
-        {% if item.footer %}
-          <li style="--sms-icon-color: {{ item.color | default: '#2563eb' }};">
-            {% if item.url and item.url != "" %}
-              <a
-                href="{% if item.url contains '://' or item.url contains 'mailto:' or item.url contains 'tel:' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
-                {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
-                aria-label="{{ item.label | escape }}"
-              >
-                <span class="sms-footer-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
-                <span>{{ item.footer_text | default: item.text | default: item.label }}</span>
-              </a>
-            {% else %}
-              <span class="sms-footer-profile__plain">
-                <span class="sms-footer-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
-                <span>{{ item.footer_text | default: item.text | default: item.label }}</span>
-              </span>
-            {% endif %}
-          </li>
-        {% endif %}
+<div class="sms-site-footer" aria-label="Website footer">
+  <!-- COLUMN 1: NAVIGATION. Edit its content in _data/site_footer.yml -->
+  <nav class="sms-site-footer__column" aria-label="Footer navigation">
+    <h2 class="sms-site-footer__heading">
+      {{ footer_data.navigation.heading | default: "NAVIGATION" }}
+    </h2>
+    <ul class="sms-site-footer__text-links">
+      {% for item in footer_data.navigation.links %}
+        <li>
+          {% if item.url and item.url != "" %}
+            <a
+              href="{% if item.url contains '://' or item.url contains 'mailto:' or item.url contains 'tel:' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
+              {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >{{ item.label }}</a>
+          {% else %}
+            <span>{{ item.label }}</span>
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </nav>
+
+  <!-- COLUMN 2: PROFILES. Edit its content in _data/site_footer.yml -->
+  <nav class="sms-site-footer__column" aria-label="Academic and professional profiles">
+    <h2 class="sms-site-footer__heading">
+      {{ footer_data.profiles.heading | default: "PROFILES" }}
+    </h2>
+    <ul class="sms-site-footer__text-links">
+      {% for item in footer_data.profiles.links %}
+        <li>
+          {% if item.url and item.url != "" %}
+            <a
+              href="{% if item.url contains '://' or item.url contains 'mailto:' or item.url contains 'tel:' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
+              {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >{{ item.label }}</a>
+          {% else %}
+            <span>{{ item.label }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <!-- COLUMN 3: CONTACT. No logos are used. Edit in _data/site_footer.yml -->
+  <section class="sms-site-footer__column" aria-label="Contact information">
+    <h2 class="sms-site-footer__heading">
+      {{ footer_data.contact.heading | default: "CONTACT" }}
+    </h2>
+    <ul class="sms-site-footer__text-links sms-site-footer__contact-links">
+      {% for item in footer_data.contact.links %}
+        <li>
+          {% if item.url and item.url != "" %}
+            <a
+              href="{% if item.url contains '://' or item.url contains 'mailto:' or item.url contains 'tel:' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
+              {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >{{ item.label }}</a>
+          {% else %}
+            <span>{{ item.label }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 </div>
 
-<div class="page__footer-copyright sms-footer-meta">
-  <span>&copy; {{ site.time | date: '%Y' }} {{ profile.name | default: site.name | default: site.title }}.</span>
-  {% if footer_data.show_credits %}
-    <span>Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</span>
-  {% endif %}
-  {% if footer_data.show_last_updated %}
-    <span>Last updated {{ "now" | date: '%Y-%m-%d' }}.</span>
-  {% endif %}
-  <span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a></span>
-</div>
+{% if footer_data.copyright.show != false %}
+  <div class="sms-site-footer__bottom">
+    <span>&copy; {{ site.time | date: '%Y' }} {{ footer_data.copyright.text | default: site.name | default: site.title }}</span>
+    {% if footer_data.copyright.show_sitemap %}
+      <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
+    {% endif %}
+  </div>
+{% endif %}

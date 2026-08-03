@@ -1,117 +1,89 @@
-# ================================================================
-# EDIT THIS FILE to change the sidebar and footer information.
+# ============================================================================
+# SIDEBAR PROFILE AND CONTACT LINKS
+# Edit this file to change the photo, name, role, icons, text, and links.
 # You normally do not need to edit the HTML or SCSS files.
-# ================================================================
+# ============================================================================
 
 profile:
-  avatar: "/images/profile.png"
+  # Put the image inside your repository's /images/ folder.
+  avatar: "/images/profile.jpg"
   name: "Shahriare Mahmud Sakib"
-  role: "Prospective PhD student in Structural Engineering"
-  short_bio: "Civil Engineering graduate from BUET and Lecturer at United International University."
+  role: "Lecturer, Department of Civil Engineering"
   follow_button: "Contact & Profiles"
 
-# Each item can be shown in the sidebar, the footer, or both.
-# For an item without a hyperlink, keep url: ""
-# For an internal page, use a path such as /cv/ or /publications/
-# For an external page, use the complete https:// address.
-# You may use any hexadecimal color, for example #0A66C2.
-items:
+# Keep the number of desktop sidebar items reasonably small so everything fits
+# without a sidebar scrollbar. Set sidebar: false to hide an item.
+sidebar_items:
   - label: "Location"
     text: "Dhaka, Bangladesh"
     icon: "fas fa-location-dot"
-    color: "#E83E8C"
+    color: "#ef476f"
     url: ""
     new_tab: false
     sidebar: true
-    footer: true
     desktop_only: true
 
   - label: "Affiliation"
     text: "United International University"
     icon: "fas fa-building-columns"
-    color: "#7C4DFF"
+    color: "#7c4dff"
     url: "https://www.uiu.ac.bd/"
     new_tab: true
     sidebar: true
-    footer: true
     desktop_only: true
 
   - label: "Email"
     text: "Email"
-    footer_text: "shahriaremahmudsakib@gmail.com"
     icon: "fas fa-envelope"
-    color: "#EA4335"
+    color: "#ea4335"
     url: "mailto:shahriaremahmudsakib@gmail.com"
     new_tab: false
     sidebar: true
-    footer: true
 
   - label: "Faculty profile"
     text: "UIU Faculty Profile"
-    icon: "fas fa-globe"
-    color: "#00A86B"
+    icon: "fas fa-user-tie"
+    color: "#00a86b"
     url: "https://ce.uiu.ac.bd/faculty/shahriare-mahmud-sakib/"
     new_tab: true
     sidebar: true
-    footer: false
 
   - label: "Google Scholar"
     text: "Google Scholar"
     icon: "ai ai-google-scholar"
-    color: "#4285F4"
+    color: "#4285f4"
     url: "https://scholar.google.com/citations?user=rDd7cyAAAAAJ&hl=en"
     new_tab: true
     sidebar: true
-    footer: true
 
   - label: "ResearchGate"
     text: "ResearchGate"
     icon: "fab fa-researchgate"
-    color: "#00CCBB"
+    color: "#00ccbb"
     url: "https://www.researchgate.net/profile/Shahriare-Mahmud-Sakib?ev=hdr_xprf"
     new_tab: true
     sidebar: true
-    footer: true
 
   - label: "GitHub"
     text: "GitHub"
     icon: "fab fa-github"
-    color: "#6E7681"
+    color: "#6e7681"
     url: "https://github.com/shahriare-mahmud-sakib"
     new_tab: true
     sidebar: true
-    footer: true
 
   - label: "LinkedIn"
     text: "LinkedIn"
     icon: "fab fa-linkedin-in"
-    color: "#0A66C2"
+    color: "#0a66c2"
     url: "https://www.linkedin.com/in/shahriare-mahmud-sakib/"
     new_tab: true
     sidebar: true
-    footer: true
-
-  - label: "YouTube"
-    text: "YouTube"
-    icon: "fab fa-youtube"
-    color: "#FF0000"
-    url: "https://www.youtube.com/@smsclassroom7035"
-    new_tab: true
-    sidebar: true
-    footer: false
 
   - label: "Curriculum Vitae"
     text: "CV"
     icon: "fas fa-file-lines"
-    color: "#F59E0B"
+    color: "#f59e0b"
     url: "/cv/"
     new_tab: false
     sidebar: true
-    footer: true
-
-footer:
-  heading: "Shahriare Mahmud Sakib"
-  role: "Lecturer in Civil Engineering | Prospective PhD Student"
-  message: "Interested in structural engineering, computational mechanics, structural health monitoring, and resilient infrastructure."
-  show_last_updated: true
-  show_credits: true

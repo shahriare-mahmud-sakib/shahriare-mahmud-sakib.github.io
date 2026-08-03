@@ -1,0 +1,99 @@
+{% assign profile_data = site.data.home_profile %}
+<link rel="stylesheet" href="{{ '/assets/css/home-profile-section.css' | relative_url }}">
+
+{% if profile_data.highlights %}
+<section class="sms-profile-panel" aria-labelledby="sms-profile-panel-title">
+  <div class="sms-profile-panel__grid-pattern" aria-hidden="true"></div>
+
+  <header class="sms-profile-panel__header">
+    {% if profile_data.highlights.eyebrow %}
+      <p class="sms-profile-panel__eyebrow">{{ profile_data.highlights.eyebrow }}</p>
+    {% endif %}
+
+    {% if profile_data.highlights.title %}
+      <h2 id="sms-profile-panel-title" class="sms-profile-panel__title">
+        {{ profile_data.highlights.title }}
+      </h2>
+    {% endif %}
+
+    {% if profile_data.highlights.description %}
+      <p class="sms-profile-panel__description">
+        {{ profile_data.highlights.description }}
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="sms-profile-cards">
+    {% for card in profile_data.highlights.cards %}
+      {% assign card_url = card.url | default: '#' %}
+      <a
+        class="sms-profile-card"
+        href="{% if card_url contains '://' or card_url contains 'mailto:' %}{{ card_url }}{% else %}{{ card_url | relative_url }}{% endif %}"
+        {% if card.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+        aria-label="{{ card.title | escape }} — {{ card.subtitle | escape }}"
+      >
+        <span class="sms-profile-card__icon" aria-hidden="true">{{ card.icon }}</span>
+
+        <span class="sms-profile-card__copy">
+          <strong class="sms-profile-card__title">{{ card.title }}</strong>
+          <span class="sms-profile-card__subtitle">{{ card.subtitle }}</span>
+        </span>
+
+        <span class="sms-profile-card__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if profile_data.collaboration.show %}
+<section class="sms-collaboration" aria-labelledby="sms-collaboration-title">
+  <span class="sms-collaboration__circle sms-collaboration__circle--left" aria-hidden="true"></span>
+  <span class="sms-collaboration__circle sms-collaboration__circle--middle" aria-hidden="true"></span>
+  <span class="sms-collaboration__circle sms-collaboration__circle--right" aria-hidden="true"></span>
+
+  <div class="sms-collaboration__content">
+    <h2 id="sms-collaboration-title" class="sms-collaboration__title">
+      {{ profile_data.collaboration.title }}
+    </h2>
+
+    <p class="sms-collaboration__text">
+      {{ profile_data.collaboration.text }}
+    </p>
+
+    <div class="sms-collaboration__actions">
+      {% assign primary = profile_data.collaboration.primary_button %}
+      {% if primary and primary.url %}
+        <a
+          class="sms-action-button sms-action-button--primary"
+          href="{% if primary.url contains '://' or primary.url contains 'mailto:' %}{{ primary.url }}{% else %}{{ primary.url | relative_url }}{% endif %}"
+          {% if primary.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M6.5 8.3H3.2V19h3.3V8.3Zm.2-3.3A1.9 1.9 0 1 0 3 5a1.9 1.9 0 0 0 3.7 0ZM12 8.3H8.8V19H12v-5.3c0-1.4.3-2.8 2.1-2.8 1.8 0 1.8 1.7 1.8 2.9V19h3.3v-5.8c0-2.9-.6-5.1-4-5.1-1.6 0-2.7.9-3.2 1.7h-.1V8.3Z"/>
+          </svg>
+          <span>{{ primary.label }}</span>
+        </a>
+      {% endif %}
+
+      {% assign secondary = profile_data.collaboration.secondary_button %}
+      {% if secondary and secondary.url %}
+        <a
+          class="sms-action-button sms-action-button--secondary"
+          href="{% if secondary.url contains '://' or secondary.url contains 'mailto:' %}{{ secondary.url }}{% else %}{{ secondary.url | relative_url }}{% endif %}"
+          {% if secondary.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6.5h16v11H4zM4.6 7.2 12 13l7.4-5.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>{{ secondary.label }}</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}

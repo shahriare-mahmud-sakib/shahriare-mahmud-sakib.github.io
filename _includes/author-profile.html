@@ -24,7 +24,7 @@
     </button>
 
     <ul class="author__urls social-icons sms-author-links">
-      {% for item in profile_data.items %}
+      {% for item in profile_data.sidebar_items %}
         {% if item.sidebar != false %}
           <li class="sms-author-link{% if item.desktop_only %} author__desktop{% endif %}" style="--sms-icon-color: {{ item.color | default: '#2563eb' }};">
             {% if item.url and item.url != "" %}

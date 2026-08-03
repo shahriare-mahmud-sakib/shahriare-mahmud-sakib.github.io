@@ -2,10 +2,9 @@
 ---
 
 /*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * Main stylesheet for Academic Pages.
+ * The custom/profile-footer import at the end adds the colorful sidebar
+ * contact icons and changes the footer from fixed to normal page flow.
  */
 
 @import
@@ -35,5 +34,7 @@
     "layout/page",
     "layout/archive",
     "layout/sidebar",
-    "layout/json_cv"
+    "layout/json_cv",
+
+    "custom/profile-footer"
 ;

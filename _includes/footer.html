@@ -2,7 +2,10 @@
 
 <div class="sms-site-footer" aria-label="Website footer">
   <nav class="sms-site-footer__column" aria-label="Footer navigation">
-    <h2 class="sms-site-footer__heading">{{ footer_data.navigation.heading | default: "NAVIGATION" }}</h2>
+    <h2 class="sms-site-footer__heading">
+      {{ footer_data.navigation.heading | default: "NAVIGATION" }}
+    </h2>
+
     <ul class="sms-site-footer__text-links">
       {% for item in footer_data.navigation.links %}
         <li>
@@ -16,7 +19,10 @@
   </nav>
 
   <nav class="sms-site-footer__column" aria-label="Academic and professional profiles">
-    <h2 class="sms-site-footer__heading">{{ footer_data.profiles.heading | default: "PROFILES" }}</h2>
+    <h2 class="sms-site-footer__heading">
+      {{ footer_data.profiles.heading | default: "PROFILES" }}
+    </h2>
+
     <ul class="sms-site-footer__text-links sms-site-footer__profile-links">
       {% for item in footer_data.profiles.links %}
         <li>
@@ -25,7 +31,7 @@
             {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
           >
             <span>{{ item.label }}</span>
-            {% if item.new_tab %}<i class="fas fa-up-right-from-square" aria-hidden="true"></i>{% endif %}
+            {% if item.new_tab %}<span class="sms-site-footer__external" aria-hidden="true">↗</span>{% endif %}
           </a>
         </li>
       {% endfor %}
@@ -33,7 +39,10 @@
   </nav>
 
   <nav class="sms-site-footer__column" aria-label="Contact links">
-    <h2 class="sms-site-footer__heading">{{ footer_data.connect.heading | default: "CONNECT" }}</h2>
+    <h2 class="sms-site-footer__heading">
+      {{ footer_data.connect.heading | default: "CONNECT" }}
+    </h2>
+
     <ul class="sms-site-footer__icon-links">
       {% for item in footer_data.connect.links %}
         <li>
@@ -42,7 +51,9 @@
             {% if item.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
             aria-label="{{ item.label | escape }}"
             title="{{ item.label | escape }}"
-          ><i class="{{ item.icon }}" aria-hidden="true"></i></a>
+          >
+            <i class="{{ item.icon }}" aria-hidden="true"></i>
+          </a>
         </li>
       {% endfor %}
     </ul>
@@ -52,6 +63,7 @@
 {% if footer_data.copyright.show != false %}
   <div class="sms-site-footer__bottom">
     <span>&copy; {{ site.time | date: '%Y' }} {{ footer_data.copyright.text | default: site.name | default: site.title }}</span>
+
     {% if footer_data.copyright.show_sitemap %}
       <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
     {% endif %}

@@ -1,0 +1,339 @@
+/* =============================================================================
+   EDITABLE SIDEBAR + THREE-COLUMN FOOTER
+   This file is imported LAST by assets/css/main.scss so it overrides the
+   default Academic Pages sidebar and footer rules.
+   ============================================================================= */
+
+/* =============================================================================
+   EDITABLE SIZE CONTROLS — CHANGE THESE VALUES ONLY
+   =============================================================================
+   SIDEBAR ICON SIZE:
+     --sms-sidebar-icon-size: 12px;
+     Try 10px for smaller icons or 15px for larger icons.
+
+   SIDEBAR TEXT SIZE (the heading/wording beside each logo):
+     --sms-sidebar-text-size: 12px;
+     Try 11px for smaller text or 14px for larger text.
+
+   SIDEBAR LINE SPACING:
+     --sms-sidebar-row-height: 24px;
+     Reduce to 21px for closer lines; increase to 28px for more space.
+
+   SIDEBAR GAP BETWEEN ICON AND TEXT:
+     --sms-sidebar-icon-text-gap: 7px;
+
+   FOOTER HEADING SIZE:
+     --sms-footer-heading-size: 15px;
+
+   FOOTER LINK/INFORMATION SIZE:
+     --sms-footer-text-size: 14px;
+   ============================================================================= */
+:root {
+  --sms-sidebar-icon-size: 12px;          /* EDIT: sidebar logo size */
+  --sms-sidebar-icon-box-size: 18px;      /* EDIT: space reserved for each logo */
+  --sms-sidebar-text-size: 12px;          /* EDIT: text beside sidebar logos */
+  --sms-sidebar-row-height: 24px;         /* EDIT: vertical spacing of logo lines */
+  --sms-sidebar-icon-text-gap: 7px;       /* EDIT: gap between logo and text */
+
+  --sms-sidebar-name-size: 15px;          /* EDIT: your name in sidebar */
+  --sms-sidebar-role-size: 12px;          /* EDIT: role/bio under your name */
+  --sms-sidebar-photo-size: 132px;        /* EDIT: profile photo width */
+
+  --sms-footer-heading-size: 15px;        /* EDIT: NAVIGATION/PROFILES/CONTACT */
+  --sms-footer-text-size: 14px;           /* EDIT: footer links and information */
+  --sms-footer-line-gap: 9px;             /* EDIT: vertical gap between footer lines */
+  --sms-footer-column-gap: 72px;          /* EDIT: horizontal gap between columns */
+}
+
+/* =============================================================================
+   PAGE AND FOOTER POSITIONING
+   The original Academic Pages theme pins the footer to the window. These rules
+   return it to normal document flow. It appears only after page content ends.
+   ============================================================================= */
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
+  padding-bottom: 0 !important;
+}
+
+/* Main content grows on short pages and pushes the footer to the viewport bottom. */
+body > #main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+/* The footer is the final page element. It never floats over the content. */
+body > .page__footer {
+  flex: 0 0 auto;
+}
+
+/* =============================================================================
+   FIXED, NON-SCROLLING DESKTOP SIDEBAR
+   ============================================================================= */
+.sms-author-card {
+  width: 100%;
+}
+
+.sms-author-card__role {
+  color: var(--global-text-color-light);
+}
+
+.sms-author-links {
+  width: 100%;
+}
+
+.sms-author-link {
+  margin: 0 !important;
+  white-space: normal !important;
+}
+
+.sms-author-link > a,
+.sms-author-link__plain {
+  display: flex !important;
+  align-items: center;
+  gap: var(--sms-sidebar-icon-text-gap);
+  width: 100%;
+  min-height: var(--sms-sidebar-row-height);
+  margin: 0 !important;
+  padding: 1px 2px !important;
+  border-radius: 5px;
+  color: var(--global-text-color) !important;
+  font-size: var(--sms-sidebar-text-size) !important; /* TEXT BESIDE LOGOS */
+  line-height: 1.15;
+  text-decoration: none !important;
+  transition: background-color 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.sms-author-link > a:hover,
+.sms-author-link > a:focus-visible {
+  background: var(--global-code-background-color);
+  color: var(--global-link-color) !important;
+  text-decoration: none !important;
+  transform: translateX(2px);
+  outline: none;
+}
+
+.sms-contact-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 var(--sms-sidebar-icon-box-size);
+  width: var(--sms-sidebar-icon-box-size);
+  height: var(--sms-sidebar-icon-box-size);
+  border-radius: 50%;
+  color: var(--sms-icon-color);
+}
+
+.sms-contact-icon i {
+  margin: 0;
+  color: inherit !important;
+  font-size: var(--sms-sidebar-icon-size) !important; /* SIDEBAR LOGO SIZE */
+  line-height: 1;
+}
+
+.sms-contact-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media screen and (min-width: $sidebar-screen-min-width) {
+  .sidebar,
+  .sidebar.sticky {
+    position: fixed !important;
+    top: $masthead-height !important;
+    bottom: auto !important;
+    height: calc(100vh - #{$masthead-height}) !important;
+    max-height: calc(100vh - #{$masthead-height}) !important;
+    padding-top: 10px !important;
+    padding-bottom: 8px !important;
+    overflow: hidden !important; /* NO independent sidebar scrollbar */
+    z-index: 20;
+  }
+
+  .sms-author-card__avatar img {
+    max-width: var(--sms-sidebar-photo-size); /* PROFILE PHOTO SIZE */
+    padding: 3px;
+  }
+
+  .sms-author-card__content .author__name {
+    margin-top: 6px;
+    margin-bottom: 3px;
+    font-size: var(--sms-sidebar-name-size); /* SIDEBAR NAME SIZE */
+    line-height: 1.15;
+  }
+
+  .sms-author-card__role {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: var(--sms-sidebar-role-size) !important; /* SIDEBAR ROLE SIZE */
+    line-height: 1.25;
+  }
+
+  .sms-author-card__links-wrapper,
+  .sms-author-links {
+    margin-top: 0 !important;
+  }
+}
+
+/* Phones/tablets use the normal collapsible profile and slightly larger taps. */
+@media screen and (max-width: $sidebar-screen-min-width - 1px) {
+  .sms-author-link > a,
+  .sms-author-link__plain {
+    min-height: 32px;
+    padding: 4px 6px !important;
+    font-size: 14px !important;
+  }
+
+  .sms-contact-icon {
+    flex-basis: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .sms-contact-icon i {
+    font-size: 13px !important;
+  }
+}
+
+/* =============================================================================
+   THREE-COLUMN TEXT FOOTER — NO LOGO BUTTONS
+   ============================================================================= */
+.page__footer {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  float: none !important;
+  clear: both;
+  width: 100%;
+  height: auto !important;
+  margin: 48px 0 0 !important;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  background:
+    radial-gradient(circle at 28% 20%, rgba(14, 165, 233, 0.07), transparent 34%),
+    linear-gradient(120deg, #071119 0%, #0a151e 58%, #071018 100%) !important;
+  color: #9fb0c5 !important;
+  z-index: 30;
+}
+
+.page__footer footer {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 36px 24px 18px !important;
+}
+
+.sms-site-footer {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr) minmax(220px, 1.15fr);
+  gap: 32px var(--sms-footer-column-gap);
+  align-items: start;
+}
+
+.sms-site-footer__heading {
+  margin: 0 0 16px !important;
+  color: #eef4fb !important;
+  font-family: inherit;
+  font-size: var(--sms-footer-heading-size) !important; /* FOOTER HEADING SIZE */
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sms-site-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sms-site-footer li {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  text-transform: none;
+}
+
+.sms-site-footer__text-links {
+  display: grid;
+  gap: var(--sms-footer-line-gap);
+}
+
+.sms-site-footer__text-links a,
+.sms-site-footer__text-links span {
+  display: inline-block;
+  padding: 0;
+  color: #9fb0c5 !important;
+  font-size: var(--sms-footer-text-size); /* FOOTER TEXT SIZE */
+  font-weight: 500;
+  line-height: 1.35;
+  text-decoration: none !important;
+  overflow-wrap: anywhere;
+}
+
+.sms-site-footer__text-links a {
+  transition: color 140ms ease, transform 140ms ease;
+}
+
+.sms-site-footer__text-links a:hover,
+.sms-site-footer__text-links a:focus-visible {
+  color: #eef4fb !important;
+  text-decoration: none !important;
+  transform: translateX(2px);
+  outline: none;
+}
+
+.sms-site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 7px 16px;
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(148, 163, 184, 0.13);
+  color: #718196;
+  font-size: 11px;
+}
+
+.sms-site-footer__bottom a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.sms-site-footer__bottom a:hover {
+  color: #cbd5e1 !important;
+}
+
+@media screen and (max-width: 900px) {
+  .sms-site-footer {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .page__footer {
+    margin-top: 36px !important;
+  }
+
+  .page__footer footer {
+    padding: 28px 16px 16px !important;
+  }
+
+  .sms-site-footer {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media print {
+  .page__footer {
+    display: none !important;
+  }
+}

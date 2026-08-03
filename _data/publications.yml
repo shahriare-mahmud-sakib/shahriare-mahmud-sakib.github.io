@@ -61,8 +61,8 @@
     - "CFST Column"
     - "Finite Element Analysis"
   links: 
-    paper: ""
-    poster: "https://conf.ce.buet.ac.bd/"
+    paper: "https://conf.ce.buet.ac.bd/"
+    poster: ""
     slides: ""
 
 - title: "Numerical Simulation of Cyclic Behavior of Cold-Formed Stainless-steel RHS Columns Subject to Cyclic Bending"
@@ -82,7 +82,7 @@
     - "Hysteretic responses"
   links: 
     paper: "https://icceiruet.org/wp-content/uploads/2025/12/239_Camera-Ready-Final-Paper_ICCEI-2025.pdf"
-    poster: "https://icceiruet.org/iccei-2025-2/"
+    poster: ""
     slides: ""
 
 - title: "Base isolation: The Revolutionary Measure in Earthquake Protection of Buildings"

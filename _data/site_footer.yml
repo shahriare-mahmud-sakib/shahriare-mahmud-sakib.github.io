@@ -1,7 +1,7 @@
 # ============================================================================
-# FOOTER CONTENT
-# Edit this file to change the three footer columns.
-# Internal page links begin with /. External links begin with https://
+# BOTTOM FOOTER CONTENT
+# The footer appears only when the visitor reaches the end of the page.
+# Edit the headings, labels, icons, and links below.
 # ============================================================================
 
 navigation:
@@ -10,29 +10,23 @@ navigation:
     - label: "Home"
       url: "/"
       new_tab: false
-
     - label: "Research"
       url: "/research/"
       new_tab: false
-
     - label: "Projects"
       url: "/projects/"
       new_tab: false
-
+    - label: "Awards"
+      url: "/awards/"
+      new_tab: false
     - label: "Publications"
       url: "/publications/"
       new_tab: false
-
-    - label: "Academic"
-      url: "/Academic/"
+    - label: "Volunteering"
+      url: "/volunteering/"
       new_tab: false
-
-    - label: "CV"
-      url: "/cv/"
-      new_tab: false
-
-    - label: "Contact"
-      url: "/contact/"
+    - label: "About"
+      url: "/"
       new_tab: false
 
 profiles:
@@ -41,11 +35,9 @@ profiles:
     - label: "LinkedIn"
       url: "https://www.linkedin.com/in/shahriare-mahmud-sakib/"
       new_tab: true
-
     - label: "ResearchGate"
       url: "https://www.researchgate.net/profile/Shahriare-Mahmud-Sakib?ev=hdr_xprf"
       new_tab: true
-
     - label: "Google Scholar"
       url: "https://scholar.google.com/citations?user=rDd7cyAAAAAJ&hl=en"
       new_tab: true
@@ -57,12 +49,10 @@ connect:
       icon: "fab fa-linkedin-in"
       url: "https://www.linkedin.com/in/shahriare-mahmud-sakib/"
       new_tab: true
-
     - label: "ResearchGate"
       icon: "fab fa-researchgate"
       url: "https://www.researchgate.net/profile/Shahriare-Mahmud-Sakib?ev=hdr_xprf"
       new_tab: true
-
     - label: "Email"
       icon: "fas fa-envelope"
       url: "mailto:shahriaremahmudsakib@gmail.com"

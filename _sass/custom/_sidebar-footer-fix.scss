@@ -1,0 +1,318 @@
+/* =============================================================================
+   SIDEBAR REPAIR + EDITABLE SIZES + THREE-COLUMN FOOTER
+   This partial must be imported LAST in assets/css/main.scss.
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   EDITABLE SIDEBAR SIZE CONTROLS
+   Change only these values when you want smaller or larger sidebar content.
+   ----------------------------------------------------------------------------- */
+:root {
+  --sms-sidebar-photo-size: 132px;  /* Profile-picture width */
+  --sms-sidebar-name-size: 0.96rem; /* Your name */
+  --sms-sidebar-role-size: 0.74rem; /* Role below your name */
+  --sms-sidebar-icon-size: 0.72rem; /* LOGO size */
+  --sms-sidebar-icon-box: 1.12rem;  /* Invisible box around each logo */
+  --sms-sidebar-text-size: 0.74rem; /* HEADING/TEXT beside each logo */
+  --sms-sidebar-row-height: 1.55rem;/* Vertical spacing of each contact line */
+  --sms-sidebar-row-gap: 0rem;      /* Gap between contact lines */
+  --sms-sidebar-icon-text-gap: 0.42rem;
+
+  --sms-footer-heading-size: 0.90rem;
+  --sms-footer-text-size: 0.88rem;
+}
+
+/* Make the document end naturally at the footer. */
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding-bottom: 0 !important;
+}
+
+/* -----------------------------------------------------------------------------
+   SIDEBAR VISIBILITY AND LAYOUT
+   ----------------------------------------------------------------------------- */
+.sidebar,
+.sidebar.sticky,
+.sms-author-card {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.sms-author-card {
+  display: block !important;
+  width: 100%;
+}
+
+.sms-author-card__avatar img {
+  width: 100%;
+  max-width: var(--sms-sidebar-photo-size) !important; /* EDIT photo size above */
+}
+
+.sms-author-card__content .author__name {
+  font-size: var(--sms-sidebar-name-size) !important; /* EDIT name size above */
+  line-height: 1.15;
+}
+
+.sms-author-card__role {
+  color: var(--global-text-color-light);
+  font-size: var(--sms-sidebar-role-size) !important; /* EDIT role size above */
+  line-height: 1.25;
+}
+
+.sms-author-links {
+  display: grid !important;
+  gap: var(--sms-sidebar-row-gap) !important;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.sms-author-link {
+  display: block !important;
+  margin: 0 !important;
+  white-space: normal !important;
+}
+
+.sms-author-link > a,
+.sms-author-link__plain {
+  display: flex !important;
+  align-items: center;
+  gap: var(--sms-sidebar-icon-text-gap);
+  width: 100%;
+  min-height: var(--sms-sidebar-row-height); /* EDIT line spacing above */
+  margin: 0 !important;
+  padding: 0.08rem 0.12rem !important;
+  border-radius: 0.35rem;
+  color: var(--global-text-color) !important;
+  font-size: var(--sms-sidebar-text-size) !important; /* EDIT text size above */
+  line-height: 1.16;
+  text-decoration: none !important;
+}
+
+.sms-author-link > a:hover,
+.sms-author-link > a:focus-visible {
+  background: var(--global-code-background-color);
+  color: var(--global-link-color) !important;
+  text-decoration: none !important;
+  transform: translateX(2px);
+  outline: none;
+}
+
+.sms-contact-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 var(--sms-sidebar-icon-box);
+  width: var(--sms-sidebar-icon-box);
+  height: var(--sms-sidebar-icon-box);
+  color: var(--sms-icon-color);
+}
+
+.sms-contact-icon i {
+  margin: 0;
+  color: inherit !important;
+  font-size: var(--sms-sidebar-icon-size) !important; /* EDIT logo size above */
+  line-height: 1;
+}
+
+.sms-contact-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Sticky is safer than position: fixed: it remains visible while reading but
+   stops naturally before the footer instead of overlapping it. */
+@media screen and (min-width: 1024px) {
+  .sidebar.sticky {
+    position: sticky !important;
+    top: 5.5rem !important;
+    display: block !important;
+    max-height: calc(100vh - 6rem);
+    overflow: visible !important;
+    z-index: 20;
+  }
+}
+
+/* Keep the theme's collapsible sidebar behavior on smaller screens. */
+@media screen and (max-width: 1023px) {
+  .sms-author-link > a,
+  .sms-author-link__plain {
+    min-height: 2rem;
+    padding: 0.25rem 0.35rem !important;
+    font-size: 0.86rem !important;
+  }
+
+  .sms-contact-icon {
+    flex-basis: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .sms-contact-icon i {
+    font-size: 0.82rem !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   FOOTER: INTRO + PROFILES + CONTACT; NO LOGO BUTTONS
+   ----------------------------------------------------------------------------- */
+.page__footer {
+  position: relative !important;
+  inset: auto !important;
+  float: none !important;
+  clear: both;
+  width: 100%;
+  height: auto !important;
+  margin: 4rem 0 0 !important;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  background:
+    radial-gradient(circle at 28% 20%, rgba(14, 165, 233, 0.07), transparent 34%),
+    linear-gradient(120deg, #071119 0%, #0a151e 58%, #071018 100%) !important;
+  color: #9fb0c5 !important;
+  z-index: 100;
+}
+
+.page__footer footer {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 2.25rem 1.5rem 1.1rem !important;
+}
+
+.sms-site-footer {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.35fr) minmax(180px, 0.75fr) minmax(210px, 0.9fr);
+  gap: 2rem 4.5rem;
+  align-items: start;
+}
+
+.sms-site-footer__eyebrow {
+  margin: 0 0 0.35rem !important;
+  color: #38bdf8 !important;
+  font-size: 0.72rem !important;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sms-site-footer__name {
+  margin: 0 0 0.45rem !important;
+  color: #eef4fb !important;
+  font-size: 1.28rem !important;
+  line-height: 1.2;
+}
+
+.sms-site-footer__role {
+  margin: 0 0 0.65rem !important;
+  color: #c8d4e2 !important;
+  font-size: 0.88rem !important;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.sms-site-footer__message {
+  max-width: 38rem;
+  margin: 0 !important;
+  color: #9fb0c5 !important;
+  font-size: var(--sms-footer-text-size) !important;
+  line-height: 1.65;
+}
+
+.sms-site-footer__heading {
+  margin: 0 0 1rem !important;
+  color: #eef4fb !important;
+  font-size: var(--sms-footer-heading-size) !important;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sms-site-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sms-site-footer li {
+  margin: 0 0 0.58rem;
+  padding: 0;
+  font-family: inherit;
+  text-transform: none;
+}
+
+.sms-site-footer__text-links a,
+.sms-site-footer__text-links span {
+  display: inline-flex;
+  color: #9fb0c5 !important;
+  font-size: var(--sms-footer-text-size) !important;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none !important;
+}
+
+.sms-site-footer__text-links a:hover,
+.sms-site-footer__text-links a:focus-visible {
+  color: #eef4fb !important;
+  transform: translateX(2px);
+  outline: none;
+}
+
+.sms-site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin-top: 1.75rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.13);
+  color: #718196;
+  font-size: 0.68rem;
+}
+
+.sms-site-footer__bottom a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.sms-site-footer__bottom a:hover {
+  color: #cbd5e1 !important;
+}
+
+@media screen and (max-width: 900px) {
+  .sms-site-footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem 2.5rem;
+  }
+
+  .sms-site-footer__intro {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page__footer {
+    margin-top: 2.5rem !important;
+  }
+
+  .page__footer footer {
+    padding: 1.75rem 1rem 1rem !important;
+  }
+
+  .sms-site-footer {
+    grid-template-columns: 1fr;
+    gap: 1.65rem;
+  }
+
+  .sms-site-footer__intro {
+    grid-column: auto;
+  }
+}
+
+@media print {
+  .sidebar,
+  .page__footer {
+    display: none !important;
+  }
+}

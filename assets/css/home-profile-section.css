@@ -5,22 +5,23 @@
 */
 
 :root {
-  --sms-panel-bg: #07141c;
-  --sms-panel-bg-soft: #0a1c26;
-  --sms-card-bg: rgba(17, 35, 46, 0.72);
-  --sms-card-border: rgba(130, 179, 204, 0.16);
-  --sms-panel-border: rgba(0, 188, 255, 0.34);
-  --sms-heading: #f3f8fc;
-  --sms-text: #9fb2c6;
-  --sms-muted: #7f93a9;
-  --sms-accent: #16b9f4;
-  --sms-accent-2: #008fd2;
+  /* Reuse the Academic Pages theme colors so these sections blend with the page. */
+  --sms-panel-bg: var(--global-bg-color);
+  --sms-panel-bg-soft: var(--global-bg-color);
+  --sms-card-bg: var(--global-code-background-color);
+  --sms-card-border: var(--global-border-color);
+  --sms-panel-border: var(--global-border-color);
+  --sms-heading: var(--global-text-color);
+  --sms-text: var(--global-text-color);
+  --sms-muted: var(--global-text-color);
+  --sms-accent: var(--global-link-color);
+  --sms-accent-2: var(--global-base-color);
 }
 
 .page__content .sms-profile-panel,
 .page__content .sms-collaboration {
   box-sizing: border-box;
-  color-scheme: dark;
+  color-scheme: normal;
   font-family: inherit;
 }
 
@@ -32,23 +33,15 @@
   padding: clamp(1.35rem, 3vw, 2.5rem);
   border: 1px solid var(--sms-card-border);
   border-radius: 1.25rem;
-  background:
-    radial-gradient(circle at 8% 5%, rgba(22, 185, 244, 0.12), transparent 34%),
-    radial-gradient(circle at 92% 95%, rgba(0, 143, 210, 0.09), transparent 30%),
-    linear-gradient(145deg, var(--sms-panel-bg-soft), var(--sms-panel-bg));
-  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.24);
+  background: var(--sms-panel-bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.045);
 }
 
 .sms-profile-panel__grid-pattern {
   position: absolute;
   inset: 0;
   z-index: -1;
-  opacity: 0.34;
-  background-image:
-    linear-gradient(rgba(107, 169, 199, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(107, 169, 199, 0.055) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.82), transparent 96%);
+  display: none;
 }
 
 .sms-profile-panel__header {
@@ -76,8 +69,9 @@
 }
 
 .page__content .sms-profile-panel__title {
-  font-size: clamp(1.65rem, 4vw, 2.35rem);
-  line-height: 1.12;
+  /* Same size as the page title “About me” in this Academic Pages theme. */
+  font-size: 1.563em;
+  line-height: 1;
 }
 
 .page__content .sms-profile-panel__description {
@@ -105,12 +99,10 @@
   overflow: hidden;
   border: 1px solid var(--sms-card-border);
   border-radius: 1rem;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.025), transparent 60%),
-    var(--sms-card-bg);
+  background: var(--sms-card-bg);
   color: var(--sms-heading);
   text-decoration: none !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.025);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.035);
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
@@ -127,11 +119,9 @@
 .page__content .sms-profile-card:hover,
 .page__content .sms-profile-card:focus-visible {
   transform: translateY(-3px);
-  border-color: rgba(22, 185, 244, 0.45);
-  background:
-    linear-gradient(135deg, rgba(22,185,244,0.07), transparent 62%),
-    rgba(17, 38, 50, 0.9);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+  border-color: var(--global-link-color);
+  background: var(--global-bg-color);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   outline: none;
   text-decoration: none !important;
 }
@@ -146,9 +136,9 @@
   width: 2.65rem;
   height: 2.65rem;
   place-items: center;
-  border: 1px solid rgba(22, 185, 244, 0.18);
+  border: 1px solid var(--global-border-color);
   border-radius: 0.8rem;
-  background: rgba(22, 185, 244, 0.07);
+  background: var(--global-footer-bg-color);
   font-size: 1.35rem;
   line-height: 1;
 }
@@ -172,6 +162,7 @@
 .sms-profile-card__subtitle {
   margin-top: 0.32rem;
   color: var(--sms-muted);
+  opacity: 0.76;
   font-size: 0.88rem;
   line-height: 1.45;
 }
@@ -206,11 +197,8 @@
   padding: clamp(2.25rem, 7vw, 4.5rem) clamp(1.2rem, 6vw, 4.5rem);
   border: 1px solid var(--sms-panel-border);
   border-radius: 1.25rem;
-  background:
-    radial-gradient(circle at 26% 42%, rgba(0, 182, 224, 0.11), transparent 33%),
-    radial-gradient(circle at 75% 20%, rgba(15, 116, 153, 0.09), transparent 38%),
-    linear-gradient(135deg, #08212a 0%, #07151d 48%, #081821 100%);
-  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.24);
+  background: var(--global-bg-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.045);
 }
 
 .sms-collaboration__content {
@@ -222,14 +210,16 @@
 }
 
 .page__content .sms-collaboration__title {
-  font-size: clamp(1.8rem, 5vw, 2.65rem);
-  line-height: 1.14;
+  /* Same size as the page title “About me” in this Academic Pages theme. */
+  font-size: 1.563em;
+  line-height: 1;
 }
 
 .page__content .sms-collaboration__text {
   max-width: 760px;
   margin: 1.15rem auto 0;
   color: var(--sms-text);
+  opacity: 0.86;
   font-size: clamp(0.98rem, 2.2vw, 1.17rem);
   line-height: 1.65;
 }
@@ -265,14 +255,14 @@
 }
 
 .page__content .sms-action-button--primary {
-  background: linear-gradient(135deg, var(--sms-accent-2), #2cc5ff);
-  color: #03131b;
-  box-shadow: 0 12px 28px rgba(0, 159, 218, 0.22);
+  background: var(--sms-accent-2);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .page__content .sms-action-button--secondary {
-  border-color: rgba(159, 190, 208, 0.15);
-  background: rgba(255, 255, 255, 0.035);
+  border-color: var(--global-border-color);
+  background: var(--global-code-background-color);
   color: var(--sms-heading);
 }
 
@@ -285,19 +275,20 @@
 
 .page__content .sms-action-button--primary:hover,
 .page__content .sms-action-button--primary:focus-visible {
-  box-shadow: 0 16px 32px rgba(0, 159, 218, 0.34);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
 }
 
 .page__content .sms-action-button--secondary:hover,
 .page__content .sms-action-button--secondary:focus-visible {
-  border-color: rgba(22, 185, 244, 0.38);
-  background: rgba(22, 185, 244, 0.07);
+  border-color: var(--global-link-color);
+  background: var(--global-bg-color);
 }
 
 .sms-collaboration__circle {
   position: absolute;
   z-index: 1;
-  border: 1px solid rgba(22, 185, 244, 0.23);
+  border: 1px solid var(--global-link-color);
+  opacity: 0.12;
   border-radius: 50%;
   pointer-events: none;
 }

@@ -19,10 +19,10 @@ course: "Civil Engineering Capstone Project, BUET"
 role: "Group Leader"
 
 supervisors:
-  - "Professor [Dr. Khan Mahmud Amanat](https://ce.buet.ac.bd/khan-mahmud-amanat/), Department of Civil Engineering, BUET"
-  - "Professor [Dr. Mehedi Ahmed Ansary](https://ce.buet.ac.bd/profile-of-mehedi-ahmed-ansary/), Department of Civil Engineering, BUET"
-  - "Professor [Dr. Moazzem Hossain](https://ce.buet.ac.bd/profile-of-moazzem-hossain/), Department of Civil Engineering, BUET"
-  - "Professor [Dr. Md. Mafizur Rahman](https://ce.buet.ac.bd/profile-of-md-mafizur-rahman/), Department of Civil Engineering, BUET"
+  - "Professor Dr. Khan Mahmud Amanat, Department of Civil Engineering, BUET"
+  - "Professor Dr. Mehedi Ahmed Ansary, Department of Civil Engineering, BUET"
+  - "Professor Dr. Moazzem Hossain, Department of Civil Engineering, BUET"
+  - "Professor Dr. Md. Mafizur Rahman, Department of Civil Engineering, BUET"
 
 cover_image: "/images/projects/model-solid-waste-management-system/cover.svg"
 cover_alt: "Illustration of a community-level solid waste management and recycling facility"

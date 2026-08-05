@@ -21,7 +21,7 @@ awards:
     accent: "#f59e0b"
     summary: >-
       Awarded University Merit Scholarships in July 2022 and July 2023.
-    detail_url: "/skills/evidence/#award-university-merit-scholarship"
+    detail_url: "/awards & skills/evidence/#award-university-merit-scholarship"
     years:
       - "July 2023"
       - "July 2022"
@@ -38,7 +38,7 @@ awards:
     accent: "#8b5cf6"
     summary: >-
       Included in the CE Faculty Dean's List for three consecutive academic years: 2019–20, 2020–21, and 2021–22.
-    detail_url: "/skills/evidence/#award-ce-faculty-deans-list"
+    detail_url: "/awards & skills/evidence/#award-ce-faculty-deans-list"
     years:
       - "2021–22"
       - "2020–21"
@@ -56,7 +56,7 @@ awards:
     accent: "#0ea5e9"
     summary: >-
       Recipient of an Education Board Technical Scholarship from 2019 to 2023.
-    detail_url: "/skills/evidence/#award-education-board-technical-scholarship"
+    detail_url: "/awards & skills/evidence/#award-education-board-technical-scholarship"
     years:
       - "2019–2023"
     certificate:
@@ -72,7 +72,7 @@ awards:
     accent: "#10b981"
     summary: >-
       Recipient of an Education Board Talent Scholarship from 2012 to 2016.
-    detail_url: "/skills/evidence/#award-education-board-talent-scholarship"
+    detail_url: "/awards & skills/evidence/#award-education-board-talent-scholarship"
     years:
       - "2012–2016"
     certificate:
@@ -108,7 +108,7 @@ skill_groups:
         icon: "fas fa-cubes"
         accent: "#f97316"
         summary: "Finite-element analysis and engineering simulation."
-        detail_url: "/skills/evidence/#ansys"
+        detail_url: "/awards & skills/evidence/#ansys"
         has_certificate: true
         has_samples: true
         certificate:
@@ -127,7 +127,7 @@ skill_groups:
         icon: "fas fa-chart-column"
         accent: "#2563eb"
         summary: "Structural modelling, analysis, and design workflows."
-        detail_url: "/skills/evidence/#sap2000"
+        detail_url: "/awards & skills/evidence/#sap2000"
         has_certificate: true
         has_samples: true
         certificate:
@@ -146,7 +146,7 @@ skill_groups:
         icon: "fas fa-building-columns"
         accent: "#7c3aed"
         summary: "Building analysis and structural-system modelling."
-        detail_url: "/skills/evidence/#etabs"
+        detail_url: "/awards & skills/evidence/#etabs"
         has_certificate: true
         has_samples: true
         certificate:
@@ -165,7 +165,7 @@ skill_groups:
         icon: "fas fa-drafting-compass"
         accent: "#dc2626"
         summary: "Engineering drawings, drafting, plans, and details."
-        detail_url: "/skills/evidence/#autocad"
+        detail_url: "/awards & skills/evidence/#autocad"
         has_certificate: true
         has_samples: true
         certificate:
@@ -184,7 +184,7 @@ skill_groups:
         icon: "fas fa-city"
         accent: "#0891b2"
         summary: "Building information modelling and project visualization."
-        detail_url: "/skills/evidence/#revit"
+        detail_url: "/awards & skills/evidence/#revit"
         has_certificate: true
         has_samples: true
         certificate:
@@ -208,7 +208,7 @@ skill_groups:
         icon: "fas fa-terminal"
         accent: "#ea580c"
         summary: "ANSYS Parametric Design Language for modelling and analysis automation."
-        detail_url: "/skills/evidence/#apdl"
+        detail_url: "/awards & skills/evidence/#apdl"
         has_certificate: true
         has_samples: true
         certificate:
@@ -227,7 +227,7 @@ skill_groups:
         icon: "fab fa-python"
         accent: "#3776ab"
         summary: "Engineering computation, data processing, automation, and visualization."
-        detail_url: "/skills/evidence/#python"
+        detail_url: "/awards & skills/evidence/#python"
         has_certificate: true
         has_samples: true
         certificate:
@@ -246,7 +246,7 @@ skill_groups:
         icon: "fas fa-square-root-variable"
         accent: "#d97706"
         summary: "Numerical computation, engineering analysis, GUI development, and plotting."
-        detail_url: "/skills/evidence/#matlab"
+        detail_url: "/awards & skills/evidence/#matlab"
         has_certificate: true
         has_samples: true
         certificate:
@@ -265,7 +265,7 @@ skill_groups:
         icon: "fas fa-code"
         accent: "#00599c"
         summary: "General-purpose programming and computational problem solving."
-        detail_url: "/skills/evidence/#c-cpp"
+        detail_url: "/awards & skills/evidence/#c-cpp"
         has_certificate: true
         has_samples: true
         certificate:
@@ -289,7 +289,7 @@ skill_groups:
         icon: "fas fa-file-word"
         accent: "#2b579a"
         summary: "Academic reports, technical documents, formatting, and structured writing."
-        detail_url: "/skills/evidence/#microsoft-word"
+        detail_url: "/awards & skills/evidence/#microsoft-word"
         has_certificate: true
         has_samples: true
         certificate:
@@ -308,7 +308,7 @@ skill_groups:
         icon: "fas fa-file-excel"
         accent: "#217346"
         summary: "Engineering calculations, data organization, tables, and charts."
-        detail_url: "/skills/evidence/#microsoft-excel"
+        detail_url: "/awards & skills/evidence/#microsoft-excel"
         has_certificate: true
         has_samples: true
         certificate:
@@ -327,7 +327,7 @@ skill_groups:
         icon: "fas fa-file-powerpoint"
         accent: "#d24726"
         summary: "Academic and technical presentations with structured visual communication."
-        detail_url: "/skills/evidence/#microsoft-powerpoint"
+        detail_url: "/awards & skills/evidence/#microsoft-powerpoint"
         has_certificate: true
         has_samples: true
         certificate:
@@ -351,7 +351,7 @@ skill_groups:
         icon: "fas fa-globe"
         accent: "#2563eb"
         summary: "IELTS overall band score: 6.5."
-        detail_url: "/skills/evidence/#english"
+        detail_url: "/awards & skills/evidence/#english"
         has_certificate: true
         has_samples: false
         certificate:
@@ -370,7 +370,7 @@ skill_groups:
         icon: "fas fa-comments"
         accent: "#16a34a"
         summary: "Native language proficiency."
-        detail_url: "/skills/evidence/#bengali"
+        detail_url: "/awards & skills/evidence/#bengali"
         has_certificate: false
         has_samples: false
         certificate:

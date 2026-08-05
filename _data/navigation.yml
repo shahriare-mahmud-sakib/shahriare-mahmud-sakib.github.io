@@ -1,36 +1,29 @@
-# The following is the order of the links in the header of the website.
+# Main header navigation.
 #
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
-
+# The Awards & Skills route contains spaces and an ampersand, so the URL must
+# remain inside quotation marks. Browsers will display the encoded form:
+# /awards%20%26%20skills/
 main:
   - title: "Publications"
     url: /publications/
-    
+
   - title: "Research"
     url: /research/
-    
+
   - title: "Projects"
-    url: /projects/    
+    url: /projects/
 
   - title: "Academic"
-    url: /Academic/    
-    
+    url: /Academic/
+
   - title: "Awards & Skills"
-    url: /awards & skills/
-        
+    url: "/awards & skills/"
+
   - title: "Activities"
     url: /year-archive/
-    
+
   - title: "CV"
     url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
+
   - title: "Contact"
     url: /contact/

@@ -134,7 +134,7 @@ sections:
     items:
       - order: 1
         year: "2025"
-        period: "November 2025"
+        period: "November"
         title: "Hands-On AI for Smart Appliances: From Sensor Data to Embedded Code"
         organization: "MATLAB EXPO 2025, MathWorks"
         icon: "fas fa-microchip"
@@ -148,7 +148,7 @@ sections:
 
       - order: 2
         year: "2023"
-        period: "February 2023"
+        period: "February"
         title: "Innovative Nature-Based Technologies for Slope Stabilization, Land Reclamation and Soil Remediation"
         organization: "ASCE Student Chapter, BUET"
         icon: "fas fa-seedling"
@@ -162,7 +162,7 @@ sections:
 
       - order: 3
         year: "2022"
-        period: "December 2022"
+        period: "December"
         title: "Soft Skills Development"
         organization: "Directorate of Continuing Education (DCE), BUET"
         icon: "fas fa-people-group"

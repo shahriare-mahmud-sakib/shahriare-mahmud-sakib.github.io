@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#06251f"/><stop offset="1" stop-color="#114d43"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<g opacity=".12" stroke="#b9f6e8"><path d="M0 95H1200M0 190H1200M0 285H1200M0 380H1200M0 475H1200M0 570H1200"/><path d="M100 0V675M250 0V675M400 0V675M550 0V675M700 0V675M850 0V675M1000 0V675M1150 0V675"/></g>
+<text x="65" y="85" fill="#ecfdf5" font-family="Arial" font-size="39" font-weight="700">Community-Level Solid Waste Management</text>
+<text x="65" y="128" fill="#a7f3d0" font-family="Arial" font-size="22">Lalbag, Dhaka • Feasibility • RCC • Steel Truss • Recycling</text>
+<g transform="translate(70 205)"><rect x="70" y="170" width="730" height="250" rx="16" fill="#d8f3ea"/><path d="M70 170L240 65L410 170" fill="#22c55e"/><path d="M360 170L555 55L800 170" fill="#14b8a6"/><rect x="150" y="245" width="110" height="175" fill="#0f766e"/><rect x="325" y="245" width="110" height="175" fill="#15803d"/><rect x="500" y="245" width="110" height="175" fill="#0f766e"/><rect x="675" y="245" width="70" height="175" fill="#15803d"/>
+<g transform="translate(840 115)"><circle cx="100" cy="100" r="75" fill="none" stroke="#84cc16" stroke-width="28" stroke-dasharray="130 60"/><path d="M100 5l22 35H78z" fill="#84cc16"/><path d="M182 145l-41 3 17-37z" fill="#2dd4bf"/><path d="M18 145l24-34 17 37z" fill="#22c55e"/></g></g>
+<text x="65" y="625" fill="#9edacb" font-family="Arial" font-size="19">Capstone Project • November 2023 – December 2024</text>
+</svg>

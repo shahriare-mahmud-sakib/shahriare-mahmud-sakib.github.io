@@ -1,50 +1,45 @@
 # ================================================================
-# EDIT THIS FILE TO CHANGE THE CONTENT AND SETTINGS OF YOUR CV PAGE
+# EDIT THIS FILE TO CHANGE YOUR CV PAGE
 # ================================================================
 #
-# Normally, this is the only website-code file you need to edit.
-# Your actual PDF is stored separately in: files/cv/
-#
-# IMPORTANT:
-# - Keep indentation exactly as shown.
-# - Use spaces, not the Tab key.
-# - Put text inside quotation marks.
-# - File names and paths are case-sensitive after publishing.
-
-page:
-  # Introductory sentence shown above the PDF.
-  intro: "My current academic curriculum vitae is available below. You may read it on this page or download the PDF copy."
+# Normally, this is the only code/settings file you need to edit.
+# Keep indentation unchanged and use spaces rather than Tab.
 
 pdf:
-  # Replace the placeholder PDF in this location with your real CV.
-  # You may also change this path when your PDF has another file name.
+  # Location of your CV PDF inside the repository.
   path: "/files/cv/Shahriare_Mahmud_Sakib_CV.pdf"
 
-
-  # Accessible title used by the embedded PDF viewer.
-  viewer_title: "Shahriare Mahmud Sakib - Curriculum Vitae"
-
-  # PDF viewer options. Usually you do not need to change this.
-  # toolbar=1 displays the browser PDF toolbar.
-  fragment: "#view=FitH&toolbar=1&navpanes=0"
+  # Text used by screen readers and browsers.
+  title: "Shahriare Mahmud Sakib - Curriculum Vitae"
 
 viewer:
-  # Change to false to hide the embedded PDF and show only the buttons.
+  # Set false to hide the embedded viewer and keep only the download sentence.
   show: true
 
-  # EDIT THESE NUMBERS TO CHANGE THE PDF VIEWER HEIGHT.
-  # Values are in pixels.
-  desktop_height: 5500
-  mobile_height: 680
+  # ==============================================================
+  # EDIT THESE VALUES TO CHANGE THE PDF VIEWER SIZE
+  # ==============================================================
+  # Desktop/laptop height in pixels:
+  desktop_height: 650
 
-  # Text shown on the two buttons.
-  download_label: "Download CV (PDF)"
-  open_label: "Open PDF in a new tab"
+  # Phone/tablet height in pixels:
+  mobile_height: 560
 
-details:
-  # Change to false to hide the update line.
-  show_last_updated: true
-  last_updated: "August 2026"
+  # Browser PDF-viewer options.
+  # Chrome and Edge normally show the dark toolbar automatically.
+  # Other browsers may display a different toolbar.
+  fragment: "#view=FitH&toolbar=1&navpanes=0"
 
-  # This note appears below the viewer.
-  note: "If the embedded PDF does not appear in your browser, use the Open PDF or Download CV button above."
+download:
+  # Set false to hide the download sentence below the viewer.
+  show: true
+
+  # The sentence will be assembled as:
+  # [before] [link_text][after]
+  before: "You can download a PDF copy of my CV"
+  link_text: "here"
+  after: "."
+
+  # Set true to request a direct download after clicking the link.
+  # Set false to open the PDF normally in the browser.
+  force_download: false

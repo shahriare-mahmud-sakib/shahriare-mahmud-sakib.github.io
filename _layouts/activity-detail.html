@@ -1,0 +1,62 @@
+---
+layout: single
+---
+<link rel="stylesheet" href="{{ '/assets/css/activities-page.css' | relative_url }}">
+
+<article class="sms-event-detail">
+  <p class="sms-event-back"><a href="{{ '/year-archive/' | relative_url }}"><i class="fas fa-arrow-left"></i> Back to Activities</a></p>
+
+  <section class="sms-event-hero">
+    <div class="sms-event-hero__icon" style="--accent: {{ page.accent }};"><i class="{{ page.icon }}"></i></div>
+    <div>
+      <p class="sms-act-kicker">{{ page.category }}</p>
+      <p class="sms-event-summary">{{ page.summary }}</p>
+      <dl>
+        {% if page.date %}<div><dt>Date</dt><dd>{{ page.date }}</dd></div>{% endif %}
+        {% if page.organization %}<div><dt>Organizer</dt><dd>{{ page.organization }}</dd></div>{% endif %}
+        {% if page.location %}<div><dt>Location</dt><dd>{{ page.location }}</dd></div>{% endif %}
+        {% if page.outcome %}<div><dt>Outcome</dt><dd>{{ page.outcome }}</dd></div>{% endif %}
+      </dl>
+    </div>
+  </section>
+
+  {% if page.certificates %}
+  <section class="sms-event-block">
+    <header><p class="sms-act-kicker">CERTIFICATES</p><h2>Certificates and supporting documents</h2></header>
+    <div class="sms-event-resources">
+      {% assign available_count = 0 %}
+      {% for certificate in page.certificates %}
+        {% if certificate.available %}
+          {% assign available_count = available_count | plus: 1 %}
+          <a href="{{ certificate.url | relative_url }}"><i class="fas fa-certificate"></i> {{ certificate.label }}</a>
+        {% endif %}
+      {% endfor %}
+      {% if available_count == 0 %}<p class="sms-event-placeholder">Upload a certificate and change <code>available: false</code> to <code>available: true</code>.</p>{% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.gallery %}
+  <section class="sms-event-block">
+    <header><p class="sms-act-kicker">EVENT PHOTOS</p><h2>Photos and visual records</h2></header>
+    <div class="sms-event-gallery">
+      {% for image in page.gallery %}
+        <figure><a href="{{ image.image | relative_url }}" target="_blank" rel="noopener noreferrer"><img src="{{ image.image | relative_url }}" alt="{{ image.alt }}" loading="lazy"></a><figcaption>{{ image.caption }}</figcaption></figure>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.resources %}
+  <section class="sms-event-block">
+    <header><p class="sms-act-kicker">RESOURCES</p><h2>Event links and files</h2></header>
+    <div class="sms-event-resources">
+      {% for resource in page.resources %}
+        <a href="{{ resource.url | relative_url }}" {% if resource.external %}target="_blank" rel="noopener noreferrer"{% endif %}><i class="{{ resource.icon | default: 'fas fa-link' }}"></i> {{ resource.label }}</a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="sms-event-content">{{ content }}</section>
+</article>

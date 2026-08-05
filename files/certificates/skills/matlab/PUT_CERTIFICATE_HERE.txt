@@ -1,0 +1,1 @@
+Place your MATLAB certificate here as certificate.pdf, then set certificate.available: true in _data/awards_skills.yml.

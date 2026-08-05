@@ -1,0 +1,1 @@
+Place downloadable Microsoft PowerPoint sample files here and add links under resources in _data/awards_skills.yml.

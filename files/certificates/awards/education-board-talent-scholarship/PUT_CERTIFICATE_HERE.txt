@@ -1,0 +1,1 @@
+Place the Education Board Talent Scholarship certificate here as certificate.pdf, then set available: true in _data/awards_skills.yml.

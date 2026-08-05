@@ -1,0 +1,1 @@
+Place the Education Board Technical Scholarship certificate here as certificate.pdf, then set available: true in _data/awards_skills.yml.

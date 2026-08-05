@@ -1,0 +1,1 @@
+Place the CE Faculty Dean's List certificate here as certificate.pdf, then set available: true in _data/awards_skills.yml.

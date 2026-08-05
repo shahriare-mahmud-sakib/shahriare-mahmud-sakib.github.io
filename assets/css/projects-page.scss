@@ -1,0 +1,529 @@
+---
+---
+
+/* =============================================================================
+   EDITABLE PROJECT-PAGE SIZE CONTROLS
+   Change these values to resize cards, text, images, spacing, and corners.
+   ============================================================================= */
+:root {
+  --sms-project-grid-gap: 1.15rem;
+  --sms-project-card-radius: 0.75rem;
+  --sms-project-card-title-size: 1.05rem;
+  --sms-project-card-text-size: 0.88rem;
+  --sms-project-card-image-height: 205px;
+
+  --sms-project-detail-cover-height: 330px;
+  --sms-project-detail-body-size: 0.95rem;
+  --sms-project-gallery-image-height: 260px;
+}
+
+/* Main page */
+.sms-projects {
+  width: 100%;
+  min-width: 0;
+}
+
+.sms-projects__intro {
+  margin: 0 0 1.35rem;
+  padding: 1.15rem 1.25rem;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+}
+
+.sms-projects__eyebrow,
+.sms-project-section-heading > p {
+  margin: 0 0 0.35rem;
+  color: var(--global-link-color);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.sms-projects__lead {
+  max-width: 60rem;
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.sms-projects__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.sms-projects__search {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex: 1 1 260px;
+  max-width: 480px;
+  padding: 0.65rem 0.8rem;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.55rem;
+  color: var(--global-text-color-light);
+}
+
+.sms-projects__search:focus-within {
+  border-color: var(--global-link-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.12);
+}
+
+.sms-projects__search input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--global-text-color);
+  font: inherit;
+  font-size: 0.86rem;
+}
+
+.sms-projects__filters {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.sms-projects__filter {
+  padding: 0.52rem 0.75rem;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  color: var(--global-text-color);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.sms-projects__filter:hover,
+.sms-projects__filter.is-active {
+  background: var(--global-link-color);
+  border-color: var(--global-link-color);
+  color: #fff;
+}
+
+.sms-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sms-project-grid-gap);
+}
+
+.sms-project-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.sms-project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--global-link-color);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.10);
+}
+
+.sms-project-card[hidden] {
+  display: none !important;
+}
+
+.sms-project-card__media {
+  position: relative;
+  display: block;
+  height: var(--sms-project-card-image-height);
+  overflow: hidden;
+  background: var(--global-bg-color);
+}
+
+.sms-project-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.sms-project-card:hover .sms-project-card__media img {
+  transform: scale(1.025);
+}
+
+.sms-project-card__placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: var(--global-link-color);
+  font-size: 2.3rem;
+}
+
+.sms-project-card__status {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.3rem 0.55rem;
+  background: rgba(5, 15, 24, 0.84);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.sms-project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sms-project-card__meta {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.45rem;
+  color: var(--global-text-color-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+
+.sms-project-card__meta span + span::before {
+  content: "•";
+  margin-right: 0.45rem;
+}
+
+.sms-project-card__title {
+  margin: 0 0 0.42rem;
+  font-size: var(--sms-project-card-title-size);
+  line-height: 1.32;
+}
+
+.sms-project-card__title a {
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.sms-project-card__title a:hover {
+  color: var(--global-link-color);
+}
+
+.sms-project-card__discipline {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.65rem;
+  color: var(--global-link-color);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.sms-project-card__summary {
+  margin: 0 0 0.85rem;
+  color: var(--global-text-color);
+  font-size: var(--sms-project-card-text-size);
+  line-height: 1.58;
+}
+
+.sms-project-card__tools,
+.sms-project-detail__tools {
+  display: flex;
+  gap: 0.38rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sms-project-card__tools li,
+.sms-project-detail__tools li {
+  padding: 0.28rem 0.5rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  color: var(--global-text-color-light);
+  font-size: 0.68rem;
+}
+
+.sms-project-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.sms-project-card__details,
+.sms-project-card__external {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  color: var(--global-link-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sms-project-card__external span {
+  display: none;
+}
+
+.sms-projects__empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--global-text-color-light);
+}
+
+/* Project detail page */
+.sms-project-detail {
+  min-width: 0;
+}
+
+.sms-project-detail__back {
+  margin: 0 0 0.85rem;
+  font-size: 0.8rem;
+}
+
+.sms-project-detail__back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  text-decoration: none;
+}
+
+.sms-project-detail__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.75fr);
+  gap: 1.15rem;
+  margin-bottom: 1.6rem;
+}
+
+.sms-project-detail__cover {
+  height: var(--sms-project-detail-cover-height);
+  margin: 0;
+  overflow: hidden;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+}
+
+.sms-project-detail__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sms-project-detail__overview {
+  padding: 1rem;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+}
+
+.sms-project-detail__badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.sms-project-detail__badges span {
+  padding: 0.3rem 0.52rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  color: var(--global-text-color-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.sms-project-detail__summary {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+.sms-project-detail__facts {
+  display: grid;
+  gap: 0.62rem;
+  margin: 0 0 1rem;
+}
+
+.sms-project-detail__facts > div {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 0.55rem;
+}
+
+.sms-project-detail__facts dt {
+  color: var(--global-text-color-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sms-project-detail__facts dd {
+  margin: 0;
+  font-size: 0.82rem;
+}
+
+.sms-project-detail__actions {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.sms-project-detail__actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.55rem 0.72rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.45rem;
+  color: var(--global-text-color);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sms-project-detail__actions a:hover,
+.sms-project-detail__actions a.is-primary {
+  background: var(--global-link-color);
+  border-color: var(--global-link-color);
+  color: #fff;
+}
+
+.sms-project-gallery {
+  margin: 1.5rem 0;
+}
+
+.sms-project-section-heading {
+  margin-bottom: 0.75rem;
+}
+
+.sms-project-section-heading h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sms-project-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.sms-project-gallery__item {
+  margin: 0;
+  overflow: hidden;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+}
+
+.sms-project-gallery__item a {
+  display: block;
+  height: var(--sms-project-gallery-image-height);
+  overflow: hidden;
+  background: var(--global-bg-color);
+}
+
+.sms-project-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.sms-project-gallery__item:hover img {
+  transform: scale(1.02);
+}
+
+.sms-project-gallery__item figcaption {
+  padding: 0.72rem 0.8rem;
+  color: var(--global-text-color-light);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.sms-project-detail__content {
+  color: var(--global-text-color);
+  font-size: var(--sms-project-detail-body-size);
+}
+
+.sms-project-detail__content h2 {
+  margin-top: 1.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--global-border-color);
+  font-size: 1.22rem;
+}
+
+.sms-project-detail__content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.sms-project-detail__footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+}
+
+.sms-project-detail__footer h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 980px) {
+  .sms-projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sms-project-detail__hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --sms-project-card-image-height: 190px;
+    --sms-project-detail-cover-height: 230px;
+    --sms-project-gallery-image-height: 220px;
+  }
+
+  .sms-projects__controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sms-projects__search {
+    max-width: none;
+  }
+
+  .sms-project-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sms-project-detail__facts > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}

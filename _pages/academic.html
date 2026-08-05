@@ -1,0 +1,64 @@
+---
+layout: archive
+title: "Academic"
+permalink: /Academic/
+author_profile: true
+redirect_from:
+  - /academic/
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/academic-page.css' | relative_url }}">
+
+{% assign academic = site.data.academic %}
+
+<div class="sms-academic-page">
+  <header class="sms-academic-hero">
+    {% if academic.page.eyebrow and academic.page.eyebrow != '' %}
+      <p class="sms-academic-hero__eyebrow">{{ academic.page.eyebrow }}</p>
+    {% endif %}
+
+    <h1 class="sms-academic-hero__title">{{ academic.page.title | default: page.title }}</h1>
+
+    {% if academic.page.introduction and academic.page.introduction != '' %}
+      <p class="sms-academic-hero__intro">{{ academic.page.introduction }}</p>
+    {% endif %}
+  </header>
+
+  {% if academic.page.show_quick_links and academic.sections.size > 0 %}
+    <nav class="sms-academic-jump" aria-label="Academic page sections">
+      {% for section in academic.sections %}
+        <a href="#{{ section.id }}">
+          <i class="{{ section.icon | default: 'fas fa-circle' }}" aria-hidden="true"></i>
+          <span>{{ section.heading }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+  {% endif %}
+
+  {% for section in academic.sections %}
+    <section class="sms-academic-section" id="{{ section.id }}" style="--sms-section-accent: {{ section.accent | default: '#2563eb' }};">
+      <div class="sms-academic-section__heading">
+        <span class="sms-academic-section__icon" aria-hidden="true">
+          <i class="{{ section.icon | default: 'fas fa-circle' }}"></i>
+        </span>
+
+        <div>
+          <h2>{{ section.heading }}</h2>
+          {% if section.subtitle and section.subtitle != '' %}
+            <p>{{ section.subtitle }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if section.entries and section.entries.size > 0 %}
+        <div class="sms-academic-list">
+          {% for entry in section.entries %}
+            {% include academic-entry.html entry=entry section_accent=section.accent %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="sms-academic-empty">Add entries in <code>_data/academic.yml</code>.</p>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>

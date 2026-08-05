@@ -1,0 +1,386 @@
+# Main editable file for the Awards & Skills pages.
+page:
+  eyebrow: "ACHIEVEMENTS & CAPABILITIES"
+  intro: >-
+    A summary of my academic honours, scholarships, technical capabilities,
+    programming experience, software knowledge, document-preparation skills,
+    and language proficiency. Select an award or skill to view certificates,
+    sample works, code, figures, or supporting documents.
+
+awards_section:
+  eyebrow: "AWARDS & HONOURS"
+  heading: "Academic Awards and Scholarships"
+  note: "Awards are arranged from newest to oldest."
+
+awards:
+  - order: 1
+    title: "University Merit Scholarship"
+    organization: "University-level academic recognition"
+    period: "July 2022 and July 2023"
+    icon: "fas fa-medal"
+    accent: "#f59e0b"
+    summary: >-
+      Awarded University Merit Scholarships in July 2022 and July 2023.
+    detail_url: "/skills/evidence/#award-university-merit-scholarship"
+    years:
+      - "July 2023"
+      - "July 2022"
+    certificate:
+      available: false
+      label: "University Merit Scholarship Certificate"
+      url: "/files/certificates/awards/university-merit-scholarship/certificate.pdf"
+
+  - order: 2
+    title: "CE Faculty Dean's List"
+    organization: "Faculty of Civil Engineering"
+    period: "Academic years 2019–20, 2020–21 and 2021–22"
+    icon: "fas fa-award"
+    accent: "#8b5cf6"
+    summary: >-
+      Included in the CE Faculty Dean's List for three consecutive academic years: 2019–20, 2020–21, and 2021–22.
+    detail_url: "/skills/evidence/#award-ce-faculty-deans-list"
+    years:
+      - "2021–22"
+      - "2020–21"
+      - "2019–20"
+    certificate:
+      available: false
+      label: "CE Faculty Dean's List Certificate"
+      url: "/files/certificates/awards/ce-faculty-deans-list/certificate.pdf"
+
+  - order: 3
+    title: "Education Board Technical Scholarship"
+    organization: "Education Board"
+    period: "2019–2023"
+    icon: "fas fa-graduation-cap"
+    accent: "#0ea5e9"
+    summary: >-
+      Recipient of an Education Board Technical Scholarship from 2019 to 2023.
+    detail_url: "/skills/evidence/#award-education-board-technical-scholarship"
+    years:
+      - "2019–2023"
+    certificate:
+      available: false
+      label: "Education Board Technical Scholarship Certificate"
+      url: "/files/certificates/awards/education-board-technical-scholarship/certificate.pdf"
+
+  - order: 4
+    title: "Education Board Talent Scholarship"
+    organization: "Education Board"
+    period: "2012–2016"
+    icon: "fas fa-star"
+    accent: "#10b981"
+    summary: >-
+      Recipient of an Education Board Talent Scholarship from 2012 to 2016.
+    detail_url: "/skills/evidence/#award-education-board-talent-scholarship"
+    years:
+      - "2012–2016"
+    certificate:
+      available: false
+      label: "Education Board Talent Scholarship Certificate"
+      url: "/files/certificates/awards/education-board-talent-scholarship/certificate.pdf"
+
+skills_section:
+  eyebrow: "SKILLS"
+  heading: "Technical and Language Skills"
+  note: "Select a skill to view certificates, images, code, reports, or sample works."
+
+controls:
+  show_search: true
+  search_placeholder: "Search skills, software, programming languages, or tools..."
+  show_filters: true
+  filters:
+    - { label: "All", value: "all" }
+    - { label: "Analysis & CAD", value: "analysis-cad" }
+    - { label: "Programming", value: "programming" }
+    - { label: "Documents", value: "documents" }
+    - { label: "Languages", value: "languages" }
+
+skill_groups:
+  - id: "analysis-cad"
+    heading: "Analysis, Simulation and CAD Software"
+    icon: "fas fa-building"
+    description: "Engineering analysis, structural modelling, simulation, drafting, and BIM tools"
+    skills:
+      - order: 1
+        slug: "ansys"
+        name: "ANSYS"
+        icon: "fas fa-cubes"
+        accent: "#f97316"
+        summary: "Finite-element analysis and engineering simulation."
+        detail_url: "/skills/evidence/#ansys"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "ANSYS Certificate"
+          url: "/files/certificates/skills/ansys/certificate.pdf"
+        samples:
+          - image: "/images/skills/ansys/sample-work-placeholder.svg"
+            alt: "Editable placeholder for ANSYS sample work"
+            caption: "Replace this placeholder with your own ANSYS certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 2
+        slug: "sap2000"
+        name: "SAP2000"
+        icon: "fas fa-chart-column"
+        accent: "#2563eb"
+        summary: "Structural modelling, analysis, and design workflows."
+        detail_url: "/skills/evidence/#sap2000"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "SAP2000 Certificate"
+          url: "/files/certificates/skills/sap2000/certificate.pdf"
+        samples:
+          - image: "/images/skills/sap2000/sample-work-placeholder.svg"
+            alt: "Editable placeholder for SAP2000 sample work"
+            caption: "Replace this placeholder with your own SAP2000 certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 3
+        slug: "etabs"
+        name: "ETABS"
+        icon: "fas fa-building-columns"
+        accent: "#7c3aed"
+        summary: "Building analysis and structural-system modelling."
+        detail_url: "/skills/evidence/#etabs"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "ETABS Certificate"
+          url: "/files/certificates/skills/etabs/certificate.pdf"
+        samples:
+          - image: "/images/skills/etabs/sample-work-placeholder.svg"
+            alt: "Editable placeholder for ETABS sample work"
+            caption: "Replace this placeholder with your own ETABS certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 4
+        slug: "autocad"
+        name: "AutoCAD"
+        icon: "fas fa-drafting-compass"
+        accent: "#dc2626"
+        summary: "Engineering drawings, drafting, plans, and details."
+        detail_url: "/skills/evidence/#autocad"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "AutoCAD Certificate"
+          url: "/files/certificates/skills/autocad/certificate.pdf"
+        samples:
+          - image: "/images/skills/autocad/sample-work-placeholder.svg"
+            alt: "Editable placeholder for AutoCAD sample work"
+            caption: "Replace this placeholder with your own AutoCAD certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 5
+        slug: "revit"
+        name: "Revit"
+        icon: "fas fa-city"
+        accent: "#0891b2"
+        summary: "Building information modelling and project visualization."
+        detail_url: "/skills/evidence/#revit"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "Revit Certificate"
+          url: "/files/certificates/skills/revit/certificate.pdf"
+        samples:
+          - image: "/images/skills/revit/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Revit sample work"
+            caption: "Replace this placeholder with your own Revit certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+  - id: "programming"
+    heading: "Programming Languages"
+    icon: "fas fa-code"
+    description: "Programming and scripting for engineering computation, automation, and visualization"
+    skills:
+      - order: 1
+        slug: "apdl"
+        name: "APDL"
+        icon: "fas fa-terminal"
+        accent: "#ea580c"
+        summary: "ANSYS Parametric Design Language for modelling and analysis automation."
+        detail_url: "/skills/evidence/#apdl"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "APDL Certificate"
+          url: "/files/certificates/skills/apdl/certificate.pdf"
+        samples:
+          - image: "/images/skills/apdl/sample-work-placeholder.svg"
+            alt: "Editable placeholder for APDL sample work"
+            caption: "Replace this placeholder with your own APDL certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 2
+        slug: "python"
+        name: "Python"
+        icon: "fab fa-python"
+        accent: "#3776ab"
+        summary: "Engineering computation, data processing, automation, and visualization."
+        detail_url: "/skills/evidence/#python"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "Python Certificate"
+          url: "/files/certificates/skills/python/certificate.pdf"
+        samples:
+          - image: "/images/skills/python/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Python sample work"
+            caption: "Replace this placeholder with your own Python certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 3
+        slug: "matlab"
+        name: "MATLAB"
+        icon: "fas fa-square-root-variable"
+        accent: "#d97706"
+        summary: "Numerical computation, engineering analysis, GUI development, and plotting."
+        detail_url: "/skills/evidence/#matlab"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "MATLAB Certificate"
+          url: "/files/certificates/skills/matlab/certificate.pdf"
+        samples:
+          - image: "/images/skills/matlab/sample-work-placeholder.svg"
+            alt: "Editable placeholder for MATLAB sample work"
+            caption: "Replace this placeholder with your own MATLAB certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 4
+        slug: "c-cpp"
+        name: "C/C++"
+        icon: "fas fa-code"
+        accent: "#00599c"
+        summary: "General-purpose programming and computational problem solving."
+        detail_url: "/skills/evidence/#c-cpp"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "C/C++ Certificate"
+          url: "/files/certificates/skills/c-cpp/certificate.pdf"
+        samples:
+          - image: "/images/skills/c-cpp/sample-work-placeholder.svg"
+            alt: "Editable placeholder for C/C++ sample work"
+            caption: "Replace this placeholder with your own C/C++ certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+  - id: "documents"
+    heading: "Document Preparation"
+    icon: "fas fa-file-lines"
+    description: "Academic, technical, analytical, and presentation document preparation"
+    skills:
+      - order: 1
+        slug: "microsoft-word"
+        name: "Microsoft Word"
+        icon: "fas fa-file-word"
+        accent: "#2b579a"
+        summary: "Academic reports, technical documents, formatting, and structured writing."
+        detail_url: "/skills/evidence/#microsoft-word"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "Microsoft Word Certificate"
+          url: "/files/certificates/skills/microsoft-word/certificate.pdf"
+        samples:
+          - image: "/images/skills/microsoft-word/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Microsoft Word sample work"
+            caption: "Replace this placeholder with your own Microsoft Word certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 2
+        slug: "microsoft-excel"
+        name: "Microsoft Excel"
+        icon: "fas fa-file-excel"
+        accent: "#217346"
+        summary: "Engineering calculations, data organization, tables, and charts."
+        detail_url: "/skills/evidence/#microsoft-excel"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "Microsoft Excel Certificate"
+          url: "/files/certificates/skills/microsoft-excel/certificate.pdf"
+        samples:
+          - image: "/images/skills/microsoft-excel/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Microsoft Excel sample work"
+            caption: "Replace this placeholder with your own Microsoft Excel certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 3
+        slug: "microsoft-powerpoint"
+        name: "Microsoft PowerPoint"
+        icon: "fas fa-file-powerpoint"
+        accent: "#d24726"
+        summary: "Academic and technical presentations with structured visual communication."
+        detail_url: "/skills/evidence/#microsoft-powerpoint"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "Microsoft PowerPoint Certificate"
+          url: "/files/certificates/skills/microsoft-powerpoint/certificate.pdf"
+        samples:
+          - image: "/images/skills/microsoft-powerpoint/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Microsoft PowerPoint sample work"
+            caption: "Replace this placeholder with your own Microsoft PowerPoint certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+  - id: "languages"
+    heading: "Language Proficiency"
+    icon: "fas fa-language"
+    description: "English and Bengali communication skills"
+    skills:
+      - order: 1
+        slug: "english"
+        name: "English"
+        icon: "fas fa-globe"
+        accent: "#2563eb"
+        summary: "IELTS overall band score: 6.5."
+        detail_url: "/skills/evidence/#english"
+        has_certificate: true
+        has_samples: false
+        certificate:
+          available: false
+          label: "English Certificate"
+          url: "/files/certificates/skills/english/certificate.pdf"
+        samples:
+          - image: "/images/skills/english/sample-work-placeholder.svg"
+            alt: "Editable placeholder for English sample work"
+            caption: "Replace this placeholder with your own English certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+      - order: 2
+        slug: "bengali"
+        name: "Bengali"
+        icon: "fas fa-comments"
+        accent: "#16a34a"
+        summary: "Native language proficiency."
+        detail_url: "/skills/evidence/#bengali"
+        has_certificate: false
+        has_samples: false
+        certificate:
+          available: false
+          label: "Bengali Certificate"
+          url: "/files/certificates/skills/bengali/certificate.pdf"
+        samples:
+          - image: "/images/skills/bengali/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Bengali sample work"
+            caption: "Replace this placeholder with your own Bengali certificate, model, output, screenshot, drawing, or sample work."
+        resources: []
+
+empty_message: "No skill matches the selected filter or search term."

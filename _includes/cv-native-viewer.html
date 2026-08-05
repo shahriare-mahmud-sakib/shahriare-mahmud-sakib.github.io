@@ -1,0 +1,37 @@
+{% assign cv = site.data.cv_page %}
+{% assign cv_pdf_url = cv.pdf.path | relative_url %}
+
+<section class="sms-native-cv" aria-label="Curriculum vitae">
+  {% if cv.viewer.show != false %}
+    <div
+      class="sms-native-cv__viewer-wrap"
+      style="
+        --sms-cv-viewer-height: {{ cv.viewer.desktop_height | default: 650 }}px;
+        --sms-cv-viewer-mobile-height: {{ cv.viewer.mobile_height | default: 560 }}px;
+      "
+    >
+      <iframe
+        class="sms-native-cv__viewer"
+        src="{{ cv_pdf_url }}{{ cv.viewer.fragment }}"
+        title="{{ cv.pdf.title | default: 'Curriculum vitae PDF' }}"
+        loading="eager"
+        frameborder="0"
+      >
+        <p>
+          Your browser cannot display the PDF viewer.
+          <a href="{{ cv_pdf_url }}">Open the CV PDF.</a>
+        </p>
+      </iframe>
+    </div>
+  {% endif %}
+
+  {% if cv.download.show != false %}
+    <p class="sms-native-cv__download">
+      {{ cv.download.before }}
+      <a
+        href="{{ cv_pdf_url }}"
+        {% if cv.download.force_download %}download{% endif %}
+      >{{ cv.download.link_text }}</a>{{ cv.download.after }}
+    </p>
+  {% endif %}
+</section>

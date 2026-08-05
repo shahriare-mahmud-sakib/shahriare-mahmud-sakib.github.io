@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+  <rect width="1200" height="675" fill="#f6f9fb"/>
+  <rect x="0" y="0" width="1200" height="96" fill="#102a38"/>
+  <text x="55" y="61" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="700">Deflection Diagram</text>
+  <text x="55" y="130" fill="#536b78" font-family="Arial, sans-serif" font-size="22">Example layout for presenting displacement or deflection results</text>
+  <g stroke="#d7e0e5" stroke-width="2">
+    <path d="M95 200H1110M95 290H1110M95 380H1110M95 470H1110M95 560H1110"/>
+    <path d="M200 170V590M400 170V590M600 170V590M800 170V590M1000 170V590"/>
+  </g>
+  <path d="M95 380H1110" stroke="#334e5d" stroke-width="4"/>
+  <path d="M110 300 C340 300 420 520 620 520 C830 520 890 300 1090 300" fill="none" stroke="#8b5cf6" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="640" text-anchor="middle" fill="#8a3b3b" font-family="Arial, sans-serif" font-size="21" font-weight="700">ILLUSTRATIVE PLACEHOLDER — REPLACE WITH YOUR ACTUAL MATLAB OUTPUT</text>
+
+</svg>

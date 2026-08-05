@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071722"/>
+      <stop offset="1" stop-color="#123747"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" x2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity=".15" stroke="#8bd5f5" stroke-width="1">
+    <path d="M0 95H1200M0 190H1200M0 285H1200M0 380H1200M0 475H1200M0 570H1200"/>
+    <path d="M100 0V675M250 0V675M400 0V675M550 0V675M700 0V675M850 0V675M1000 0V675M1150 0V675"/>
+  </g>
+  <text x="70" y="90" fill="#eaf6fc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Structural Beam Analysis</text>
+  <text x="70" y="132" fill="#9cc6d8" font-family="Arial, sans-serif" font-size="23">MATLAB • AFD • SFD • BMD • Deflection</text>
+  <g transform="translate(95 205)">
+    <rect x="0" y="135" width="950" height="22" rx="8" fill="url(#beam)"/>
+    <path d="M75 157L25 230H125Z" fill="#dcebf2"/>
+    <path d="M875 157L825 230H925Z" fill="#dcebf2"/>
+    <circle cx="847" cy="238" r="10" fill="#dcebf2"/>
+    <circle cx="903" cy="238" r="10" fill="#dcebf2"/>
+    <g stroke="#f8c45c" stroke-width="7" fill="none">
+      <path d="M160 5V112M270 5V112M380 5V112M490 5V112M600 5V112M710 5V112M820 5V112"/>
+    </g>
+    <g fill="#f8c45c">
+      <path d="M160 112l-14-24h28zM270 112l-14-24h28zM380 112l-14-24h28zM490 112l-14-24h28zM600 112l-14-24h28zM710 112l-14-24h28zM820 112l-14-24h28z"/>
+    </g>
+    <path d="M80 295 C250 240 390 340 520 285 S760 220 930 300" fill="none" stroke="#fb7185" stroke-width="8"/>
+    <path d="M80 335 C250 310 380 390 520 350 S770 290 930 365" fill="none" stroke="#a78bfa" stroke-width="8"/>
+  </g>
+  <text x="70" y="625" fill="#7fb2c7" font-family="Arial, sans-serif" font-size="19">Engineering visualization for academic project presentation</text>
+
+</svg>

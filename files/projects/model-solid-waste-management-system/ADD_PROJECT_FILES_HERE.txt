@@ -1,0 +1,11 @@
+Place downloadable resources here, for example:
+
+project-report.pdf
+presentation.pdf
+revit-model.rvt
+sap2000-model.sdb
+design-calculations.pdf
+drawings.pdf
+
+Then add or uncomment links in:
+_portfolio/model-solid-waste-management-system.md

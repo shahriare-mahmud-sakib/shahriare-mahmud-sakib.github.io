@@ -1,0 +1,10 @@
+Place downloadable resources here, for example:
+
+project-report.pdf
+presentation.pdf
+matlab-code.zip
+sample-input.xlsx
+sample-output.csv
+
+Then add or uncomment links in:
+_portfolio/structural-beam-analysis.md

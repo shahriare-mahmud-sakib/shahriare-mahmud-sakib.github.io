@@ -137,8 +137,8 @@ sections:
     accent: "#b45309"
 
     entries:
-      - title: "Member Secretary of Departmental Committees"
-        organization: "Department of Civil Engineering, United International University (UIU)"
+      - title: "Member Secretary"
+        organization: "Departmental Committees, Department of Civil Engineering, United International University (UIU)"
         organization_url: "https://ce.uiu.ac.bd/"
         external_organization_link: true
         period: "July 2025 – Present"
@@ -160,6 +160,32 @@ sections:
         links:
           - label: "Visit CE, UIU"
             url: "https://ce.uiu.ac.bd/"
+            external: true
+
+    entries:
+      - title: "Faculty Co-advisor"
+        organization: "ASCE Student Chapter, United International University (UIU)"
+        organization_url: "https://www.facebook.com/asceuiu"
+        external_organization_link: true
+        period: "July 2025 – Present"
+        location: "Dhaka, Bangladesh"
+        status: "Current"
+        icon: "fas fa-building-columns"
+        accent: "#b45309"
+        summary: >-
+          Mentor student leaders and guide professional development activities, industry linkages, 
+          and technical seminars/workshops.
+        details:
+          - "Advise student executive committees on planning technical seminars, field visits, and career development events."
+          - "Bridge academic learning with practical civil engineering applications through student chapter initiatives."
+          - "Encourage student engagement in national and regional competitions, conferences, and networking events."
+        tags:
+          - "Student Mentorship"
+          - "ASCE Student Chapter"
+          - "Leadership & Guidance"
+        links:
+          - label: "Visit ASCE Student Chapter, UIU"
+            url: "https://www.facebook.com/asceuiu"
             external: true
 
 # =============================================================================

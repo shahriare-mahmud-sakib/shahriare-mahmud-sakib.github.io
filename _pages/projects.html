@@ -7,44 +7,36 @@ author_profile: true
 
 <link rel="stylesheet" href="{{ '/assets/css/projects-page.css' | relative_url }}">
 
-{% assign page_settings = site.data.projects_page %}
+{% assign settings = site.data.projects_page %}
 {% assign ordered_projects = site.portfolio | sort: "order" %}
 
 <section class="sms-projects" data-projects-root>
   <header class="sms-projects__intro">
-    {% if page_settings.page.eyebrow %}
-      <p class="sms-projects__eyebrow">{{ page_settings.page.eyebrow }}</p>
+    {% if settings.page.eyebrow %}
+      <p class="sms-projects__eyebrow">{{ settings.page.eyebrow }}</p>
     {% endif %}
-
-    {% if page_settings.page.intro %}
-      <p class="sms-projects__lead">{{ page_settings.page.intro }}</p>
+    {% if settings.page.intro %}
+      <p class="sms-projects__lead">{{ settings.page.intro }}</p>
     {% endif %}
   </header>
 
-  {% if page_settings.controls.show_search or page_settings.controls.show_filters %}
+  {% if settings.controls.show_search or settings.controls.show_filters %}
     <div class="sms-projects__controls" aria-label="Project filters">
-      {% if page_settings.controls.show_search %}
+      {% if settings.controls.show_search %}
         <label class="sms-projects__search">
           <span class="sr-only">Search projects</span>
-          <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
-          <input
-            type="search"
-            data-project-search
-            placeholder="{{ page_settings.controls.search_placeholder }}"
-            autocomplete="off"
-          >
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input type="search" data-project-search placeholder="{{ settings.controls.search_placeholder }}" autocomplete="off">
         </label>
       {% endif %}
 
-      {% if page_settings.controls.show_filters %}
+      {% if settings.controls.show_filters %}
         <div class="sms-projects__filters" role="group" aria-label="Filter projects">
-          {% for filter in page_settings.controls.filters %}
-            <button
-              type="button"
+          {% for filter in settings.controls.filters %}
+            <button type="button"
               class="sms-projects__filter{% if filter.value == 'all' %} is-active{% endif %}"
               data-project-filter="{{ filter.value | slugify }}"
-              aria-pressed="{% if filter.value == 'all' %}true{% else %}false{% endif %}"
-            >
+              aria-pressed="{% if filter.value == 'all' %}true{% else %}false{% endif %}">
               {{ filter.label }}
             </button>
           {% endfor %}
@@ -53,17 +45,25 @@ author_profile: true
     </div>
   {% endif %}
 
-  <div class="sms-projects__grid" data-project-grid>
+  {% if settings.timeline.show %}
+    <header class="sms-projects__timeline-heading">
+      <p>{{ settings.timeline.eyebrow }}</p>
+      <div>
+        <h2>{{ settings.timeline.heading }}</h2>
+        <span>{{ settings.timeline.note }}</span>
+      </div>
+    </header>
+  {% endif %}
+
+  <div class="sms-project-timeline" data-project-list>
     {% for project in ordered_projects %}
       {% if project.show_on_projects == true %}
-        {% include project-card.html project=project %}
+        {% include project-timeline-item.html project=project %}
       {% endif %}
     {% endfor %}
   </div>
 
-  <p class="sms-projects__empty" data-project-empty hidden>
-    {{ page_settings.empty_message }}
-  </p>
+  <p class="sms-projects__empty" data-project-empty hidden>{{ settings.empty_message }}</p>
 </section>
 
 <script src="{{ '/assets/js/projects-filter.js' | relative_url }}" defer></script>

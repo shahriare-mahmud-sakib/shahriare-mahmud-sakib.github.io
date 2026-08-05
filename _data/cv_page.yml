@@ -1,0 +1,49 @@
+# ================================================================
+# EDIT THIS FILE TO CHANGE THE CONTENT AND SETTINGS OF YOUR CV PAGE
+# ================================================================
+#
+# Normally, this is the only website-code file you need to edit.
+# Your actual PDF is stored separately in: files/cv/
+#
+# IMPORTANT:
+# - Keep indentation exactly as shown.
+# - Use spaces, not the Tab key.
+# - Put text inside quotation marks.
+# - File names and paths are case-sensitive after publishing.
+
+page:
+  # Introductory sentence shown above the PDF.
+  intro: "My current academic curriculum vitae is available below. You may read it on this page or download the PDF copy."
+
+pdf:
+  # Replace the placeholder PDF in this location with your real CV.
+  # You may also change this path when your PDF has another file name.
+  path: "/files/cv/Shahriare_Mahmud_Sakib_CV.pdf"
+
+  # Text shown on the two buttons.
+  download_label: "Download CV (PDF)"
+  open_label: "Open PDF in a new tab"
+
+  # Accessible title used by the embedded PDF viewer.
+  viewer_title: "Shahriare Mahmud Sakib - Curriculum Vitae"
+
+  # PDF viewer options. Usually you do not need to change this.
+  # toolbar=1 displays the browser PDF toolbar.
+  fragment: "#view=FitH&toolbar=1&navpanes=0"
+
+viewer:
+  # Change to false to hide the embedded PDF and show only the buttons.
+  show: true
+
+  # EDIT THESE NUMBERS TO CHANGE THE PDF VIEWER HEIGHT.
+  # Values are in pixels.
+  desktop_height: 1050
+  mobile_height: 680
+
+details:
+  # Change to false to hide the update line.
+  show_last_updated: true
+  last_updated: "August 2026"
+
+  # This note appears below the viewer.
+  note: "If the embedded PDF does not appear in your browser, use the Open PDF or Download CV button above."

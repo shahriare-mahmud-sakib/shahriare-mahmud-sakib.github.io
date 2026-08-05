@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#eef4f7"/><stop offset="1" stop-color="#dbe7ed"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect x="105" y="90" width="990" height="470" rx="28" fill="#fff" stroke="#7b98a8" stroke-width="5"/>
+  <circle cx="365" cy="275" r="75" fill="#c7dce7"/>
+  <path d="M170 510l235-190 145 120 150-135 330 205z" fill="#78a7bd" opacity=".8"/>
+  <text x="600" y="610" text-anchor="middle" fill="#8a3b3b" font-family="Arial" font-size="22" font-weight="700">EDITABLE PLACEHOLDER — REPLACE WITH YOUR CERTIFICATE OR EVENT PHOTO</text>
+</svg>

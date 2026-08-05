@@ -1,56 +1,60 @@
-# =====================================================================
-# EDIT THIS FILE TO CHANGE THE CV PAGE
-# =====================================================================
-# Keep indentation unchanged and use spaces, not Tab.
+# =============================================================================
+# EDITABLE CV PAGE SETTINGS
+# Normally, this is the only file you need to edit.
+# Keep the indentation exactly as shown and use spaces, not tabs.
+# =============================================================================
 
 pdf:
-  # Put your PDF at this exact repository location, or edit this path.
+  # Put your PDF at this exact repository location:
+  # files/cv/Shahriare_Mahmud_Sakib_CV.pdf
   path: "/files/cv/Shahriare_Mahmud_Sakib_CV.pdf"
+
+  # Text used by browsers and screen readers.
   title: "Shahriare Mahmud Sakib - Curriculum Vitae"
 
 viewer:
-  # true = show the PDF inside the webpage
-  # false = hide the viewer and keep only the download sentence
+  # true = show the embedded CV; false = show only the download sentence.
   show: true
 
-  # -------------------------------------------------------------------
-  # WIDTH CONTROLS
-  # -------------------------------------------------------------------
-  # 100% makes the PDF viewer fill the complete content area available
-  # to the RIGHT of the sidebar, like the reference CV page.
+  # ---------------------------------------------------------------------------
+  # EDIT THE VIEWER WIDTH HERE
+  # ---------------------------------------------------------------------------
+  # 100% makes the CV occupy the full content width beside the sidebar.
   width: "100%"
 
-  # Keep "none" for full available width. You may use "1100px" if you
-  # later want to limit the viewer width.
+  # "none" means there is no additional maximum-width restriction.
+  # Example alternative: "1100px"
   max_width: "none"
 
-  # -------------------------------------------------------------------
-  # HEIGHT CONTROLS
-  # -------------------------------------------------------------------
-  # This height resembles the reference page on a laptop/desktop.
-  # Examples: "650px", "75vh", or "calc(100vh - 190px)".
-  desktop_height: "650px"
+  # ---------------------------------------------------------------------------
+  # EDIT THE VIEWER HEIGHT HERE
+  # ---------------------------------------------------------------------------
+  # Recommended desktop/laptop height:
+  desktop_height: "680px"
 
-  # Height used on phones and narrow tablets.
+  # Recommended phone/tablet height:
   mobile_height: "560px"
 
-  # Browser PDF-viewer options.
-  # FitH fits the PDF horizontally to the viewer width.
+  # FitH asks Chrome/Edge PDF viewers to fit the document horizontally.
   fragment: "#view=FitH&toolbar=1&navpanes=0&scrollbar=1"
 
-  # Optional accessible fallback sentence inside the iframe.
-  fallback_text: "Your browser cannot display the embedded PDF."
-  fallback_link_text: "Open the CV PDF."
+appearance:
+  # Background visible while the PDF is loading.
+  background: "#525659"
+
+  # Use "0px" for square corners, as in the reference website.
+  border_radius: "0px"
+
+  # Use "0px" for no border or "1px" for a thin border.
+  border_width: "1px"
 
 download:
-  # true = show the sentence below the viewer
+  # true = show the sentence below the embedded CV.
   show: true
 
-  # The sentence is assembled as:
-  # [before] [link_text][after]
   before: "You can download a PDF copy of my CV"
   link_text: "here"
   after: "."
 
-  # false opens the PDF normally; true asks the browser to download it.
+  # false opens the PDF normally; true requests a direct download.
   force_download: false

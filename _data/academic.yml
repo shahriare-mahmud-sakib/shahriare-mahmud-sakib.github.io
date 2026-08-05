@@ -1,0 +1,162 @@
+# =============================================================================
+# EDITABLE ACADEMIC PAGE CONTENT
+# File used by: _pages/academic.html
+#
+# You normally edit ONLY this file when updating your education, teaching,
+# or professional experience. Keep the indentation exactly as shown.
+# =============================================================================
+
+page:
+  eyebrow: "Academic Profile"
+  title: "Education & Experience"
+  introduction: >-
+    A summary of my educational background, teaching activities, and professional
+    experience in civil and structural engineering.
+  show_quick_links: true
+
+# Each item below becomes one complete section on the Academic page.
+# To change the section order, move the whole section block up or down.
+sections:
+
+  # ---------------------------------------------------------------------------
+  # SECTION 1: EDUCATION
+  # ---------------------------------------------------------------------------
+  - id: "education"                  # Used in the page link: /Academic/#education
+    heading: "Education"
+    subtitle: "Academic qualifications and areas of specialization."
+    icon: "fas fa-graduation-cap"   # Font Awesome icon
+    accent: "#2563eb"               # Section accent color
+
+    entries:
+      - title: "B.Sc. in Civil Engineering"
+        organization: "Bangladesh University of Engineering and Technology (BUET)"
+        organization_url: "https://www.buet.ac.bd/"
+        external_organization_link: true
+        period: "Graduated 2025"
+        location: "Dhaka, Bangladesh"
+        status: "Completed"
+        icon: "fas fa-university"
+        accent: "#2563eb"
+        summary: >-
+          Completed an undergraduate degree in Civil Engineering with a major in
+          Structural Engineering and a minor in Transportation Engineering.
+        details:
+          - "CGPA: 3.89 / 4.00; ranked among the top 10% of the class."
+          - "Major: Structural Engineering; Minor: Transportation Engineering."
+          - "Undergraduate research focused on nonlinear finite-element modelling of cold-formed stainless-steel columns under cyclic loading."
+        tags:
+          - "Structural Engineering"
+          - "Finite Element Modelling"
+          - "Academic Merit"
+        links:
+          - label: "Visit BUET"
+            url: "https://www.buet.ac.bd/"
+            external: true
+
+      - title: "Higher Secondary Certificate (HSC)"
+        organization: "Major General Mahmudul Hasan Adarsha College"
+        organization_url: ""
+        external_organization_link: false
+        period: ""
+        location: "Tangail, Bangladesh"
+        status: "Completed"
+        icon: "fas fa-school"
+        accent: "#0f766e"
+        summary: "Completed Higher Secondary education in the Science group."
+        details: []
+        tags:
+          - "Science"
+        links: []
+
+      - title: "Secondary School Certificate (SSC)"
+        organization: "Sakhipur P.M. Pilot High School"
+        organization_url: ""
+        external_organization_link: false
+        period: ""
+        location: "Tangail, Bangladesh"
+        status: "Completed"
+        icon: "fas fa-school"
+        accent: "#7c3aed"
+        summary: "Completed Secondary education in the Science group."
+        details: []
+        tags:
+          - "Science"
+        links: []
+
+  # ---------------------------------------------------------------------------
+  # SECTION 2: TEACHING EXPERIENCE
+  # ---------------------------------------------------------------------------
+  - id: "teaching"
+    heading: "Teaching Experience"
+    subtitle: "University-level teaching, student support, and academic responsibilities."
+    icon: "fas fa-chalkboard-teacher"
+    accent: "#0f766e"
+
+    entries:
+      - title: "Lecturer, Department of Civil Engineering"
+        organization: "United International University (UIU)"
+        organization_url: "https://ce.uiu.ac.bd/faculty/shahriare-mahmud-sakib/"
+        external_organization_link: true
+        period: "July 2025 – Present"
+        location: "Dhaka, Bangladesh"
+        status: "Current"
+        icon: "fas fa-person-chalkboard"
+        accent: "#0f766e"
+        summary: >-
+          Teach and support undergraduate Civil Engineering students through
+          classroom instruction, assessment, consultation, and academic mentoring.
+        details:
+          - "Prepare lectures, learning materials, assignments, quizzes, and examinations."
+          - "Guide students in understanding structural and civil-engineering concepts."
+          - "Support laboratory, project, and academic-advising activities as assigned."
+          # ADD YOUR COURSES HERE. Example:
+          # - "Courses taught: Structural Analysis I, Mechanics of Solids, and Engineering Mechanics."
+        tags:
+          - "Undergraduate Teaching"
+          - "Student Mentoring"
+          - "Civil Engineering"
+        links:
+          - label: "UIU Faculty Profile"
+            url: "https://ce.uiu.ac.bd/faculty/shahriare-mahmud-sakib/"
+            external: true
+
+  # ---------------------------------------------------------------------------
+  # SECTION 3: PROFESSIONAL EXPERIENCE
+  # ---------------------------------------------------------------------------
+  - id: "professional"
+    heading: "Professional Experience"
+    subtitle: "Academic appointments and professional responsibilities."
+    icon: "fas fa-briefcase"
+    accent: "#b45309"
+
+    entries:
+      - title: "Lecturer in Civil Engineering"
+        organization: "United International University (UIU)"
+        organization_url: "https://www.uiu.ac.bd/"
+        external_organization_link: true
+        period: "July 2025 – Present"
+        location: "Dhaka, Bangladesh"
+        status: "Current"
+        icon: "fas fa-building-columns"
+        accent: "#b45309"
+        summary: >-
+          Serve as a faculty member in the Department of Civil Engineering, with
+          responsibilities spanning teaching, student engagement, and academic service.
+        details:
+          - "Contribute to the delivery and continuous improvement of undergraduate Civil Engineering education."
+          - "Participate in departmental academic activities and student-support initiatives."
+          - "Continue research development in structural engineering, computational mechanics, and resilient infrastructure."
+        tags:
+          - "Academic Appointment"
+          - "Structural Engineering"
+          - "Academic Service"
+        links:
+          - label: "Visit UIU"
+            url: "https://www.uiu.ac.bd/"
+            external: true
+
+# =============================================================================
+# HOW TO ADD ANOTHER ENTRY
+# Copy one complete block beginning with "- title:" and paste it under entries:.
+# Then change its title, organization, dates, summary, details, tags, and links.
+# =============================================================================

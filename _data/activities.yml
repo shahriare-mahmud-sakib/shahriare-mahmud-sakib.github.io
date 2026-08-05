@@ -2,7 +2,7 @@
 # ACTIVITIES PAGE DATA
 #
 # Main editable file for the Activities page.
-# - Smaller order numbers appear earlier.
+# - Smaller order numbers appear earlier. 
 # - Keep the newest activity at order: 1 inside each section.
 # - Article writing links to the Publications page.
 # - Competitions, seminars and workshops link to detail pages.
@@ -13,11 +13,8 @@
 page:
   eyebrow: "ENGAGEMENT BEYOND THE CLASSROOM"
   intro: >-
-    A chronological overview of my co-curricular activities, competitions,
-    seminars, workshops, student-club engagement, community service, and
-    educational content. Activities within each section are arranged from
-    newest to oldest.
-
+    A chronological overview tracking my co-curricular and extracurricular 
+    involvement, community engagement, and educational initiatives.
 controls:
   show_search: true
   search_placeholder: "Search activities, organizations, events, or years..."

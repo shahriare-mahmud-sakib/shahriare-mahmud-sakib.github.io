@@ -5,13 +5,12 @@
 # =============================================================================
 
 page:
-  eyebrow: "ACADEMIC & PROFESSIONAL WORK"
+  eyebrow: "ACADEMIC & PROFESSIONAL PROJECTS"
   intro: >-
-    A chronological record of selected civil-engineering projects involving
-    sustainable infrastructure, structural analysis, computational methods,
-    design, programming, modelling, and engineering visualization. Select any
-    project to view its detailed overview, methods, figures, code, reports, and
-    outputs.
+    This page showcases my academic and professional civil engineering projects. 
+    Use the categories and filters below to explore my work spanning sustainable 
+    infrastructure, structural analysis, computational methods, engineering design, 
+    and programming.
 
 timeline:
   show: true
@@ -30,8 +29,8 @@ controls:
       value: "academic"
     - label: "Professional"
       value: "professional"
-    - label: "Research"
-      value: "research"
+    # - label: "Research"
+    #   value: "research"
     - label: "Programming"
       value: "programming"
 

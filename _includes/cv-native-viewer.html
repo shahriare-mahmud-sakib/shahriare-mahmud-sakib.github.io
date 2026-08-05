@@ -1,27 +1,30 @@
 {% assign cv = site.data.cv_page %}
 {% assign cv_pdf_url = cv.pdf.path | relative_url %}
 
-<section class="sms-native-cv" aria-label="Curriculum vitae">
+<section
+  class="sms-native-cv"
+  aria-label="Curriculum vitae"
+  style="
+    --sms-cv-viewer-width: {{ cv.viewer.width | default: '100%' }};
+    --sms-cv-viewer-max-width: {{ cv.viewer.max_width | default: 'none' }};
+    --sms-cv-viewer-height: {{ cv.viewer.desktop_height | default: '680px' }};
+    --sms-cv-viewer-mobile-height: {{ cv.viewer.mobile_height | default: '560px' }};
+    --sms-cv-viewer-background: {{ cv.appearance.background | default: '#525659' }};
+    --sms-cv-viewer-radius: {{ cv.appearance.border_radius | default: '0px' }};
+    --sms-cv-viewer-border-width: {{ cv.appearance.border_width | default: '1px' }};
+  "
+>
   {% if cv.viewer.show != false %}
-    <div
-      class="sms-native-cv__viewer-wrap"
-      style="
-        --sms-cv-viewer-width: {{ cv.viewer.width | default: '100%' }};
-        --sms-cv-viewer-max-width: {{ cv.viewer.max_width | default: 'none' }};
-        --sms-cv-viewer-height: {{ cv.viewer.desktop_height | default: '650px' }};
-        --sms-cv-viewer-mobile-height: {{ cv.viewer.mobile_height | default: '560px' }};
-      "
-    >
+    <div class="sms-native-cv__viewer-wrap">
       <iframe
         class="sms-native-cv__viewer"
         src="{{ cv_pdf_url }}{{ cv.viewer.fragment }}"
         title="{{ cv.pdf.title | default: 'Curriculum vitae PDF' }}"
         loading="eager"
-        frameborder="0"
       >
         <p>
-          {{ cv.viewer.fallback_text | default: 'Your browser cannot display the embedded PDF.' }}
-          <a href="{{ cv_pdf_url }}">{{ cv.viewer.fallback_link_text | default: 'Open the CV PDF.' }}</a>
+          Your browser cannot display the PDF viewer.
+          <a href="{{ cv_pdf_url }}">Open the CV PDF.</a>
         </p>
       </iframe>
     </div>

@@ -1,0 +1,287 @@
+# =============================================================================
+# ACTIVITIES PAGE DATA
+#
+# Main editable file for the Activities page.
+# - Smaller order numbers appear earlier.
+# - Keep the newest activity at order: 1 inside each section.
+# - Article writing links to the Publications page.
+# - Competitions, seminars and workshops link to detail pages.
+# - Club and community entries are intentionally not hyperlinked.
+# - The YouTube section displays only the first two playlist entries.
+# =============================================================================
+
+page:
+  eyebrow: "ENGAGEMENT BEYOND THE CLASSROOM"
+  intro: >-
+    A chronological overview of my co-curricular activities, competitions,
+    seminars, workshops, student-club engagement, community service, and
+    educational content. Activities within each section are arranged from
+    newest to oldest.
+
+controls:
+  show_search: true
+  search_placeholder: "Search activities, organizations, events, or years..."
+  show_filters: true
+  filters:
+    - label: "All"
+      value: "all"
+    - label: "Co-curricular"
+      value: "co-curricular"
+    - label: "Extra-curricular"
+      value: "extra-curricular"
+    - label: "Community"
+      value: "community"
+    - label: "Educational Content"
+      value: "education"
+
+sections:
+  article:
+    eyebrow: "CO-CURRICULAR ACTIVITIES"
+    heading: "Article Writing"
+    icon: "fas fa-pen-nib"
+    category: "co-curricular"
+    items:
+      - order: 1
+        year: "2024"
+        period: "Annual Magazine 2024"
+        title: "Base Isolation: The Revolutionary Measure in Earthquake Protection of Buildings"
+        organization: "ASCE Student Chapter, BUET"
+        icon: "fas fa-newspaper"
+        accent: "#2563eb"
+        summary: >-
+          Published an article discussing base-isolation systems as an
+          earthquake-protection measure for buildings.
+        linked: true
+        link_label: "View in Publications"
+        url: "/publications/#base-isolation-the-revolutionary-measure-in-earthquake-protection-of-buildings"
+
+  competitions:
+    eyebrow: "CO-CURRICULAR ACTIVITIES"
+    heading: "Participation in Competitions"
+    icon: "fas fa-trophy"
+    category: "co-curricular"
+    items:
+      - order: 1
+        year: "2023"
+        period: "2023"
+        title: "Seismic Challenge — Cennovation"
+        organization: "Islamic University of Technology"
+        location: "Gazipur, Bangladesh"
+        icon: "fas fa-building-shield"
+        accent: "#dc2626"
+        summary: "Participated in the Seismic Challenge at Cennovation: Civil Engineering Competitions 2023."
+        linked: true
+        link_label: "Event overview"
+        url: "/activities/seismic-challenge-cennovation-2023/"
+
+      - order: 2
+        year: "2023"
+        period: "2023"
+        title: "Seismic Challenge — Ceismic"
+        organization: "Bangladesh University of Engineering and Technology (BUET)"
+        location: "Dhaka, Bangladesh"
+        icon: "fas fa-house-crack"
+        accent: "#f97316"
+        summary: "Participated in the Seismic Challenge at Ceismic: Civil Engineering Competition 2023."
+        linked: true
+        link_label: "Event overview"
+        url: "/activities/seismic-challenge-ceismic-2023/"
+
+      - order: 3
+        year: "2019"
+        period: "2019"
+        title: "Bangladesh Mathematical Olympiad"
+        organization: "Bangladesh Mathematical Olympiad"
+        location: "Tangail, Bangladesh"
+        icon: "fas fa-square-root-variable"
+        accent: "#7c3aed"
+        summary: "Participated in the Bangladesh Mathematical Olympiad in Tangail."
+        linked: true
+        link_label: "Event overview"
+        url: "/activities/bangladesh-mathematical-olympiad-2019/"
+
+      - order: 4
+        year: "2019"
+        period: "2019"
+        title: "Science Olympiad"
+        organization: "Bangladesh Academy of Sciences"
+        location: "Dhaka, Bangladesh"
+        outcome: "District Champion"
+        icon: "fas fa-flask"
+        accent: "#0891b2"
+        summary: "Participated in the Science Olympiad and achieved District Champion recognition."
+        linked: true
+        link_label: "Event overview"
+        url: "/activities/science-olympiad-2019/"
+
+      - order: 5
+        year: "2018"
+        period: "2018"
+        title: "Mathematics and Computer — Creative Talent Quest"
+        organization: "Creative Talent Quest"
+        location: "Dhaka, Bangladesh"
+        outcome: "District Champion"
+        icon: "fas fa-laptop-code"
+        accent: "#16a34a"
+        summary: "Competed in Mathematics and Computer and achieved District Champion recognition."
+        linked: true
+        link_label: "Event overview"
+        url: "/activities/creative-talent-quest-2018/"
+
+  workshops:
+    eyebrow: "CO-CURRICULAR ACTIVITIES"
+    heading: "Seminars and Workshops"
+    icon: "fas fa-chalkboard-user"
+    category: "co-curricular"
+    items:
+      - order: 1
+        year: "2025"
+        period: "November 2025"
+        title: "Hands-On AI for Smart Appliances: From Sensor Data to Embedded Code"
+        organization: "MATLAB EXPO 2025, MathWorks"
+        icon: "fas fa-microchip"
+        accent: "#e11d48"
+        summary: >-
+          Participated in a hands-on session on transforming sensor data into
+          embedded AI code for smart-appliance applications.
+        linked: true
+        link_label: "Workshop overview"
+        url: "/activities/hands-on-ai-smart-appliances-2025/"
+
+      - order: 2
+        year: "2023"
+        period: "February 2023"
+        title: "Innovative Nature-Based Technologies for Slope Stabilization, Land Reclamation and Soil Remediation"
+        organization: "ASCE Student Chapter, BUET"
+        icon: "fas fa-seedling"
+        accent: "#16a34a"
+        summary: >-
+          Participated in a seminar on nature-based approaches to slope
+          stabilization, land reclamation, and soil remediation.
+        linked: true
+        link_label: "Seminar overview"
+        url: "/activities/nature-based-technologies-2023/"
+
+      - order: 3
+        year: "2022"
+        period: "December 2022"
+        title: "Soft Skills Development"
+        organization: "Directorate of Continuing Education (DCE), BUET"
+        icon: "fas fa-people-group"
+        accent: "#8b5cf6"
+        summary: "Participated in a professional-development workshop focused on interpersonal and workplace skills."
+        linked: true
+        link_label: "Workshop overview"
+        url: "/activities/soft-skills-development-2022/"
+
+  clubs:
+    eyebrow: "EXTRA-CURRICULAR ACTIVITIES"
+    heading: "Club Activities"
+    icon: "fas fa-users"
+    category: "extra-curricular"
+    items:
+      - order: 1
+        year: "2024–25"
+        period: "2024–2025"
+        title: "Executive"
+        organization: "ASCE Student Chapter, BUET"
+        icon: "fas fa-user-tie"
+        accent: "#2563eb"
+        summary: "Served as an executive member of the ASCE Student Chapter at BUET."
+        linked: false
+
+      - order: 2
+        year: "2022–25"
+        period: "2022–2025"
+        title: "Member and Volunteer"
+        organization: "BUET Innovation & Designing Club (BIDC)"
+        icon: "fas fa-lightbulb"
+        accent: "#f59e0b"
+        summary: "Participated in club initiatives as a member and volunteer."
+        linked: false
+
+      - order: 3
+        year: "2013–17"
+        period: "2013–2017"
+        title: "Member and Volunteer"
+        organization: "Debate Club, Sakhipur P.M. Pilot High School"
+        icon: "fas fa-comments"
+        accent: "#7c3aed"
+        summary: "Participated in debate-club activities as a member and volunteer."
+        linked: false
+
+  community:
+    eyebrow: "EXTRA-CURRICULAR ACTIVITIES"
+    heading: "Community Involvement"
+    icon: "fas fa-hand-holding-heart"
+    category: "community"
+    items:
+      - order: 1
+        year: "2022–25"
+        period: "2022–2025"
+        title: "Flood Relief Fundraising and Aid Distribution"
+        organization: "BUET Student Community"
+        icon: "fas fa-box-open"
+        accent: "#0284c7"
+        summary: >-
+          Participated in fundraising and aid distribution for flood-affected
+          communities in Bangladesh.
+        linked: false
+
+      - order: 2
+        year: "2021–25"
+        period: "2021–2025"
+        title: "Winter Clothing Distribution"
+        organization: "BUET Student Community"
+        icon: "fas fa-shirt"
+        accent: "#0f766e"
+        summary: >-
+          Participated in winter-clothing distribution for underprivileged
+          communities in Dhaka.
+        linked: false
+
+      - order: 3
+        year: "2024"
+        period: "2024"
+        title: "Emergency Disaster Relief and Flood Response"
+        organization: "As-Sunnah Foundation"
+        icon: "fas fa-hands-helping"
+        accent: "#16a34a"
+        summary: >-
+          Participated in the 2024 Emergency Disaster Relief Fund and flood-response initiatives.
+        linked: false
+
+  education:
+    eyebrow: "EXTRA-CURRICULAR ACTIVITIES"
+    heading: "Educational Content"
+    icon: "fab fa-youtube"
+    category: "education"
+    channel:
+      name: "SMS' Classroom"
+      period: "2022–2026"
+      url: "https://www.youtube.com/@smsclassroom7035"
+      playlists_url: "https://www.youtube.com/@smsclassroom7035/playlists"
+      summary: >-
+        SMS' Classroom publishes educational video content, including
+        engineering-software tutorials and technical learning resources in
+        accessible formats.
+      button_label: "Visit YouTube Channel"
+
+    # The page displays the first two entries only. Keep the newest at order: 1.
+    # To embed a playlist, copy the value after `list=` from its YouTube URL and
+    # paste it into playlist_id. Example URL:
+    # https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxxx
+    playlists:
+      - order: 1
+        title: "Newest Playlist — add the current title"
+        playlist_id: ""
+        url: "https://www.youtube.com/@smsclassroom7035/playlists"
+        summary: "Paste the newest playlist title, URL, and playlist ID here."
+
+      - order: 2
+        title: "Second-Newest Playlist — add the current title"
+        playlist_id: ""
+        url: "https://www.youtube.com/@smsclassroom7035/playlists"
+        summary: "Paste the second-newest playlist title, URL, and playlist ID here."
+
+empty_message: "No activity matches the selected filter or search term."

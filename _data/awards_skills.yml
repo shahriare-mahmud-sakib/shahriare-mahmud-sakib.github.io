@@ -120,9 +120,8 @@ skill_groups:
     heading: "Research Expertise"
     icon: "fas fa-microscope"
     description: >-
-      Research areas in structural engineering, earthquake engineering,
-      computational mechanics, monitoring, experimentation, and resilient
-      infrastructure.
+      Focused on developing core expertise in the structural, numerical, and seismic 
+      analysis of civil engineering structures through targeted research.
     hyperlinked: false
 
     skills:
@@ -151,38 +150,38 @@ skill_groups:
           - "cyclic loading"
           - "earthquake"
 
-      - order: 3
-        name: "Structural Dynamics"
-        icon: "fas fa-chart-line"
-        accent: "#7c3aed"
-        summary: >-
-          Dynamic response of structures subjected to time-varying and extreme
-          loading.
-        hyperlinked: false
-        keywords:
-          - "dynamic response"
-          - "vibration"
-          - "extreme loading"
+      # - order: 3
+      #   name: "Structural Dynamics"
+      #   icon: "fas fa-chart-line"
+      #   accent: "#7c3aed"
+      #   summary: >-
+      #     Dynamic response of structures subjected to time-varying and extreme
+      #     loading.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "dynamic response"
+      #     - "vibration"
+      #     - "extreme loading" 
 
-      - order: 4
-        name: "Computational Structural Mechanics"
-        icon: "fas fa-gears"
-        accent: "#0891b2"
-        summary: >-
-          Computational modelling and numerical assessment of structural
-          behaviour.
-        hyperlinked: false
-        keywords:
-          - "computational mechanics"
-          - "numerical modelling"
-          - "simulation"
+      # - order: 4
+      #   name: "Computational Structural Mechanics"
+      #   icon: "fas fa-gears"
+      #   accent: "#0891b2"
+      #   summary: >-
+      #     Computational modelling and numerical assessment of structural
+      #     behaviour.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "computational mechanics"
+      #     - "numerical modelling"
+      #     - "simulation"
 
       - order: 5
         name: "Nonlinear Finite Element Analysis"
         icon: "fas fa-cubes"
         accent: "#f97316"
         summary: >-
-          Geometric and material nonlinear analysis, constitutive modelling,
+          Geometric and material nonlinear analysis, constitutive three-dimensional modelling,
           validation, and parametric investigation.
         hyperlinked: false
         keywords:
@@ -191,26 +190,26 @@ skill_groups:
           - "ANSYS"
           - "APDL"
 
-      - order: 6
-        name: "Structural Health Monitoring"
-        icon: "fas fa-heart-pulse"
-        accent: "#16a34a"
-        summary: >-
-          Monitoring, condition assessment, and data-informed evaluation of
-          structural and infrastructure systems.
-        hyperlinked: false
-        keywords:
-          - "monitoring"
-          - "condition assessment"
-          - "infrastructure health"
+      # - order: 6
+      #   name: "Structural Health Monitoring"
+      #   icon: "fas fa-heart-pulse"
+      #   accent: "#16a34a"
+      #   summary: >-
+      #     Monitoring, condition assessment, and data-informed evaluation of
+      #     structural and infrastructure systems.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "monitoring"
+      #     - "condition assessment"
+      #     - "infrastructure health"
 
       - order: 7
         name: "Steel and Composite Structures"
         icon: "fas fa-industry"
         accent: "#475569"
         summary: >-
-          Seismic performance and nonlinear behaviour of steel, stainless-steel,
-          thin-walled, and composite structural members.
+          Seismic performance and nonlinear behaviour of steel, concrete,
+          and composite structural members.
         hyperlinked: false
         keywords:
           - "steel structures"
@@ -231,18 +230,18 @@ skill_groups:
           - "shake table"
           - "laboratory testing"
 
-      - order: 9
-        name: "Resilient Infrastructure Systems"
-        icon: "fas fa-bridge"
-        accent: "#9333ea"
-        summary: >-
-          Safer, smarter, and more resilient infrastructure through integrated
-          computational and experimental research.
-        hyperlinked: false
-        keywords:
-          - "resilience"
-          - "infrastructure"
-          - "performance assessment"
+      # - order: 9
+      #   name: "Resilient Infrastructure Systems"
+      #   icon: "fas fa-bridge"
+      #   accent: "#9333ea"
+      #   summary: >-
+      #     Safer, smarter, and more resilient infrastructure through integrated
+      #     computational and experimental research.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "resilience"
+      #     - "infrastructure"
+      #     - "performance assessment"
 
   # ---------------------------------------------------------------------------
   # ANALYSIS, SIMULATION AND CAD

@@ -8,21 +8,21 @@ show_on_projects: true
 order: 1
 filter: "academic"
 
-timeline_year: "2023–2024"
+timeline_year: "2023–2025"
 timeline_icon: "fas fa-recycle"
 
 project_type: "Capstone Project"
 status: "Completed"
-period: "Nov. 2023 – Dec. 2024"
-discipline: "Sustainable Infrastructure and Structural Engineering"
-course: "Undergraduate Civil Engineering Capstone Project"
+period: "Nov. 2023 – Mar. 2025"
+discipline: "Sustainable Infrastructure and Environmental Engineering"
+course: "Civil Engineering Capstone Project, BUET"
 role: "Group Leader"
 
 supervisors:
-  - "Professor Dr. Khan Mahmud Amanat, Department of Civil Engineering, BUET"
-  - "Professor Dr. Mehedi Ahmed Ansary, Department of Civil Engineering, BUET"
-  - "Professor Dr. Moazzem Hossain, Department of Civil Engineering, BUET"
-  - "Professor Dr. Md. Mafizur Rahman, Department of Civil Engineering, BUET"
+  - "Professor [Dr. Khan Mahmud Amanat](https://ce.buet.ac.bd/khan-mahmud-amanat/), Department of Civil Engineering, BUET"
+  - "Professor [Dr. Mehedi Ahmed Ansary](https://ce.buet.ac.bd/profile-of-mehedi-ahmed-ansary/), Department of Civil Engineering, BUET"
+  - "Professor [Dr. Moazzem Hossain](https://ce.buet.ac.bd/profile-of-moazzem-hossain/), Department of Civil Engineering, BUET"
+  - "Professor [Dr. Md. Mafizur Rahman](https://ce.buet.ac.bd/profile-of-md-mafizur-rahman/), Department of Civil Engineering, BUET"
 
 cover_image: "/images/projects/model-solid-waste-management-system/cover.svg"
 cover_alt: "Illustration of a community-level solid waste management and recycling facility"

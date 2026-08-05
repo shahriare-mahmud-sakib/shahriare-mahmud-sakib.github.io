@@ -40,14 +40,15 @@ sections:
     items:
       - order: 1
         year: "2024"
-        period: "Annual Magazine 2024"
+        period: "January"
         title: "Base Isolation: The Revolutionary Measure in Earthquake Protection of Buildings"
-        organization: "ASCE Student Chapter, BUET"
+        organization: "Annual Magazine 2024, ASCE Student Chapter, BUET"
         icon: "fas fa-newspaper"
         accent: "#2563eb"
         summary: >-
           Published an article discussing base-isolation systems as an
-          earthquake-protection measure for buildings.
+          earthquake-protection measure for buildings in the Annual Magazine 
+          2024, ASCE Student Chapter, BUET.
         linked: true
         link_label: "View in Publications"
         url: "/publications/#base-isolation-the-revolutionary-measure-in-earthquake-protection-of-buildings"
@@ -60,67 +61,67 @@ sections:
     items:
       - order: 1
         year: "2023"
-        period: "2023"
+        period: "March"
         title: "Seismic Challenge — Cennovation"
-        organization: "Islamic University of Technology"
+        organization: "Islamic University of Technology (IUT)"
         location: "Gazipur, Bangladesh"
         icon: "fas fa-building-shield"
         accent: "#dc2626"
-        summary: "Participated in the Seismic Challenge at Cennovation: Civil Engineering Competitions 2023."
+        # summary: "Participated in the Seismic Challenge at Cennovation: Civil Engineering Competitions 2023."
         linked: true
         link_label: "Event overview"
         url: "/activities/seismic-challenge-cennovation-2023/"
 
       - order: 2
         year: "2023"
-        period: "2023"
+        period: "February"
         title: "Seismic Challenge — Ceismic"
         organization: "Bangladesh University of Engineering and Technology (BUET)"
         location: "Dhaka, Bangladesh"
         icon: "fas fa-house-crack"
         accent: "#f97316"
-        summary: "Participated in the Seismic Challenge at Ceismic: Civil Engineering Competition 2023."
+        # summary: "Participated in the Seismic Challenge at Ceismic: Civil Engineering Competition 2023."
         linked: true
         link_label: "Event overview"
         url: "/activities/seismic-challenge-ceismic-2023/"
 
       - order: 3
         year: "2019"
-        period: "2019"
-        title: "Bangladesh Mathematical Olympiad"
-        organization: "Bangladesh Mathematical Olympiad"
-        location: "Tangail, Bangladesh"
-        icon: "fas fa-square-root-variable"
-        accent: "#7c3aed"
-        summary: "Participated in the Bangladesh Mathematical Olympiad in Tangail."
-        linked: true
-        link_label: "Event overview"
-        url: "/activities/bangladesh-mathematical-olympiad-2019/"
-
-      - order: 4
-        year: "2019"
-        period: "2019"
+        period: "February"
         title: "Science Olympiad"
         organization: "Bangladesh Academy of Sciences"
         location: "Dhaka, Bangladesh"
         outcome: "District Champion"
         icon: "fas fa-flask"
         accent: "#0891b2"
-        summary: "Participated in the Science Olympiad and achieved District Champion recognition."
+        # summary: "Participated in the Science Olympiad and achieved District Champion recognition."
         linked: true
         link_label: "Event overview"
         url: "/activities/science-olympiad-2019/"
+        
+      - order: 4
+        year: "2019"
+        period: "January"
+        title: "Bangladesh Mathematical Olympiad"
+        organization: "Bangladesh Mathematical Olympiad"
+        location: "Tangail, Bangladesh"
+        icon: "fas fa-square-root-variable"
+        accent: "#7c3aed"
+        # summary: "Participated in the Bangladesh Mathematical Olympiad in Tangail."
+        linked: true
+        link_label: "Event overview"
+        url: "/activities/bangladesh-mathematical-olympiad-2019/"      
 
       - order: 5
         year: "2018"
-        period: "2018"
+        period: "April"
         title: "Mathematics and Computer — Creative Talent Quest"
-        organization: "Creative Talent Quest"
+        organization: "National Creative Talent Quest"
         location: "Dhaka, Bangladesh"
         outcome: "District Champion"
         icon: "fas fa-laptop-code"
         accent: "#16a34a"
-        summary: "Competed in Mathematics and Computer and achieved District Champion recognition."
+        # summary: "Competed in Mathematics and Computer and achieved District Champion recognition."
         linked: true
         link_label: "Event overview"
         url: "/activities/creative-talent-quest-2018/"

@@ -1,0 +1,172 @@
+---
+---
+
+/* ==================================================================
+   EDITABLE CV PAGE STYLE CONTROLS
+
+   You can change the values below without editing the rest of the file.
+   The page uses your Academic Pages theme variables, so it follows the
+   light/dark colors already used by your website.
+   ================================================================== */
+
+:root {
+  /* Introductory paragraph */
+  --sms-cv-intro-size: 0.95rem;
+
+  /* Buttons */
+  --sms-cv-button-text-size: 0.82rem;
+  --sms-cv-button-radius: 0.45rem;
+  --sms-cv-button-padding-y: 0.62rem;
+  --sms-cv-button-padding-x: 0.9rem;
+
+  /* PDF container */
+  --sms-cv-frame-radius: 0.65rem;
+  --sms-cv-frame-padding: 0.55rem;
+
+  /* Spacing */
+  --sms-cv-actions-gap: 0.65rem;
+  --sms-cv-section-gap: 1rem;
+}
+
+/* Main CV content */
+.page__content .sms-cv-page {
+  width: 100%;
+  margin: 0;
+  color: var(--global-text-color);
+}
+
+.page__content .sms-cv-page__intro {
+  margin: 0 0 var(--sms-cv-section-gap);
+  font-size: var(--sms-cv-intro-size);
+  line-height: 1.65;
+  color: var(--global-text-color);
+}
+
+/* Download and open buttons */
+.page__content .sms-cv-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sms-cv-actions-gap);
+  margin: 0 0 var(--sms-cv-section-gap);
+}
+
+.page__content .sms-cv-page__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding:
+    var(--sms-cv-button-padding-y)
+    var(--sms-cv-button-padding-x);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-cv-button-radius);
+  font-size: var(--sms-cv-button-text-size);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.page__content .sms-cv-page__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.page__content .sms-cv-page__button--primary {
+  color: #fff !important;
+  background: var(--global-link-color);
+  border-color: var(--global-link-color);
+}
+
+.page__content .sms-cv-page__button--primary:hover {
+  color: #fff !important;
+  background: var(--global-link-color-hover);
+  border-color: var(--global-link-color-hover);
+}
+
+.page__content .sms-cv-page__button--secondary {
+  color: var(--global-link-color) !important;
+  background: var(--global-bg-color);
+}
+
+.page__content .sms-cv-page__button--secondary:hover {
+  color: var(--global-link-color-hover) !important;
+  background: var(--global-code-background-color);
+}
+
+/* Theme-matched PDF frame */
+.page__content .sms-cv-page__viewer-shell {
+  width: 100%;
+  height: var(--sms-cv-viewer-height);
+  padding: var(--sms-cv-frame-padding);
+  overflow: hidden;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-cv-frame-radius);
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.page__content .sms-cv-page__viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #fff;
+  border: 0;
+  border-radius: calc(var(--sms-cv-frame-radius) - 0.2rem);
+}
+
+/* Information below viewer */
+.page__content .sms-cv-page__meta {
+  margin-top: 0.8rem;
+}
+
+.page__content .sms-cv-page__updated,
+.page__content .sms-cv-page__note {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+
+.page__content .sms-cv-page__updated {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Tablet and phone layout */
+@media (max-width: 767px) {
+  .page__content .sms-cv-page__actions {
+    align-items: stretch;
+  }
+
+  .page__content .sms-cv-page__button {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .page__content .sms-cv-page__viewer-shell {
+    height: var(--sms-cv-viewer-mobile-height);
+    padding: 0.3rem;
+  }
+}
+
+/* Print: do not print the embedded browser viewer */
+@media print {
+  .page__content .sms-cv-page__viewer-shell {
+    display: none;
+  }
+
+  .page__content .sms-cv-page__button {
+    color: #000 !important;
+    background: transparent !important;
+    border-color: #777 !important;
+    box-shadow: none !important;
+  }
+}

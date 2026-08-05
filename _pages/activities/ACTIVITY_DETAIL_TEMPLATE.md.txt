@@ -1,0 +1,43 @@
+HOW TO ADD A NEW LINKED COMPETITION, SEMINAR, OR WORKSHOP
+========================================================
+
+1. Copy this file inside `_pages/activities/`.
+2. Rename it, for example: `new-workshop-2026.md`.
+3. Change `.txt` to `.md`.
+4. Delete these instruction lines.
+5. Add the matching item to `_data/activities.yml`.
+
+---
+layout: activity-detail
+title: "Activity title"
+permalink: /activities/activity-slug/
+author_profile: true
+category: "SEMINAR / WORKSHOP"
+date: "2026"
+organization: "Organizer"
+location: "Location"
+outcome: ""
+icon: "fas fa-chalkboard-user"
+accent: "#0ea5e9"
+summary: "One-sentence summary."
+
+certificates:
+  - label: "Participation Certificate"
+    url: "/files/activities/activity-slug/certificate.pdf"
+    available: false
+
+gallery:
+  - image: "/images/activities/activity-slug/photo-01.jpg"
+    alt: "Event photograph"
+    caption: "Describe the photograph."
+
+resources: []
+---
+
+## Overview
+
+Write the event overview.
+
+## Participation and learning
+
+Explain your participation, contribution, result, and learning.

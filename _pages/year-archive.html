@@ -1,19 +1,122 @@
 ---
 layout: archive
+title: "Activities"
 permalink: /year-archive/
-title: "Blog posts"
 author_profile: true
 redirect_from:
-  - /wordpress/blog-posts/
+  - /activities/
 ---
 
-{% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+<link rel="stylesheet" href="{{ '/assets/css/activities-page.css' | relative_url }}">
+{% assign a = site.data.activities %}
+
+<section class="sms-activities" data-activities-root>
+  <header class="sms-activities__intro">
+    <p class="sms-act-kicker">{{ a.page.eyebrow }}</p>
+    <p>{{ a.page.intro }}</p>
+  </header>
+
+  <div class="sms-act-controls">
+    {% if a.controls.show_search %}
+      <label class="sms-act-search">
+        <span class="sr-only">Search activities</span>
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" data-activity-search placeholder="{{ a.controls.search_placeholder }}" autocomplete="off">
+      </label>
+    {% endif %}
+
+    {% if a.controls.show_filters %}
+      <div class="sms-act-filters" role="group" aria-label="Filter activities">
+        {% for filter in a.controls.filters %}
+          <button type="button" class="sms-act-filter{% if filter.value == 'all' %} is-active{% endif %}"
+                  data-activity-filter="{{ filter.value }}"
+                  aria-pressed="{% if filter.value == 'all' %}true{% else %}false{% endif %}">
+            {{ filter.label }}
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% assign section_keys = 'article,competitions,workshops,clubs,community' | split: ',' %}
+  {% for key in section_keys %}
+    {% assign section = a.sections[key] %}
+    <section class="sms-act-section" data-activity-section data-section-category="{{ section.category }}">
+      <header class="sms-act-heading">
+        <span><i class="{{ section.icon }}" aria-hidden="true"></i></span>
+        <div>
+          <p class="sms-act-kicker">{{ section.eyebrow }}</p>
+          <h2>{{ section.heading }}</h2>
+        </div>
+      </header>
+
+      <div class="sms-act-timeline">
+        {% assign ordered_items = section.items | sort: 'order' %}
+        {% for item in ordered_items %}
+          {% include activity-item.html item=item category=section.category %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+
+  {% assign education = a.sections.education %}
+  <section class="sms-act-section sms-act-youtube" data-activity-section data-section-category="education">
+    <header class="sms-act-heading">
+      <span><i class="{{ education.icon }}" aria-hidden="true"></i></span>
+      <div>
+        <p class="sms-act-kicker">{{ education.eyebrow }}</p>
+        <h2>{{ education.heading }}</h2>
+      </div>
+    </header>
+
+    <article class="sms-channel-card" data-activity-card data-activity-category="education"
+      data-activity-search="{{ education.channel.name | append: ' ' | append: education.channel.summary | downcase | escape }}">
+      <div class="sms-channel-card__icon"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+      <div>
+        <div class="sms-channel-card__meta">{{ education.channel.period }}</div>
+        <h3>{{ education.channel.name }}</h3>
+        <p>{{ education.channel.summary }}</p>
+        <a href="{{ education.channel.url }}" target="_blank" rel="noopener noreferrer">
+          {{ education.channel.button_label }} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </article>
+
+    <div class="sms-playlist-heading">
+      <div>
+        <p class="sms-act-kicker">RECENT PLAYLISTS</p>
+        <h3>Two most recent playlists</h3>
+      </div>
+      <a href="{{ education.channel.playlists_url }}" target="_blank" rel="noopener noreferrer">View all playlists</a>
+    </div>
+
+    <div class="sms-playlist-grid">
+      {% assign playlists = education.playlists | sort: 'order' %}
+      {% for playlist in playlists limit: 2 %}
+        <article class="sms-playlist-card">
+          <div class="sms-playlist-card__media">
+            {% if playlist.playlist_id and playlist.playlist_id != '' %}
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list={{ playlist.playlist_id }}"
+                      title="{{ playlist.title | escape }}" loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+            {% else %}
+              <div class="sms-playlist-placeholder">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+                <span>Add playlist ID in <code>_data/activities.yml</code></span>
+              </div>
+            {% endif %}
+          </div>
+          <div class="sms-playlist-card__body">
+            <h4>{{ playlist.title }}</h4>
+            <p>{{ playlist.summary }}</p>
+            <a href="{{ playlist.url }}" target="_blank" rel="noopener noreferrer">Open playlist</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <p class="sms-act-empty" data-activity-empty hidden>{{ a.empty_message }}</p>
+</section>
+<script src="{{ '/assets/js/activities-filter.js' | relative_url }}" defer></script>

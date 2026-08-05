@@ -25,7 +25,7 @@ page:
 awards_section:
   eyebrow: "AWARDS & HONOURS"
   heading: "Academic Awards and Scholarships"
-  note: "Awards are arranged from newest to oldest."
+  # note: "Awards are arranged from newest to oldest."
 
 awards:
   - order: 1
@@ -50,8 +50,9 @@ awards:
     icon: "fas fa-award"
     accent: "#8b5cf6"
     summary: >-
-      Included in the Faculty of Civil Engineering Dean's List for
-      consecutive undergraduate academic years.
+      Awarded and included in the Faculty of Civil Engineering Dean’s List for 
+      consecutive undergraduate academic years in recognition of outstanding 
+      academic excellence.
     years:
       - "Academic Year: 2019–20"
       - "Academic Year: 2020–21"
@@ -85,9 +86,9 @@ awards:
 skills_section:
   eyebrow: "SKILLS & EXPERTISE"
   heading: "Research Expertise and Technical Skills"
-  note: >-
-    Research areas are displayed directly without links. Technical skills may
-    link to certificates, code, reports, or sample works.
+  # note: >-
+  #   Research areas are displayed directly without links. Technical skills may
+  #   link to certificates, code, reports, or sample works.
 
 controls:
   show_search: true

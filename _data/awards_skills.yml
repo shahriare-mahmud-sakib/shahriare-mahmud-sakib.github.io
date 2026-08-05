@@ -13,20 +13,21 @@ awards_section:
 awards:
   - order: 1
     title: "University Merit Scholarship"
-    organization: "University-level academic recognition"
-    period: "July 2022 and July 2023"
+    organization: "BUET"
+    period: "2022 - 2023"
     icon: "fas fa-medal"
     accent: "#f59e0b"
     summary: >-
-      Awarded University Merit Scholarships in July 2022 and July 2023.
-    detail_url: "/awards & skills/evidence/#award-university-merit-scholarship"
+      Awarded the prestigious University Merit Scholarship, BUET, for remarkable 
+      academic performance in the July 2022 and July 2023 semesters.
+    # detail_url: "/awards & skills/evidence/#award-university-merit-scholarship"
     years:
-      - "July 2023"
-      - "July 2022"
-    certificate:
-      available: false
-      label: "University Merit Scholarship Certificate"
-      url: "/files/certificates/awards/university-merit-scholarship/certificate.pdf"
+      - "Semester: July 2023"
+      - "Semester: July 2022"
+    # certificate:
+    #   available: false
+      # label: "University Merit Scholarship Certificate"
+      # url: "/files/certificates/awards/university-merit-scholarship/certificate.pdf"
 
   - order: 2
     title: "CE Faculty Dean's List"

@@ -20,9 +20,6 @@ pdf:
   # You may also change this path when your PDF has another file name.
   path: "/files/cv/Shahriare_Mahmud_Sakib_CV.pdf"
 
-  # Text shown on the two buttons.
-  download_label: "Download CV (PDF)"
-  open_label: "Open PDF in a new tab"
 
   # Accessible title used by the embedded PDF viewer.
   viewer_title: "Shahriare Mahmud Sakib - Curriculum Vitae"
@@ -39,6 +36,10 @@ viewer:
   # Values are in pixels.
   desktop_height: 1050
   mobile_height: 680
+
+  # Text shown on the two buttons.
+  download_label: "Download CV (PDF)"
+  open_label: "Open PDF in a new tab"
 
 details:
   # Change to false to hide the update line.

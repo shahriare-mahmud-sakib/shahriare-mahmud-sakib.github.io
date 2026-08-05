@@ -1,0 +1,80 @@
+{% assign item = include.entry %}
+{% assign section_accent = include.section_accent | default: '#2563eb' %}
+{% assign card_accent = item.accent | default: section_accent %}
+
+<article class="sms-academic-card" style="--sms-academic-accent: {{ card_accent }};">
+  <div class="sms-academic-card__icon" aria-hidden="true">
+    <i class="{{ item.icon | default: 'fas fa-circle' }}"></i>
+  </div>
+
+  <div class="sms-academic-card__body">
+    <div class="sms-academic-card__meta">
+      {% if item.period and item.period != '' %}
+        <span class="sms-academic-card__period">
+          <i class="far fa-calendar-alt" aria-hidden="true"></i>
+          {{ item.period }}
+        </span>
+      {% endif %}
+
+      {% if item.location and item.location != '' %}
+        <span class="sms-academic-card__location">
+          <i class="fas fa-location-dot" aria-hidden="true"></i>
+          {{ item.location }}
+        </span>
+      {% endif %}
+
+      {% if item.status and item.status != '' %}
+        <span class="sms-academic-card__status">{{ item.status }}</span>
+      {% endif %}
+    </div>
+
+    <h3 class="sms-academic-card__title">{{ item.title }}</h3>
+
+    {% if item.organization and item.organization != '' %}
+      <p class="sms-academic-card__organization">
+        {% if item.organization_url and item.organization_url != '' %}
+          <a href="{% if item.external_organization_link %}{{ item.organization_url }}{% else %}{{ item.organization_url | relative_url }}{% endif %}"
+             {% if item.external_organization_link %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ item.organization }}
+            {% if item.external_organization_link %}<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>{% endif %}
+          </a>
+        {% else %}
+          {{ item.organization }}
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if item.summary and item.summary != '' %}
+      <p class="sms-academic-card__summary">{{ item.summary }}</p>
+    {% endif %}
+
+    {% if item.details and item.details.size > 0 %}
+      <ul class="sms-academic-card__details">
+        {% for detail in item.details %}
+          <li>{{ detail }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if item.tags and item.tags.size > 0 %}
+      <div class="sms-academic-card__tags" aria-label="Related topics">
+        {% for tag in item.tags %}
+          <span>{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if item.links and item.links.size > 0 %}
+      <div class="sms-academic-card__links">
+        {% for link in item.links %}
+          <a class="sms-academic-card__link"
+             href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+             {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ link.label }}
+            {% if link.external %}<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>{% else %}<i class="fas fa-arrow-right" aria-hidden="true"></i>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

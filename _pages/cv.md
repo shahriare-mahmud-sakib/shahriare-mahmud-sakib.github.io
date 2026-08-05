@@ -7,6 +7,6 @@ redirect_from:
   - /resume
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/cv-page.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/cv-native-viewer.css' | relative_url }}">
 
-{% include cv-viewer.html %}
+{% include cv-native-viewer.html %}

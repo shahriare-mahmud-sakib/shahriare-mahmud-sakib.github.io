@@ -179,33 +179,45 @@ sections:
     category: "extra-curricular"
     items:
       - order: 1
-        year: "2024–25"
-        period: "2024–2025"
+        year: "2024–2025"
+        # period: "2024–2025"
         title: "Executive"
         organization: "ASCE Student Chapter, BUET"
         icon: "fas fa-user-tie"
         accent: "#2563eb"
-        summary: "Served as an executive member of the ASCE Student Chapter at BUET."
+        summary: >-
+        Served as an executive member of the ASCE Student Chapter at BUET.
+        Coordinated student volunteers and managed different event logistics.
         linked: false
 
       - order: 2
-        year: "2022–25"
-        period: "2022–2025"
+        year: "2022–2025"
+        # period: "2022–2025"
         title: "Member and Volunteer"
         organization: "BUET Innovation & Designing Club (BIDC)"
         icon: "fas fa-lightbulb"
         accent: "#f59e0b"
-        summary: "Participated in club initiatives as a member and volunteer."
+        summary: "Participated in 20+ club initiatives as a member and volunteer."
         linked: false
 
-      - order: 3
-        year: "2013–17"
-        period: "2013–2017"
+        - order: 3
+        year: "2022–2025"
+        # period: "2022–2025"
+        title: "Member and Volunteer"
+        organization: "BUET Chess Club"
+        icon: "fas fa-lightbulb"
+        accent: "#f59e0b"
+        summary: "Participated in 10+ club initiatives as a member and volunteer, as well as participated in 5+ chess competitions arranged by this club."
+        linked: false
+
+      - order: 4
+        year: "2013–2017"
+        # period: "2013–2017"
         title: "Member and Volunteer"
         organization: "Debate Club, Sakhipur P.M. Pilot High School"
         icon: "fas fa-comments"
         accent: "#7c3aed"
-        summary: "Participated in debate-club activities as a member and volunteer."
+        summary: "Participated in debate club activities and different debate competitions as a member and volunteer."
         linked: false
 
   community:
@@ -215,8 +227,8 @@ sections:
     category: "community"
     items:
       - order: 1
-        year: "2022–25"
-        period: "2022–2025"
+        year: "2022–2025"
+        # period: "2022–2025"
         title: "Flood Relief Fundraising and Aid Distribution"
         organization: "BUET Student Community"
         icon: "fas fa-box-open"
@@ -227,8 +239,8 @@ sections:
         linked: false
 
       - order: 2
-        year: "2021–25"
-        period: "2021–2025"
+        year: "2021–2025"
+        # period: "2021–2025"
         title: "Winter Clothing Distribution"
         organization: "BUET Student Community"
         icon: "fas fa-shirt"
@@ -240,7 +252,7 @@ sections:
 
       - order: 3
         year: "2024"
-        period: "2024"
+        # period: "2024"
         title: "Emergency Disaster Relief and Flood Response"
         organization: "As-Sunnah Foundation"
         icon: "fas fa-hands-helping"
@@ -256,7 +268,7 @@ sections:
     category: "education"
     channel:
       name: "SMS' Classroom"
-      period: "2022–2026"
+      period: "2022–Present"
       url: "https://www.youtube.com/@smsclassroom7035"
       playlists_url: "https://www.youtube.com/@smsclassroom7035/playlists"
       summary: >-
@@ -271,15 +283,15 @@ sections:
     # https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxxx
     playlists:
       - order: 1
-        title: "Newest Playlist — add the current title"
+        title: "AutoCAD Full Tutorial"
         playlist_id: ""
-        url: "https://www.youtube.com/@smsclassroom7035/playlists"
-        summary: "Paste the newest playlist title, URL, and playlist ID here."
+        url: "https://youtube.com/playlist?list=PLb-EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=qNl1LI2Bi8YBFO5x"
+        summary: "A comprehensive series of AutoCAD tutorials, covering concepts from fundamentals to advanced techniques."
 
       - order: 2
-        title: "Second-Newest Playlist — add the current title"
+        title: "ANSYS 19.2 Mechanical APDL Full Tutorial"
         playlist_id: ""
-        url: "https://www.youtube.com/@smsclassroom7035/playlists"
-        summary: "Paste the second-newest playlist title, URL, and playlist ID here."
+        url: "https://youtube.com/playlist?list=PLb-EloPEROJWPvoZcEClo8RTdnr1PxTiV&si=hJsSAOTaCp4KKBQK"
+        summary: "A comprehensive series of ANSYS Mechanical APDL tutorials, covering concepts from fundamentals to advanced techniques."
 
 empty_message: "No activity matches the selected filter or search term."

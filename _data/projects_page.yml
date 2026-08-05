@@ -1,0 +1,36 @@
+# =============================================================================
+# PROJECTS PAGE SETTINGS
+# Edit this file to change the introduction, filters, and empty-result message.
+# Individual projects are edited inside the _portfolio folder.
+# =============================================================================
+
+page:
+  eyebrow: "ACADEMIC & PROFESSIONAL WORK"
+  intro: >-
+    Selected civil-engineering projects involving structural analysis,
+    computational methods, programming, modelling, design, and visualization.
+    Open any project to see its detailed overview, methods, figures, code,
+    reports, and outputs.
+
+controls:
+  show_search: true
+  search_placeholder: "Search projects, tools, methods, or topics..."
+
+  show_filters: true
+  filters:
+    - label: "All"
+      value: "all"
+
+    - label: "Academic"
+      value: "academic"
+
+    - label: "Professional"
+      value: "professional"
+
+    - label: "Research"
+      value: "research"
+
+    - label: "Programming"
+      value: "programming"
+
+empty_message: "No project matches the selected filter or search term."

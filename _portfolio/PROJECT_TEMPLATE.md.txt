@@ -1,15 +1,11 @@
-HOW TO USE THIS TEMPLATE
+HOW TO ADD A NEW PROJECT
 ========================
 
-1. Copy this file.
-2. Paste the copy inside the _portfolio folder.
-3. Rename it with a short lowercase name, for example:
-       finite-element-building-model.md
-4. Change the extension from .txt to .md.
-5. Edit the information below.
-6. Restart Jekyll if the new page does not appear immediately.
-
-DELETE THESE INSTRUCTION LINES FROM THE NEW .md FILE.
+1. Copy this file into the _portfolio folder.
+2. Rename it, for example: finite-element-building-model.md
+3. Change .txt to .md.
+4. Delete these instruction lines above the first ---.
+5. Give the newest project the smallest order number.
 
 ---
 layout: project
@@ -17,23 +13,37 @@ title: "Your Project Title"
 permalink: /projects/your-project-slug/
 
 show_on_projects: true
-order: 20
+
+# Smaller number = earlier on the page.
+# For a new newest project, use order: 1 and increase older projects.
+order: 1
 filter: "academic"
+
+timeline_year: "2026"
+timeline_icon: "fas fa-project-diagram"
 
 project_type: "Academic Project"
 status: "Completed"
-period: "2026"
+period: "Jan. 2026 – Dec. 2026"
 discipline: "Structural Engineering"
-course: "Course name or professional context"
+course: "Course or professional context"
 role: "Your role"
-team: "Individual project or team information"
+team: "Individual or team information"
+
+supervisors:
+  - "Supervisor Name, Position, Department, Institution"
 
 cover_image: "/images/projects/your-project-slug/cover.jpg"
 cover_alt: "Short description of the cover image"
 
 summary: >-
-  Write a concise two- or three-sentence summary explaining the engineering
-  problem, your method, and the main output.
+  Write two or three sentences explaining the engineering problem, your method,
+  and the main outputs.
+
+highlights:
+  - "First major contribution or output."
+  - "Second major contribution or output."
+  - "Third major contribution or output."
 
 tools:
   - "MATLAB"
@@ -50,20 +60,18 @@ links:
     icon: "fab fa-github"
     external: true
 
-  - label: "Download Report"
+  - label: "View Report"
     url: "/files/projects/your-project-slug/project-report.pdf"
     icon: "fas fa-file-pdf"
     external: false
-    download: false
 
 gallery:
   - image: "/images/projects/your-project-slug/output-01.png"
-    alt: "Description of output 1"
-    caption: "Explain what this output shows."
-
+    alt: "Description of output one"
+    caption: "Explain what the first output shows."
   - image: "/images/projects/your-project-slug/output-02.png"
-    alt: "Description of output 2"
-    caption: "Explain what this output shows."
+    alt: "Description of output two"
+    caption: "Explain what the second output shows."
 ---
 
 ## Project overview
@@ -76,14 +84,13 @@ Explain the engineering problem, objective, background, and scope.
 2. Second step.
 3. Third step.
 
-## Model or analysis
+## Analysis or design
 
-Explain your assumptions, equations, software model, dataset, or design process.
+Explain assumptions, models, datasets, calculations, or the design process.
 
 ## Results and outputs
 
-Discuss the most important figures, numerical results, comparisons, or design
-decisions.
+Discuss important figures, numerical results, comparisons, or decisions.
 
 ## My contribution
 
@@ -91,10 +98,10 @@ Clearly state what you personally completed.
 
 ## Lessons and future development
 
-Explain what you learned and how the work could be improved or extended.
+Explain what you learned and how the project could be extended.
 
 ## Selected code
 
 ```matlab
-% Add a short, readable excerpt here.
+% Add a short code excerpt.
 ```

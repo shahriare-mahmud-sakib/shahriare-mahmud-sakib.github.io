@@ -1,40 +1,47 @@
 ---
 layout: project
-title: "Structural Beam Analysis with MATLAB"
+title: "Structural Response Analysis of Beams under Various Loading Conditions Using MATLAB"
 permalink: /projects/structural-beam-analysis/
 
-# Set this to true to show the project on /projects/.
 show_on_projects: true
-
-# Smaller numbers appear first on the Projects page.
-order: 1
-
-# Used by the filter buttons. Suggested values:
-# academic, professional, research, programming
+order: 2
 filter: "academic"
 
-project_type: "Academic Project"
+timeline_year: "2022"
+timeline_icon: "fas fa-chart-line"
+
+project_type: "Laboratory Project"
 status: "Completed"
-period: "Undergraduate project"
-discipline: "Structural Engineering"
-course: "MATLAB-based structural analysis project"
-role: "Project contributor"
+period: "Aug. 2022"
+discipline: "Structural Engineering and Engineering Computation"
+course: "CE 206: Engineering Computation Sessional"
+role: "Group Leader"
+
+supervisors:
+  - "Mohammad Irfan Hossain, Assistant Professor, Department of Civil Engineering, BUET"
+  - "Shantanu Paul, Lecturer, Department of Civil Engineering, BUET"
 
 cover_image: "/images/projects/structural-beam-analysis/cover.svg"
 cover_alt: "Illustration of a loaded structural beam and response diagrams"
 
 summary: >-
-  A MATLAB educational tool for analysing cantilever and simply supported beams
-  under point loads, uniformly distributed loads, and triangular distributed
-  loads. The program produces axial-force, shear-force, bending-moment, and
+  A MATLAB project with GUI integration for analysing cantilever and simply
+  supported beams under point, uniformly distributed, and triangular loads,
+  with automated generation of axial-force, shear-force, bending-moment, and
   deflection diagrams.
+
+highlights:
+  - "Developed the final laboratory project for CE 206 using MATLAB and GUI integration."
+  - "Implemented computational models, including singularity-function-based analysis."
+  - "Automated AFD, SFD, BMD, and deflection visualization using MATLAB vector plotting."
 
 tools:
   - "MATLAB"
+  - "MATLAB GUI"
+  - "Singularity Functions"
   - "Structural Analysis"
-  - "Numerical Computation"
+  - "Vector Plotting"
   - "Beam Theory"
-  - "Engineering Visualization"
 
 keywords:
   - "cantilever beam"
@@ -53,99 +60,53 @@ links:
     icon: "fab fa-github"
     external: true
 
-  # EXAMPLE: Add your report PDF after placing it in files/projects/.
-  # - label: "Download Project Report"
-  #   url: "/files/projects/structural-beam-analysis/project-report.pdf"
-  #   icon: "fas fa-file-pdf"
-  #   external: false
-  #   download: false
-
 gallery:
-  # Replace these SVG placeholders with screenshots of your actual MATLAB plots.
   - image: "/images/projects/structural-beam-analysis/afd-placeholder.svg"
     alt: "Illustrative placeholder for an axial force diagram"
-    caption: "Axial Force Diagram — illustrative placeholder; replace with your actual MATLAB output."
-
+    caption: "Axial Force Diagram — editable placeholder; replace with the actual MATLAB output."
   - image: "/images/projects/structural-beam-analysis/sfd-placeholder.svg"
     alt: "Illustrative placeholder for a shear force diagram"
-    caption: "Shear Force Diagram — illustrative placeholder; replace with your actual MATLAB output."
-
+    caption: "Shear Force Diagram — editable placeholder; replace with the actual MATLAB output."
   - image: "/images/projects/structural-beam-analysis/bmd-placeholder.svg"
     alt: "Illustrative placeholder for a bending moment diagram"
-    caption: "Bending Moment Diagram — illustrative placeholder; replace with your actual MATLAB output."
-
+    caption: "Bending Moment Diagram — editable placeholder; replace with the actual MATLAB output."
   - image: "/images/projects/structural-beam-analysis/deflection-placeholder.svg"
     alt: "Illustrative placeholder for a beam deflection diagram"
-    caption: "Deflection Diagram — illustrative placeholder; replace with your actual MATLAB output."
+    caption: "Deflection Diagram — editable placeholder; replace with the actual MATLAB output."
 ---
 
 ## Project overview
 
-This project applies MATLAB programming to classical structural-beam analysis. It
-supports **cantilever** and **simply supported** beams subjected to point loads,
-uniformly distributed loads, and triangular distributed loads.
-
-The program is intended as an educational tool for Civil Engineering students.
-It combines structural-analysis calculations with clear visual output so users
-can compare loading conditions with the resulting internal-force and deflection
-diagrams.
+This laboratory project was completed for **CE 206: Engineering Computation Sessional**. It used MATLAB and GUI integration to analyse the structural response of cantilever and simply supported beams under several loading conditions.
 
 ## Main capabilities
 
-- Accepts common beam-support and loading configurations.
-- Determines reactions and structural response along the beam.
-- Produces the **Axial Force Diagram (AFD)**.
-- Produces the **Shear Force Diagram (SFD)**.
-- Produces the **Bending Moment Diagram (BMD)**.
-- Produces the **Deflection Diagram**.
-- Provides a visual workflow that supports teaching and verification.
+- Analyses cantilever and simply supported beams.
+- Accepts point, uniformly distributed, and triangular distributed loads.
+- Generates axial-force, shear-force, bending-moment, and deflection diagrams.
 
-## Computational workflow
+## Computational approach
 
-1. Define the beam type, span, material, section properties, and loading.
-2. Calculate support reactions.
-3. Evaluate internal-force functions along the beam.
-4. Calculate displacement or deflection response.
-5. Plot the structural-response diagrams in MATLAB.
+The project implemented computational models including singularity-function methods to represent loading and structural response. MATLAB vector plotting automated visualization of the resulting diagrams.
 
-## Running the project
+## My role
 
-Clone or download the GitHub repository, place all MATLAB files in one folder,
-and run:
+As **group leader**, I helped organize the project workflow and contributed to the computational model, MATLAB implementation, GUI integration, testing, and visualization.
+
+## Running the code
+
+Clone or download the GitHub repository, keep all MATLAB files in the same folder, and run:
 
 ```matlab
 BeamAnalysisProject
 ```
 
-The supporting MATLAB files must remain in the same project directory.
+## Add real outputs
 
-## Add your real outputs here
-
-Replace the placeholder images inside:
+Replace the placeholder files inside:
 
 ```text
 images/projects/structural-beam-analysis/
 ```
 
-Recommended filenames:
-
-```text
-afd.png
-sfd.png
-bmd.png
-deflection.png
-```
-
-Then update the `gallery:` image paths in this file. You can use PNG, JPG, WebP,
-or SVG files.
-
-## Add selected code or explanation
-
-You may add short MATLAB code excerpts using fenced code blocks:
-
-```matlab
-% Example: call your main analysis workflow
-BeamAnalysisProject
-```
-
-For the complete source code, use the GitHub button at the top of this page.
+Recommended filenames: `matlab-gui.png`, `afd.png`, `sfd.png`, `bmd.png`, and `deflection.png`.

@@ -113,14 +113,15 @@ sections:
           classroom instruction, assessment, consultation, and academic mentoring.
         details:
           - "Prepare lectures, learning materials, assignments, quizzes, and examinations."
+          - "Teaching courses include basic civil engineering and structural engineering courses."
           - "Guide students in understanding structural and civil-engineering concepts."
           - "Support laboratory, project, and academic-advising activities as assigned."
           # ADD YOUR COURSES HERE. Example:
-          # - "Courses taught: Structural Analysis I, Mechanics of Solids, and Engineering Mechanics."
+          - "Courses taught: Surveying, Design of Steel Structures, Civil Engineering Drawing II, Details of Construction, Engineering Geology and Geomorphology, and Different Sessional Courses."
         tags:
           - "Undergraduate Teaching"
           - "Student Mentoring"
-          - "Civil Engineering"
+          - "Civil and Structural Engineering courses"
         links:
           - label: "UIU Faculty Profile"
             url: "https://ce.uiu.ac.bd/faculty/shahriare-mahmud-sakib/"

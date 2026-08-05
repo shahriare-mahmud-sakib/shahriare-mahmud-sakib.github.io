@@ -1,35 +1,37 @@
 # =============================================================================
 # PROJECTS PAGE SETTINGS
-# Edit this file to change the introduction, filters, and empty-result message.
-# Individual projects are edited inside the _portfolio folder.
+# Edit this file to change the page introduction, filters, and timeline heading.
+# Edit individual projects inside the _portfolio folder.
 # =============================================================================
 
 page:
   eyebrow: "ACADEMIC & PROFESSIONAL WORK"
   intro: >-
-    Selected civil-engineering projects involving structural analysis,
-    computational methods, programming, modelling, design, and visualization.
-    Open any project to see its detailed overview, methods, figures, code,
-    reports, and outputs.
+    A chronological record of selected civil-engineering projects involving
+    sustainable infrastructure, structural analysis, computational methods,
+    design, programming, modelling, and engineering visualization. Select any
+    project to view its detailed overview, methods, figures, code, reports, and
+    outputs.
+
+timeline:
+  show: true
+  eyebrow: "PROJECT TIMELINE"
+  heading: "Selected Projects"
+  note: "Projects are arranged from newest to oldest."
 
 controls:
   show_search: true
   search_placeholder: "Search projects, tools, methods, or topics..."
-
   show_filters: true
   filters:
     - label: "All"
       value: "all"
-
     - label: "Academic"
       value: "academic"
-
     - label: "Professional"
       value: "professional"
-
     - label: "Research"
       value: "research"
-
     - label: "Programming"
       value: "programming"
 

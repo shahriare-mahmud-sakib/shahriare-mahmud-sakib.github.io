@@ -6,19 +6,13 @@ layout: single
 
 <article class="sms-project-detail">
   <p class="sms-project-detail__back">
-    <a href="{{ '/projects/' | relative_url }}">
-      <i class="fas fa-arrow-left" aria-hidden="true"></i>
-      All projects
-    </a>
+    <a href="{{ '/projects/' | relative_url }}"><i class="fas fa-arrow-left"></i> Back to project timeline</a>
   </p>
 
   <section class="sms-project-detail__hero">
     {% if page.cover_image %}
       <figure class="sms-project-detail__cover">
-        <img
-          src="{{ page.cover_image | relative_url }}"
-          alt="{{ page.cover_alt | default: page.title }}"
-        >
+        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.cover_alt | default: page.title }}">
       </figure>
     {% endif %}
 
@@ -29,59 +23,35 @@ layout: single
         {% if page.period %}<span>{{ page.period }}</span>{% endif %}
       </div>
 
-      {% if page.summary %}
-        <p class="sms-project-detail__summary">{{ page.summary }}</p>
-      {% endif %}
+      {% if page.summary %}<p class="sms-project-detail__summary">{{ page.summary }}</p>{% endif %}
 
       <dl class="sms-project-detail__facts">
-        {% if page.discipline %}
-          <div>
-            <dt>Field</dt>
-            <dd>{{ page.discipline }}</dd>
-          </div>
-        {% endif %}
-
-        {% if page.course %}
-          <div>
-            <dt>Course / Context</dt>
-            <dd>{{ page.course }}</dd>
-          </div>
-        {% endif %}
-
-        {% if page.role %}
-          <div>
-            <dt>Role</dt>
-            <dd>{{ page.role }}</dd>
-          </div>
-        {% endif %}
-
-        {% if page.team %}
-          <div>
-            <dt>Team</dt>
-            <dd>{{ page.team }}</dd>
-          </div>
-        {% endif %}
+        {% if page.discipline %}<div><dt>Field</dt><dd>{{ page.discipline }}</dd></div>{% endif %}
+        {% if page.course %}<div><dt>Course / Context</dt><dd>{{ page.course }}</dd></div>{% endif %}
+        {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+        {% if page.team %}<div><dt>Team</dt><dd>{{ page.team }}</dd></div>{% endif %}
       </dl>
 
+      {% if page.supervisors %}
+        <div class="sms-project-detail__supervisors">
+          <h2>Supervisors</h2>
+          <ul>{% for supervisor in page.supervisors %}<li>{{ supervisor }}</li>{% endfor %}</ul>
+        </div>
+      {% endif %}
+
       {% if page.tools %}
-        <ul class="sms-project-detail__tools" aria-label="Tools and methods">
-          {% for tool in page.tools %}
-            <li>{{ tool }}</li>
-          {% endfor %}
+        <ul class="sms-project-detail__tools">
+          {% for tool in page.tools %}<li>{{ tool }}</li>{% endfor %}
         </ul>
       {% endif %}
 
       {% if page.links %}
         <div class="sms-project-detail__actions">
           {% for link in page.links %}
-            <a
-              href="{{ link.url }}"
-              class="{% if forloop.first %}is-primary{% endif %}"
+            <a href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" class="{% if forloop.first %}is-primary{% endif %}"
               {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-              {% if link.download %}download{% endif %}
-            >
-              {% if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
-              {{ link.label }}
+              {% if link.download %}download{% endif %}>
+              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %} {{ link.label }}
             </a>
           {% endfor %}
         </div>
@@ -95,47 +65,30 @@ layout: single
         <p>VISUALIZATION</p>
         <h2 id="project-gallery-title">Project figures and outputs</h2>
       </div>
-
       <div class="sms-project-gallery__grid">
         {% for item in page.gallery %}
           <figure class="sms-project-gallery__item">
-            <a
-              href="{{ item.image | relative_url }}"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Open full-size image"
-            >
-              <img
-                src="{{ item.image | relative_url }}"
-                alt="{{ item.alt | default: item.caption }}"
-                loading="lazy"
-              >
+            <a href="{{ item.image | relative_url }}" target="_blank" rel="noopener noreferrer" title="Open full-size image">
+              <img src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.caption }}" loading="lazy">
             </a>
-            {% if item.caption %}
-              <figcaption>{{ item.caption }}</figcaption>
-            {% endif %}
+            {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
           </figure>
         {% endfor %}
       </div>
     </section>
   {% endif %}
 
-  <section class="sms-project-detail__content">
-    {{ content }}
-  </section>
+  <section class="sms-project-detail__content">{{ content }}</section>
 
   {% if page.links %}
     <footer class="sms-project-detail__footer">
       <h2>Project resources</h2>
       <div class="sms-project-detail__actions">
         {% for link in page.links %}
-          <a
-            href="{{ link.url }}"
+          <a href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
             {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-            {% if link.download %}download{% endif %}
-          >
-            {% if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
-            {{ link.label }}
+            {% if link.download %}download{% endif %}>
+            {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %} {{ link.label }}
           </a>
         {% endfor %}
       </div>

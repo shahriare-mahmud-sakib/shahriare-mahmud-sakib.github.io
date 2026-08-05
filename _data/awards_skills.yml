@@ -13,7 +13,7 @@ awards_section:
 awards:
   - order: 1
     title: "University Merit Scholarship"
-    organization: "BUET"
+    organization: "Bangladesh University of Engineering and Technology (BUET)"
     period: "2022 - 2023"
     icon: "fas fa-medal"
     accent: "#f59e0b"
@@ -30,22 +30,24 @@ awards:
       # url: "/files/certificates/awards/university-merit-scholarship/certificate.pdf"
 
   - order: 2
-    title: "CE Faculty Dean's List"
-    organization: "Faculty of Civil Engineering"
-    period: "Academic years 2019–20, 2020–21 and 2021–22"
+    title: "Dean's List Award"
+    organization: "Faculty of Civil Engineering, Bangladesh University of Engineering and Technology (BUET)"
+    period: "2020 – 2025"
     icon: "fas fa-award"
     accent: "#8b5cf6"
     summary: >-
-      Included in the CE Faculty Dean's List for three consecutive academic years: 2019–20, 2020–21, and 2021–22.
-    detail_url: "/awards & skills/evidence/#award-ce-faculty-deans-list"
+      Awarded the prestigious Dean's List Award, BUET, for consecutive remarkable 
+      academic performance throughout all undergraduate academic years (2019-2020, 2020-21, 2021-22, 2022-23).
+    # detail_url: "/awards & skills/evidence/#award-ce-faculty-deans-list"
     years:
-      - "2021–22"
+      - "Academic Year: 2019–20"
       - "2020–21"
-      - "2019–20"
-    certificate:
-      available: false
-      label: "CE Faculty Dean's List Certificate"
-      url: "/files/certificates/awards/ce-faculty-deans-list/certificate.pdf"
+      - "2021–22"
+      - "2022–23"
+    # certificate:
+    #   available: false
+    #   label: "CE Faculty Dean's List Certificate"
+    #   url: "/files/certificates/awards/ce-faculty-deans-list/certificate.pdf"
 
   - order: 3
     title: "Education Board Technical Scholarship"

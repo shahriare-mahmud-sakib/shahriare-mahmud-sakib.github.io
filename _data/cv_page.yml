@@ -20,10 +20,10 @@ viewer:
   # EDIT THESE VALUES TO CHANGE THE PDF VIEWER SIZE
   # ==============================================================
   # Desktop/laptop height in pixels:
-  desktop_height: 650
+  desktop_height: 100000
 
   # Phone/tablet height in pixels:
-  mobile_height: 560
+  mobile_height: 10000
 
   # Browser PDF-viewer options.
   # Chrome and Edge normally show the dark toolbar automatically.

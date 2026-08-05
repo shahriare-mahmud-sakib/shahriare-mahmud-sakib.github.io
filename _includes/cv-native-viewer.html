@@ -6,8 +6,10 @@
     <div
       class="sms-native-cv__viewer-wrap"
       style="
-        --sms-cv-viewer-height: {{ cv.viewer.desktop_height | default: 650 }}px;
-        --sms-cv-viewer-mobile-height: {{ cv.viewer.mobile_height | default: 560 }}px;
+        --sms-cv-viewer-width: {{ cv.viewer.width | default: '100%' }};
+        --sms-cv-viewer-max-width: {{ cv.viewer.max_width | default: 'none' }};
+        --sms-cv-viewer-height: {{ cv.viewer.desktop_height | default: '650px' }};
+        --sms-cv-viewer-mobile-height: {{ cv.viewer.mobile_height | default: '560px' }};
       "
     >
       <iframe
@@ -18,8 +20,8 @@
         frameborder="0"
       >
         <p>
-          Your browser cannot display the PDF viewer.
-          <a href="{{ cv_pdf_url }}">Open the CV PDF.</a>
+          {{ cv.viewer.fallback_text | default: 'Your browser cannot display the embedded PDF.' }}
+          <a href="{{ cv_pdf_url }}">{{ cv.viewer.fallback_link_text | default: 'Open the CV PDF.' }}</a>
         </p>
       </iframe>
     </div>

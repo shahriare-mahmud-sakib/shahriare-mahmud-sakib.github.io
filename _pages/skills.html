@@ -7,32 +7,102 @@ redirect_from:
   - /awards-and-skills/
 author_profile: true
 ---
+
 <link rel="stylesheet" href="{{ '/assets/css/awards-skills-page.css' | relative_url }}">
+
 {% assign d = site.data.awards_skills %}
 {% assign ordered_awards = d.awards | sort: "order" %}
+
 <section class="sms-as" data-skills-root>
   <header class="sms-as__intro">
-    <p class="sms-kicker">{{ d.page.eyebrow }}</p><p>{{ d.page.intro }}</p>
+    <p class="sms-kicker">{{ d.page.eyebrow }}</p>
+    <p>{{ d.page.intro }}</p>
   </header>
+
   <section class="sms-awards">
-    <header class="sms-heading"><div><p class="sms-kicker">{{ d.awards_section.eyebrow }}</p><h2>{{ d.awards_section.heading }}</h2></div><span>{{ d.awards_section.note }}</span></header>
-    <div class="sms-award-timeline">{% for award in ordered_awards %}{% include award-timeline-item.html award=award %}{% endfor %}</div>
-  </section>
-  <section class="sms-skills">
-    <header class="sms-heading"><div><p class="sms-kicker">{{ d.skills_section.eyebrow }}</p><h2>{{ d.skills_section.heading }}</h2></div><span>{{ d.skills_section.note }}</span></header>
-    <div class="sms-controls">
-      {% if d.controls.show_search %}<label class="sms-search"><i class="fas fa-magnifying-glass"></i><input type="search" data-skill-search placeholder="{{ d.controls.search_placeholder }}"></label>{% endif %}
-      {% if d.controls.show_filters %}<div class="sms-filters">{% for f in d.controls.filters %}<button type="button" class="sms-filter{% if f.value == 'all' %} is-active{% endif %}" data-skill-filter="{{ f.value }}">{{ f.label }}</button>{% endfor %}</div>{% endif %}
-    </div>
-    <div class="sms-groups">
-      {% for group in d.skill_groups %}
-      <section class="sms-group" data-skill-group="{{ group.id }}">
-        <header class="sms-group__head"><span><i class="{{ group.icon }}"></i></span><div><h3>{{ group.heading }}</h3><p>{{ group.description }}</p></div></header>
-        <div class="sms-skill-grid">{% assign skills = group.skills | sort: "order" %}{% for skill in skills %}{% include skill-card.html skill=skill group_id=group.id %}{% endfor %}</div>
-      </section>
+    <header class="sms-heading">
+      <div>
+        <p class="sms-kicker">{{ d.awards_section.eyebrow }}</p>
+        <h2>{{ d.awards_section.heading }}</h2>
+      </div>
+      <span>{{ d.awards_section.note }}</span>
+    </header>
+
+    <div class="sms-award-timeline">
+      {% for award in ordered_awards %}
+        {% include award-timeline-item.html award=award %}
       {% endfor %}
     </div>
-    <p class="sms-empty" data-skill-empty hidden>{{ d.empty_message }}</p>
+  </section>
+
+  <section class="sms-skills">
+    <header class="sms-heading">
+      <div>
+        <p class="sms-kicker">{{ d.skills_section.eyebrow }}</p>
+        <h2>{{ d.skills_section.heading }}</h2>
+      </div>
+      <span>{{ d.skills_section.note }}</span>
+    </header>
+
+    <div class="sms-controls">
+      {% if d.controls.show_search %}
+        <label class="sms-search">
+          <span class="sr-only">Search research expertise and skills</span>
+          <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+          <input
+            type="search"
+            data-skill-search
+            placeholder="{{ d.controls.search_placeholder }}"
+            autocomplete="off"
+          >
+        </label>
+      {% endif %}
+
+      {% if d.controls.show_filters %}
+        <div class="sms-filters" role="group" aria-label="Filter skills and expertise">
+          {% for filter in d.controls.filters %}
+            <button
+              type="button"
+              class="sms-filter{% if filter.value == 'all' %} is-active{% endif %}"
+              data-skill-filter="{{ filter.value }}"
+              aria-pressed="{% if filter.value == 'all' %}true{% else %}false{% endif %}"
+            >
+              {{ filter.label }}
+            </button>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="sms-groups">
+      {% for group in d.skill_groups %}
+        <section class="sms-group" data-skill-group="{{ group.id }}">
+          <header class="sms-group__head">
+            <span><i class="{{ group.icon }}" aria-hidden="true"></i></span>
+            <div>
+              <h3>{{ group.heading }}</h3>
+              <p>{{ group.description }}</p>
+            </div>
+          </header>
+
+          <div class="sms-skill-grid">
+            {% assign skills = group.skills | sort: "order" %}
+            {% for skill in skills %}
+              {% include skill-card.html
+                skill=skill
+                group_id=group.id
+                group_hyperlinked=group.hyperlinked
+              %}
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    </div>
+
+    <p class="sms-empty" data-skill-empty hidden>
+      {{ d.empty_message }}
+    </p>
   </section>
 </section>
+
 <script src="{{ '/assets/js/awards-skills-filter.js' | relative_url }}" defer></script>

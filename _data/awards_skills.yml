@@ -12,13 +12,13 @@ awards_section:
 
 awards:
   - order: 1
-    title: "University Merit Scholarship"
+    title: "BUET Academic Merit Scholarship"
     organization: "Bangladesh University of Engineering and Technology (BUET)"
     period: "2022 - 2023"
     icon: "fas fa-medal"
     accent: "#f59e0b"
     summary: >-
-      Awarded the prestigious University Merit Scholarship, BUET, for remarkable 
+      Awarded the prestigious BUET Academic Merit Scholarship for remarkable 
       academic performance in the July 2022 and July 2023 semesters.
     # detail_url: "/awards & skills/evidence/#award-university-merit-scholarship"
     years:
@@ -50,36 +50,38 @@ awards:
     #   url: "/files/certificates/awards/ce-faculty-deans-list/certificate.pdf"
 
   - order: 3
-    title: "Education Board Technical Scholarship"
-    organization: "Education Board"
+    title: "Education Board Scholarship"
+    organization: "Board of Intermediate and Secondary Education, Dhaka"
     period: "2019–2023"
     icon: "fas fa-graduation-cap"
     accent: "#0ea5e9"
     summary: >-
-      Recipient of an Education Board Technical Scholarship from 2019 to 2023.
-    detail_url: "/awards & skills/evidence/#award-education-board-technical-scholarship"
+      Awarded the Education Board Scholarship from 2019 to 2023 in recognition
+      of exceptional academic results in the Higher Secondary Certificate (HSC) examination.
+    # detail_url: "/awards & skills/evidence/#award-education-board-technical-scholarship"
     years:
       - "2019–2023"
-    certificate:
-      available: false
-      label: "Education Board Technical Scholarship Certificate"
-      url: "/files/certificates/awards/education-board-technical-scholarship/certificate.pdf"
+    # certificate:
+    #   available: false
+    #   label: "Education Board Technical Scholarship Certificate"
+    #   url: "/files/certificates/awards/education-board-technical-scholarship/certificate.pdf"
 
   - order: 4
-    title: "Education Board Talent Scholarship"
-    organization: "Education Board"
+    title: "Education Board Scholarship"
+    organization: "Directorate of Primary Education (DPE), Bangladesh"
     period: "2012–2016"
     icon: "fas fa-star"
     accent: "#10b981"
     summary: >-
-      Recipient of an Education Board Talent Scholarship from 2012 to 2016.
-    detail_url: "/awards & skills/evidence/#award-education-board-talent-scholarship"
+      Awarded the Education Board Scholarship from 2012 to 2016 in recognition
+      of exceptional academic results in the Primary School Certificate (PSC) examination.
+    # detail_url: "/awards & skills/evidence/#award-education-board-talent-scholarship"
     years:
       - "2012–2016"
-    certificate:
-      available: false
-      label: "Education Board Talent Scholarship Certificate"
-      url: "/files/certificates/awards/education-board-talent-scholarship/certificate.pdf"
+    # certificate:
+    #   available: false
+    #   label: "Education Board Talent Scholarship Certificate"
+    #   url: "/files/certificates/awards/education-board-talent-scholarship/certificate.pdf"
 
 skills_section:
   eyebrow: "SKILLS & EXPERTISE"

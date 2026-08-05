@@ -137,9 +137,9 @@ sections:
     accent: "#b45309"
 
     entries:
-      - title: "Lecturer in Civil Engineering"
-        organization: "United International University (UIU)"
-        organization_url: "https://www.uiu.ac.bd/"
+      - title: "Member Secretary of Departmental Committees"
+        organization: "Department of Civil Engineering, United International University (UIU)"
+        organization_url: "https://ce.uiu.ac.bd/"
         external_organization_link: true
         period: "July 2025 – Present"
         location: "Dhaka, Bangladesh"
@@ -147,19 +147,19 @@ sections:
         icon: "fas fa-building-columns"
         accent: "#b45309"
         summary: >-
-          Serve as a faculty member in the Department of Civil Engineering, with
-          responsibilities spanning teaching, student engagement, and academic service.
+          Coordinate administrative and developmental initiatives to enhance laboratory infrastructure, 
+          streamline curriculum alignment, and foster professional student communities.
         details:
-          - "Contribute to the delivery and continuous improvement of undergraduate Civil Engineering education."
-          - "Participate in departmental academic activities and student-support initiatives."
-          - "Continue research development in structural engineering, computational mechanics, and resilient infrastructure."
+          - "Facilitate proceedings and documentation for the Departmental Laboratory Development Committee to upgrade academic and research facilities."
+          - "Manage course equivalency evaluations and policy frameworks through the Course Equivalency Committee."
+          - "Establish and support professional student platforms via the Professional Students Chapters Establishment Committee."
         tags:
-          - "Academic Appointment"
-          - "Structural Engineering"
-          - "Academic Service"
+          - "Academic Administration"
+          - "Departmental Committees"
+          - "Leadership and Supports"
         links:
-          - label: "Visit UIU"
-            url: "https://www.uiu.ac.bd/"
+          - label: "Visit CE, UIU"
+            url: "https://ce.uiu.ac.bd/"
             external: true
 
 # =============================================================================

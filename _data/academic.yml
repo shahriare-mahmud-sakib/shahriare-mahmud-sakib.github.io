@@ -41,46 +41,52 @@ sections:
           Completed an undergraduate degree in Civil Engineering with a major in
           Structural Engineering and a minor in Transportation Engineering.
         details:
-          - "CGPA: 3.89 / 4.00; ranked among the top 10% of the class."
+          - "CGPA: 3.89 / 4.00; ranked among the top 10% of the graduating class."
           - "Major: Structural Engineering; Minor: Transportation Engineering."
-          - "Undergraduate research focused on nonlinear finite-element modelling of cold-formed stainless-steel columns under cyclic loading."
+          - "Undergraduate research focused on nonlinear finite-element investigation of cold-formed stainless-steel columns under cyclic loading."
         tags:
           - "Structural Engineering"
-          - "Finite Element Modelling"
-          - "Academic Merit"
+          - "Finite Element Analysis"
+          - "Top 10% in graduating class"
         links:
-          - label: "Visit BUET"
+          - label: "Academic Transcript"
             url: "https://www.buet.ac.bd/"
             external: true
 
       - title: "Higher Secondary Certificate (HSC)"
         organization: "Major General Mahmudul Hasan Adarsha College"
-        organization_url: ""
-        external_organization_link: false
-        period: ""
+        organization_url: "https://mgmhac.edu.bd/"
+        external_organization_link: true
+        period: "Graduated 2019"
         location: "Tangail, Bangladesh"
         status: "Completed"
         icon: "fas fa-school"
         accent: "#0f766e"
         summary: "Completed Higher Secondary education in the Science group."
-        details: []
+        details: 
+          - "GPA: 5.00 / 5.00; ranked 1st in the graduating class."
+          - "Group: Science."
         tags:
           - "Science"
+          - "Top 1% in graduating class"
         links: []
 
       - title: "Secondary School Certificate (SSC)"
         organization: "Sakhipur P.M. Pilot High School"
-        organization_url: ""
-        external_organization_link: false
-        period: ""
+        organization_url: "https://spmpmsac.edu.bd/"
+        external_organization_link: true
+        period: "Graduated 2017"
         location: "Tangail, Bangladesh"
         status: "Completed"
         icon: "fas fa-school"
         accent: "#7c3aed"
         summary: "Completed Secondary education in the Science group."
-        details: []
+        details:  
+          - "GPA: 5.00 / 5.00; ranked 3rd in the graduating class."
+          - "Group: Science."
         tags:
           - "Science"
+          - "Top 1% in graduating class"
         links: []
 
   # ---------------------------------------------------------------------------

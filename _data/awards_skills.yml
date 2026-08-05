@@ -218,7 +218,7 @@ skill_groups:
           - "thin-walled"
 
       - order: 8
-        name: "Experimental Structural Engineering"
+        name: "Experimental Structural Analysis"
         icon: "fas fa-vials"
         accent: "#0f766e"
         summary: >-

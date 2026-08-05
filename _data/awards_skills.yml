@@ -2,10 +2,8 @@
 page:
   eyebrow: "ACHIEVEMENTS & CAPABILITIES"
   intro: >-
-    A summary of my academic honours, scholarships, technical capabilities,
-    programming experience, software knowledge, document-preparation skills,
-    and language proficiency. Select an award or skill to view certificates,
-    sample works, code, figures, or supporting documents.
+    This page presents a summary of my academic honours, scholarships, technical capabilities,
+    programming experience, software knowledge, and language proficiency.
 
 awards_section:
   eyebrow: "AWARDS & HONOURS"
@@ -81,9 +79,9 @@ awards:
       url: "/files/certificates/awards/education-board-talent-scholarship/certificate.pdf"
 
 skills_section:
-  eyebrow: "SKILLS"
-  heading: "Technical and Language Skills"
-  note: "Select a skill to view certificates, images, code, reports, or sample works."
+  eyebrow: "SKILLS & EXPERTISE"
+  heading: "Research Expertise, Technical and Soft Skills"
+  note: "Select a skill to view certificates, reports, or sample works."
 
 controls:
   show_search: true
@@ -278,8 +276,8 @@ skill_groups:
             caption: "Replace this placeholder with your own C/C++ certificate, model, output, screenshot, drawing, or sample work."
         resources: []
 
-  - id: "documents"
-    heading: "Document Preparation"
+  - id: "research"
+    heading: "Expertise Research Areas"
     icon: "fas fa-file-lines"
     description: "Academic, technical, analytical, and presentation document preparation"
     skills:

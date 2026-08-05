@@ -1,2 +1,33 @@
-{% assign a=include.award %}
-<article class="sms-award-item"><div class="sms-award-date">{{ a.period }}</div><div class="sms-award-dot" style="--accent:{{ a.accent }}"><i class="{{ a.icon }}"></i></div><a class="sms-award-card" href="{{ a.detail_url | relative_url }}"><div class="sms-award-card__top"><div><h3>{{ a.title }}</h3><p>{{ a.organization }}</p></div><i class="fas fa-arrow-up-right-from-square"></i></div><ul>{% for y in a.years %}<li>{{ y }}</li>{% endfor %}</ul><p>{{ a.summary }}</p><span>View certificate/details <i class="fas fa-arrow-right"></i></span></a></article>
+{% assign award = include.award %}
+
+<article class="sms-award-item">
+  <div class="sms-award-date">{{ award.period }}</div>
+
+  <div
+    class="sms-award-dot"
+    style="--accent: {{ award.accent }};"
+    aria-hidden="true"
+  >
+    <i class="{{ award.icon }}"></i>
+  </div>
+
+  <!-- Intentionally a DIV, not an anchor: awards are not hyperlinked. -->
+  <div class="sms-award-card">
+    <div class="sms-award-card__top">
+      <div>
+        <h3>{{ award.title }}</h3>
+        <p>{{ award.organization }}</p>
+      </div>
+    </div>
+
+    {% if award.years %}
+      <ul>
+        {% for year in award.years %}
+          <li>{{ year }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <p>{{ award.summary }}</p>
+  </div>
+</article>

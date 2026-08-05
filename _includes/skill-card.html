@@ -1,2 +1,55 @@
-{% assign s=include.skill %}{% capture txt %}{{ s.name }} {{ s.summary }}{% endcapture %}
-<article class="sms-skill-card" data-skill-card data-skill-category="{{ include.group_id }}" data-skill-search-text="{{ txt | downcase | escape }}"><a href="{{ s.detail_url | relative_url }}"><div class="sms-skill-icon" style="--accent:{{ s.accent }}"><i class="{{ s.icon }}"></i></div><div><h4>{{ s.name }}</h4><p>{{ s.summary }}</p><div class="sms-badges">{% if s.has_certificate %}<span><i class="fas fa-certificate"></i> Certificate</span>{% endif %}{% if s.has_samples %}<span><i class="fas fa-image"></i> Sample work</span>{% endif %}</div></div><i class="fas fa-arrow-right"></i></a></article>
+{% assign skill = include.skill %}
+{% assign group_linked = include.group_hyperlinked %}
+
+{% capture search_text %}
+  {{ skill.name }}
+  {{ skill.summary }}
+  {% for keyword in skill.keywords %}{{ keyword }} {% endfor %}
+{% endcapture %}
+
+{% assign card_is_linked = true %}
+{% if group_linked == false or skill.hyperlinked == false or skill.detail_url == nil %}
+  {% assign card_is_linked = false %}
+{% endif %}
+
+<article
+  class="sms-skill-card{% unless card_is_linked %} sms-skill-card--static{% endunless %}"
+  data-skill-card
+  data-skill-category="{{ include.group_id }}"
+  data-skill-search-text="{{ search_text | strip_html | strip_newlines | downcase | escape }}"
+>
+  {% if card_is_linked %}
+    <a href="{{ skill.detail_url | relative_url }}">
+      <div class="sms-skill-icon" style="--accent: {{ skill.accent }};">
+        <i class="{{ skill.icon }}" aria-hidden="true"></i>
+      </div>
+
+      <div>
+        <h4>{{ skill.name }}</h4>
+        <p>{{ skill.summary }}</p>
+
+        <div class="sms-badges">
+          {% if skill.has_certificate %}
+            <span><i class="fas fa-certificate" aria-hidden="true"></i> Certificate</span>
+          {% endif %}
+          {% if skill.has_samples %}
+            <span><i class="fas fa-image" aria-hidden="true"></i> Sample work</span>
+          {% endif %}
+        </div>
+      </div>
+
+      <i class="fas fa-arrow-right sms-skill-arrow" aria-hidden="true"></i>
+    </a>
+  {% else %}
+    <div class="sms-skill-card__static-content">
+      <div class="sms-skill-icon" style="--accent: {{ skill.accent }};">
+        <i class="{{ skill.icon }}" aria-hidden="true"></i>
+      </div>
+
+      <div>
+        <h4>{{ skill.name }}</h4>
+        <p>{{ skill.summary }}</p>
+      </div>
+    </div>
+  {% endif %}
+</article>

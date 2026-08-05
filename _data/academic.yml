@@ -51,7 +51,7 @@ sections:
         links:
           - label: "Academic Transcript"
             url: "files/Certificate and Transcript_Sahriare_Mahmud_Sakib.pdf"
-            external: true
+            external: false
 
       - title: "Higher Secondary Certificate (HSC)"
         organization: "Major General Mahmudul Hasan Adarsha College"

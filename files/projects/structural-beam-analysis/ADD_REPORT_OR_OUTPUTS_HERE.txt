@@ -1,0 +1,19 @@
+Place downloadable project resources in this folder, for example:
+
+project-report.pdf
+presentation-slides.pdf
+sample-input.xlsx
+sample-output.csv
+matlab-code.zip
+
+Then add a link inside:
+
+_portfolio/structural-beam-analysis.md
+
+Example:
+
+links:
+  - label: "Download Project Report"
+    url: "/files/projects/structural-beam-analysis/project-report.pdf"
+    icon: "fas fa-file-pdf"
+    external: false

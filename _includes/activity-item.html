@@ -1,0 +1,34 @@
+{% assign item = include.item %}
+{% capture search_text %}
+  {{ item.title }} {{ item.organization }} {{ item.location }} {{ item.period }} {{ item.year }} {{ item.outcome }} {{ item.summary }}
+{% endcapture %}
+
+<article class="sms-act-item" data-activity-card data-activity-category="{{ include.category }}"
+  data-activity-search="{{ search_text | strip_html | strip_newlines | downcase | escape }}">
+  <div class="sms-act-date">
+    <strong>{{ item.year }}</strong>
+    <span>{{ item.period }}</span>
+  </div>
+
+  <div class="sms-act-dot" style="--accent: {{ item.accent }};" aria-hidden="true">
+    <i class="{{ item.icon }}"></i>
+  </div>
+
+  {% if item.linked and item.url %}
+    <a class="sms-act-card sms-act-card--linked" href="{{ item.url | relative_url }}">
+  {% else %}
+    <div class="sms-act-card">
+  {% endif %}
+      <div class="sms-act-card__top">
+        <div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.organization }}</p>
+        </div>
+        {% if item.linked %}<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>{% endif %}
+      </div>
+      {% if item.location %}<p class="sms-act-location"><i class="fas fa-location-dot" aria-hidden="true"></i> {{ item.location }}</p>{% endif %}
+      {% if item.outcome %}<span class="sms-act-outcome">{{ item.outcome }}</span>{% endif %}
+      <p class="sms-act-summary">{{ item.summary }}</p>
+      {% if item.linked %}<span class="sms-act-link">{{ item.link_label | default: 'View details' }} <i class="fas fa-arrow-right" aria-hidden="true"></i></span>{% endif %}
+  {% if item.linked and item.url %}</a>{% else %}</div>{% endif %}
+</article>

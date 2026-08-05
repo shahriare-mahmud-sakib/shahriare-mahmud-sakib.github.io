@@ -34,7 +34,7 @@ viewer:
 
   # EDIT THESE NUMBERS TO CHANGE THE PDF VIEWER HEIGHT.
   # Values are in pixels.
-  desktop_height: 1050
+  desktop_height: 5500
   mobile_height: 680
 
   # Text shown on the two buttons.

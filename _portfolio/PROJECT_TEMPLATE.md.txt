@@ -1,0 +1,100 @@
+HOW TO USE THIS TEMPLATE
+========================
+
+1. Copy this file.
+2. Paste the copy inside the _portfolio folder.
+3. Rename it with a short lowercase name, for example:
+       finite-element-building-model.md
+4. Change the extension from .txt to .md.
+5. Edit the information below.
+6. Restart Jekyll if the new page does not appear immediately.
+
+DELETE THESE INSTRUCTION LINES FROM THE NEW .md FILE.
+
+---
+layout: project
+title: "Your Project Title"
+permalink: /projects/your-project-slug/
+
+show_on_projects: true
+order: 20
+filter: "academic"
+
+project_type: "Academic Project"
+status: "Completed"
+period: "2026"
+discipline: "Structural Engineering"
+course: "Course name or professional context"
+role: "Your role"
+team: "Individual project or team information"
+
+cover_image: "/images/projects/your-project-slug/cover.jpg"
+cover_alt: "Short description of the cover image"
+
+summary: >-
+  Write a concise two- or three-sentence summary explaining the engineering
+  problem, your method, and the main output.
+
+tools:
+  - "MATLAB"
+  - "ETABS"
+  - "SAP2000"
+
+keywords:
+  - "keyword one"
+  - "keyword two"
+
+links:
+  - label: "View Code"
+    url: "https://github.com/YOUR-USERNAME/YOUR-REPOSITORY"
+    icon: "fab fa-github"
+    external: true
+
+  - label: "Download Report"
+    url: "/files/projects/your-project-slug/project-report.pdf"
+    icon: "fas fa-file-pdf"
+    external: false
+    download: false
+
+gallery:
+  - image: "/images/projects/your-project-slug/output-01.png"
+    alt: "Description of output 1"
+    caption: "Explain what this output shows."
+
+  - image: "/images/projects/your-project-slug/output-02.png"
+    alt: "Description of output 2"
+    caption: "Explain what this output shows."
+---
+
+## Project overview
+
+Explain the engineering problem, objective, background, and scope.
+
+## Methodology
+
+1. First step.
+2. Second step.
+3. Third step.
+
+## Model or analysis
+
+Explain your assumptions, equations, software model, dataset, or design process.
+
+## Results and outputs
+
+Discuss the most important figures, numerical results, comparisons, or design
+decisions.
+
+## My contribution
+
+Clearly state what you personally completed.
+
+## Lessons and future development
+
+Explain what you learned and how the work could be improved or extended.
+
+## Selected code
+
+```matlab
+% Add a short, readable excerpt here.
+```

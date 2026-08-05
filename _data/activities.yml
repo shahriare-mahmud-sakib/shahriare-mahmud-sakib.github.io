@@ -185,9 +185,7 @@ sections:
         organization: "ASCE Student Chapter, BUET"
         icon: "fas fa-user-tie"
         accent: "#2563eb"
-        summary: >-
-        Served as an executive member of the ASCE Student Chapter at BUET.
-        Coordinated student volunteers and managed different event logistics.
+        summary: "Served as an executive member of the ASCE Student Chapter at BUET. Coordinated student volunteers and managed different event logistics."
         linked: false
 
       - order: 2

@@ -1,0 +1,1 @@
+Place certificate.pdf and other event files for Hands-On AI for Smart Appliances: From Sensor Data to Embedded Code in this folder.

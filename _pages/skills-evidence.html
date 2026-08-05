@@ -1,0 +1,32 @@
+---
+layout: archive
+title: "Certificates & Sample Works"
+permalink: /skills/evidence/
+author_profile: true
+---
+<link rel="stylesheet" href="{{ '/assets/css/awards-skills-page.css' | relative_url }}">
+{% assign d = site.data.awards_skills %}
+<p class="sms-back"><a href="{{ '/skills/' | relative_url }}"><i class="fas fa-arrow-left"></i> Back to Awards & Skills</a></p>
+<section class="sms-evidence-page">
+  <header class="sms-as__intro"><p class="sms-kicker">SUPPORTING EVIDENCE</p><p>Add certificates, engineering outputs, screenshots, code links, reports, presentations, models, drawings, or sample files by editing <code>_data/awards_skills.yml</code>.</p></header>
+  <section><header class="sms-heading"><div><p class="sms-kicker">AWARDS</p><h2>Award certificates and documents</h2></div></header>
+    {% for award in d.awards %}
+    <article class="sms-evidence" id="award-{{ award.detail_url | split: '#award-' | last }}">
+      <div class="sms-evidence__icon" style="--accent:{{ award.accent }}"><i class="{{ award.icon }}"></i></div>
+      <div><h3>{{ award.title }}</h3><p>{{ award.summary }}</p><p class="sms-meta">{{ award.period }}</p>
+      {% if award.certificate.available %}<a class="sms-resource" href="{{ award.certificate.url | relative_url }}"><i class="fas fa-certificate"></i> {{ award.certificate.label }}</a>{% else %}<p class="sms-placeholder">Upload the certificate and set <code>available: true</code>.</p>{% endif %}</div>
+    </article>{% endfor %}
+  </section>
+  <section><header class="sms-heading"><div><p class="sms-kicker">SKILLS</p><h2>Certificates, code, and sample works</h2></div></header>
+    {% for group in d.skill_groups %}{% for skill in group.skills %}
+    <article class="sms-evidence" id="{{ skill.slug }}">
+      <div class="sms-evidence__icon" style="--accent:{{ skill.accent }}"><i class="{{ skill.icon }}"></i></div>
+      <div class="sms-evidence__body"><h3>{{ skill.name }}</h3><p>{{ skill.summary }}</p>
+        {% if skill.certificate %}{% if skill.certificate.available %}<a class="sms-resource" href="{{ skill.certificate.url | relative_url }}"><i class="fas fa-certificate"></i> {{ skill.certificate.label }}</a>{% elsif skill.has_certificate %}<p class="sms-placeholder">Certificate area ready: upload the PDF and set <code>available: true</code>.</p>{% endif %}{% endif %}
+        {% if skill.samples %}<div class="sms-gallery">{% for item in skill.samples %}<figure><a href="{{ item.image | relative_url }}" target="_blank"><img src="{{ item.image | relative_url }}" alt="{{ item.alt }}"></a><figcaption>{{ item.caption }}</figcaption></figure>{% endfor %}</div>{% endif %}
+        {% if skill.resources and skill.resources.size > 0 %}<div class="sms-resources">{% for r in skill.resources %}<a class="sms-resource" href="{{ r.url | relative_url }}" {% if r.external %}target="_blank" rel="noopener"{% endif %}><i class="{{ r.icon | default:'fas fa-link' }}"></i> {{ r.label }}</a>{% endfor %}</div>{% endif %}
+        <div class="sms-code-help"><h4>Add code or explanation</h4><p>For longer code or a detailed project, add a link under <code>resources:</code> to GitHub or to a project page.</p></div>
+      </div>
+    </article>{% endfor %}{% endfor %}
+  </section>
+</section>

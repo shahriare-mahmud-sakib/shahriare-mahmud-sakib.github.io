@@ -11,11 +11,11 @@ filter: "academic"
 timeline_year: "2023–2025"
 timeline_icon: "fas fa-recycle"
 
-project_type: "Capstone Project"
+project_type: "Capstone Project - BUET"
 status: "Completed"
 period: "Nov. 2023 – Mar. 2025"
 discipline: "Sustainable Infrastructure and Environmental Engineering"
-course: "Civil Engineering Capstone Project, BUET"
+course: "Capstone Project"
 role: "Group Leader"
 
 supervisors:

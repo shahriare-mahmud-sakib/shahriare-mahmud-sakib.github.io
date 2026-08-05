@@ -50,7 +50,7 @@ sections:
           - "Top 10% in graduating class"
         links:
           - label: "Academic Transcript"
-            url: "https://www.buet.ac.bd/"
+            url: "files/Certificate and Transcript_Sahriare_Mahmud_Sakib.pdf"
             external: true
 
       - title: "Higher Secondary Certificate (HSC)"

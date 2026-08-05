@@ -1,41 +1,53 @@
 ---
 ---
 
-/* ==================================================================
-   EDITABLE CV VIEWER STYLE CONTROLS
-
-   The toolbar inside the PDF belongs to the visitor's browser.
-   These settings control only the area around the browser PDF viewer.
-   ================================================================== */
+/* =====================================================================
+   EDITABLE CV PAGE STYLE CONTROLS
+   =====================================================================
+   This file keeps the normal Academic Pages sidebar and makes the PDF
+   fill the complete content column to the RIGHT of that sidebar.
+   ===================================================================== */
 
 :root {
-  /* Space below the PDF viewer before the download sentence */
-  --sms-cv-download-top-space: 1.35rem;
+  /* Space between the PDF viewer and the sentence below it */
+  --sms-cv-download-top-space: 1.25rem;
 
-  /* Download sentence size */
+  /* Font size of the download sentence */
   --sms-cv-download-text-size: 1rem;
 
-  /* Loading/background color behind the PDF */
+  /* Dark loading area behind the browser's PDF viewer */
   --sms-cv-viewer-loading-bg: #525659;
 
-  /* Set to 0 for the square look shown in the reference screenshot */
+  /* 0 gives square corners like the reference page */
   --sms-cv-viewer-radius: 0;
 
-  /* Optional border around the viewer */
+  /* Set to 1px if you want a thin border around the viewer */
   --sms-cv-viewer-border-width: 0;
 }
 
+/* ---------------------------------------------------------------------
+   IMPORTANT WIDTH RULES
+   ---------------------------------------------------------------------
+   These rules do NOT remove the sidebar. They only ensure that the CV
+   uses all of the remaining page width beside the sidebar.
+   --------------------------------------------------------------------- */
 .page__content .sms-native-cv {
-  width: 100%;
+  display: block;
+  width: 100%;                 /* FULL CONTENT-COLUMN WIDTH */
+  max-width: none;
   margin: 0;
+  padding: 0;
 }
 
-/* Full-width embedded browser PDF viewer */
 .page__content .sms-native-cv__viewer-wrap {
-  width: 100%;
-  height: var(--sms-cv-viewer-height);
+  display: block;
+  width: var(--sms-cv-viewer-width, 100%);       /* EDIT IN cv_page.yml */
+  max-width: var(--sms-cv-viewer-max-width, none); /* EDIT IN cv_page.yml */
+  height: var(--sms-cv-viewer-height, 650px);    /* EDIT IN cv_page.yml */
   margin: 0;
+  padding: 0;
   overflow: hidden;
+  box-sizing: border-box;
   background: var(--sms-cv-viewer-loading-bg);
   border:
     var(--sms-cv-viewer-border-width)
@@ -46,8 +58,9 @@
 
 .page__content .sms-native-cv__viewer {
   display: block;
-  width: 100%;
+  width: 100%;                 /* PDF FITS THE VIEWER WIDTH */
   height: 100%;
+  min-width: 0;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -57,10 +70,8 @@
 
 /* Sentence below the viewer */
 .page__content .sms-native-cv__download {
-  margin:
-    var(--sms-cv-download-top-space)
-    0
-    0;
+  margin: var(--sms-cv-download-top-space) 0 0;
+  padding: 0;
   font-size: var(--sms-cv-download-text-size);
   line-height: 1.6;
   color: var(--global-text-color);
@@ -76,10 +87,12 @@
   color: var(--global-link-color-hover);
 }
 
-/* Phone/tablet */
+/* Phone/tablet: the Academic Pages sidebar collapses normally. */
 @media (max-width: 767px) {
   .page__content .sms-native-cv__viewer-wrap {
-    height: var(--sms-cv-viewer-mobile-height);
+    width: 100%;
+    max-width: none;
+    height: var(--sms-cv-viewer-mobile-height, 560px);
   }
 
   .page__content .sms-native-cv__download {
@@ -87,7 +100,7 @@
   }
 }
 
-/* Printing the webpage itself */
+/* Do not print the browser iframe when printing the webpage itself. */
 @media print {
   .page__content .sms-native-cv__viewer-wrap {
     display: none;

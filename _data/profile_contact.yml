@@ -10,7 +10,7 @@ profile:
   # Put the image in your repository's /images/ folder.
   avatar: "/images/profile.png"
   name: "Shahriare Mahmud Sakib"
-  role: "Prospective PhD Student | Structural and Transportation Engineering Research"
+  role: "Prospective PhD Student | Structural and Transportation Engineering Research" 
   short_bio: "Civil Engineering graduate from BUET and Lecturer at United International University."
   follow_button: "Contact & Profiles"
 

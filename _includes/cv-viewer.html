@@ -1,0 +1,64 @@
+{% assign cv = site.data.cv_page %}
+{% assign pdf_url = cv.pdf.path | relative_url %}
+
+<section class="sms-cv-page">
+  {% if cv.page.intro %}
+    <p class="sms-cv-page__intro">{{ cv.page.intro }}</p>
+  {% endif %}
+
+  <div class="sms-cv-page__actions" aria-label="Curriculum vitae actions">
+    <a
+      class="sms-cv-page__button sms-cv-page__button--primary"
+      href="{{ pdf_url }}"
+      download
+    >
+      <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+      <span>{{ cv.pdf.download_label | default: "Download CV (PDF)" }}</span>
+    </a>
+
+    <a
+      class="sms-cv-page__button sms-cv-page__button--secondary"
+      href="{{ pdf_url }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+      <span>{{ cv.pdf.open_label | default: "Open PDF in a new tab" }}</span>
+    </a>
+  </div>
+
+  {% if cv.viewer.show != false %}
+    <div
+      class="sms-cv-page__viewer-shell"
+      style="
+        --sms-cv-viewer-height: {{ cv.viewer.desktop_height | default: 1050 }}px;
+        --sms-cv-viewer-mobile-height: {{ cv.viewer.mobile_height | default: 680 }}px;
+      "
+    >
+      <iframe
+        class="sms-cv-page__viewer"
+        src="{{ pdf_url }}{{ cv.pdf.fragment }}"
+        title="{{ cv.pdf.viewer_title | default: 'Curriculum vitae PDF' }}"
+        loading="eager"
+      >
+        <p>
+          Your browser cannot display the embedded PDF.
+          <a href="{{ pdf_url }}">Open the CV PDF.</a>
+        </p>
+      </iframe>
+    </div>
+  {% endif %}
+
+  <div class="sms-cv-page__meta">
+    {% if cv.details.show_last_updated and cv.details.last_updated %}
+      <p class="sms-cv-page__updated">
+        <i class="far fa-calendar-check" aria-hidden="true"></i>
+        <span>CV last updated: {{ cv.details.last_updated }}</span>
+      </p>
+    {% endif %}
+
+    {% if cv.details.note %}
+      <p class="sms-cv-page__note">{{ cv.details.note }}</p>
+    {% endif %}
+  </div>
+</section>

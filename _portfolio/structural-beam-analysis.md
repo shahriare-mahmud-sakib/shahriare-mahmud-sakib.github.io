@@ -10,7 +10,7 @@ filter: "academic"
 timeline_year: "2022"
 timeline_icon: "fas fa-chart-line"
 
-project_type: "Laboratory Project"
+project_type: "Laboratory Project - BUET"
 status: "Completed"
 period: "Aug. 2022"
 discipline: "Structural Engineering and Engineering Computation"

@@ -1,108 +1,106 @@
 ---
 ---
 
-/* =====================================================================
-   EDITABLE CV PAGE STYLE CONTROLS
-   =====================================================================
-   This file keeps the normal Academic Pages sidebar and makes the PDF
-   fill the complete content column to the RIGHT of that sidebar.
-   ===================================================================== */
+/* =============================================================================
+   CV VIEWER — CORRECTED FOR THE "archive" LAYOUT
 
-:root {
-  /* Space between the PDF viewer and the sentence below it */
-  --sms-cv-download-top-space: 1.25rem;
+   IMPORTANT:
+   The CV page uses layout: archive.
+   The archive layout places the page content directly inside .archive and does
+   NOT create a .page__content wrapper.
 
-  /* Font size of the download sentence */
-  --sms-cv-download-text-size: 1rem;
+   Therefore, DO NOT write selectors such as:
+       .page__content .sms-native-cv
 
-  /* Dark loading area behind the browser's PDF viewer */
-  --sms-cv-viewer-loading-bg: #525659;
+   Those selectors will not match this CV page and the iframe will fall back to
+   the browser's small default size.
+   ============================================================================= */
 
-  /* 0 gives square corners like the reference page */
-  --sms-cv-viewer-radius: 0;
-
-  /* Set to 1px if you want a thin border around the viewer */
-  --sms-cv-viewer-border-width: 0;
-}
-
-/* ---------------------------------------------------------------------
-   IMPORTANT WIDTH RULES
-   ---------------------------------------------------------------------
-   These rules do NOT remove the sidebar. They only ensure that the CV
-   uses all of the remaining page width beside the sidebar.
-   --------------------------------------------------------------------- */
-.page__content .sms-native-cv {
+/* Complete CV section */
+.sms-native-cv {
   display: block;
-  width: 100%;                 /* FULL CONTENT-COLUMN WIDTH */
-  max-width: none;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
   margin: 0;
-  padding: 0;
 }
 
-.page__content .sms-native-cv__viewer-wrap {
+/* PDF viewer container */
+.sms-native-cv__viewer-wrap {
   display: block;
-  width: var(--sms-cv-viewer-width, 100%);       /* EDIT IN cv_page.yml */
-  max-width: var(--sms-cv-viewer-max-width, none); /* EDIT IN cv_page.yml */
-  height: var(--sms-cv-viewer-height, 650px);    /* EDIT IN cv_page.yml */
+  box-sizing: border-box;
+
+  /* EDIT width in _data/cv_page.yml */
+  width: var(--sms-cv-viewer-width, 100%);
+  max-width: var(--sms-cv-viewer-max-width, none);
+
+  /* EDIT height in _data/cv_page.yml */
+  height: var(--sms-cv-viewer-height, 680px);
+
   margin: 0;
   padding: 0;
   overflow: hidden;
-  box-sizing: border-box;
-  background: var(--sms-cv-viewer-loading-bg);
+
+  background: var(--sms-cv-viewer-background, #525659);
   border:
-    var(--sms-cv-viewer-border-width)
+    var(--sms-cv-viewer-border-width, 1px)
     solid
     var(--global-border-color);
-  border-radius: var(--sms-cv-viewer-radius);
+  border-radius: var(--sms-cv-viewer-radius, 0);
 }
 
-.page__content .sms-native-cv__viewer {
-  display: block;
-  width: 100%;                 /* PDF FITS THE VIEWER WIDTH */
-  height: 100%;
+/* Embedded browser PDF viewer */
+.sms-native-cv__viewer {
+  display: block !important;
+  box-sizing: border-box;
+
+  /* These two lines make the PDF fill the available column beside the sidebar. */
+  width: 100% !important;
+  height: 100% !important;
+
   min-width: 0;
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--sms-cv-viewer-loading-bg);
+
+  background: var(--sms-cv-viewer-background, #525659);
   border: 0;
 }
 
-/* Sentence below the viewer */
-.page__content .sms-native-cv__download {
-  margin: var(--sms-cv-download-top-space) 0 0;
-  padding: 0;
-  font-size: var(--sms-cv-download-text-size);
-  line-height: 1.6;
+/* Download sentence */
+.sms-native-cv__download {
+  margin: 1.25rem 0 0;
   color: var(--global-text-color);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.page__content .sms-native-cv__download a {
+.sms-native-cv__download a {
   color: var(--global-link-color);
   text-decoration: underline;
   text-underline-offset: 0.12em;
 }
 
-.page__content .sms-native-cv__download a:hover {
+.sms-native-cv__download a:hover {
   color: var(--global-link-color-hover);
 }
 
-/* Phone/tablet: the Academic Pages sidebar collapses normally. */
-@media (max-width: 767px) {
-  .page__content .sms-native-cv__viewer-wrap {
+/* Mobile/tablet */
+@media screen and (max-width: 767px) {
+  .sms-native-cv__viewer-wrap {
     width: 100%;
     max-width: none;
     height: var(--sms-cv-viewer-mobile-height, 560px);
   }
 
-  .page__content .sms-native-cv__download {
+  .sms-native-cv__download {
     font-size: 0.9rem;
   }
 }
 
-/* Do not print the browser iframe when printing the webpage itself. */
+/* Hide the embedded browser viewer when printing the webpage itself. */
 @media print {
-  .page__content .sms-native-cv__viewer-wrap {
+  .sms-native-cv__viewer-wrap {
     display: none;
   }
 }

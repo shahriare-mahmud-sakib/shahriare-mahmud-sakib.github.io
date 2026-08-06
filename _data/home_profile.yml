@@ -6,7 +6,6 @@
 page:
   eyebrow: "PROFILE"
   title: "About me"
-  show_quick_links: false
 
   introduction:
     - >-
@@ -78,7 +77,6 @@ highlights:
       url: "/publications/"
       new_tab: false
 
-    - icon: ""
     - icon: "🏅"
       title: "Dean's List"
       subtitle: "All Undergraduate Years"

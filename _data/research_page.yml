@@ -251,11 +251,10 @@ current_research:
           - "Numerical assessment under seismic loading"
 
         gallery:
-          - image: "/images/research/current/nonlinear-model-placeholder.svg"
-            alt: "Editable placeholder for the current nonlinear numerical model"
+          - image: "/images/research/current/numerical-validation.png"
+            alt: "Numerical validation for the current nonlinear FEM"
             caption: >-
-              Editable placeholder — replace with a finite element model,
-              contour plot, deformation shape, or current numerical result.
+              Numerical validation for the finite element model of the CFST column.
 
         resources: []
 
@@ -305,11 +304,10 @@ current_research:
           - "Structural response observation under dynamic loading"
 
         gallery:
-          - image: "/images/research/current/shake-table-placeholder.svg"
-            alt: "Editable placeholder for the shake table research"
+          - image: "/images/research/current/research-methodology.png"
+            alt: "Methodology for the shake table research"
             caption: >-
-              Editable placeholder — replace with a test setup, specimen,
-              instrumentation, or shake-table experiment photograph.
+              Research methodology for the shake-table experiment of CFST columns.
 
         resources: []
 

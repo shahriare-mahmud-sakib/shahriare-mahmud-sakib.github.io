@@ -49,14 +49,14 @@ sections:
   - order: 2
     id: "completed-research"
     heading: "Completed Research"
-    subtitle: "Completed investigations, arranged from newest to oldest."
+    subtitle: ""
     icon: "fas fa-circle-check"
     accent: "#16a34a"
 
   - order: 3
     id: "current-research"
     heading: "Current Research"
-    subtitle: "Ongoing investigations, arranged from newest to oldest."
+    subtitle: ""
     icon: "fas fa-flask"
     accent: "#0ea5e9"
 

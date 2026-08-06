@@ -1,0 +1,480 @@
+# =============================================================================
+# AWARDS & SKILLS PAGE
+#
+# Main editable file for:
+# - Awards and honours
+# - Research expertise
+# - Analysis, simulation and CAD skills 
+# - Programming skills
+# - Language proficiency
+#
+# IMPORTANT
+# - Awards are intentionally NOT hyperlinked.
+# - Research expertise cards are intentionally NOT hyperlinked.
+# - Technical and programming skills may link to the evidence page.
+# - Document-preparation skills have been removed.
+# =============================================================================
+
+page:
+  eyebrow: "ACHIEVEMENTS & CAPABILITIES"
+  intro: >-
+    An overview of my academic honors, scholarships, evolving research expertise, 
+    technical skills, programming background, engineering software knowledge, 
+    and language proficiencies.
+awards_section:
+  eyebrow: "AWARDS & HONOURS"
+  heading: "Academic Awards and Scholarships"
+  # note: "Awards are arranged from newest to oldest."
+
+awards:
+  - order: 1
+    title: "BUET Academic Merit Scholarship"
+    organization: "Bangladesh University of Engineering and Technology (BUET)"
+    period: "2022–2023"
+    icon: "fas fa-medal"
+    accent: "#f59e0b"
+    summary: >-
+      Awarded the BUET Academic Merit Scholarship for strong academic
+      performance in the July 2022 and July 2023 semesters.
+    years:
+      - "Semester: July 2023"
+      - "Semester: July 2022"
+
+  - order: 2
+    title: "Dean's List Award"
+    organization: >-
+      Faculty of Civil Engineering, Bangladesh University of Engineering
+      and Technology (BUET)
+    period: "2019–2023"
+    icon: "fas fa-award"
+    accent: "#8b5cf6"
+    summary: >-
+      Awarded and included in the Faculty of Civil Engineering Dean’s List for 
+      consecutive undergraduate academic years in recognition of outstanding 
+      academic excellence.
+    years:
+      - "Academic Year: 2019–20"
+      - "Academic Year: 2020–21"
+      - "Academic Year: 2021–22"
+      - "Academic Year: 2022–23"
+
+  - order: 3
+    title: "Education Board Scholarship"
+    organization: "Board of Intermediate and Secondary Education, Dhaka"
+    period: "2019–2023"
+    icon: "fas fa-graduation-cap"
+    accent: "#0ea5e9"
+    summary: >-
+      Awarded an Education Board Scholarship in recognition of exceptional
+      academic results in the Higher Secondary Certificate examination.
+    years:
+      - "2019–2023"
+
+  - order: 4
+    title: "Education Board Scholarship"
+    organization: "Directorate of Primary Education, Bangladesh"
+    period: "2012–2016"
+    icon: "fas fa-star"
+    accent: "#10b981"
+    summary: >-
+      Awarded an Education Board Scholarship in recognition of exceptional
+      academic results in the Primary School Certificate examination.
+    years:
+      - "2012–2016"
+
+skills_section:
+  eyebrow: "SKILLS & EXPERTISE"
+  heading: "Research Expertise and Technical Skills"
+  # note: >-
+  #   Research areas are displayed directly without links. Technical skills may
+  #   link to certificates, code, reports, or sample works.
+
+controls:
+  show_search: true
+  search_placeholder: "Search research areas, software, programming languages, or tools..."
+
+  show_filters: true
+  filters:
+    - label: "All"
+      value: "all"
+
+    - label: "Research Expertise"
+      value: "research"
+
+    - label: "Analysis & CAD"
+      value: "analysis-cad"
+
+    - label: "Programming"
+      value: "programming"
+
+    - label: "Languages"
+      value: "languages"
+
+skill_groups:
+  # ---------------------------------------------------------------------------
+  # RESEARCH EXPERTISE
+  # This group and all cards inside it are intentionally non-clickable.
+  # ---------------------------------------------------------------------------
+  - id: "research"
+    heading: "Research Expertise"
+    icon: "fas fa-microscope"
+    description: >-
+      Focused on developing core expertise in the structural, numerical, and seismic 
+      analysis of civil engineering structures through targeted research.
+    hyperlinked: false
+
+    skills:
+      - order: 1
+        name: "Structural Engineering"
+        icon: "fas fa-building-columns"
+        accent: "#2563eb"
+        summary: >-
+          Analysis, behaviour, assessment, and design of structural systems.
+        hyperlinked: false
+        keywords:
+          - "structures"
+          - "civil engineering"
+          - "structural systems"
+
+      - order: 2
+        name: "Earthquake Engineering"
+        icon: "fas fa-wave-square"
+        accent: "#dc2626"
+        summary: >-
+          Seismic behaviour, cyclic response, and earthquake-resistant
+          structural performance.
+        hyperlinked: false
+        keywords:
+          - "seismic"
+          - "cyclic loading"
+          - "earthquake"
+
+      # - order: 3
+      #   name: "Structural Dynamics"
+      #   icon: "fas fa-chart-line"
+      #   accent: "#7c3aed"
+      #   summary: >-
+      #     Dynamic response of structures subjected to time-varying and extreme
+      #     loading.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "dynamic response"
+      #     - "vibration"
+      #     - "extreme loading" 
+
+      # - order: 4
+      #   name: "Computational Structural Mechanics"
+      #   icon: "fas fa-gears"
+      #   accent: "#0891b2"
+      #   summary: >-
+      #     Computational modelling and numerical assessment of structural
+      #     behaviour.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "computational mechanics"
+      #     - "numerical modelling"
+      #     - "simulation"
+
+      - order: 5
+        name: "Nonlinear Finite Element Analysis"
+        icon: "fas fa-cubes"
+        accent: "#f97316"
+        summary: >-
+          Geometric and material nonlinear analysis, constitutive three-dimensional modelling,
+          validation, and parametric investigation.
+        hyperlinked: false
+        keywords:
+          - "finite element"
+          - "nonlinear analysis"
+          - "ANSYS"
+          - "APDL"
+
+      # - order: 6
+      #   name: "Structural Health Monitoring"
+      #   icon: "fas fa-heart-pulse"
+      #   accent: "#16a34a"
+      #   summary: >-
+      #     Monitoring, condition assessment, and data-informed evaluation of
+      #     structural and infrastructure systems.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "monitoring"
+      #     - "condition assessment"
+      #     - "infrastructure health"
+
+      - order: 7
+        name: "Steel and Composite Structures"
+        icon: "fas fa-industry"
+        accent: "#475569"
+        summary: >-
+          Seismic performance and nonlinear behaviour of steel, concrete,
+          and composite structural members.
+        hyperlinked: false
+        keywords:
+          - "steel structures"
+          - "composite structures"
+          - "stainless steel"
+          - "thin-walled"
+
+      - order: 8
+        name: "Experimental Structural Analysis"
+        icon: "fas fa-vials"
+        accent: "#0f766e"
+        summary: >-
+          Experimental investigation and response assessment of structural
+          members, including seismic and shake-table testing.
+        hyperlinked: false
+        keywords:
+          - "experiment"
+          - "shake table"
+          - "laboratory testing"
+
+      # - order: 9
+      #   name: "Resilient Infrastructure Systems"
+      #   icon: "fas fa-bridge"
+      #   accent: "#9333ea"
+      #   summary: >-
+      #     Safer, smarter, and more resilient infrastructure through integrated
+      #     computational and experimental research.
+      #   hyperlinked: false
+      #   keywords:
+      #     - "resilience"
+      #     - "infrastructure"
+      #     - "performance assessment"
+
+  # ---------------------------------------------------------------------------
+  # ANALYSIS, SIMULATION AND CAD
+  # These cards remain hyperlinked to supporting evidence.
+  # ---------------------------------------------------------------------------
+  - id: "analysis-cad"
+    heading: "Analysis, Simulation and CAD Software"
+    icon: "fas fa-building"
+    description: >-
+      Engineering analysis, structural modelling, simulation, drafting, and
+      building-information-modelling tools.
+    hyperlinked: true
+
+    skills:
+      - order: 1
+        slug: "ansys"
+        name: "ANSYS"
+        icon: "fas fa-cubes"
+        accent: "#f97316"
+        summary: "Finite-element analysis and engineering simulation."
+        detail_url: "/awards & skills/evidence/#ansys"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "ANSYS Certificate"
+          url: "/files/certificates/skills/ansys/certificate.pdf"
+        samples:
+          - image: "/images/skills/ansys/sample-work-placeholder.svg"
+            alt: "Editable placeholder for ANSYS sample work"
+            caption: "Replace this placeholder with your ANSYS model, output, screenshot, or sample work."
+        resources: []
+
+      - order: 2
+        slug: "sap2000"
+        name: "SAP2000"
+        icon: "fas fa-chart-column"
+        accent: "#2563eb"
+        summary: "Structural modelling, analysis, and design workflows."
+        detail_url: "/awards & skills/evidence/#sap2000"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "SAP2000 Certificate"
+          url: "/files/certificates/skills/sap2000/certificate.pdf"
+        samples:
+          - image: "/images/skills/sap2000/sample-work-placeholder.svg"
+            alt: "Editable placeholder for SAP2000 sample work"
+            caption: "Replace this placeholder with your SAP2000 model, result, or sample work."
+        resources: []
+
+      - order: 3
+        slug: "etabs"
+        name: "ETABS"
+        icon: "fas fa-building-columns"
+        accent: "#7c3aed"
+        summary: "Building analysis and structural-system modelling."
+        detail_url: "/awards & skills/evidence/#etabs"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "ETABS Certificate"
+          url: "/files/certificates/skills/etabs/certificate.pdf"
+        samples:
+          - image: "/images/skills/etabs/sample-work-placeholder.svg"
+            alt: "Editable placeholder for ETABS sample work"
+            caption: "Replace this placeholder with your ETABS model, result, or sample work."
+        resources: []
+
+      - order: 4
+        slug: "autocad"
+        name: "AutoCAD"
+        icon: "fas fa-drafting-compass"
+        accent: "#dc2626"
+        summary: "Engineering drawings, drafting, plans, and details."
+        detail_url: "/awards & skills/evidence/#autocad"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "AutoCAD Certificate"
+          url: "/files/certificates/skills/autocad/certificate.pdf"
+        samples:
+          - image: "/images/skills/autocad/sample-work-placeholder.svg"
+            alt: "Editable placeholder for AutoCAD sample work"
+            caption: "Replace this placeholder with your AutoCAD drawing, plan, or detail."
+        resources: []
+
+      - order: 5
+        slug: "revit"
+        name: "Revit"
+        icon: "fas fa-city"
+        accent: "#0891b2"
+        summary: "Building information modelling and project visualization."
+        detail_url: "/awards & skills/evidence/#revit"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "Revit Certificate"
+          url: "/files/certificates/skills/revit/certificate.pdf"
+        samples:
+          - image: "/images/skills/revit/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Revit sample work"
+            caption: "Replace this placeholder with your Revit model, rendering, or sample work."
+        resources: []
+
+  # ---------------------------------------------------------------------------
+  # PROGRAMMING
+  # ---------------------------------------------------------------------------
+  - id: "programming"
+    heading: "Programming Languages"
+    icon: "fas fa-code"
+    description: >-
+      Programming and scripting for engineering computation, automation,
+      numerical analysis, and visualization.
+    hyperlinked: true
+
+    skills:
+      - order: 1
+        slug: "apdl"
+        name: "APDL"
+        icon: "fas fa-terminal"
+        accent: "#ea580c"
+        summary: "ANSYS Parametric Design Language for modelling and analysis automation."
+        detail_url: "/awards & skills/evidence/#apdl"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "APDL Certificate"
+          url: "/files/certificates/skills/apdl/certificate.pdf"
+        samples:
+          - image: "/images/skills/apdl/sample-work-placeholder.svg"
+            alt: "Editable placeholder for APDL sample work"
+            caption: "Replace this placeholder with your APDL script, model, or output."
+        resources: []
+
+      - order: 2
+        slug: "python"
+        name: "Python"
+        icon: "fab fa-python"
+        accent: "#3776ab"
+        summary: "Engineering computation, data processing, automation, and visualization."
+        detail_url: "/awards & skills/evidence/#python"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "Python Certificate"
+          url: "/files/certificates/skills/python/certificate.pdf"
+        samples:
+          - image: "/images/skills/python/sample-work-placeholder.svg"
+            alt: "Editable placeholder for Python sample work"
+            caption: "Replace this placeholder with your Python code, plot, notebook, or output."
+        resources: []
+
+      - order: 3
+        slug: "matlab"
+        name: "MATLAB"
+        icon: "fas fa-square-root-variable"
+        accent: "#d97706"
+        summary: "Numerical computation, engineering analysis, GUI development, and plotting."
+        detail_url: "/awards & skills/evidence/#matlab"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "MATLAB Certificate"
+          url: "/files/certificates/skills/matlab/certificate.pdf"
+        samples:
+          - image: "/images/skills/matlab/sample-work-placeholder.svg"
+            alt: "Editable placeholder for MATLAB sample work"
+            caption: "Replace this placeholder with your MATLAB GUI, diagram, code, or output."
+        resources:
+          - label: "Structural Beam Analysis Code"
+            url: "https://github.com/shahriare-mahmud-sakib/structural-beam-analysis"
+            icon: "fab fa-github"
+            external: true
+
+      - order: 4
+        slug: "c-cpp"
+        name: "C/C++"
+        icon: "fas fa-code"
+        accent: "#00599c"
+        summary: "General-purpose programming and computational problem solving."
+        detail_url: "/awards & skills/evidence/#c-cpp"
+        has_certificate: true
+        has_samples: true
+        certificate:
+          available: false
+          label: "C/C++ Certificate"
+          url: "/files/certificates/skills/c-cpp/certificate.pdf"
+        samples:
+          - image: "/images/skills/c-cpp/sample-work-placeholder.svg"
+            alt: "Editable placeholder for C/C++ sample work"
+            caption: "Replace this placeholder with your C/C++ code, program, or output."
+        resources: []
+
+  # ---------------------------------------------------------------------------
+  # LANGUAGE PROFICIENCY
+  # ---------------------------------------------------------------------------
+  - id: "languages"
+    heading: "Language Proficiency"
+    icon: "fas fa-language"
+    description: "English and Bengali communication skills."
+    hyperlinked: true
+
+    skills:
+      - order: 1
+        slug: "english"
+        name: "English"
+        icon: "fas fa-globe"
+        accent: "#2563eb"
+        summary: "IELTS overall band score: 6.5."
+        detail_url: "/awards & skills/evidence/#english"
+        has_certificate: true
+        has_samples: false
+        certificate:
+          available: false
+          label: "IELTS Test Report Form"
+          url: "/files/certificates/skills/english/certificate.pdf"
+        resources: []
+
+      - order: 2
+        slug: "bengali"
+        name: "Bengali"
+        icon: "fas fa-comments"
+        accent: "#16a34a"
+        summary: "Native language proficiency."
+        hyperlinked: false
+        has_certificate: false
+        has_samples: false
+
+empty_message: "No skill or research area matches the selected filter or search term."

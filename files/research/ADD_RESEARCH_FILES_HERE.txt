@@ -1,0 +1,24 @@
+Place optional research resources inside this folder.
+
+Suggested structure:
+
+files/research/
+├── undergraduate-research/
+│   ├── presentation.pdf
+│   ├── poster.pdf
+│   └── summary.pdf
+├── current-research/
+│   ├── project-summary.pdf
+│   └── presentation.pdf
+└── future-research/
+    └── research-vision.pdf
+
+After adding a file, create a resource entry in `_data/research_page.yml`.
+
+Example:
+
+resources:
+  - label: "View Research Presentation"
+    url: "/files/research/undergraduate-research/presentation.pdf"
+    icon: "fas fa-display"
+    external: false

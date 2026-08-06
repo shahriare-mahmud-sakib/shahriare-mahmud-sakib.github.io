@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+<rect width="1200" height="675" fill="#f5f8fa"/>
+<text x="62" y="78" fill="#20303a" font-family="Arial" font-size="38" font-weight="700">Model Validation / Cyclic Response</text>
+<text x="62" y="120" fill="#6f818d" font-family="Arial" font-size="22">Completed research image placeholder</text>
+<g transform="translate(115 165)"><path d="M0 380H950M0 0V380" stroke="#526b78" stroke-width="4"/><g stroke="#d8e1e6" stroke-width="2"><path d="M0 95H950M0 190H950M0 285H950"/><path d="M190 0V380M380 0V380M570 0V380M760 0V380"/></g><path d="M10 195 C95 25 170 345 255 185 C345 30 420 350 510 188 C600 25 680 345 770 190 C845 65 900 300 940 200" fill="none" stroke="#0ea5e9" stroke-width="8"/><path d="M10 210 C90 70 180 315 255 205 C350 75 430 320 510 205 C610 75 690 320 770 207 C850 105 905 280 940 215" fill="none" stroke="#f59e0b" stroke-width="7"/></g>
+<text x="600" y="625" text-anchor="middle" fill="#8a3b3b" font-family="Arial" font-size="19" font-weight="700">REPLACE WITH YOUR ACTUAL VALIDATION PLOT OR HYSTERESIS CURVE</text>
+
+</svg>

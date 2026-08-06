@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+<defs><linearGradient id="b" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#102a43"/><stop offset="1" stop-color="#075985"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#b)"/>
+<text x="62" y="78" fill="#eff6ff" font-family="Arial" font-size="38" font-weight="700">Current Nonlinear Numerical Model</text>
+<text x="62" y="120" fill="#bae6fd" font-family="Arial" font-size="22">Current research image placeholder</text>
+<g transform="translate(180 155)"><g stroke="#e0f2fe" stroke-width="7" fill="none"><path d="M60 410H780M110 410V30M330 410V30M550 410V30M770 410V30"/><path d="M110 95H770M110 200H770M110 305H770"/></g><g fill="#fbbf24"><circle cx="110" cy="95" r="11"/><circle cx="330" cy="95" r="11"/><circle cx="550" cy="95" r="11"/><circle cx="770" cy="95" r="11"/><circle cx="110" cy="200" r="11"/><circle cx="330" cy="200" r="11"/><circle cx="550" cy="200" r="11"/><circle cx="770" cy="200" r="11"/><circle cx="110" cy="305" r="11"/><circle cx="330" cy="305" r="11"/><circle cx="550" cy="305" r="11"/><circle cx="770" cy="305" r="11"/></g><path d="M110 30 C245 100 190 230 330 305 C465 375 420 165 550 95 C680 25 640 250 770 410" fill="none" stroke="#fb7185" stroke-width="11"/></g>
+<text x="600" y="625" text-anchor="middle" fill="#fecaca" font-family="Arial" font-size="19" font-weight="700">REPLACE WITH YOUR ACTUAL FINITE ELEMENT MODEL OR NUMERICAL RESULT</text>
+
+</svg>

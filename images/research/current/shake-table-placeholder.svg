@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+<defs><linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="#062c35"/><stop offset="1" stop-color="#0e4b5b"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#b)"/>
+<text x="62" y="78" fill="#ecfeff" font-family="Arial" font-size="38" font-weight="700">Shake Table Research</text>
+<text x="62" y="120" fill="#a5e5ef" font-family="Arial" font-size="22">Current research image placeholder</text>
+<g transform="translate(100 175)"><rect x="0" y="330" width="1000" height="48" rx="10" fill="#c7e8ed"/><rect x="70" y="378" width="860" height="35" rx="8" fill="#38bdf8"/><g stroke="#e6f7fa" stroke-width="10" fill="none"><path d="M260 330V70M480 330V70M700 330V70"/><path d="M260 100H700M260 205H700M260 305H700"/><path d="M260 100L480 205L700 100M260 205L480 305L700 205"/></g><path d="M80 455 C155 395 230 505 305 445 C380 390 455 505 530 445 C605 390 680 505 755 445 C830 395 890 490 930 450" fill="none" stroke="#fb7185" stroke-width="9"/></g>
+<text x="600" y="625" text-anchor="middle" fill="#fca5a5" font-family="Arial" font-size="19" font-weight="700">REPLACE WITH YOUR ACTUAL TEST SETUP OR LABORATORY PHOTOGRAPH</text>
+
+</svg>

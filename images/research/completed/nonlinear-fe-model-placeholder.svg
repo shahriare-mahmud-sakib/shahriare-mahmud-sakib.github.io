@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+<defs><linearGradient id="b" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#071722"/><stop offset="1" stop-color="#16394a"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#b)"/>
+<text x="62" y="78" fill="#ecf8fd" font-family="Arial" font-size="38" font-weight="700">Nonlinear Finite Element Model</text>
+<text x="62" y="120" fill="#9cc9dc" font-family="Arial" font-size="22">Completed research image placeholder</text>
+<g transform="translate(180 160)"><rect x="80" y="15" width="190" height="410" rx="20" fill="#d6e9f1" stroke="#38bdf8" stroke-width="8"/><g stroke="#0ea5e9" stroke-width="3"><path d="M105 20V420M145 20V420M185 20V420M225 20V420M260 20V420"/><path d="M85 70H265M85 130H265M85 190H265M85 250H265M85 310H265M85 370H265"/></g><path d="M175 5 C95 95 270 150 175 235 C90 315 275 370 175 440" fill="none" stroke="#fb7185" stroke-width="13"/><g transform="translate(390 30)"><path d="M0 370H480M0 0V370" stroke="#d4e5ec" stroke-width="4"/><path d="M15 195 C80 20 150 340 225 180 C295 40 370 330 465 175" fill="none" stroke="#f59e0b" stroke-width="9"/></g></g>
+<text x="600" y="625" text-anchor="middle" fill="#fca5a5" font-family="Arial" font-size="19" font-weight="700">REPLACE WITH YOUR ACTUAL ANSYS MODEL OR OUTPUT</text>
+
+</svg>

@@ -1,6 +1,6 @@
 # ================================================================
 # EDIT THIS FILE TO CHANGE THE ABOUT-ME INTRODUCTION, PROFILE CARDS,
-# AND COLLABORATION BUTTONS.
+# CARD GRID COLUMNS, AND COLLABORATION BUTTONS.
 # You usually do not need to edit the HTML or CSS files.
 # ================================================================
 
@@ -47,6 +47,13 @@ highlights:
   # Internal link example: /research/
   # External link example: https://www.buet.ac.bd/
   # Set new_tab: true only when you want the link to open in a new tab.
+  # Responsive card orientation.
+  # Desktop: 3 cards in one row; tablet: 2; mobile: 1.
+  layout:
+    columns_desktop: 3
+    columns_tablet: 2
+    columns_mobile: 1
+
   cards:
     - icon: "🎓"
       title: "BUET Graduate"

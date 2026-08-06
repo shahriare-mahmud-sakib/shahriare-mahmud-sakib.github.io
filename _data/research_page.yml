@@ -205,59 +205,6 @@ current_research:
 
   items:
     # order: 1 is shown first as the most recent/current priority.
-    - order: 1
-      slug: "seismic-response-shake-table-testing"
-      type: "Current Research"
-      status: "Ongoing"
-      period: "Dec 2025 - Present"
-      title: >-
-        Seismic Response Assessment of Structural Members via Shake Table Testing
-      detail_url: "/research/current/seismic-response-shake-table-testing/"
-      icon: "fas fa-house-crack"
-      accent: "#0ea5e9"
-
-      person:
-        label: "Co-investigator"
-        name: "Jamil Ahmed Joy"
-        url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
-        designation: "Assistant Professor, Department of CE, UIU"
-
-      card_summary: >-
-        Experimental investigation of structural members under seismic loading
-        through shake table testing and structural-response assessment.
-
-      tags:
-        - "Shake Table Testing"
-        - "Seismic Response"
-        - "Experimental Research"
-
-      details:
-        paragraphs:
-          - >-
-            This current research investigates the seismic response of
-            structural members through shake table testing. The work forms part
-            of my broader interest in experimental assessment of steel and
-            composite structural members subjected to seismic loading.
-
-          - >-
-            The investigation is intended to support the assessment of
-            structural response under controlled dynamic loading and to
-            contribute to safer and more resilient structural systems.
-
-        tools_heading: "Tools & Techniques"
-        tools:
-          - "Shake table testing"
-          - "Experimental seismic-response assessment"
-          - "Structural response observation under dynamic loading"
-
-        gallery:
-          - image: "/images/research/current/shake-table-placeholder.svg"
-            alt: "Editable placeholder for the shake table research"
-            caption: >-
-              Editable placeholder — replace with a test setup, specimen,
-              instrumentation, or shake-table experiment photograph.
-
-        resources: []
 
     - order: 2
       slug: "nonlinear-numerical-seismic-loading"
@@ -310,6 +257,60 @@ current_research:
             caption: >-
               Editable placeholder — replace with a finite element model,
               contour plot, deformation shape, or current numerical result.
+
+        resources: []
+
+    - order: 1
+      slug: "seismic-response-shake-table-testing"
+      type: "Current Research"
+      status: "Ongoing"
+      period: "Dec 2025 - Present"
+      title: >-
+        Seismic Response Assessment of Structural Members via Shake Table Testing
+      detail_url: "/research/current/seismic-response-shake-table-testing/"
+      icon: "fas fa-house-crack"
+      accent: "#0ea5e9"
+
+      person:
+        label: "Co-investigator"
+        name: "Jamil Ahmed Joy"
+        url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
+        designation: "Assistant Professor, Department of CE, UIU"
+
+      card_summary: >-
+        Experimental investigation of structural members under seismic loading
+        through shake table testing and structural-response assessment.
+
+      tags:
+        - "Shake Table Testing"
+        - "Seismic Response"
+        - "Experimental Research"
+
+      details:
+        paragraphs:
+          - >-
+            This current research investigates the seismic response of
+            structural members through shake table testing. The work forms part
+            of my broader interest in experimental assessment of steel and
+            composite structural members subjected to seismic loading.
+
+          - >-
+            The investigation is intended to support the assessment of
+            structural response under controlled dynamic loading and to
+            contribute to safer and more resilient structural systems.
+
+        tools_heading: "Tools & Techniques"
+        tools:
+          - "Shake table testing"
+          - "Experimental seismic-response assessment"
+          - "Structural response observation under dynamic loading"
+
+        gallery:
+          - image: "/images/research/current/shake-table-placeholder.svg"
+            alt: "Editable placeholder for the shake table research"
+            caption: >-
+              Editable placeholder — replace with a test setup, specimen,
+              instrumentation, or shake-table experiment photograph.
 
         resources: []
 

@@ -2,32 +2,31 @@
 setlocal
 
 echo ============================================================
-echo Checking YAML files...
+echo 1. Validating YAML, front matter, and page routes
 echo ============================================================
-ruby scripts\check_site_data.rb
+ruby scripts\check_site.rb
 if errorlevel 1 (
   echo.
-  echo Validation failed. Nothing should be pushed yet.
+  echo Validation failed. Fix the errors before pushing.
   pause
   exit /b 1
 )
 
 echo.
 echo ============================================================
-echo Building the complete Jekyll website...
+echo 2. Building the complete Jekyll website
 echo ============================================================
 call bundle exec jekyll build --strict_front_matter
 if errorlevel 1 (
   echo.
-  echo Jekyll build failed. Nothing should be pushed yet.
+  echo Jekyll build failed. Fix the errors before pushing.
   pause
   exit /b 1
 )
 
 echo.
 echo ============================================================
-echo SUCCESS: YAML validation and Jekyll build both passed.
-echo You may now commit and push the files.
+echo SUCCESS: the repository is safe to commit and push.
 echo ============================================================
 pause
 exit /b 0

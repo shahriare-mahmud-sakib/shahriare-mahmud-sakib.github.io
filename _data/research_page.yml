@@ -1,0 +1,212 @@
+# =============================================================================
+# EDITABLE RESEARCH PAGE DATA
+#
+# This file preserves the content of the existing Research page while making
+# the layout, research interests, figures, captions, and resource links easy
+# to edit.
+#
+# Most future edits can be made in this file without changing HTML or CSS.
+# =============================================================================
+
+page:
+  eyebrow: "RESEARCH PROFILE"
+
+  introduction:
+    - >-
+      My research focuses on advancing the understanding of structural behavior
+      under extreme loading conditions through the integration of computational
+      mechanics, nonlinear finite element modeling, and experimental
+      investigations. I am particularly interested in the seismic performance
+      of steel and composite structures, with an emphasis on developing reliable
+      analytical and numerical tools for performance assessment, structural
+      resilience, and infrastructure safety.
+
+    - >-
+      Looking forward, I aim to integrate data-driven approaches and structural
+      health monitoring techniques with computational modeling to support the
+      development of smarter and more resilient civil infrastructure.
+
+research_interests:
+  heading: "Research Interests"
+  note: "Core areas guiding my completed, current, and future research."
+
+  items:
+    - order: 1
+      name: "Structural Engineering"
+      icon: "fas fa-building-columns"
+
+    - order: 2
+      name: "Earthquake Engineering"
+      icon: "fas fa-wave-square"
+
+    - order: 3
+      name: "Structural Dynamics"
+      icon: "fas fa-chart-line"
+
+    - order: 4
+      name: "Structural Health Monitoring"
+      icon: "fas fa-heart-pulse"
+
+    - order: 5
+      name: "Computational Structural Mechanics"
+      icon: "fas fa-gears"
+
+    - order: 6
+      name: "Nonlinear Finite Element Analysis"
+      icon: "fas fa-cubes"
+
+    - order: 7
+      name: "Resilient Infrastructure Systems"
+      icon: "fas fa-bridge"
+
+completed_research:
+  heading: "Undergraduate Research"
+  period: "Jan 2024 - Mar 2025"
+  status: "Completed Research"
+  status_icon: "fas fa-circle-check"
+
+  title: >-
+    Nonlinear FE Investigation on Behavior of Cold-Formed Stainless-Steel
+    Columns Subject to Cyclic Loading
+
+  supervisor:
+    label: "Supervisor"
+    name: "Dr. Khan Mahmud Amanat"
+    url: "https://ce.buet.ac.bd/khan-mahmud-amanat/"
+    designation: "Professor, Department of Civil Engineering, BUET"
+
+  paragraphs:
+    - >-
+      My undergraduate research addressed the limited understanding of the
+      seismic behavior of cold-formed stainless-steel hollow structural section
+      (HSS) columns subjected to combined axial compression and cyclic bending.
+      To investigate this problem, I developed a three-dimensional nonlinear
+      finite element model using [ANSYS Mechanical
+      APDL](https://www.ansys.com/blog/what-is-apdl), incorporating both
+      geometric and material nonlinearities together with the effects of
+      cold-forming.
+
+    - >-
+      The numerical model employed advanced constitutive material modeling
+      through the [Chaboche nonlinear kinematic
+      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=/views/secured/corp/v251/en/wb_wbtec/WBteccurvefitchab.html)
+      and [Voce isotropic
+      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=//views/secured/corp/v251/en/ans_mat/amp8sq21dldm.html)
+      models and was rigorously validated against published experimental
+      studies.
+
+    - >-
+      Following validation, an extensive parametric investigation involving 210
+      nonlinear finite element simulations was conducted to evaluate the
+      influence of geometric and loading parameters on the cyclic behavior and
+      seismic performance of cold-formed stainless-steel columns.
+
+    - >-
+      This research strengthened my interest in computational structural
+      mechanics and demonstrated the effectiveness of advanced nonlinear finite
+      element modeling for evaluating the cyclic response, strength, ductility,
+      and failure mechanisms of thin-walled steel structures subjected to
+      seismic loading.
+
+  tools_heading: "Tools and Techniques"
+
+  tools:
+    - >-
+      Three-dimensional nonlinear finite element modeling (FEM) using [ANSYS
+      Mechanical APDL](https://www.ansys.com/blog/what-is-apdl)
+
+    - >-
+      Nonlinear constitutive material modeling using [Chaboche kinematic
+      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=/views/secured/corp/v251/en/wb_wbtec/WBteccurvefitchab.html)
+      and [Voce isotropic
+      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=//views/secured/corp/v251/en/ans_mat/amp8sq21dldm.html)
+      models
+
+    - "Geometric and material nonlinear analysis of thin-walled steel structures"
+
+    - "Finite element model validation using published experimental data"
+
+    - "Parametric analysis of cyclic structural behavior"
+
+  gallery_heading: "Completed Research Figures"
+
+  gallery:
+    - image: "/images/research/completed-research-placeholder.svg"
+      alt: >-
+        Editable placeholder for the completed nonlinear finite element research
+      caption: >-
+        Editable placeholder — replace with an ANSYS model, mesh, validation
+        plot, hysteresis curve, deformation shape, or parametric-analysis output.
+
+  resources:
+    []
+
+current_future_research:
+  heading: "Current & Future Research"
+
+  introduction: >-
+    My current research focuses on the experimental and numerical investigation
+    of structural members subjected to seismic loading. I am presently working
+    on the seismic response assessment of steel and composite structural members
+    through shake table testing and advanced nonlinear finite element analysis.
+
+  current:
+    label: "Current Research"
+    icon: "fas fa-flask"
+
+    projects:
+      - order: 1
+        title: >-
+          Seismic response assessment of structural members via shake table
+          testing
+        co_investigator:
+          label: "Co-investigator"
+          name: "Jamil Ahmed Joy"
+          url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
+          designation: "Assistant Professor, Department of CE, UIU"
+
+      - order: 2
+        title: >-
+          Nonlinear numerical investigation of structural members under seismic
+          loading
+        co_investigator:
+          label: "Co-investigator"
+          name: "Jamil Ahmed Joy"
+          url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
+          designation: "Assistant Professor, Department of CE, UIU"
+
+    gallery_heading: "Current Research Figures"
+
+    gallery:
+      - image: "/images/research/current-research-placeholder.svg"
+        alt: "Editable placeholder for current seismic research"
+        caption: >-
+          Editable placeholder — replace with shake-table setup photographs,
+          specimen preparation, instrumentation, laboratory testing, finite
+          element models, or current numerical results.
+
+    resources:
+      []
+
+  future:
+    label: "Future Research"
+    icon: "fas fa-compass"
+
+    paragraph: >-
+      In the future, I intend to expand my research toward structural health
+      monitoring, machine learning-assisted structural assessment, and
+      performance-based earthquake engineering, integrating computational
+      simulations with experimental observations to develop safer, smarter, and
+      more resilient infrastructure systems.
+
+    gallery_heading: "Future Research Vision"
+
+    gallery:
+      - image: "/images/research/future-research-placeholder.svg"
+        alt: "Editable placeholder for future research directions"
+        caption: >-
+          Editable placeholder — replace with a structural-health-monitoring
+          diagram, sensor network, machine-learning workflow, digital-twin
+          concept, or resilient-infrastructure research visualization.
+
+    resources: []

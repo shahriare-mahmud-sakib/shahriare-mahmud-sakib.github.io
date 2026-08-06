@@ -206,11 +206,11 @@ current_research:
   items:
     # order: 1 is shown first as the most recent/current priority.
 
-    - order: 2
+    - order: 1
       slug: "nonlinear-numerical-seismic-loading"
       type: "Current Research"
       status: "Ongoing"
-      period: "Dec 2025 - Present"
+      period: "Mar 2026 - Present"
       title: >-
         Nonlinear Numerical Investigation of Structural Members under Seismic Loading
       detail_url: "/research/current/nonlinear-numerical-seismic-loading/"
@@ -260,7 +260,7 @@ current_research:
 
         resources: []
 
-    - order: 1
+    - order: 2
       slug: "seismic-response-shake-table-testing"
       type: "Current Research"
       status: "Ongoing"

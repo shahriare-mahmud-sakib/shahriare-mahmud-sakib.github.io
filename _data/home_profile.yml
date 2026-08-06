@@ -60,6 +60,12 @@ highlights:
       url: "/Academic/"
       new_tab: false
 
+    - icon: "🏅"
+      title: "Dean's List"
+      subtitle: "All Undergraduate Years"
+      url: "/awards%20&%20skills/"
+      new_tab: false
+
     - icon: "🧑‍🏫"
       title: "Lecturer @ UIU"
       subtitle: "Department of Civil Engineering"
@@ -78,11 +84,6 @@ highlights:
       url: "/publications/"
       new_tab: false
 
-    - icon: "🏅"
-      title: "Dean's List"
-      subtitle: "All Undergraduate Years"
-      url: "/awards%20&%20skills/"
-      new_tab: false
 
 collaboration:
   show: true

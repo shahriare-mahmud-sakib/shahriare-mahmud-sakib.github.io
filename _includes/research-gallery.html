@@ -1,0 +1,36 @@
+{% assign gallery = include.gallery %}
+{% assign heading = include.heading %}
+
+{% if gallery and gallery.size > 0 %}
+  <section class="sms-research-gallery">
+    {% if heading %}
+      <header class="sms-research-gallery__heading">
+        <p>VISUALIZATION</p>
+        <h3>{{ heading }}</h3>
+      </header>
+    {% endif %}
+
+    <div class="sms-research-gallery__grid">
+      {% for item in gallery %}
+        <figure class="sms-research-gallery__item">
+          <a
+            href="{{ item.image | relative_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open full-size image"
+          >
+            <img
+              src="{{ item.image | relative_url }}"
+              alt="{{ item.alt | default: item.caption }}"
+              loading="lazy"
+            >
+          </a>
+
+          {% if item.caption %}
+            <figcaption>{{ item.caption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

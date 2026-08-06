@@ -1,15 +1,19 @@
 # =============================================================================
-# EDITABLE RESEARCH PAGE DATA
+# EDITABLE RESEARCH PAGE
 #
-# This file preserves the content of the existing Research page while making
-# the layout, research interests, figures, captions, and resource links easy
-# to edit.
+# Controls the Research profile, quick-link buttons, section order, research
+# cards, detailed research pages, tools, figures, captions, and resources.
 #
-# Most future edits can be made in this file without changing HTML or CSS.
+# ORDERING
+# - Smaller section order numbers appear earlier on the main Research page.
+# - Smaller research-item order numbers appear earlier within a section.
+# - Give the newest research item order: 1.
 # =============================================================================
 
 page:
   eyebrow: "RESEARCH PROFILE"
+  title: "Research"
+  show_quick_links: true
 
   introduction:
     - >-
@@ -26,10 +30,44 @@ page:
       health monitoring techniques with computational modeling to support the
       development of smarter and more resilient civil infrastructure.
 
-research_interests:
-  heading: "Research Interests"
-  # note: "Core areas guiding my completed, current, and future research."
+  # Change these values to control the orientation of the main page.
+  layout:
+    quick_link_columns: 4
+    interest_columns: 3
+    research_card_columns: 1
+    detail_image_columns: 2
 
+# The same list controls both quick-link buttons and section order.
+sections:
+  - order: 1
+    id: "research-interests"
+    heading: "Research Interests"
+    subtitle: "Core areas guiding my completed, current, and future research."
+    icon: "fas fa-microscope"
+    accent: "#2563eb"
+
+  - order: 2
+    id: "completed-research"
+    heading: "Completed Research"
+    subtitle: "Completed investigations, arranged from newest to oldest."
+    icon: "fas fa-circle-check"
+    accent: "#16a34a"
+
+  - order: 3
+    id: "current-research"
+    heading: "Current Research"
+    subtitle: "Ongoing investigations, arranged from newest to oldest."
+    icon: "fas fa-flask"
+    accent: "#0ea5e9"
+
+  - order: 4
+    id: "future-research"
+    heading: "Future Research"
+    subtitle: "Long-term research directions and intended development."
+    icon: "fas fa-compass"
+    accent: "#8b5cf6"
+
+research_interests:
   items:
     - order: 1
       name: "Structural Engineering"
@@ -60,153 +98,225 @@ research_interests:
       icon: "fas fa-bridge"
 
 completed_research:
-  heading: "Undergraduate Research"
-  period: "Jan 2024 - Mar 2025"
-  status: "Completed Research"
-  status_icon: "fas fa-circle-check"
+  items:
+    - order: 1
+      slug: "nonlinear-fe-cold-formed-stainless-steel-columns"
+      type: "Undergraduate Research"
+      status: "Completed"
+      period: "Jan 2024 – Mar 2025"
+      title: >-
+        Nonlinear FE Investigation on Behavior of Cold-Formed Stainless-Steel
+        Columns Subject to Cyclic Loading
+      detail_url: "/research/completed/nonlinear-fe-cold-formed-stainless-steel-columns/"
+      icon: "fas fa-cubes"
+      accent: "#16a34a"
 
-  title: >-
-    Nonlinear FE Investigation on Behavior of Cold-Formed Stainless-Steel
-    Columns Subject to Cyclic Loading
+      person:
+        label: "Supervisor"
+        name: "Dr. Khan Mahmud Amanat"
+        url: "https://ce.buet.ac.bd/khan-mahmud-amanat/"
+        designation: "Professor, Department of Civil Engineering, BUET"
 
-  supervisor:
-    label: "Supervisor"
-    name: "Dr. Khan Mahmud Amanat"
-    url: "https://ce.buet.ac.bd/khan-mahmud-amanat/"
-    designation: "Professor, Department of Civil Engineering, BUET"
+      card_summary: >-
+        Developed and validated a three-dimensional nonlinear finite element
+        model in ANSYS Mechanical APDL and completed a 210-model parametric
+        investigation of cold-formed stainless-steel HSS columns subjected to
+        combined axial compression and cyclic bending.
 
-  paragraphs:
-    - >-
-      My undergraduate research addressed the limited understanding of the
-      seismic behavior of cold-formed stainless-steel hollow structural section
-      (HSS) columns subjected to combined axial compression and cyclic bending.
-      To investigate this problem, I developed a three-dimensional nonlinear
-      finite element model using [ANSYS Mechanical
-      APDL](https://www.ansys.com/blog/what-is-apdl), incorporating both
-      geometric and material nonlinearities together with the effects of
-      cold-forming.
+      tags:
+        - "ANSYS Mechanical APDL"
+        - "Nonlinear FEA"
+        - "Cyclic Loading"
+        - "Stainless-Steel Columns"
 
-    - >-
-      The numerical model employed advanced constitutive material modeling
-      through the [Chaboche nonlinear kinematic
-      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=/views/secured/corp/v251/en/wb_wbtec/WBteccurvefitchab.html)
-      and [Voce isotropic
-      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=//views/secured/corp/v251/en/ans_mat/amp8sq21dldm.html)
-      models and was rigorously validated against published experimental
-      studies.
+      details:
+        paragraphs:
+          - >-
+            My undergraduate research addressed the limited understanding of
+            the seismic behavior of cold-formed stainless-steel hollow
+            structural section (HSS) columns subjected to combined axial
+            compression and cyclic bending. To investigate this problem, I
+            developed a three-dimensional nonlinear finite element model using
+            [ANSYS Mechanical APDL](https://www.ansys.com/blog/what-is-apdl),
+            incorporating both geometric and material nonlinearities together
+            with the effects of cold-forming.
 
-    - >-
-      Following validation, an extensive parametric investigation involving 210
-      nonlinear finite element simulations was conducted to evaluate the
-      influence of geometric and loading parameters on the cyclic behavior and
-      seismic performance of cold-formed stainless-steel columns.
+          - >-
+            The numerical model employed advanced constitutive material
+            modeling through the [Chaboche nonlinear kinematic
+            hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=/views/secured/corp/v251/en/wb_wbtec/WBteccurvefitchab.html)
+            and [Voce isotropic
+            hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=//views/secured/corp/v251/en/ans_mat/amp8sq21dldm.html)
+            models and was rigorously validated against published experimental
+            studies.
 
-    - >-
-      This research strengthened my interest in computational structural
-      mechanics and demonstrated the effectiveness of advanced nonlinear finite
-      element modeling for evaluating the cyclic response, strength, ductility,
-      and failure mechanisms of thin-walled steel structures subjected to
-      seismic loading.
+          - >-
+            Following validation, an extensive parametric investigation
+            involving 210 nonlinear finite element simulations was conducted to
+            evaluate the influence of geometric and loading parameters on the
+            cyclic behavior and seismic performance of cold-formed
+            stainless-steel columns.
 
-  tools_heading: "Tools and Techniques"
+          - >-
+            This research strengthened my interest in computational structural
+            mechanics and demonstrated the effectiveness of advanced nonlinear
+            finite element modeling for evaluating the cyclic response,
+            strength, ductility, and failure mechanisms of thin-walled steel
+            structures subjected to seismic loading.
 
-  tools:
-    - >-
-      Three-dimensional nonlinear finite element modeling (FEM) using [ANSYS
-      Mechanical APDL](https://www.ansys.com/blog/what-is-apdl)
+        tools_heading: "Tools & Techniques"
+        tools:
+          - >-
+            Three-dimensional nonlinear finite element modeling using [ANSYS
+            Mechanical APDL](https://www.ansys.com/blog/what-is-apdl)
+          - >-
+            Nonlinear constitutive material modeling using [Chaboche kinematic
+            hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=/views/secured/corp/v251/en/wb_wbtec/WBteccurvefitchab.html)
+            and [Voce isotropic
+            hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=//views/secured/corp/v251/en/ans_mat/amp8sq21dldm.html)
+            models
+          - "Geometric and material nonlinear analysis of thin-walled steel structures"
+          - "Finite element model validation using published experimental data"
+          - "Parametric analysis of cyclic structural behavior"
 
-    - >-
-      Nonlinear constitutive material modeling using [Chaboche kinematic
-      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=/views/secured/corp/v251/en/wb_wbtec/WBteccurvefitchab.html)
-      and [Voce isotropic
-      hardening](https://ansyshelp.ansys.com/public/account/secured?returnurl=//views/secured/corp/v251/en/ans_mat/amp8sq21dldm.html)
-      models
+        # Images appear directly after the writing and Tools & Techniques.
+        # No image-section heading is rendered on the detail page.
+        gallery:
+          - image: "/images/research/completed/nonlinear-fe-model-placeholder.svg"
+            alt: "Editable placeholder for the nonlinear finite element model"
+            caption: >-
+              Editable placeholder — replace with an ANSYS model, mesh,
+              deformation shape, or another completed-research figure.
 
-    - "Geometric and material nonlinear analysis of thin-walled steel structures"
+          - image: "/images/research/completed/validation-placeholder.svg"
+            alt: "Editable placeholder for model validation or cyclic response"
+            caption: >-
+              Editable placeholder — replace with a validation plot, hysteresis
+              curve, parametric result, or another completed-research output.
 
-    - "Finite element model validation using published experimental data"
+        resources: []
 
-    - "Parametric analysis of cyclic structural behavior"
-
-  # gallery_heading: "Completed Research Figures"
-
-  # gallery:
-    - image: "/images/research/completed-research-placeholder.svg"
-      alt: >-
-        Editable placeholder for the completed nonlinear finite element research
-      caption: >-
-        Editable placeholder — replace with an ANSYS model, mesh, validation
-        plot, hysteresis curve, deformation shape, or parametric-analysis output.
-
-  resources:
-    []
-
-current_future_research:
-  heading: "Current & Future Research"
-
+current_research:
   introduction: >-
     My current research focuses on the experimental and numerical investigation
     of structural members subjected to seismic loading. I am presently working
     on the seismic response assessment of steel and composite structural members
     through shake table testing and advanced nonlinear finite element analysis.
 
-  current:
-    label: "Current Research"
-    icon: "fas fa-flask"
+  items:
+    # order: 1 is shown first as the most recent/current priority.
+    - order: 1
+      slug: "seismic-response-shake-table-testing"
+      type: "Current Research"
+      status: "Ongoing"
+      period: "Current"
+      title: >-
+        Seismic Response Assessment of Structural Members via Shake Table Testing
+      detail_url: "/research/current/seismic-response-shake-table-testing/"
+      icon: "fas fa-house-crack"
+      accent: "#0ea5e9"
 
-    projects:
-      - order: 1
-        title: >-
-          Seismic response assessment of structural members via shake table
-          testing
-        co_investigator:
-          label: "Co-investigator"
-          name: "Jamil Ahmed Joy"
-          url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
-          designation: "Assistant Professor, Department of CE, UIU"
+      person:
+        label: "Co-investigator"
+        name: "Jamil Ahmed Joy"
+        url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
+        designation: "Assistant Professor, Department of CE, UIU"
 
-      - order: 2
-        title: >-
-          Nonlinear numerical investigation of structural members under seismic
-          loading
-        co_investigator:
-          label: "Co-investigator"
-          name: "Jamil Ahmed Joy"
-          url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
-          designation: "Assistant Professor, Department of CE, UIU"
+      card_summary: >-
+        Experimental investigation of structural members under seismic loading
+        through shake table testing and structural-response assessment.
 
-    # gallery_heading: "Current Research Figures"
+      tags:
+        - "Shake Table Testing"
+        - "Seismic Response"
+        - "Experimental Research"
 
-    # gallery:
-      - image: "/images/research/current-research-placeholder.svg"
-        alt: "Editable placeholder for current seismic research"
-        caption: >-
-          Editable placeholder — replace with shake-table setup photographs,
-          specimen preparation, instrumentation, laboratory testing, finite
-          element models, or current numerical results.
+      details:
+        paragraphs:
+          - >-
+            This current research investigates the seismic response of
+            structural members through shake table testing. The work forms part
+            of my broader interest in experimental assessment of steel and
+            composite structural members subjected to seismic loading.
 
-    resources:
-      []
+          - >-
+            The investigation is intended to support the assessment of
+            structural response under controlled dynamic loading and to
+            contribute to safer and more resilient structural systems.
 
-  future:
-    label: "Future Research"
-    icon: "fas fa-compass"
+        tools_heading: "Tools & Techniques"
+        tools:
+          - "Shake table testing"
+          - "Experimental seismic-response assessment"
+          - "Structural response observation under dynamic loading"
 
-    paragraph: >-
-      In the future, I intend to expand my research toward structural health
-      monitoring, machine learning-assisted structural assessment, and
-      performance-based earthquake engineering, integrating computational
-      simulations with experimental observations to develop safer, smarter, and
-      more resilient infrastructure systems.
+        gallery:
+          - image: "/images/research/current/shake-table-placeholder.svg"
+            alt: "Editable placeholder for the shake table research"
+            caption: >-
+              Editable placeholder — replace with a test setup, specimen,
+              instrumentation, or shake-table experiment photograph.
 
-    # gallery_heading: "Future Research Vision"
+        resources: []
 
-    # gallery:
-      - image: "/images/research/future-research-placeholder.svg"
-        alt: "Editable placeholder for future research directions"
-        caption: >-
-          Editable placeholder — replace with a structural-health-monitoring
-          diagram, sensor network, machine-learning workflow, digital-twin
-          concept, or resilient-infrastructure research visualization.
+    - order: 2
+      slug: "nonlinear-numerical-seismic-loading"
+      type: "Current Research"
+      status: "Ongoing"
+      period: "Current"
+      title: >-
+        Nonlinear Numerical Investigation of Structural Members under Seismic Loading
+      detail_url: "/research/current/nonlinear-numerical-seismic-loading/"
+      icon: "fas fa-laptop-code"
+      accent: "#0284c7"
 
-    resources: []
+      person:
+        label: "Co-investigator"
+        name: "Jamil Ahmed Joy"
+        url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
+        designation: "Assistant Professor, Department of CE, UIU"
+
+      card_summary: >-
+        Advanced nonlinear numerical investigation of structural members under
+        seismic loading using computational structural-mechanics methods.
+
+      tags:
+        - "Nonlinear Analysis"
+        - "Numerical Modelling"
+        - "Seismic Loading"
+
+      details:
+        paragraphs:
+          - >-
+            This current research focuses on the nonlinear numerical
+            investigation of structural members subjected to seismic loading.
+            It extends my experience in computational structural mechanics and
+            advanced nonlinear finite element analysis.
+
+          - >-
+            The numerical investigation supports the assessment of structural
+            behaviour under seismic demands and complements my broader interest
+            in experimental and computational earthquake engineering.
+
+        tools_heading: "Tools & Techniques"
+        tools:
+          - "Advanced nonlinear finite element analysis"
+          - "Computational modelling of structural members"
+          - "Numerical assessment under seismic loading"
+
+        gallery:
+          - image: "/images/research/current/nonlinear-model-placeholder.svg"
+            alt: "Editable placeholder for the current nonlinear numerical model"
+            caption: >-
+              Editable placeholder — replace with a finite element model,
+              contour plot, deformation shape, or current numerical result.
+
+        resources: []
+
+future_research:
+  paragraph: >-
+    In the future, I intend to expand my research toward structural health
+    monitoring, machine learning-assisted structural assessment, and
+    performance-based earthquake engineering, integrating computational
+    simulations with experimental observations to develop safer, smarter, and
+    more resilient infrastructure systems.

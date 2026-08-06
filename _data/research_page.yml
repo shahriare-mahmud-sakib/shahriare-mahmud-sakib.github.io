@@ -182,17 +182,16 @@ completed_research:
         # Images appear directly after the writing and Tools & Techniques.
         # No image-section heading is rendered on the detail page.
         gallery:
-          - image: "/images/research/completed/nonlinear-fe-model-placeholder.svg"
-            alt: "Editable placeholder for the nonlinear finite element model"
+          - image: "/images/research/completed/nonlinear fe model.png"
+            alt: "Nonlinear finite element model"
             caption: >-
-              Editable placeholder — replace with an ANSYS model, mesh,
-              deformation shape, or another completed-research figure.
+              ANSYS nonlinear finite element model, mesh, loading, and
+              deformation shape of the structure.
 
           - image: "/images/research/completed/validation-placeholder.svg"
-            alt: "Editable placeholder for model validation or cyclic response"
+            alt: "Numerical validation of the FE model"
             caption: >-
-              Editable placeholder — replace with a validation plot, hysteresis
-              curve, parametric result, or another completed-research output.
+              Numerical validation and hysteresis response of the structure.
 
         resources: []
 

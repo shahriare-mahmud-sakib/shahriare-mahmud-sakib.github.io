@@ -1,7 +1,15 @@
 {% assign profile_data = site.data.home_profile %}
+{% assign card_layout = profile_data.highlights.layout %}
 <link rel="stylesheet" href="{{ '/assets/css/home-profile-section.css' | relative_url }}">
 
-
+<div
+  class="sms-home-page"
+  style="
+    --sms-profile-columns-desktop: {{ card_layout.columns_desktop | default: 3 }};
+    --sms-profile-columns-tablet: {{ card_layout.columns_tablet | default: 2 }};
+    --sms-profile-columns-mobile: {{ card_layout.columns_mobile | default: 1 }};
+  "
+>
 {% if profile_data.page and profile_data.page.introduction %}
 <section
   class="sms-about-intro"
@@ -117,3 +125,4 @@
   </div>
 </section>
 {% endif %}
+</div>

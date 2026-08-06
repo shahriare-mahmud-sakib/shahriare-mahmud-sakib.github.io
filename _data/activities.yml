@@ -98,7 +98,7 @@ sections:
         linked: true
         link_label: "Event overview"
         url: "/activities/science-olympiad-2019/"
-        
+
       - order: 4
         year: "2019"
         period: "January"
@@ -282,13 +282,13 @@ sections:
     playlists:
       - order: 1
         title: "AutoCAD Full Tutorial"
-        playlist_id: "PLb-EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=AVTbcsgJrWesziau"
-        url: "https://youtube.com/playlist?list=PLb-EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=AVTbcsgJrWesziau"
+        playlist_id: ""
+        url: "https://youtube.com/playlist?list=PLb-EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=qNl1LI2Bi8YBFO5x"
         summary: "A comprehensive series of AutoCAD tutorials, covering concepts from fundamentals to advanced techniques."
 
       - order: 2
         title: "ANSYS 19.2 Mechanical APDL Full Tutorial"
-        playlist_id: "PLb-EloPEROJWPvoZcEClo8RTdnr1PxTiV&si=hJsSAOTaCp4KKBQK"
+        playlist_id: ""
         url: "https://youtube.com/playlist?list=PLb-EloPEROJWPvoZcEClo8RTdnr1PxTiV&si=hJsSAOTaCp4KKBQK"
         summary: "A comprehensive series of ANSYS Mechanical APDL tutorials, covering concepts from fundamentals to advanced techniques."
 

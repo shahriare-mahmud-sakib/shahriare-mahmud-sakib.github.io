@@ -68,8 +68,21 @@ highlights:
 
     - icon: "🏗️"
       title: "Structural Engineering"
-      subtitle: "Research, modelling & resilience"
+      subtitle: "Research, Modelling & Resilience"
       url: "/research/"
+      new_tab: false
+
+    - icon: "📚"
+      title: "ICCEI 2025 & ICCE 2026"
+      subtitle: "Paper Accepted for Presentation"
+      url: "/publications/"
+      new_tab: false
+
+    - icon: ""
+    - icon: "🏅"
+      title: "Dean's List"
+      subtitle: "All Undergraduate Years"
+      url: "/awards%20&%20skills/"
       new_tab: false
 
 collaboration:

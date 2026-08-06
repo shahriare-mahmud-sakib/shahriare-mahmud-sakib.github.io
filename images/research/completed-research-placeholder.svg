@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#071722"/><stop offset="1" stop-color="#16394a"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity=".14" stroke="#b8e4f6"><path d="M0 95H1200M0 190H1200M0 285H1200M0 380H1200M0 475H1200M0 570H1200"/><path d="M100 0V675M250 0V675M400 0V675M550 0V675M700 0V675M850 0V675M1000 0V675M1150 0V675"/></g>
+  <text x="65" y="82" fill="#ecf8fd" font-family="Arial" font-size="38" font-weight="700">Completed Research Figure</text>
+  <text x="65" y="124" fill="#9cc9dc" font-family="Arial" font-size="22">Nonlinear FE investigation of cold-formed stainless-steel columns</text>
+  <g transform="translate(130 170)">
+    <rect x="155" y="20" width="150" height="390" rx="18" fill="#d6e9f1" stroke="#38bdf8" stroke-width="8"/>
+    <g stroke="#0ea5e9" stroke-width="3" opacity=".85"><path d="M175 25V405M205 25V405M235 25V405M265 25V405M295 25V405"/><path d="M160 65H300M160 115H300M160 165H300M160 215H300M160 265H300M160 315H300M160 365H300"/></g>
+    <path d="M230 10 C170 95 310 155 230 235 C155 315 300 375 230 430" fill="none" stroke="#fb7185" stroke-width="12"/>
+    <g transform="translate(455 25)"><path d="M0 360H500M0 0V360" stroke="#d4e5ec" stroke-width="4"/><path d="M15 190 C85 20 150 335 225 180 C300 35 365 325 485 170" fill="none" stroke="#f59e0b" stroke-width="8"/><path d="M15 205 C80 55 155 305 225 200 C310 70 380 290 485 185" fill="none" stroke="#a78bfa" stroke-width="7"/></g>
+  </g>
+  <text x="600" y="625" text-anchor="middle" fill="#fca5a5" font-family="Arial" font-size="19" font-weight="700">EDITABLE PLACEHOLDER — REPLACE WITH AN ACTUAL RESEARCH FIGURE</text>
+
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">
+
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#241247"/><stop offset="1" stop-color="#49327b"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="65" y="82" fill="#f5f3ff" font-family="Arial" font-size="38" font-weight="700">Future Research Vision</text>
+  <text x="65" y="124" fill="#d8ccff" font-family="Arial" font-size="22">Structural health monitoring • data-driven assessment • resilient infrastructure</text>
+  <g transform="translate(90 175)">
+    <g stroke="#e9e5ff" stroke-width="8" fill="none"><path d="M60 310H1010"/><path d="M170 310V105M380 310V105M590 310V105M800 310V105"/><path d="M170 130H800M170 220H800"/></g>
+    <g fill="#22d3ee"><circle cx="170" cy="130" r="16"/><circle cx="380" cy="130" r="16"/><circle cx="590" cy="130" r="16"/><circle cx="800" cy="130" r="16"/><circle cx="170" cy="220" r="16"/><circle cx="380" cy="220" r="16"/><circle cx="590" cy="220" r="16"/><circle cx="800" cy="220" r="16"/></g>
+    <path d="M80 410 C185 330 260 490 365 410 C470 330 545 490 650 410 C755 330 830 490 960 395" fill="none" stroke="#fb7185" stroke-width="8"/>
+  </g>
+  <text x="600" y="625" text-anchor="middle" fill="#fecaca" font-family="Arial" font-size="19" font-weight="700">EDITABLE PLACEHOLDER — REPLACE WITH YOUR FUTURE RESEARCH CONCEPT</text>
+
+</svg>

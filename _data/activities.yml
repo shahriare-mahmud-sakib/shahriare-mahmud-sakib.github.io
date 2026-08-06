@@ -180,7 +180,7 @@ sections:
     items:
       - order: 1
         year: "2024–2025"
-        # period: "2024–2025"
+        period: ""
         title: "Executive"
         organization: "ASCE Student Chapter, BUET"
         icon: "fas fa-user-tie"
@@ -190,7 +190,7 @@ sections:
 
       - order: 2
         year: "2022–2025"
-        # period: "2022–2025"
+        period: ""
         title: "Member and Volunteer"
         organization: "BUET Innovation & Designing Club (BIDC)"
         icon: "fas fa-lightbulb"
@@ -200,7 +200,7 @@ sections:
 
         - order: 3
         year: "2022–2025"
-        # period: "2022–2025"
+        period: ""
         title: "Member and Volunteer"
         organization: "BUET Chess Club"
         icon: "fas fa-lightbulb"
@@ -210,7 +210,7 @@ sections:
 
       - order: 4
         year: "2013–2017"
-        # period: "2013–2017"
+        period: ""
         title: "Member and Volunteer"
         organization: "Debate Club, Sakhipur P.M. Pilot High School"
         icon: "fas fa-comments"
@@ -226,7 +226,7 @@ sections:
     items:
       - order: 1
         year: "2022–2025"
-        # period: "2022–2025"
+        period: ""
         title: "Flood Relief Fundraising and Aid Distribution"
         organization: "BUET Student Community"
         icon: "fas fa-box-open"
@@ -238,7 +238,7 @@ sections:
 
       - order: 2
         year: "2021–2025"
-        # period: "2021–2025"
+        period: ""
         title: "Winter Clothing Distribution"
         organization: "BUET Student Community"
         icon: "fas fa-shirt"
@@ -250,7 +250,7 @@ sections:
 
       - order: 3
         year: "2024"
-        # period: "2024"
+        period: ""
         title: "Emergency Disaster Relief and Flood Response"
         organization: "As-Sunnah Foundation"
         icon: "fas fa-hands-helping"

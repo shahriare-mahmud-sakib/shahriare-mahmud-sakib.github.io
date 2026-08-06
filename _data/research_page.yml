@@ -101,7 +101,7 @@ completed_research:
   items:
     - order: 1
       slug: "nonlinear-fe-cold-formed-stainless-steel-columns"
-      type: "Undergraduate Research"
+      type: "Undergraduate Thesis"
       status: "Completed"
       period: "Jan 2024 – Mar 2025"
       title: >-
@@ -209,7 +209,7 @@ current_research:
       slug: "seismic-response-shake-table-testing"
       type: "Current Research"
       status: "Ongoing"
-      period: "Current"
+      period: "Dec 2025 - Present"
       title: >-
         Seismic Response Assessment of Structural Members via Shake Table Testing
       detail_url: "/research/current/seismic-response-shake-table-testing/"
@@ -263,7 +263,7 @@ current_research:
       slug: "nonlinear-numerical-seismic-loading"
       type: "Current Research"
       status: "Ongoing"
-      period: "Current"
+      period: "Dec 2025 - Present"
       title: >-
         Nonlinear Numerical Investigation of Structural Members under Seismic Loading
       detail_url: "/research/current/nonlinear-numerical-seismic-loading/"

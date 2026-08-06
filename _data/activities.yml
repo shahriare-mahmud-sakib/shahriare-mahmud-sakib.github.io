@@ -282,8 +282,8 @@ sections:
     playlists:
       - order: 1
         title: "AutoCAD Full Tutorial"
-        playlist_id: "EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=qNl1LI2Bi8YBFO5x"
-        url: "https://youtube.com/playlist?list=PLb-EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=qNl1LI2Bi8YBFO5x"
+        playlist_id: "PLb-EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=AVTbcsgJrWesziau"
+        url: "https://youtube.com/playlist?list=PLb-EloPEROJVxA7FqAmv7vsMYV4_1jfGd&si=AVTbcsgJrWesziau"
         summary: "A comprehensive series of AutoCAD tutorials, covering concepts from fundamentals to advanced techniques."
 
       - order: 2

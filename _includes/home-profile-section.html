@@ -1,6 +1,26 @@
 {% assign profile_data = site.data.home_profile %}
 <link rel="stylesheet" href="{{ '/assets/css/home-profile-section.css' | relative_url }}">
 
+
+{% if profile_data.page and profile_data.page.introduction %}
+<section
+  class="sms-about-intro"
+  aria-label="{{ profile_data.page.title | default: 'About me' | escape }}"
+>
+  {% if profile_data.page.eyebrow %}
+    <p class="sms-about-intro__eyebrow">
+      {{ profile_data.page.eyebrow }}
+    </p>
+  {% endif %}
+
+  <div class="sms-about-intro__content">
+    {% for paragraph in profile_data.page.introduction %}
+      {{ paragraph | markdownify }}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% if profile_data.highlights %}
 <section class="sms-profile-panel" aria-labelledby="sms-profile-panel-title">
   <div class="sms-profile-panel__grid-pattern" aria-hidden="true"></div>

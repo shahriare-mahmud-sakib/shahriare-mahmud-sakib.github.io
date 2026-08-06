@@ -188,7 +188,7 @@ completed_research:
               ANSYS nonlinear finite element model, mesh, loading, and
               deformation shape of the structure.
 
-          - image: "/images/research/completed/validation-placeholder.svg"
+          - image: "/images/research/completed/fem validation.png"
             alt: "Numerical validation of the FE model"
             caption: >-
               Numerical validation and hysteresis response of the structure.

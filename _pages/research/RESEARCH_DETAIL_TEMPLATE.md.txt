@@ -1,0 +1,23 @@
+HOW TO ADD A NEW COMPLETED OR CURRENT RESEARCH ITEM
+===================================================
+
+1. Add the complete item to `_data/research_page.yml` under either:
+   - `completed_research: items:` or
+   - `current_research: items:`
+2. Give the newest item `order: 1` and increase older order numbers.
+3. Copy this file and place the copy under `_pages/research/completed/` or
+   `_pages/research/current/`.
+4. Rename it with a short lowercase slug and change `.txt` to `.md`.
+5. Delete these instructions and edit the front matter below.
+
+---
+layout: research-detail
+title: "Exact Research Title"
+permalink: /research/current/your-research-slug/
+author_profile: true
+research_type: "current"
+research_slug: "your-research-slug"
+---
+
+The `research_slug` must exactly match the `slug` in `_data/research_page.yml`.
+Use `research_type: "completed"` for a completed-research detail page.

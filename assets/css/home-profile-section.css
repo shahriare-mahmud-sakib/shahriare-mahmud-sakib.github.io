@@ -18,8 +18,22 @@
   --sms-accent-2: var(--global-base-color);
 }
 
-.page__content .sms-profile-panel,
-.page__content .sms-collaboration {
+
+/* Homepage wrapper: fills the same archive content column used by Research. */
+.sms-home-page {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+.sms-home-page *,
+.sms-home-page *::before,
+.sms-home-page *::after {
+  box-sizing: border-box;
+}
+
+.sms-profile-panel,
+.sms-collaboration {
   box-sizing: border-box;
   color-scheme: normal;
   font-family: inherit;
@@ -30,7 +44,7 @@
   isolation: isolate;
   overflow: hidden;
   margin: 2.6rem 0 4.25rem;
-  padding: clamp(1.35rem, 3vw, 2.5rem);
+  padding: clamp(1.15rem, 2.2vw, 1.8rem);
   border: /*1px solid var(--sms-card-border);*/
   border-radius: 1.25rem;
   background: var(--sms-panel-bg);
@@ -49,7 +63,7 @@
   margin-bottom: 1.65rem;
 }
 
-.page__content .sms-profile-panel__eyebrow {
+.sms-profile-panel__eyebrow {
   margin: 0 0 0.5rem;
   color: var(--sms-accent);
   font-size: 0.74rem;
@@ -58,8 +72,8 @@
   text-transform: uppercase;
 }
 
-.page__content .sms-profile-panel__title,
-.page__content .sms-collaboration__title {
+.sms-profile-panel__title,
+.sms-collaboration__title {
   margin: 0;
   padding: 0;
   border: 0;
@@ -68,13 +82,13 @@
   letter-spacing: -0.035em;
 }
 
-.page__content .sms-profile-panel__title {
+.sms-profile-panel__title {
   /* Same size as the page title “About me” in this Academic Pages theme. */
   font-size: 1.563em;
   line-height: 1;
 }
 
-.page__content .sms-profile-panel__description {
+.sms-profile-panel__description {
   max-width: 680px;
   margin: 0.75rem 0 0;
   color: var(--sms-text);
@@ -84,18 +98,19 @@
 
 .sms-profile-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--sms-profile-columns-desktop, 3), minmax(0, 1fr));
   gap: 1rem;
 }
 
-.page__content .sms-profile-card {
+.sms-profile-card {
   position: relative;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 1rem;
-  min-height: 98px;
-  padding: 1rem 1.1rem;
+  gap: 0.72rem;
+  min-width: 0;
+  min-height: 112px;
+  padding: 0.9rem;
   overflow: hidden;
   border: 1px solid var(--sms-card-border);
   border-radius: 1rem;
@@ -106,7 +121,7 @@
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
-.page__content .sms-profile-card::before {
+.sms-profile-card::before {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
@@ -116,8 +131,8 @@
   transition: opacity 180ms ease;
 }
 
-.page__content .sms-profile-card:hover,
-.page__content .sms-profile-card:focus-visible {
+.sms-profile-card:hover,
+.sms-profile-card:focus-visible {
   transform: translateY(-3px);
   border-color: var(--global-link-color);
   background: var(--global-bg-color);
@@ -126,15 +141,15 @@
   text-decoration: none !important;
 }
 
-.page__content .sms-profile-card:hover::before,
-.page__content .sms-profile-card:focus-visible::before {
+.sms-profile-card:hover::before,
+.sms-profile-card:focus-visible::before {
   opacity: 1;
 }
 
 .sms-profile-card__icon {
   display: grid;
-  width: 2.65rem;
-  height: 2.65rem;
+  width: 2.45rem;
+  height: 2.45rem;
   place-items: center;
   border: 1px solid var(--global-border-color);
   border-radius: 0.8rem;
@@ -145,6 +160,7 @@
 
 .sms-profile-card__copy {
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .sms-profile-card__title,
@@ -154,7 +170,7 @@
 
 .sms-profile-card__title {
   color: var(--sms-heading);
-  font-size: clamp(1rem, 2vw, 1.14rem);
+  font-size: clamp(0.93rem, 1.35vw, 1.05rem);
   font-weight: 750;
   line-height: 1.3;
 }
@@ -163,7 +179,7 @@
   margin-top: 0.32rem;
   color: var(--sms-muted);
   opacity: 0.76;
-  font-size: 0.88rem;
+  font-size: 0.80rem;
   line-height: 1.45;
 }
 
@@ -209,13 +225,13 @@
   text-align: center;
 }
 
-.page__content .sms-collaboration__title {
+.sms-collaboration__title {
   /* Same size as the page title “About me” in this Academic Pages theme. */
   font-size: 1.563em;
   line-height: 1;
 }
 
-.page__content .sms-collaboration__text {
+.sms-collaboration__text {
   max-width: 760px;
   margin: 1.15rem auto 0;
   color: var(--sms-text);
@@ -232,7 +248,7 @@
   margin-top: 1.75rem;
 }
 
-.page__content .sms-action-button {
+.sms-action-button {
   display: inline-flex;
   min-height: 52px;
   align-items: center;
@@ -254,32 +270,32 @@
   flex: 0 0 auto;
 }
 
-.page__content .sms-action-button--primary {
+.sms-action-button--primary {
   background: var(--sms-accent-2);
   color: #fff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.page__content .sms-action-button--secondary {
+.sms-action-button--secondary {
   border-color: var(--global-border-color);
   background: var(--global-code-background-color);
   color: var(--sms-heading);
 }
 
-.page__content .sms-action-button:hover,
-.page__content .sms-action-button:focus-visible {
+.sms-action-button:hover,
+.sms-action-button:focus-visible {
   transform: translateY(-2px);
   text-decoration: none !important;
   outline: none;
 }
 
-.page__content .sms-action-button--primary:hover,
-.page__content .sms-action-button--primary:focus-visible {
+.sms-action-button--primary:hover,
+.sms-action-button--primary:focus-visible {
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
 }
 
-.page__content .sms-action-button--secondary:hover,
-.page__content .sms-action-button--secondary:focus-visible {
+.sms-action-button--secondary:hover,
+.sms-action-button--secondary:focus-visible {
   border-color: var(--global-link-color);
   background: var(--global-bg-color);
 }
@@ -314,9 +330,15 @@
   top: -115px;
 }
 
+@media (max-width: 1100px) {
+  .sms-profile-cards {
+    grid-template-columns: repeat(var(--sms-profile-columns-tablet, 2), minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 760px) {
   .sms-profile-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(var(--sms-profile-columns-mobile, 1), minmax(0, 1fr));
   }
 
   .sms-profile-panel,
@@ -335,7 +357,7 @@
     padding: 1.05rem;
   }
 
-  .page__content .sms-profile-card {
+  .sms-profile-card {
     grid-template-columns: auto minmax(0, 1fr);
     min-height: 88px;
     padding: 0.9rem;
@@ -346,15 +368,15 @@
   }
 
   .sms-collaboration__actions,
-  .page__content .sms-action-button {
+  .sms-action-button {
     width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page__content .sms-profile-card,
+  .sms-profile-card,
   .sms-profile-card__arrow,
-  .page__content .sms-action-button {
+  .sms-action-button {
     transition: none;
   }
 }
@@ -366,7 +388,7 @@
    This section is intentionally rendered before the Profile at a Glance panel.
    ========================================================================== */
 
-.page__content .sms-about-intro {
+.sms-about-intro {
   box-sizing: border-box;
   margin: 0 0 1.5rem;
   padding: clamp(1rem, 2.4vw, 1.35rem);
@@ -378,7 +400,7 @@
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
 }
 
-.page__content .sms-about-intro__eyebrow {
+.sms-about-intro__eyebrow {
   margin: 0 0 0.58rem;
   color: var(--global-link-color);
   font-size: 0.72rem;
@@ -388,22 +410,22 @@
   text-transform: uppercase;
 }
 
-.page__content .sms-about-intro__content {
+.sms-about-intro__content {
   max-width: 64rem;
 }
 
-.page__content .sms-about-intro__content p {
+.sms-about-intro__content p {
   margin: 0 0 0.78rem;
   color: var(--global-text-color);
   font-size: 0.96rem;
   line-height: 1.68;
 }
 
-.page__content .sms-about-intro__content p:last-child {
+.sms-about-intro__content p:last-child {
   margin-bottom: 0;
 }
 
-.page__content .sms-about-intro__content a {
+.sms-about-intro__content a {
   color: var(--global-link-color);
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -411,17 +433,17 @@
 }
 
 /* Reduce the former large gap because the About section now precedes it. */
-.page__content .sms-profile-panel {
+.sms-profile-panel {
   margin-top: 1.35rem;
 }
 
 @media (max-width: 480px) {
-  .page__content .sms-about-intro {
+  .sms-about-intro {
     padding: 0.95rem;
     border-radius: 0.68rem;
   }
 
-  .page__content .sms-about-intro__content p {
+  .sms-about-intro__content p {
     font-size: 0.91rem;
     line-height: 1.62;
   }

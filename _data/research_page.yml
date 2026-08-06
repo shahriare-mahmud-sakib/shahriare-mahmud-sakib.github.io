@@ -28,7 +28,7 @@ page:
 
 research_interests:
   heading: "Research Interests"
-  note: "Core areas guiding my completed, current, and future research."
+  # note: "Core areas guiding my completed, current, and future research."
 
   items:
     - order: 1
@@ -128,9 +128,9 @@ completed_research:
 
     - "Parametric analysis of cyclic structural behavior"
 
-  gallery_heading: "Completed Research Figures"
+  # gallery_heading: "Completed Research Figures"
 
-  gallery:
+  # gallery:
     - image: "/images/research/completed-research-placeholder.svg"
       alt: >-
         Editable placeholder for the completed nonlinear finite element research
@@ -175,9 +175,9 @@ current_future_research:
           url: "https://ce.uiu.ac.bd/faculty/jamil-ahmed-joy/"
           designation: "Assistant Professor, Department of CE, UIU"
 
-    gallery_heading: "Current Research Figures"
+    # gallery_heading: "Current Research Figures"
 
-    gallery:
+    # gallery:
       - image: "/images/research/current-research-placeholder.svg"
         alt: "Editable placeholder for current seismic research"
         caption: >-
@@ -199,9 +199,9 @@ current_future_research:
       simulations with experimental observations to develop safer, smarter, and
       more resilient infrastructure systems.
 
-    gallery_heading: "Future Research Vision"
+    # gallery_heading: "Future Research Vision"
 
-    gallery:
+    # gallery:
       - image: "/images/research/future-research-placeholder.svg"
         alt: "Editable placeholder for future research directions"
         caption: >-

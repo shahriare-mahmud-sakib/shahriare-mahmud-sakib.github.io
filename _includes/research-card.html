@@ -1,0 +1,38 @@
+{% assign item = include.item %}
+
+<article class="sms-research-card" style="--sms-card-accent: {{ item.accent }};">
+  <div class="sms-research-card__date">
+    <span>{{ item.period }}</span>
+    <small>{{ item.status }}</small>
+  </div>
+
+  <div class="sms-research-card__icon" aria-hidden="true">
+    <i class="{{ item.icon }}"></i>
+  </div>
+
+  <div class="sms-research-card__body">
+    <p class="sms-research-card__type">{{ item.type }}</p>
+    <h3><a href="{{ item.detail_url | relative_url }}">{{ item.title }}</a></h3>
+
+    {% if item.person %}
+      <p class="sms-research-card__person">
+        <strong>{{ item.person.label }}:</strong>
+        <a href="{{ item.person.url }}" target="_blank" rel="noopener noreferrer">{{ item.person.name }}</a>,
+        {{ item.person.designation }}
+      </p>
+    {% endif %}
+
+    <p class="sms-research-card__summary">{{ item.card_summary }}</p>
+
+    {% if item.tags %}
+      <ul class="sms-research-card__tags">
+        {% for tag in item.tags %}<li>{{ tag }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+
+    <a class="sms-research-card__details" href="{{ item.detail_url | relative_url }}">
+      View research details
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</article>

@@ -1,190 +1,85 @@
 {% assign research = site.data.research_page %}
+{% assign sections = research.sections | sort: "order" %}
 {% assign interests = research.research_interests.items | sort: "order" %}
-{% assign current_projects = research.current_future_research.current.projects | sort: "order" %}
+{% assign completed_items = research.completed_research.items | sort: "order" %}
+{% assign current_items = research.current_research.items | sort: "order" %}
 
-<section class="sms-research">
-  <header class="sms-research__intro">
-    <p class="sms-research__eyebrow">{{ research.page.eyebrow }}</p>
+<div
+  class="sms-research-page"
+  style="
+    --sms-quick-columns: {{ research.page.layout.quick_link_columns | default: 4 }};
+    --sms-interest-columns: {{ research.page.layout.interest_columns | default: 3 }};
+    --sms-research-card-columns: {{ research.page.layout.research_card_columns | default: 1 }};
+  "
+>
+  <header class="sms-research-profile">
+    <p class="sms-research-kicker">{{ research.page.eyebrow }}</p>
 
     {% for paragraph in research.page.introduction %}
       <p>{{ paragraph }}</p>
     {% endfor %}
   </header>
 
-  <section class="sms-research-interests" aria-labelledby="research-interests-title">
-    <header class="sms-research-section-heading">
-      <div>
-        <p>FOCUS AREAS</p>
-        <h2 id="research-interests-title">{{ research.research_interests.heading }}</h2>
-      </div>
-
-      {% if research.research_interests.note %}
-        <span>{{ research.research_interests.note }}</span>
-      {% endif %}
-    </header>
-
-    <ul class="sms-research-interests__grid">
-      {% for interest in interests %}
-        <li>
-          <span><i class="{{ interest.icon }}" aria-hidden="true"></i></span>
-          <strong>{{ interest.name }}</strong>
-        </li>
+  {% if research.page.show_quick_links and sections.size > 0 %}
+    <nav class="sms-research-jump" aria-label="Research page sections">
+      {% for section in sections %}
+        <a href="#{{ section.id }}" style="--sms-link-accent: {{ section.accent }};">
+          <i class="{{ section.icon }}" aria-hidden="true"></i>
+          <span>{{ section.heading }}</span>
+        </a>
       {% endfor %}
-    </ul>
-  </section>
+    </nav>
+  {% endif %}
 
-  <section class="sms-research-project sms-research-project--completed">
-    <header class="sms-research-project__header">
-      <div>
-        <p class="sms-research-project__status">
-          <i class="{{ research.completed_research.status_icon }}" aria-hidden="true"></i>
-          {{ research.completed_research.status }}
-        </p>
+  {% for section in sections %}
+    <section
+      class="sms-research-section"
+      id="{{ section.id }}"
+      style="--sms-section-accent: {{ section.accent }};"
+    >
+      <header class="sms-research-section__heading">
+        <span aria-hidden="true"><i class="{{ section.icon }}"></i></span>
+        <div>
+          <h2>{{ section.heading }}</h2>
+          {% if section.subtitle %}<p>{{ section.subtitle }}</p>{% endif %}
+        </div>
+      </header>
 
-        <h2>{{ research.completed_research.heading }}</h2>
-      </div>
+      {% case section.id %}
+        {% when "research-interests" %}
+          <ul class="sms-research-interests">
+            {% for interest in interests %}
+              <li>
+                <span><i class="{{ interest.icon }}" aria-hidden="true"></i></span>
+                <strong>{{ interest.name }}</strong>
+              </li>
+            {% endfor %}
+          </ul>
 
-      <time>{{ research.completed_research.period }}</time>
-    </header>
+        {% when "completed-research" %}
+          <div class="sms-research-list">
+            {% for item in completed_items %}
+              {% include research-card.html item=item %}
+            {% endfor %}
+          </div>
 
-    <div class="sms-research-project__title-block">
-      <h3>{{ research.completed_research.title }}</h3>
+        {% when "current-research" %}
+          {% if research.current_research.introduction %}
+            <p class="sms-research-section__intro">{{ research.current_research.introduction }}</p>
+          {% endif %}
 
-      <p>
-        <strong>{{ research.completed_research.supervisor.label }}:</strong>
-        <a
-          href="{{ research.completed_research.supervisor.url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >{{ research.completed_research.supervisor.name }}</a>,
-        {{ research.completed_research.supervisor.designation }}
-      </p>
-    </div>
+          <div class="sms-research-list">
+            {% for item in current_items %}
+              {% include research-card.html item=item %}
+            {% endfor %}
+          </div>
 
-    <div class="sms-research-project__prose">
-      {% for paragraph in research.completed_research.paragraphs %}
-        {{ paragraph | markdownify }}
-      {% endfor %}
-    </div>
-
-    <section class="sms-research-tools">
-      <h3>{{ research.completed_research.tools_heading }}</h3>
-
-      <ol>
-        {% for tool in research.completed_research.tools %}
-          <li>{{ tool | markdownify }}</li>
-        {% endfor %}
-      </ol>
+        {% when "future-research" %}
+          <div class="sms-future-research">
+            <span aria-hidden="true"><i class="fas fa-route"></i></span>
+            <p>{{ research.future_research.paragraph }}</p>
+          </div>
+      {% endcase %}
     </section>
-
-    {% include research-gallery.html
-      gallery=research.completed_research.gallery
-      heading=research.completed_research.gallery_heading
-    %}
-
-    {% if research.completed_research.resources and research.completed_research.resources.size > 0 %}
-      <div class="sms-research-resources">
-        {% for resource in research.completed_research.resources %}
-          <a
-            href="{{ resource.url | relative_url }}"
-            {% if resource.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-          >
-            <i class="{{ resource.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
-            {{ resource.label }}
-          </a>
-        {% endfor %}
-      </div>
-    {% endif %}
-  </section>
-
-  <section class="sms-research-current-future">
-    <header class="sms-research-section-heading">
-      <div>
-        <p>ONGOING & FORWARD-LOOKING WORK</p>
-        <h2>{{ research.current_future_research.heading }}</h2>
-      </div>
-    </header>
-
-    <p class="sms-research-current-future__intro">
-      {{ research.current_future_research.introduction }}
-    </p>
-
-    <div class="sms-research-current-future__grid">
-      <section class="sms-research-direction sms-research-direction--current">
-        <header>
-          <span>
-            <i class="{{ research.current_future_research.current.icon }}" aria-hidden="true"></i>
-          </span>
-          <h3>{{ research.current_future_research.current.label }}</h3>
-        </header>
-
-        <ol class="sms-current-projects">
-          {% for project in current_projects %}
-            <li>
-              <h4>{{ project.title }}</h4>
-
-              <p>
-                <strong>{{ project.co_investigator.label }}:</strong>
-                <a
-                  href="{{ project.co_investigator.url }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >{{ project.co_investigator.name }}</a>,
-                {{ project.co_investigator.designation }}
-              </p>
-            </li>
-          {% endfor %}
-        </ol>
-
-        {% include research-gallery.html
-          gallery=research.current_future_research.current.gallery
-          heading=research.current_future_research.current.gallery_heading
-        %}
-
-        {% if research.current_future_research.current.resources and research.current_future_research.current.resources.size > 0 %}
-          <div class="sms-research-resources">
-            {% for resource in research.current_future_research.current.resources %}
-              <a
-                href="{{ resource.url | relative_url }}"
-                {% if resource.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-              >
-                <i class="{{ resource.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
-                {{ resource.label }}
-              </a>
-            {% endfor %}
-          </div>
-        {% endif %}
-      </section>
-
-      <section class="sms-research-direction sms-research-direction--future">
-        <header>
-          <span>
-            <i class="{{ research.current_future_research.future.icon }}" aria-hidden="true"></i>
-          </span>
-          <h3>{{ research.current_future_research.future.label }}</h3>
-        </header>
-
-        <p>{{ research.current_future_research.future.paragraph }}</p>
-
-        {% include research-gallery.html
-          gallery=research.current_future_research.future.gallery
-          heading=research.current_future_research.future.gallery_heading
-        %}
-
-        {% if research.current_future_research.future.resources and research.current_future_research.future.resources.size > 0 %}
-          <div class="sms-research-resources">
-            {% for resource in research.current_future_research.future.resources %}
-              <a
-                href="{{ resource.url | relative_url }}"
-                {% if resource.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-              >
-                <i class="{{ resource.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
-                {{ resource.label }}
-              </a>
-            {% endfor %}
-          </div>
-        {% endif %}
-      </section>
-    </div>
-  </section>
-</section>
+  {% endfor %}
+</div>

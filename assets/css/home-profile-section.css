@@ -358,3 +358,71 @@
     transition: none;
   }
 }
+
+/* ==========================================================================
+   ABOUT-ME INTRODUCTION
+   Content source: _data/home_profile.yml -> page.introduction
+
+   This section is intentionally rendered before the Profile at a Glance panel.
+   ========================================================================== */
+
+.page__content .sms-about-intro {
+  box-sizing: border-box;
+  margin: 0 0 1.5rem;
+  padding: clamp(1rem, 2.4vw, 1.35rem);
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--global-link-color);
+  border-radius: 0.8rem;
+  background: var(--global-code-background-color);
+  color: var(--global-text-color);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
+}
+
+.page__content .sms-about-intro__eyebrow {
+  margin: 0 0 0.58rem;
+  color: var(--global-link-color);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.page__content .sms-about-intro__content {
+  max-width: 64rem;
+}
+
+.page__content .sms-about-intro__content p {
+  margin: 0 0 0.78rem;
+  color: var(--global-text-color);
+  font-size: 0.96rem;
+  line-height: 1.68;
+}
+
+.page__content .sms-about-intro__content p:last-child {
+  margin-bottom: 0;
+}
+
+.page__content .sms-about-intro__content a {
+  color: var(--global-link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+/* Reduce the former large gap because the About section now precedes it. */
+.page__content .sms-profile-panel {
+  margin-top: 1.35rem;
+}
+
+@media (max-width: 480px) {
+  .page__content .sms-about-intro {
+    padding: 0.95rem;
+    border-radius: 0.68rem;
+  }
+
+  .page__content .sms-about-intro__content p {
+    font-size: 0.91rem;
+    line-height: 1.62;
+  }
+}

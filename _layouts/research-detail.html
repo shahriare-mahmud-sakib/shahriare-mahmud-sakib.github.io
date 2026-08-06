@@ -1,0 +1,138 @@
+---
+layout: single
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/research-page.css' | relative_url }}">
+
+{% assign research = site.data.research_page %}
+
+{% if page.research_type == "completed" %}
+  {% assign research_items = research.completed_research.items %}
+{% elsif page.research_type == "current" %}
+  {% assign research_items = research.current_research.items %}
+{% else %}
+  {% assign research_items = empty %}
+{% endif %}
+
+{% assign item = research_items | where: "slug", page.research_slug | first %}
+
+{% if item %}
+  <article
+    class="sms-research-detail"
+    style="
+      --sms-detail-accent: {{ item.accent }};
+      --sms-detail-image-columns: {{ research.page.layout.detail_image_columns | default: 2 }};
+    "
+  >
+    <p class="sms-research-detail__back">
+      <a href="{{ '/research/' | relative_url }}#{{ page.research_type }}-research">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        Back to {{ page.research_type | capitalize }} Research
+      </a>
+    </p>
+
+    <section class="sms-research-detail__meta">
+      <div class="sms-research-detail__icon" aria-hidden="true">
+        <i class="{{ item.icon }}"></i>
+      </div>
+
+      <div>
+        <div class="sms-research-detail__badges">
+          <span>{{ item.type }}</span>
+          <span>{{ item.status }}</span>
+          <span>{{ item.period }}</span>
+        </div>
+
+        {% if item.person %}
+          <p>
+            <strong>{{ item.person.label }}:</strong>
+            <a
+              href="{{ item.person.url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >{{ item.person.name }}</a>,
+            {{ item.person.designation }}
+          </p>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="sms-research-detail__writing">
+      {% for paragraph in item.details.paragraphs %}
+        {{ paragraph | markdownify }}
+      {% endfor %}
+    </section>
+
+    {% if item.details.tools and item.details.tools.size > 0 %}
+      <section class="sms-research-detail__tools">
+        <h2>{{ item.details.tools_heading | default: "Tools & Techniques" }}</h2>
+
+        <ol>
+          {% for tool in item.details.tools %}
+            <li>{{ tool | markdownify }}</li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endif %}
+
+    {% if item.details.gallery and item.details.gallery.size > 0 %}
+      <!--
+        Images intentionally appear after the writing and Tools & Techniques.
+        No separate image-section heading is rendered.
+      -->
+      <div class="sms-research-detail__gallery">
+        {% for image in item.details.gallery limit: 2 %}
+          <figure>
+            <a
+              href="{{ image.image | relative_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="{{ image.image | relative_url }}"
+                alt="{{ image.alt | default: image.caption }}"
+                loading="lazy"
+              >
+            </a>
+
+            {% if image.caption %}
+              <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if item.details.resources and item.details.resources.size > 0 %}
+      <div class="sms-research-detail__resources">
+        {% for resource in item.details.resources %}
+          <a
+            href="{{ resource.url | relative_url }}"
+            {% if resource.external %}
+              target="_blank"
+              rel="noopener noreferrer"
+            {% endif %}
+          >
+            <i
+              class="{{ resource.icon | default: 'fas fa-link' }}"
+              aria-hidden="true"
+            ></i>
+            {{ resource.label }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </article>
+{% else %}
+  <section class="notice--danger">
+    <h2>Research entry not found</h2>
+    <p>
+      No item with slug <code>{{ page.research_slug }}</code> was found in the
+      <code>{{ page.research_type }}</code> research list in
+      <code>_data/research_page.yml</code>.
+    </p>
+    <p>
+      <a href="{{ '/research/' | relative_url }}">Return to the Research page</a>
+    </p>
+  </section>
+{% endif %}

@@ -15,7 +15,7 @@ timeline:
   show: true
   eyebrow: "PROJECT TIMELINE"
   heading: "Selected Projects"
-  note: "Projects are arranged from newest to oldest."
+  note: ""
 
 controls:
   show_search: true

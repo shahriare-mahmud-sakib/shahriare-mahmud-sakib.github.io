@@ -7,8 +7,8 @@
 
 :root {
   /* EDITABLE PROFILE-PICTURE SIZES */
-  --sms-sidebar-photo-size: 170px;
-  --sms-sidebar-photo-size-short-screen: 128px;
+  --sms-sidebar-photo-size: 225px;
+  --sms-sidebar-photo-size-short-screen: 185px;
   --sms-sidebar-mobile-photo-size: 96px;
 
   /* MOBILE CARD SETTINGS */
@@ -24,6 +24,8 @@
   .sms-author-card__avatar {
     display: block !important;
     width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
     text-align: center;
   }
 
@@ -62,6 +64,14 @@
     box-shadow: none !important;
     opacity: 1 !important;
     z-index: auto !important;
+  }
+}
+
+
+/* Very wide desktop screens can use the full red-marked visual size. */
+@media screen and (min-width: 1500px) and (min-height: 701px) {
+  :root {
+    --sms-sidebar-photo-size: 235px;
   }
 }
 

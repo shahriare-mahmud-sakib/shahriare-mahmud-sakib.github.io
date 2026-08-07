@@ -1,0 +1,210 @@
+/* =============================================================================
+   PROJECTS + ACTIVITIES SEARCH/FILTER TOOLBAR
+   Matches the structure and responsive behavior of the Publications toolbar.
+
+   Publications reference values reproduced here:
+   - toolbar gap: 1rem
+   - toolbar padding: 0.9rem
+   - toolbar radius: 10px
+   - filter gap: 0.45rem
+   - filter padding: 0.42rem 0.72rem
+   - search width: 16rem
+   - search minimum height: 2.4rem
+   - mobile stacking breakpoint: 800px
+   ============================================================================= */
+
+.sms-projects,
+.sms-activities {
+  --sms-toolbar-accent: var(--global-link-color, #2f7f93);
+  --sms-toolbar-surface: var(--global-bg-color, #ffffff);
+  --sms-toolbar-border: var(--global-border-color, #e5e7eb);
+  --sms-toolbar-text: var(--global-text-color, #3d4144);
+}
+
+/* --------------------------------------------------------------------------
+   Outer toolbar box — same structure as .publication-toolbar
+   -------------------------------------------------------------------------- */
+
+.sms-projects__controls,
+.sms-act-controls {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 0 0.75rem;
+  padding: 0.9rem;
+  border: 1px solid var(--sms-toolbar-border);
+  border-radius: 10px;
+  background: var(--sms-toolbar-surface);
+}
+
+/* --------------------------------------------------------------------------
+   Filter option group — same wrapping behavior as .publication-filter-group
+   -------------------------------------------------------------------------- */
+
+.sms-projects__filters,
+.sms-act-filters {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Filter pills — same dimensions as .publication-filter
+   -------------------------------------------------------------------------- */
+
+.sms-projects__filter,
+.sms-act-filter {
+  appearance: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid var(--sms-toolbar-border);
+  border-radius: 999px;
+  color: var(--sms-toolbar-text);
+  background: var(--sms-toolbar-surface);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.sms-projects__filter:hover,
+.sms-projects__filter.is-active,
+.sms-act-filter:hover,
+.sms-act-filter.is-active {
+  border-color: var(--sms-toolbar-accent);
+  color: #fff;
+  background: var(--sms-toolbar-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Search holder — same desktop width as .publication-search
+   -------------------------------------------------------------------------- */
+
+.sms-projects__search,
+.sms-act-search {
+  display: block;
+  flex: 0 1 16rem;
+  width: auto;
+  min-width: 11rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+/* Hide any legacy search icon if an older cached page still contains one. */
+.sms-projects__search > i,
+.sms-act-search > i {
+  display: none !important;
+}
+
+/* Same input treatment as the Publications search field. */
+.sms-projects__search input,
+.sms-act-search input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 2.4rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--sms-toolbar-border);
+  border-radius: 7px;
+  outline: 0;
+  color: var(--sms-toolbar-text);
+  background: var(--sms-toolbar-surface);
+  font: inherit;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  box-shadow: none;
+}
+
+.sms-projects__search input:focus,
+.sms-act-search input:focus {
+  border-color: var(--sms-toolbar-accent);
+  outline: 3px solid color-mix(
+    in srgb,
+    var(--sms-toolbar-accent) 18%,
+    transparent
+  );
+}
+
+/* Make native search decorations harmless across browsers. */
+.sms-projects__search input::-webkit-search-cancel-button,
+.sms-act-search input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Tablet / mobile — same 800px breakpoint used by Publications.
+   Filters remain first, search becomes full-width below them.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  .sms-projects__controls,
+  .sms-act-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sms-projects__filters,
+  .sms-act-filters {
+    width: 100%;
+  }
+
+  .sms-projects__search,
+  .sms-act-search {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Extra narrow phones: retain wrapping and comfortable touch targets. */
+@media (max-width: 420px) {
+  .sms-projects__controls,
+  .sms-act-controls {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .sms-projects__filters,
+  .sms-act-filters {
+    gap: 0.4rem;
+  }
+
+  .sms-projects__filter,
+  .sms-act-filter {
+    min-height: 2rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  .sms-projects__search input,
+  .sms-act-search input {
+    min-height: 2.45rem;
+  }
+}
+
+/* Search/filter controls are not useful in print output. */
+@media print {
+  .sms-projects__controls,
+  .sms-act-controls {
+    display: none !important;
+  }
+}

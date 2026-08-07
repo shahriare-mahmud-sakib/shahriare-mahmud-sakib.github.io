@@ -2,7 +2,7 @@
 ---
 
 /* Main Academic Pages stylesheet.
-   IMPORTANT: custom/sidebar-footer-fix must remain the LAST import. */
+   IMPORTANT: custom/mobile-sidebar-profile-fix must remain the LAST import. */
 
 @import
     "vendor/breakpoint/breakpoint",
@@ -13,7 +13,6 @@
 
     "include/mixins",
     "vendor/susy/susy",
-
     "layout/reset",
     "layout/base",
     "include/utilities",
@@ -32,6 +31,9 @@
     "layout/sidebar",
     "layout/json_cv",
 
-    /* KEEP THIS LAST: fixes sidebar visibility and replaces footer layout. */
-    "custom/sidebar-footer-fix"
+    /* Existing custom sidebar and footer design. */
+    "custom/sidebar-footer-fix",
+
+    /* KEEP THIS LAST: larger photo and safe mobile collapse behavior. */
+    "custom/mobile-sidebar-profile-fix"
 ;

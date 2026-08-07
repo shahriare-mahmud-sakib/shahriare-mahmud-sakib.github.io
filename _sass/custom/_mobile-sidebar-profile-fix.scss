@@ -1,0 +1,287 @@
+/* =============================================================================
+   LARGER SIDEBAR PHOTO + SAFE MOBILE CONTACT PROFILE
+
+   Imported after custom/sidebar-footer-fix so these rules win without deleting
+   the existing sidebar and footer design.
+   ============================================================================= */
+
+:root {
+  /* EDITABLE PROFILE-PICTURE SIZES */
+  --sms-sidebar-photo-size: 170px;
+  --sms-sidebar-photo-size-short-screen: 128px;
+  --sms-sidebar-mobile-photo-size: 96px;
+
+  /* MOBILE CARD SETTINGS */
+  --sms-sidebar-mobile-radius: 0.75rem;
+  --sms-sidebar-mobile-gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Desktop profile picture
+   -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  .sms-author-card__avatar {
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .sms-author-card__avatar img {
+    display: block;
+    width: var(--sms-sidebar-photo-size) !important;
+    max-width: var(--sms-sidebar-photo-size) !important;
+    height: var(--sms-sidebar-photo-size);
+    margin: 0 auto;
+    padding: 4px;
+    object-fit: cover;
+    border: 1px solid var(--global-border-color);
+    border-radius: 50%;
+  }
+
+  /* The contact list is permanently visible on desktop. */
+  .sms-author-card__follow {
+    display: none !important;
+  }
+
+  .sms-author-card__links-wrapper {
+    position: relative !important;
+    display: block !important;
+    z-index: auto !important;
+  }
+
+  .sms-author-card__links-wrapper .sms-author-links {
+    position: relative !important;
+    display: grid !important;
+    right: auto !important;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+  }
+}
+
+/* Keep the sidebar usable on laptops with very short screens. */
+@media screen and (min-width: 1024px) and (max-height: 700px) {
+  .sms-author-card__avatar img {
+    width: var(--sms-sidebar-photo-size-short-screen) !important;
+    max-width: var(--sms-sidebar-photo-size-short-screen) !important;
+    height: var(--sms-sidebar-photo-size-short-screen);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Phone and tablet sidebar
+
+   Important:
+   - The sidebar returns to normal document flow.
+   - The links are static, not absolutely positioned.
+   - Opening the list increases the sidebar height and pushes content downward.
+   - The list is closed unless .is-open is present on the wrapper.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1023px) {
+  .sidebar,
+  .sidebar.sticky {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 0 1.1rem !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    z-index: 1 !important;
+  }
+
+  .sms-author-card {
+    display: grid !important;
+    grid-template-columns:
+      var(--sms-sidebar-mobile-photo-size)
+      minmax(0, 1fr);
+    gap: var(--sms-sidebar-mobile-gap);
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid var(--global-border-color);
+    border-radius: var(--sms-sidebar-mobile-radius);
+    background: var(--global-code-background-color);
+  }
+
+  .sms-author-card__avatar {
+    display: block !important;
+    width: var(--sms-sidebar-mobile-photo-size) !important;
+    height: var(--sms-sidebar-mobile-photo-size);
+    margin: 0 !important;
+  }
+
+  .sms-author-card__avatar img {
+    display: block;
+    width: var(--sms-sidebar-mobile-photo-size) !important;
+    max-width: var(--sms-sidebar-mobile-photo-size) !important;
+    height: var(--sms-sidebar-mobile-photo-size);
+    margin: 0 !important;
+    padding: 3px;
+    object-fit: cover;
+    border: 1px solid var(--global-border-color);
+    border-radius: 50%;
+  }
+
+  .sms-author-card__content {
+    display: block !important;
+    min-width: 0;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .sms-author-card__content .author__name {
+    margin: 0 0 0.25rem !important;
+    font-size: 1rem !important;
+    line-height: 1.2;
+  }
+
+  .sms-author-card__role {
+    margin: 0 !important;
+    font-size: 0.78rem !important;
+    line-height: 1.35;
+  }
+
+  .sms-author-card__links-wrapper {
+    position: static !important;
+    display: block !important;
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    cursor: default !important;
+    z-index: auto !important;
+  }
+
+  .sms-author-card__follow {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0.62rem 0.75rem !important;
+    border: 1px solid var(--global-border-color);
+    border-radius: 0.55rem;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .sms-author-card__follow:hover,
+  .sms-author-card__follow:focus-visible {
+    border-color: var(--global-link-color);
+    color: var(--global-link-color);
+    outline: none;
+  }
+
+  .sms-author-card__follow-icon {
+    display: inline-grid;
+    width: 1.35rem;
+    height: 1.35rem;
+    flex: 0 0 1.35rem;
+    place-items: center;
+    transition: transform 160ms ease;
+  }
+
+  .sms-author-card__links-wrapper.is-open
+    .sms-author-card__follow-icon {
+    transform: rotate(180deg);
+  }
+
+  .sms-author-card__links-wrapper .sms-author-links {
+    position: static !important;
+    inset: auto !important;
+    right: auto !important;
+    left: auto !important;
+    display: none !important;
+    width: 100% !important;
+    min-width: 0;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0.55rem 0 0 !important;
+    padding: 0.45rem !important;
+    overflow: visible !important;
+    border: 1px solid var(--global-border-color) !important;
+    border-radius: 0.55rem;
+    background: var(--global-bg-color) !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    z-index: auto !important;
+  }
+
+  .sms-author-card__links-wrapper.is-open .sms-author-links {
+    display: grid !important;
+  }
+
+  /* Remove the theme's dropdown pointer. */
+  .sms-author-card__links-wrapper .sms-author-links::before,
+  .sms-author-card__links-wrapper .sms-author-links::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .sms-author-card__links-wrapper .sms-author-link {
+    width: 100%;
+  }
+
+  .sms-author-card__links-wrapper .sms-author-link > a,
+  .sms-author-card__links-wrapper .sms-author-link__plain {
+    width: 100%;
+    min-height: 2.1rem;
+    padding: 0.3rem 0.4rem !important;
+  }
+}
+
+/* Narrow phones */
+@media screen and (max-width: 420px) {
+  :root {
+    --sms-sidebar-mobile-photo-size: 82px;
+  }
+
+  .sms-author-card {
+    padding: 0.68rem;
+  }
+
+  .sms-author-card__content .author__name {
+    font-size: 0.94rem !important;
+  }
+
+  .sms-author-card__role {
+    font-size: 0.72rem !important;
+  }
+}
+
+/* Print does not need the profile controls. */
+@media print {
+  .sms-author-card__follow {
+    display: none !important;
+  }
+}

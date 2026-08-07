@@ -6,6 +6,7 @@ author_profile: true
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/projects-page.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/search-toolbar-publication-style.css' | relative_url }}">
 
 {% assign settings = site.data.projects_page %}
 {% assign ordered_projects = site.portfolio | sort: "order" %}
@@ -15,6 +16,7 @@ author_profile: true
     {% if settings.page.eyebrow %}
       <p class="sms-projects__eyebrow">{{ settings.page.eyebrow }}</p>
     {% endif %}
+
     {% if settings.page.intro %}
       <p class="sms-projects__lead">{{ settings.page.intro }}</p>
     {% endif %}
@@ -22,25 +24,31 @@ author_profile: true
 
   {% if settings.controls.show_search or settings.controls.show_filters %}
     <div class="sms-projects__controls" aria-label="Project filters">
-      {% if settings.controls.show_search %}
-        <label class="sms-projects__search">
-          <span class="sr-only">Search projects</span>
-          <i class="fas fa-search" aria-hidden="true"></i>
-          <input type="search" data-project-search placeholder="{{ settings.controls.search_placeholder }}" autocomplete="off">
-        </label>
-      {% endif %}
-
       {% if settings.controls.show_filters %}
         <div class="sms-projects__filters" role="group" aria-label="Filter projects">
           {% for filter in settings.controls.filters %}
-            <button type="button"
+            <button
+              type="button"
               class="sms-projects__filter{% if filter.value == 'all' %} is-active{% endif %}"
               data-project-filter="{{ filter.value | slugify }}"
-              aria-pressed="{% if filter.value == 'all' %}true{% else %}false{% endif %}">
+              aria-pressed="{% if filter.value == 'all' %}true{% else %}false{% endif %}"
+            >
               {{ filter.label }}
             </button>
           {% endfor %}
         </div>
+      {% endif %}
+
+      {% if settings.controls.show_search %}
+        <label class="sms-projects__search">
+          <span class="sr-only">Search projects</span>
+          <input
+            type="search"
+            data-project-search
+            placeholder="{{ settings.controls.search_placeholder }}"
+            autocomplete="off"
+          >
+        </label>
       {% endif %}
     </div>
   {% endif %}
@@ -63,7 +71,9 @@ author_profile: true
     {% endfor %}
   </div>
 
-  <p class="sms-projects__empty" data-project-empty hidden>{{ settings.empty_message }}</p>
+  <p class="sms-projects__empty" data-project-empty hidden>
+    {{ settings.empty_message }}
+  </p>
 </section>
 
 <script src="{{ '/assets/js/projects-filter.js' | relative_url }}" defer></script>

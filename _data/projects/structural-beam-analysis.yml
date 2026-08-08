@@ -360,26 +360,22 @@ sections:
 gallery_heading: "Beam-response diagrams and MATLAB outputs"
 
 gallery:
-  - image: "/images/projects/structural-beam-analysis/afd-placeholder.svg"
-    alt: "Illustrative placeholder for an axial force diagram"
+  - image: "/images/projects/structural-beam-analysis/afd.png"
+    alt: "Illustration of an axial force diagram"
     caption: >-
-      Axial Force Diagram (AFD) — replace this placeholder with an actual
-      MATLAB-generated output when available.
+      Axial Force Diagram (AFD).
 
-  - image: "/images/projects/structural-beam-analysis/sfd-placeholder.svg"
-    alt: "Illustrative placeholder for a shear force diagram"
+  - image: "/images/projects/structural-beam-analysis/sfd.png"
+    alt: "Illustration of a shear force diagram"
     caption: >-
-      Shear Force Diagram (SFD) — replace this placeholder with an actual
-      MATLAB-generated output when available.
+      Shear Force Diagram (SFD).
 
-  - image: "/images/projects/structural-beam-analysis/bmd-placeholder.svg"
-    alt: "Illustrative placeholder for a bending moment diagram"
+  - image: "/images/projects/structural-beam-analysis/bmd.png"
+    alt: "Illustration of a bending moment diagram"
     caption: >-
-      Bending Moment Diagram (BMD) — replace this placeholder with an actual
-      MATLAB-generated output when available.
+      Bending Moment Diagram (BMD).
 
-  - image: "/images/projects/structural-beam-analysis/deflection-placeholder.svg"
-    alt: "Illustrative placeholder for a beam deflection diagram"
+  - image: "/images/projects/structural-beam-analysis/deflection.png"
+    alt: "Illustration of a beam deflection diagram"
     caption: >-
-      Deflection Diagram — replace this placeholder with an actual
-      MATLAB-generated output when available.
+      Deflection Diagram.

@@ -1,40 +1,15 @@
 {% assign project_page = include.project %}
 {% assign project = project_page %}
 
-{%- comment -%}
-DATA-DRIVEN PROJECT SUPPORT
-
-For newer projects:
-  _portfolio/<project>.md
-contains:
-  project_data_key: "<project>"
-
-The visible timeline content is then loaded from:
-  _data/projects/<project>.yml
-
-Older projects without project_data_key continue to use their normal
-_portfolio front matter.
-{%- endcomment -%}
-
 {% if project_page.project_data_key and site.data.projects %}
   {% assign data_project = site.data.projects[project_page.project_data_key] %}
-
   {% if data_project %}
     {% assign project = data_project %}
   {% endif %}
 {% endif %}
 
-{%- comment -%}
-Always keep the URL from the Jekyll portfolio page because a YAML data object
-does not have a generated .url property.
-{%- endcomment -%}
 {% assign project_url = project_page.url | relative_url %}
-
-{% assign project_filter = project.filter
-  | default: project_page.filter
-  | default: project.project_type
-  | slugify
-%}
+{% assign project_filter = project.filter | default: project_page.filter | default: project.project_type | slugify %}
 
 {% capture searchable_text %}
   {{ project.title }}
@@ -44,22 +19,10 @@ does not have a generated .url property.
   {{ project.status }}
   {{ project.period }}
   {{ project.role }}
-
-  {% for tool in project.tools %}
-    {{ tool }}
-  {% endfor %}
-
-  {% for keyword in project.keywords %}
-    {{ keyword }}
-  {% endfor %}
-
+  {% for tool in project.tools %}{{ tool }} {% endfor %}
+  {% for keyword in project.keywords %}{{ keyword }} {% endfor %}
   {% for supervisor in project.supervisors %}
-    {% if supervisor.name %}
-      {{ supervisor.name }}
-      {{ supervisor.designation }}
-    {% else %}
-      {{ supervisor }}
-    {% endif %}
+    {% if supervisor.name %}{{ supervisor.name }} {{ supervisor.designation }}{% else %}{{ supervisor }}{% endif %}
   {% endfor %}
 {% endcapture %}
 
@@ -70,18 +33,13 @@ does not have a generated .url property.
   data-project-search-text="{{ searchable_text | strip_html | strip_newlines | downcase | escape }}"
 >
   <div class="sms-project-timeline__date">
-    <span class="sms-project-timeline__year">
-      {{ project.timeline_year | default: project_page.timeline_year }}
-    </span>
-
-    <span class="sms-project-timeline__period">
-      {{ project.period | default: project_page.period }}
-    </span>
+    <span class="sms-project-timeline__year">{{ project.timeline_year }}</span>
+    <span class="sms-project-timeline__period">{{ project.period }}</span>
   </div>
 
   <div class="sms-project-timeline__marker" aria-hidden="true">
     <span>
-      <i class="{{ project.timeline_icon | default: project_page.timeline_icon | default: 'fas fa-diagram-project' }}"></i>
+      <i class="{{ project.timeline_icon | default: 'fas fa-diagram-project' }}"></i>
     </span>
   </div>
 
@@ -90,86 +48,44 @@ does not have a generated .url property.
       {% if project.cover_image %}
         <img
           src="{{ project.cover_image | relative_url }}"
-          alt="{{ project.cover_alt | default: project.title | escape }}"
-          loading="lazy"
-        >
-      {% elsif project_page.cover_image %}
-        <img
-          src="{{ project_page.cover_image | relative_url }}"
-          alt="{{ project_page.cover_alt | default: project_page.title | escape }}"
+          alt="{{ project.cover_alt | default: project.title }}"
           loading="lazy"
         >
       {% else %}
         <div class="sms-project-card__placeholder">
-          <i class="fas fa-diagram-project" aria-hidden="true"></i>
+          <i class="fas fa-diagram-project"></i>
         </div>
       {% endif %}
 
       {% if project.status %}
         <span class="sms-project-card__status">{{ project.status }}</span>
-      {% elsif project_page.status %}
-        <span class="sms-project-card__status">{{ project_page.status }}</span>
       {% endif %}
     </a>
 
     <div class="sms-project-card__body">
       <div class="sms-project-card__meta">
-        {% if project.project_type %}
-          <span>{{ project.project_type }}</span>
-        {% elsif project_page.project_type %}
-          <span>{{ project_page.project_type }}</span>
-        {% endif %}
-
-        {% if project.discipline %}
-          <span>{{ project.discipline }}</span>
-        {% elsif project_page.discipline %}
-          <span>{{ project_page.discipline }}</span>
-        {% endif %}
+        {% if project.project_type %}<span>{{ project.project_type }}</span>{% endif %}
+        {% if project.discipline %}<span>{{ project.discipline }}</span>{% endif %}
       </div>
 
       <h2 class="sms-project-card__title">
-        <a href="{{ project_url }}">
-          {{ project.title | default: project_page.title }}
-        </a>
+        <a href="{{ project_url }}">{{ project.title | default: project_page.title }}</a>
       </h2>
 
       {% if project.role %}
         <p class="sms-project-card__role">
           <i class="fas fa-user-group" aria-hidden="true"></i>
-          <strong>Role:</strong>
-          {{ project.role }}
-        </p>
-      {% elsif project_page.role %}
-        <p class="sms-project-card__role">
-          <i class="fas fa-user-group" aria-hidden="true"></i>
-          <strong>Role:</strong>
-          {{ project_page.role }}
+          <strong>Role:</strong> {{ project.role }}
         </p>
       {% endif %}
 
-      {%- comment -%}
-This is the important fix: the capstone summary now comes from
-_data/projects/model-solid-waste-management-system.yml.
-{%- endcomment -%}
       {% if project.summary %}
-        <p class="sms-project-card__summary">
-          {{ project.summary }}
-        </p>
-      {% elsif project_page.summary %}
-        <p class="sms-project-card__summary">
-          {{ project_page.summary }}
-        </p>
+        <p class="sms-project-card__summary">{{ project.summary }}</p>
       {% endif %}
 
       {% if project.highlights %}
         <ul class="sms-project-card__highlights">
           {% for highlight in project.highlights limit: 3 %}
-            <li>{{ highlight }}</li>
-          {% endfor %}
-        </ul>
-      {% elsif project_page.highlights %}
-        <ul class="sms-project-card__highlights">
-          {% for highlight in project_page.highlights limit: 3 %}
             <li>{{ highlight }}</li>
           {% endfor %}
         </ul>
@@ -181,12 +97,6 @@ _data/projects/model-solid-waste-management-system.yml.
             <li>{{ tool }}</li>
           {% endfor %}
         </ul>
-      {% elsif project_page.tools %}
-        <ul class="sms-project-card__tools" aria-label="Tools and methods">
-          {% for tool in project_page.tools limit: 6 %}
-            <li>{{ tool }}</li>
-          {% endfor %}
-        </ul>
       {% endif %}
 
       <div class="sms-project-card__actions">
@@ -195,29 +105,20 @@ _data/projects/model-solid-waste-management-system.yml.
           <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
 
-        {% assign links = project.links | default: project_page.links %}
-
-        {% if links %}
-          {% assign first_external_link = nil %}
-
-          {% for link in links %}
-            {% if link.external and first_external_link == nil %}
-              {% assign first_external_link = link %}
-            {% endif %}
-          {% endfor %}
-
-          {% if first_external_link %}
+        {% if project.links %}
+          {% assign external_link = project.links | where: "external", true | first %}
+          {% if external_link %}
             <a
               class="sms-project-card__external"
-              href="{{ first_external_link.url }}"
+              href="{{ external_link.url }}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="{{ first_external_link.label | escape }}"
+              aria-label="{{ external_link.label }}"
             >
-              {% if first_external_link.icon %}
-                <i class="{{ first_external_link.icon }}" aria-hidden="true"></i>
+              {% if external_link.icon %}
+                <i class="{{ external_link.icon }}" aria-hidden="true"></i>
               {% endif %}
-              <span>{{ first_external_link.label }}</span>
+              <span>{{ external_link.label }}</span>
             </a>
           {% endif %}
         {% endif %}

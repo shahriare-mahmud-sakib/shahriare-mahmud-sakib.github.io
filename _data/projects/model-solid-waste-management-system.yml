@@ -79,20 +79,14 @@ tools:
 
 # Displayed in the project hero.
 facts:
-  - label: "Location"
-    value: "Dhakeshwari Road, Ward 26, Lalbag, Dhaka"
+  - label: "Field"
+    value: "Sustainable Infrastructure and Environmental Engineering"
 
-  - label: "Implementing Agency"
-    value: "Dhaka South City Corporation (DSCC)"
+  - label: "Course"
+    value: "Capstone Project"
 
   - label: "Project Facility"
     value: "Redeveloped Secondary Waste Transfer Station"
-
-  - label: "Final BOQ"
-    value: "Approximately BDT 4.09 crore"
-
-  - label: "Design Life"
-    value: "20 years"
 
   - label: "My Role"
     value: "Team Leader"
@@ -183,12 +177,6 @@ sections:
         surrounding collection network.
 
     facts:
-      - label: "Sponsoring Ministry"
-        value: "Ministry of Local Government"
-
-      - label: "Implementing Agency"
-        value: "Dhaka South City Corporation"
-
       - label: "Geographic Area"
         value: "Lalbag, Dhaka, Bangladesh"
 

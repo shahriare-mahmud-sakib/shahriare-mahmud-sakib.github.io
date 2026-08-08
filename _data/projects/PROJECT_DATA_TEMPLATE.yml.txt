@@ -1,0 +1,79 @@
+HOW TO USE THIS TEMPLATE
+========================
+
+1. Copy this file inside `_data/projects/`.
+2. Rename it, for example:
+       new-bridge-project.yml
+3. Remove these instruction lines above `title:`.
+4. Edit the data.
+5. Create a matching `_portfolio/new-bridge-project.md` file using the other
+   supplied template.
+
+title: "Project Title"
+
+show_on_projects: true
+order: 1
+filter: "academic"
+timeline_year: "2026"
+timeline_icon: "fas fa-diagram-project"
+
+project_type: "Academic Project"
+status: "Completed"
+period: "Jan. 2026 – Dec. 2026"
+discipline: "Civil Engineering"
+course: "Course or project context"
+role: "Team Leader"
+
+cover_image: "/images/projects/new-bridge-project/cover.png"
+cover_alt: "Description of the cover image"
+cover_position: "center center"
+
+summary: >-
+  Concise project summary.
+
+highlights:
+  - "First timeline-card highlight."
+  - "Second timeline-card highlight."
+
+keywords:
+  - "keyword"
+
+tools:
+  - "Software or technique"
+
+facts:
+  - label: "Location"
+    value: "Location"
+
+metrics:
+  - value: "100 m"
+    label: "Example metric"
+
+supervisors:
+  - name: "Supervisor Name"
+    designation: "Department and institution"
+
+links:
+  - label: "View Report"
+    url: "/files/projects/new-bridge-project/report.pdf"
+    icon: "fas fa-file-pdf"
+    external: false
+
+sections:
+  - id: "overview"
+    nav_label: "Overview"
+    eyebrow: "PROJECT CONTEXT"
+    heading: "Project overview"
+    paragraphs:
+      - >-
+        Project description.
+
+    bullets:
+      - "Important point."
+
+gallery_heading: "Selected project outputs"
+
+gallery:
+  - image: "/images/projects/new-bridge-project/output.png"
+    alt: "Output description"
+    caption: "Output caption."

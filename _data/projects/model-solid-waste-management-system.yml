@@ -1,0 +1,412 @@
+# =============================================================================
+# CAPSTONE PROJECT DETAIL PAGE
+#
+# Edit this file to change:
+# - timeline-card content;
+# - project-detail content;
+# - cover picture;
+# - key facts and metrics;
+# - personal contribution;
+# - supervisors and team;
+# - tools, software, standards, images, and resource links.
+#
+# Page address:
+# /projects/model-solid-waste-management-system/
+# =============================================================================
+
+title: "A Model Solid Waste Management System at Community Level"
+
+# Projects timeline
+show_on_projects: true
+order: 1
+filter: "academic"
+timeline_year: "2023–2025"
+timeline_icon: "fas fa-recycle"
+
+# Project identity
+project_type: "Capstone Project - BUET"
+status: "Completed"
+period: "Nov. 2023 – Mar. 2025"
+discipline: "Sustainable Infrastructure and Environmental Engineering"
+course: "CE 404: Capstone Project"
+role: "Team Leader"
+
+# The requested repository cover image.
+cover_image: "/images/projects/model-solid-waste-management-system/cover.png"
+cover_alt: >-
+  Revit three-dimensional model of the proposed community-level solid-waste
+  management facility in Lalbag, Dhaka
+cover_position: "center center"
+
+summary: >-
+  A multidisciplinary capstone proposal to redevelop and expand the existing
+  Secondary Waste Transfer Station in Lalbag, Dhaka, by integrating segregated
+  collection, waste compaction, recovery and recycling, environmental
+  management, architectural planning, structural analysis, detailed drawings,
+  cost estimation, and phased implementation.
+
+highlights:
+  - "Proposed redevelopment of the Secondary Waste Transfer Station in Lalbag, Dhaka."
+  - "Integrated feasibility, environmental, traffic, architectural, structural, and cost analyses."
+  - "Developed the 3D model in Revit, performed structural analysis in SAP2000, and prepared drawings in AutoCAD."
+
+keywords:
+  - "solid waste management"
+  - "secondary waste transfer station"
+  - "Lalbag"
+  - "Dhaka"
+  - "recycling"
+  - "Revit"
+  - "SAP2000"
+  - "AutoCAD"
+  - "RCC"
+  - "steel truss"
+  - "feasibility study"
+  - "environmental management"
+  - "bill of quantities"
+
+tools:
+  - "Revit"
+  - "SAP2000"
+  - "AutoCAD"
+  - "RCC Design"
+  - "Steel Truss Design"
+  - "BNBC 2020"
+  - "Feasibility Analysis"
+  - "Traffic Impact Analysis"
+  - "Environmental Assessment"
+  - "Cost Estimation & BOQ"
+
+# Displayed in the project hero.
+facts:
+  - label: "Location"
+    value: "Dhakeshwari Road, Ward 26, Lalbag, Dhaka"
+
+  - label: "Implementing Agency"
+    value: "Dhaka South City Corporation (DSCC)"
+
+  - label: "Project Facility"
+    value: "Redeveloped Secondary Waste Transfer Station"
+
+  - label: "Final BOQ"
+    value: "Approximately BDT 4.09 crore"
+
+  - label: "Design Life"
+    value: "20 years"
+
+  - label: "My Role"
+    value: "Team Leader"
+
+# Summary metrics shown below the hero.
+metrics:
+  - value: "300 m²"
+    label: "Total building area"
+
+  - value: "255.36 m²"
+    label: "Transfer-station floor area"
+
+  - value: "20 years"
+    label: "Design life"
+
+  - value: "BDT 4.09 crore"
+    label: "Final BOQ estimate"
+
+supervisors:
+  - name: "Professor Dr. Khan Mahmud Amanat"
+    designation: "Department of Civil Engineering, BUET"
+
+  - name: "Professor Dr. Mehedi Ahmed Ansary"
+    designation: "Department of Civil Engineering, BUET"
+
+  - name: "Professor Dr. Moazzem Hossain"
+    designation: "Department of Civil Engineering, BUET"
+
+  - name: "Professor Dr. Md. Mafizur Rahman"
+    designation: "Department of Civil Engineering, BUET"
+
+# Main buttons. Internal resources are included in this package.
+links:
+  - label: "ResearchGate Presentation"
+    url: "https://www.researchgate.net/publication/396400301_A_MODEL_SOLID_WASTE_MANAGEMENT_SYSTEM_AT_COMMUNITY_LEVEL"
+    icon: "fab fa-researchgate"
+    external: true
+
+  - label: "View Presentation PDF"
+    url: "/files/projects/model-solid-waste-management-system/CE404_Group-4_Final-Presentation.pdf"
+    icon: "fas fa-file-pdf"
+    external: false
+
+  - label: "Download PowerPoint"
+    url: "/files/projects/model-solid-waste-management-system/CE404_Group-4_Final-Presentation.pptx"
+    icon: "fas fa-file-powerpoint"
+    external: false
+    download: true
+
+# The section order here is the page order.
+sections:
+  - id: "overview"
+    nav_label: "Overview"
+    eyebrow: "PROJECT CONTEXT"
+    heading: "Overview and motivation"
+    paragraphs:
+      - >-
+        Rapid population growth and dense urban activity have placed substantial
+        pressure on Dhaka's municipal solid-waste infrastructure. The existing
+        arrangement at the Lalbag Secondary Waste Transfer Station relied on
+        mixed-waste handling and limited processing facilities, contributing to
+        inefficient transport, environmental pollution, land wastage, and
+        inconvenience for surrounding communities.
+
+      - >-
+        Our capstone project proposed the redevelopment and expansion of this
+        facility as a community-level solid-waste management system. The concept
+        combined doorstep segregated collection, improved transfer logistics,
+        waste compaction, material separation, recycling, environmental
+        safeguards, and a purpose-designed office and transfer-station complex.
+
+    bullets:
+      - "Introduce segregated collection at the source and improve collection logistics."
+      - "Provide facilities for compaction, separation, recovery, and recycling."
+      - "Improve waste transport through modern containers and organized transfer operations."
+      - "Reduce pollution, resource wastage, and adverse effects on surrounding communities."
+      - "Integrate architectural, structural, environmental, economic, and implementation planning."
+
+  - id: "project-setting"
+    nav_label: "Project Setting"
+    eyebrow: "SITE & BASIC INFORMATION"
+    heading: "Project location and institutional context"
+    paragraphs:
+      - >-
+        The project site is located on Dhakeshwari Road in Ward 26 of Dhaka South
+        City Corporation, within the Lalbag area of Dhaka. The proposal was
+        developed around the existing Secondary Waste Transfer Station and its
+        surrounding collection network.
+
+    facts:
+      - label: "Sponsoring Ministry"
+        value: "Ministry of Local Government"
+
+      - label: "Implementing Agency"
+        value: "Dhaka South City Corporation"
+
+      - label: "Geographic Area"
+        value: "Lalbag, Dhaka, Bangladesh"
+
+      - label: "Project Objective"
+        value: "Implement a sustainable community-level solid-waste management system"
+
+      - label: "Project Category"
+        value: "Yellow"
+
+      - label: "Planned Duration"
+        value: "One year"
+
+  - id: "feasibility"
+    nav_label: "Feasibility"
+    eyebrow: "MULTIDISCIPLINARY ASSESSMENT"
+    heading: "Feasibility and planning studies"
+    paragraphs:
+      - >-
+        The feasibility phase combined field investigation, condition assessment,
+        operational review, comparative case studies, collection-route analysis,
+        traffic impact assessment, environmental assessment, preliminary cost
+        estimation, and cost-benefit evaluation.
+
+    subsections:
+      - heading: "Field and operational assessment"
+        bullets:
+          - "Documented the existing transfer station, containers, collection vans, trucks, collection points, and operating schedule."
+          - "Reviewed collection routes serving Azimpur Colony, Chawkbazar, and Lalbag."
+          - "Identified the absence of on-site segregation, recycling, and compaction facilities."
+
+      - heading: "Comparative case studies"
+        bullets:
+          - "Reviewed mechanized and community-level transfer facilities in Indore, Changsha, and Kolkata."
+          - "Compared collection systems, dry-wet separation, segregation methods, recycling practices, and compaction technologies."
+          - "Used the comparison to define the functional requirements of the Lalbag proposal."
+
+      - heading: "Traffic and environmental assessment"
+        bullets:
+          - "Evaluated collection routes and surrounding traffic conditions."
+          - "Compared estimated traffic demand with available corridor capacity."
+          - "Prepared mitigation measures for pre-construction, construction, and operational phases."
+          - "Addressed air, noise, soil, water, leachate, worker safety, drainage, and monitoring requirements."
+
+      - heading: "Economic and implementation planning"
+        bullets:
+          - "Prepared preliminary and detailed cost estimates and a Bill of Quantities."
+          - "Considered collection revenue, recycling revenue, operation and maintenance, monitoring, administration, and quality assurance."
+          - "Prepared a phased implementation programme covering investigation, design, procurement, construction, testing, and commissioning."
+
+  - id: "my-contribution"
+    nav_label: "My Contribution"
+    eyebrow: "PERSONAL CONTRIBUTION"
+    heading: "My role as team leader"
+    paragraphs:
+      - >-
+        As the team leader, I coordinated the overall project workflow and
+        helped integrate the feasibility, architectural, structural,
+        environmental, costing, and implementation components into one coherent
+        proposal. I organized task distribution, monitored progress, supported
+        technical decision-making, and contributed to the preparation and
+        presentation of the final project.
+
+      - >-
+        My technical contribution included developing the three-dimensional
+        facility model in **Revit**, carrying out structural modelling and
+        analysis in **SAP2000**, and preparing engineering drawings and details
+        in **AutoCAD**. I also contributed to the interpretation of design
+        results, coordination between architectural and structural components,
+        preparation of project documentation, and communication of the proposed
+        system from an engineering perspective.
+
+    bullets:
+      - "Project leadership, task coordination, and integration of multidisciplinary work."
+      - "Three-dimensional architectural and structural modelling in Revit."
+      - "Structural modelling and analysis in SAP2000."
+      - "Engineering drawings, layouts, and details in AutoCAD."
+      - "Coordination of feasibility, environmental, traffic, design, BOQ, and implementation outputs."
+      - "Preparation and delivery of the final capstone presentation."
+
+  - id: "design"
+    nav_label: "Engineering Design"
+    eyebrow: "ARCHITECTURAL & STRUCTURAL ENGINEERING"
+    heading: "Design development"
+    paragraphs:
+      - >-
+        The final facility combined an office building with a larger transfer
+        station. The office was designed as an RCC-framed structure, while the
+        transfer station used an RCC structural system supporting a steel-truss
+        roof. The design also included foundations, grade beams, columns, beams,
+        slabs, an underground water reservoir, plumbing, drainage, and associated
+        site elements.
+
+    subsections:
+      - heading: "Architectural and spatial design"
+        bullets:
+          - "Total building area of approximately 300 m² and base area of approximately 368 m²."
+          - "Transfer-station dimensions of approximately 17.07 m × 14.96 m with a floor area of 255.36 m²."
+          - "Office, staff, service, vehicle-parking, processing, storage, and circulation spaces."
+          - "Alternative architectural arrangements evaluated before finalizing the design."
+          - "Three-dimensional model developed in Revit and coordinated with engineering drawings."
+
+      - heading: "Structural design basis"
+        bullets:
+          - "Design life: 20 years."
+          - "Primary standards: BNBC 2020, ACI 318-08, and AISC 14."
+          - "Basic wind speed: 65.7 m/s."
+          - "Seismic Zone 2, Site Class SC, and Seismic Design Category C."
+          - "Gravity, wind, and earthquake load combinations considered in analysis."
+
+      - heading: "Structural components"
+        bullets:
+          - "Shallow square foundations and reinforced-concrete framing."
+          - "Grade beams, columns, beams, and two-way slabs."
+          - "Underground water reservoir designed for governing full/empty and saturated-soil conditions."
+          - "Symmetrical two-dimensional Pratt roof truss with bolted gusset-plate connections."
+          - "Structural response and member actions evaluated in SAP2000."
+
+      - heading: "Drawings and documentation"
+        bullets:
+          - "Ground-floor plan, column layout, grade-beam layout, and beam detailing."
+          - "Slab, footing, underground-reservoir, roof-truss, and connection details."
+          - "Plumbing and drainage layout connected to the municipal sewer network."
+          - "Drawings and detailing prepared and coordinated in AutoCAD."
+
+  - id: "cost-and-delivery"
+    nav_label: "Cost & Delivery"
+    eyebrow: "BOQ & IMPLEMENTATION"
+    heading: "Cost, construction, and delivery strategy"
+    paragraphs:
+      - >-
+        The final Bill of Quantities estimated the project cost at approximately
+        **BDT 4.09 crore**. The estimate covered investigation, earthwork,
+        foundations, reinforced-concrete work, structural steel, masonry,
+        architectural finishes, plumbing, testing, safety provisions, site
+        facilities, engineering, and additional project costs.
+
+      - >-
+        The implementation plan separated pre-construction and construction
+        activities. Pre-construction tasks included project initiation,
+        investigation, surveys, environmental analysis, feasibility reporting,
+        detailed design, BOQ preparation, and tendering. The construction phase
+        included site preparation, earthwork, foundations, underground
+        structures, the RCC frame, masonry, steel work, services, and finishes.
+
+    note: >-
+      The financial assessment indicated that conventional revenue alone would
+      not capture the proposal's full value. The project was therefore framed
+      around broader environmental, public-health, operational, social, and
+      long-term urban-management benefits.
+
+  - id: "outcomes"
+    nav_label: "Outcomes"
+    eyebrow: "PROJECT OUTCOMES"
+    heading: "Proposed benefits and engineering value"
+    bullets:
+      - "Modernization and expansion of an existing community waste-transfer facility."
+      - "Source segregation, organized collection, compaction, recovery, and recycling."
+      - "Improved environmental controls and safer operating conditions."
+      - "Reduced uncontrolled dumping, pollution, resource loss, and transport inefficiency."
+      - "Integrated facility planning supported by architectural, structural, environmental, and economic analysis."
+      - "A coordinated set of models, calculations, drawings, BOQ, and implementation schedules suitable for project development."
+
+  - id: "team"
+    nav_label: "Team"
+    eyebrow: "PROJECT TEAM"
+    heading: "Team members and academic supervision"
+    paragraphs:
+      - >-
+        The capstone was completed by Group 4 in the Department of Civil
+        Engineering at BUET. I served as team leader and worked with the following
+        team members.
+
+    people:
+      - name: "Shahriare Mahmud Sakib"
+        role: "Team Leader"
+
+      - name: "Humaira Jannat Taki"
+        role: "Deputy Team Leader"
+
+      - name: "Muaz Hossain Mahi"
+        role: "Team Member"
+
+      - name: "Fahim Zafri"
+        role: "Team Member"
+
+      - name: "Md. Ausaf Alam"
+        role: "Team Member"
+
+      - name: "Akash Saha"
+        role: "Team Member"
+
+gallery_heading: "Selected models, analyses, drawings, and project outputs"
+
+gallery:
+  - image: "/images/projects/model-solid-waste-management-system/project-location.png"
+    alt: "Project location and existing solid-waste transfer-station context"
+    caption: "Project location and existing Secondary Waste Transfer Station context in Lalbag, Dhaka."
+
+  - image: "/images/projects/model-solid-waste-management-system/revit-architectural-alternatives.png"
+    alt: "Revit architectural alternatives for the proposed waste-management facility"
+    caption: "Architectural alternatives and three-dimensional facility models developed using Revit."
+
+  - image: "/images/projects/model-solid-waste-management-system/sap2000-structural-analysis.png"
+    alt: "SAP2000 structural model and roof-truss analysis"
+    caption: "Structural modelling and analysis of the facility and roof system in SAP2000."
+
+  - image: "/images/projects/model-solid-waste-management-system/autocad-ground-floor-plan.png"
+    alt: "AutoCAD ground-floor plan of the proposed transfer station"
+    caption: "Finalized ground-floor plan and dimensional coordination prepared in AutoCAD."
+
+  - image: "/images/projects/model-solid-waste-management-system/autocad-roof-truss-detail.png"
+    alt: "AutoCAD steel roof-truss and connection details"
+    caption: "Steel roof-truss geometry and connection detailing prepared as part of the engineering drawings."
+
+  - image: "/images/projects/model-solid-waste-management-system/boq-cost-breakdown.png"
+    alt: "Bill of Quantities and cost breakdown"
+    caption: "Final Bill of Quantities and project-cost distribution."
+
+  - image: "/images/projects/model-solid-waste-management-system/integrated-project-system.png"
+    alt: "Integrated engineering problem and community waste-management system"
+    caption: "Integrated project framework linking stakeholders, engineering analyses, and implementation components."

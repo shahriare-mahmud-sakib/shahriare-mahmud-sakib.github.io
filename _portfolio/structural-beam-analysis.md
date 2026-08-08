@@ -3,6 +3,21 @@ layout: project
 title: "Structural Response Analysis of Beams under Various Loading Conditions Using MATLAB"
 permalink: /projects/structural-beam-analysis/
 
+# ---------------------------------------------------------------------------
+# DETAIL-PAGE DATA SOURCE
+#
+# The hyperlink detail page now reads:
+# _data/projects/structural-beam-analysis.yml
+# ---------------------------------------------------------------------------
+project_data_key: "structural-beam-analysis"
+
+# ---------------------------------------------------------------------------
+# MAIN PROJECTS TIMELINE
+#
+# These values are intentionally unchanged from the current repository.
+# The new YAML file contains identical timeline values, so the card appearance
+# on /projects/ remains the same.
+# ---------------------------------------------------------------------------
 show_on_projects: true
 order: 2
 filter: "academic"
@@ -59,54 +74,4 @@ links:
     url: "https://github.com/shahriare-mahmud-sakib/structural-beam-analysis"
     icon: "fab fa-github"
     external: true
-
-gallery:
-  - image: "/images/projects/structural-beam-analysis/afd-placeholder.svg"
-    alt: "Illustrative placeholder for an axial force diagram"
-    caption: "Axial Force Diagram — editable placeholder; replace with the actual MATLAB output."
-  - image: "/images/projects/structural-beam-analysis/sfd-placeholder.svg"
-    alt: "Illustrative placeholder for a shear force diagram"
-    caption: "Shear Force Diagram — editable placeholder; replace with the actual MATLAB output."
-  - image: "/images/projects/structural-beam-analysis/bmd-placeholder.svg"
-    alt: "Illustrative placeholder for a bending moment diagram"
-    caption: "Bending Moment Diagram — editable placeholder; replace with the actual MATLAB output."
-  - image: "/images/projects/structural-beam-analysis/deflection-placeholder.svg"
-    alt: "Illustrative placeholder for a beam deflection diagram"
-    caption: "Deflection Diagram — editable placeholder; replace with the actual MATLAB output."
 ---
-
-## Project overview
-
-This laboratory project was completed for **CE 206: Engineering Computation Sessional**. It used MATLAB and GUI integration to analyse the structural response of cantilever and simply supported beams under several loading conditions.
-
-## Main capabilities
-
-- Analyses cantilever and simply supported beams.
-- Accepts point, uniformly distributed, and triangular distributed loads.
-- Generates axial-force, shear-force, bending-moment, and deflection diagrams.
-
-## Computational approach
-
-The project implemented computational models including singularity-function methods to represent loading and structural response. MATLAB vector plotting automated visualization of the resulting diagrams.
-
-## My role
-
-As **group leader**, I helped organize the project workflow and contributed to the computational model, MATLAB implementation, GUI integration, testing, and visualization.
-
-## Running the code
-
-Clone or download the GitHub repository, keep all MATLAB files in the same folder, and run:
-
-```matlab
-BeamAnalysisProject
-```
-
-## Add real outputs
-
-Replace the placeholder files inside:
-
-```text
-images/projects/structural-beam-analysis/
-```
-
-Recommended filenames: `matlab-gui.png`, `afd.png`, `sfd.png`, `bmd.png`, and `deflection.png`.

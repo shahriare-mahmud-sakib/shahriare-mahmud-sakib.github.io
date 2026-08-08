@@ -1,36 +1,65 @@
-{% assign project = include.project %}
-{% assign project_url = project.url | relative_url %}
-{% assign project_filter = project.filter | default: project.project_type | slugify %}
+{% assign project_page = include.project %}
+{% assign project = project_page %}
+
+{% if project_page.project_data_key and site.data.projects %}
+  {% assign data_project = site.data.projects[project_page.project_data_key] %}
+  {% if data_project %}
+    {% assign project = data_project %}
+  {% endif %}
+{% endif %}
+
+{% assign project_url = project_page.url | relative_url %}
+{% assign project_filter = project.filter | default: project_page.filter | default: project.project_type | slugify %}
+
 {% capture searchable_text %}
-  {{ project.title }} {{ project.summary }} {{ project.project_type }}
-  {{ project.discipline }} {{ project.status }} {{ project.period }} {{ project.role }}
+  {{ project.title }}
+  {{ project.summary }}
+  {{ project.project_type }}
+  {{ project.discipline }}
+  {{ project.status }}
+  {{ project.period }}
+  {{ project.role }}
   {% for tool in project.tools %}{{ tool }} {% endfor %}
   {% for keyword in project.keywords %}{{ keyword }} {% endfor %}
-  {% for supervisor in project.supervisors %}{{ supervisor }} {% endfor %}
+  {% for supervisor in project.supervisors %}
+    {% if supervisor.name %}{{ supervisor.name }} {{ supervisor.designation }}{% else %}{{ supervisor }}{% endif %}
+  {% endfor %}
 {% endcapture %}
 
-<article class="sms-project-timeline__item"
+<article
+  class="sms-project-timeline__item"
   data-project-card
   data-project-type="{{ project_filter }}"
-  data-project-search-text="{{ searchable_text | strip_html | strip_newlines | downcase | escape }}">
-
+  data-project-search-text="{{ searchable_text | strip_html | strip_newlines | downcase | escape }}"
+>
   <div class="sms-project-timeline__date">
     <span class="sms-project-timeline__year">{{ project.timeline_year }}</span>
     <span class="sms-project-timeline__period">{{ project.period }}</span>
   </div>
 
   <div class="sms-project-timeline__marker" aria-hidden="true">
-    <span><i class="{{ project.timeline_icon | default: 'fas fa-project-diagram' }}"></i></span>
+    <span>
+      <i class="{{ project.timeline_icon | default: 'fas fa-diagram-project' }}"></i>
+    </span>
   </div>
 
   <section class="sms-project-card">
     <a class="sms-project-card__media" href="{{ project_url }}">
       {% if project.cover_image %}
-        <img src="{{ project.cover_image | relative_url }}" alt="{{ project.cover_alt | default: project.title }}" loading="lazy">
+        <img
+          src="{{ project.cover_image | relative_url }}"
+          alt="{{ project.cover_alt | default: project.title }}"
+          loading="lazy"
+        >
       {% else %}
-        <div class="sms-project-card__placeholder"><i class="fas fa-project-diagram"></i></div>
+        <div class="sms-project-card__placeholder">
+          <i class="fas fa-diagram-project"></i>
+        </div>
       {% endif %}
-      {% if project.status %}<span class="sms-project-card__status">{{ project.status }}</span>{% endif %}
+
+      {% if project.status %}
+        <span class="sms-project-card__status">{{ project.status }}</span>
+      {% endif %}
     </a>
 
     <div class="sms-project-card__body">
@@ -39,35 +68,59 @@
         {% if project.discipline %}<span>{{ project.discipline }}</span>{% endif %}
       </div>
 
-      <h2 class="sms-project-card__title"><a href="{{ project_url }}">{{ project.title }}</a></h2>
+      <h2 class="sms-project-card__title">
+        <a href="{{ project_url }}">{{ project.title | default: project_page.title }}</a>
+      </h2>
 
       {% if project.role %}
-        <p class="sms-project-card__role"><i class="fas fa-users"></i><strong>Role:</strong> {{ project.role }}</p>
+        <p class="sms-project-card__role">
+          <i class="fas fa-user-group" aria-hidden="true"></i>
+          <strong>Role:</strong> {{ project.role }}
+        </p>
       {% endif %}
 
-      {% if project.summary %}<p class="sms-project-card__summary">{{ project.summary }}</p>{% endif %}
+      {% if project.summary %}
+        <p class="sms-project-card__summary">{{ project.summary }}</p>
+      {% endif %}
 
       {% if project.highlights %}
         <ul class="sms-project-card__highlights">
-          {% for highlight in project.highlights limit: 3 %}<li>{{ highlight }}</li>{% endfor %}
+          {% for highlight in project.highlights limit: 3 %}
+            <li>{{ highlight }}</li>
+          {% endfor %}
         </ul>
       {% endif %}
 
       {% if project.tools %}
         <ul class="sms-project-card__tools" aria-label="Tools and methods">
-          {% for tool in project.tools limit: 6 %}<li>{{ tool }}</li>{% endfor %}
+          {% for tool in project.tools limit: 6 %}
+            <li>{{ tool }}</li>
+          {% endfor %}
         </ul>
       {% endif %}
 
       <div class="sms-project-card__actions">
-        <a class="sms-project-card__details" href="{{ project_url }}">View detailed project <i class="fas fa-arrow-right"></i></a>
+        <a class="sms-project-card__details" href="{{ project_url }}">
+          View detailed project
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+
         {% if project.links %}
-          {% for link in project.links limit: 1 %}
-            <a class="sms-project-card__external" href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
-              {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %} aria-label="{{ link.label }}">
-              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}<span>{{ link.label }}</span>
+          {% assign external_link = project.links | where: "external", true | first %}
+          {% if external_link %}
+            <a
+              class="sms-project-card__external"
+              href="{{ external_link.url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="{{ external_link.label }}"
+            >
+              {% if external_link.icon %}
+                <i class="{{ external_link.icon }}" aria-hidden="true"></i>
+              {% endif %}
+              <span>{{ external_link.label }}</span>
             </a>
-          {% endfor %}
+          {% endif %}
         {% endif %}
       </div>
     </div>

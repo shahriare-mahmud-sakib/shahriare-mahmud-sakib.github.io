@@ -1,0 +1,21 @@
+HOW TO USE THIS TEMPLATE
+========================
+
+1. Copy this file inside `_portfolio/`.
+2. Rename it, for example:
+       new-bridge-project.md
+3. Delete these instruction lines.
+4. Make `project_data_key` exactly match the YAML filename without `.yml`.
+
+---
+layout: project
+title: "Project Title"
+permalink: /projects/new-bridge-project/
+author_profile: true
+
+project_data_key: "new-bridge-project"
+
+show_on_projects: true
+order: 1
+filter: "academic"
+---

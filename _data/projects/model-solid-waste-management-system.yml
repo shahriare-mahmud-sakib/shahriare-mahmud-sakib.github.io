@@ -141,7 +141,7 @@ sections:
   - id: "overview"
     nav_label: "Overview"
     eyebrow: "PROJECT CONTEXT"
-    heading: "Overview and motivation"
+    heading: "Overview and objectives"
     paragraphs:
       - >-
         Rapid population growth and dense urban activity have placed substantial
@@ -166,7 +166,7 @@ sections:
       - "Integrate architectural, structural, environmental, economic, and implementation planning."
 
   - id: "project-setting"
-    nav_label: "Project Setting"
+    nav_label: "Project Information"
     eyebrow: "SITE & BASIC INFORMATION"
     heading: "Project location and institutional context"
     paragraphs:
@@ -302,7 +302,7 @@ sections:
           - "Drawings and detailing prepared and coordinated in AutoCAD."
 
   - id: "cost-and-delivery"
-    nav_label: "Cost & Delivery"
+    nav_label: "Financial Assessment"
     eyebrow: "BOQ & IMPLEMENTATION"
     heading: "Cost, construction, and delivery strategy"
     paragraphs:
@@ -345,7 +345,7 @@ sections:
     heading: "Team members and academic supervision"
     paragraphs:
       - >-
-        The capstone was completed by Group 4 in the Department of Civil
+        The capstone was completed by Group 4 of Section B (Session 2019-20) in the Department of Civil
         Engineering at BUET. I served as team leader and worked with the following
         team members.
 

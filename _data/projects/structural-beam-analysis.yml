@@ -360,6 +360,16 @@ sections:
 gallery_heading: "Beam-response diagrams and MATLAB outputs"
 
 gallery:
+  - image: "/images/projects/structural-beam-analysis/beam-problem.png"
+    alt: "Illustration of a simple beam problem"
+    caption: >-
+      General Simple Beam Analysis Problem.
+      
+  - image: "/images/projects/structural-beam-analysis/matlab-demo.png"
+    alt: "Illustration of the MATLAB project demonstration"
+    caption: >-
+      Demonstration of the MATLAB Project: Structural Beam Analysis.
+      
   - image: "/images/projects/structural-beam-analysis/afd.png"
     alt: "Illustration of an axial force diagram"
     caption: >-

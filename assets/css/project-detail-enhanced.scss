@@ -1,0 +1,392 @@
+---
+---
+
+/* =============================================================================
+   DATA-DRIVEN PROJECT DETAIL PAGE
+
+   The project layout now inherits `archive`, matching the width used by
+   Research and other wide pages. The existing Projects timeline stylesheet
+   remains unchanged; this file only enhances project-detail pages.
+   ============================================================================= */
+
+:root {
+  --sms-project-detail-section-gap: 1.15rem;
+  --sms-project-detail-section-padding: 1.05rem;
+  --sms-project-detail-nav-columns: 4;
+  --sms-project-detail-gallery-columns: 2;
+  --sms-project-detail-cover-height-wide: 355px;
+}
+
+.archive .sms-project-detail--enhanced {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.sms-project-detail--enhanced *,
+.sms-project-detail--enhanced *::before,
+.sms-project-detail--enhanced *::after {
+  box-sizing: border-box;
+}
+
+.sms-project-detail--enhanced .sms-project-detail__hero {
+  grid-template-columns: minmax(0, 1.22fr) minmax(300px, 0.78fr);
+}
+
+.sms-project-detail--enhanced .sms-project-detail__cover {
+  height: var(--sms-project-detail-cover-height-wide);
+}
+
+.sms-project-detail--enhanced .sms-project-detail__cover img {
+  object-position: var(--sms-project-cover-position, center center);
+}
+
+.sms-project-detail__facts--data > div {
+  grid-template-columns: 112px minmax(0, 1fr);
+}
+
+.sms-project-detail__facts--data dd p {
+  display: inline;
+  margin: 0;
+}
+
+.sms-project-detail__supervisors li {
+  margin-bottom: 0.28rem;
+}
+
+.sms-project-detail__supervisors li strong,
+.sms-project-detail__supervisors li span {
+  display: block;
+}
+
+.sms-project-detail__supervisors li span {
+  margin-top: 0.08rem;
+  color: var(--global-text-color-light);
+  font-size: 0.68rem;
+}
+
+/* Metrics */
+.sms-project-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.72rem;
+  margin: 0 0 1.15rem;
+}
+
+.sms-project-metrics article {
+  padding: 0.82rem;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+  text-align: center;
+}
+
+.sms-project-metrics strong,
+.sms-project-metrics span {
+  display: block;
+}
+
+.sms-project-metrics strong {
+  color: var(--global-link-color);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.sms-project-metrics span {
+  margin-top: 0.24rem;
+  color: var(--global-text-color-light);
+  font-size: 0.69rem;
+  line-height: 1.35;
+}
+
+/* Quick navigation */
+.sms-project-detail__nav {
+  display: grid;
+  grid-template-columns:
+    repeat(var(--sms-project-detail-nav-columns), minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0 0 1.2rem;
+  padding: 0.78rem;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+}
+
+.sms-project-detail__nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.55rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.48rem;
+  color: var(--global-text-color);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sms-project-detail__nav a:hover,
+.sms-project-detail__nav a:focus-visible {
+  border-color: var(--global-link-color);
+  color: var(--global-link-color);
+}
+
+/* Main content sections */
+.sms-project-sections {
+  display: grid;
+  gap: var(--sms-project-detail-section-gap);
+}
+
+.sms-project-detail__section {
+  scroll-margin-top: 5.5rem;
+  padding: var(--sms-project-detail-section-padding);
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--sms-project-card-radius);
+}
+
+.sms-project-detail__section > header {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.48rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.sms-project-detail__section > header p {
+  margin: 0 0 0.22rem;
+  color: var(--global-link-color);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.sms-project-detail__section > header h2 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.sms-project-detail__prose {
+  color: var(--global-text-color);
+  font-size: var(--sms-project-detail-body-size);
+  line-height: 1.65;
+}
+
+.sms-project-detail__prose p {
+  margin: 0 0 0.72rem;
+}
+
+.sms-project-detail__prose p:last-child {
+  margin-bottom: 0;
+}
+
+.sms-project-detail__bullets {
+  display: grid;
+  gap: 0.42rem;
+  margin: 0.75rem 0 0 1.05rem;
+  padding: 0;
+  color: var(--global-text-color);
+  font-size: 0.82rem;
+  line-height: 1.52;
+}
+
+.sms-project-detail__bullets li p,
+.sms-project-subsections li p {
+  display: inline;
+  margin: 0;
+}
+
+/* Fact grids */
+.sms-project-fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0.8rem 0 0;
+}
+
+.sms-project-fact-grid > div {
+  padding: 0.72rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.55rem;
+}
+
+.sms-project-fact-grid dt {
+  margin-bottom: 0.18rem;
+  color: var(--global-text-color-light);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.sms-project-fact-grid dd {
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+/* Subsections */
+.sms-project-subsections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.72rem;
+  margin-top: 0.82rem;
+}
+
+.sms-project-subsections article {
+  padding: 0.78rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.58rem;
+}
+
+.sms-project-subsections h3 {
+  margin: 0 0 0.48rem;
+  color: var(--global-text-color);
+  font-size: 0.88rem;
+}
+
+.sms-project-subsections p,
+.sms-project-subsections ul {
+  color: var(--global-text-color);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.sms-project-subsections p {
+  margin: 0 0 0.45rem;
+}
+
+.sms-project-subsections ul {
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+
+.sms-project-subsections li {
+  margin-bottom: 0.28rem;
+}
+
+/* Team cards */
+.sms-project-people {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.62rem;
+  margin-top: 0.8rem;
+}
+
+.sms-project-people article {
+  padding: 0.72rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.55rem;
+}
+
+.sms-project-people strong,
+.sms-project-people span {
+  display: block;
+}
+
+.sms-project-people strong {
+  font-size: 0.78rem;
+}
+
+.sms-project-people span {
+  margin-top: 0.18rem;
+  color: var(--global-text-color-light);
+  font-size: 0.67rem;
+}
+
+/* Notes */
+.sms-project-note {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 0.55rem;
+  margin-top: 0.82rem;
+  padding: 0.75rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-link-color);
+  border-radius: 0.55rem;
+}
+
+.sms-project-note > i {
+  margin-top: 0.12rem;
+  color: var(--global-link-color);
+}
+
+.sms-project-note p {
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+/* Enhanced output gallery */
+.sms-project-gallery--enhanced {
+  margin-top: 1.35rem;
+}
+
+.sms-project-gallery--enhanced .sms-project-gallery__grid {
+  grid-template-columns:
+    repeat(var(--sms-project-detail-gallery-columns), minmax(0, 1fr));
+}
+
+.sms-project-gallery--enhanced .sms-project-gallery__item a {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.sms-project-gallery--enhanced .sms-project-gallery__item img {
+  object-fit: contain;
+  background: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 1120px) {
+  :root {
+    --sms-project-detail-nav-columns: 3;
+  }
+
+  .sms-project-detail--enhanced .sms-project-detail__hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sms-project-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 760px) {
+  :root {
+    --sms-project-detail-nav-columns: 2;
+    --sms-project-detail-gallery-columns: 1;
+  }
+
+  .sms-project-detail--enhanced .sms-project-detail__cover {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .sms-project-detail__facts--data > div,
+  .sms-project-fact-grid,
+  .sms-project-subsections,
+  .sms-project-people {
+    grid-template-columns: 1fr;
+  }
+
+  .sms-project-detail__nav {
+    padding: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  :root {
+    --sms-project-detail-nav-columns: 1;
+  }
+
+  .sms-project-metrics {
+    grid-template-columns: 1fr;
+  }
+}

@@ -409,9 +409,9 @@ skill_groups:
         has_certificate: true
         has_samples: true
         certificate:
-          available: false
+          available: true
           label: "Python Certificate"
-          url: "/files/certificates/skills/python/certificate.pdf"
+          url: "/files/certificates/skills/python/python-fundamentals.pdf"
         samples:
           - image: "/images/skills/python/sample-work-placeholder.svg"
             alt: "Editable placeholder for Python sample work"

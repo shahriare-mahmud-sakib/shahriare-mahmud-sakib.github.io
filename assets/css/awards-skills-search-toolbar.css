@@ -1,0 +1,138 @@
+.sms-skills {
+  --sms-skills-toolbar-accent: var(--global-link-color, #2f7f93);
+  --sms-skills-toolbar-surface: var(--global-bg-color, #ffffff);
+  --sms-skills-toolbar-border: var(--global-border-color, #e5e7eb);
+  --sms-skills-toolbar-text: var(--global-text-color, #3d4144);
+}
+
+.sms-skills .sms-controls {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 0 1.2rem;
+  padding: 0.9rem;
+  border: 1px solid var(--sms-skills-toolbar-border);
+  border-radius: 10px;
+  background: var(--sms-skills-toolbar-surface);
+}
+
+.sms-skills .sms-filters {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  min-width: 0;
+  margin: 0;
+}
+
+.sms-skills .sms-filter {
+  appearance: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid var(--sms-skills-toolbar-border);
+  border-radius: 999px;
+  color: var(--sms-skills-toolbar-text);
+  background: var(--sms-skills-toolbar-surface);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.sms-skills .sms-filter:hover,
+.sms-skills .sms-filter.is-active {
+  border-color: var(--sms-skills-toolbar-accent);
+  color: #fff;
+  background: var(--sms-skills-toolbar-accent);
+}
+
+.sms-skills .sms-search {
+  display: block;
+  flex: 0 1 16rem;
+  width: auto;
+  min-width: 11rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.sms-skills .sms-search > i {
+  display: none !important;
+}
+
+.sms-skills .sms-search input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 2.4rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--sms-skills-toolbar-border);
+  border-radius: 7px;
+  outline: 0;
+  color: var(--sms-skills-toolbar-text);
+  background: var(--sms-skills-toolbar-surface);
+  font: inherit;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  box-shadow: none;
+}
+
+.sms-skills .sms-search input:focus {
+  border-color: var(--sms-skills-toolbar-accent);
+  outline: 3px solid color-mix(in srgb, var(--sms-skills-toolbar-accent) 18%, transparent);
+}
+
+@media (max-width: 800px) {
+  .sms-skills .sms-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sms-skills .sms-filters {
+    width: 100%;
+  }
+
+  .sms-skills .sms-search {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .sms-skills .sms-controls {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .sms-skills .sms-filters {
+    gap: 0.4rem;
+  }
+
+  .sms-skills .sms-filter {
+    min-height: 2rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  .sms-skills .sms-search input {
+    min-height: 2.45rem;
+  }
+}
+
+@media print {
+  .sms-skills .sms-controls {
+    display: none !important;
+  }
+}

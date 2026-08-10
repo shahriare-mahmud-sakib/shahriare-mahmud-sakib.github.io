@@ -350,16 +350,19 @@ skill_groups:
         accent: "#0891b2"
         summary: "Building information modelling and project visualization."
         detail_url: "/awards & skills/evidence/#revit"
-        has_certificate: true
+        has_certificate: false
         has_samples: true
         certificate:
           available: false
           label: "Revit Certificate"
           url: "/files/certificates/skills/revit/certificate.pdf"
         samples:
-          - image: "/images/skills/revit/sample-work-placeholder.svg"
-            alt: "Editable placeholder for Revit sample work"
-            caption: "Replace this placeholder with your Revit model, rendering, or sample work."
+          - image: "/images/skills/revit/revit-model1.png"
+            alt: "Alternative architectural model"
+            caption: "Alternative Architectural Models for Community West Processing Station."
+          - image: "/images/skills/revit/revit-model2.png"
+            alt: "Architectural model for capstone project"
+            caption: "Architectural Models for The Capstone Project-BUET."
         resources: []
 
   # ---------------------------------------------------------------------------
@@ -381,16 +384,19 @@ skill_groups:
         accent: "#ea580c"
         summary: "ANSYS Parametric Design Language for modelling and analysis automation."
         detail_url: "/awards & skills/evidence/#apdl"
-        has_certificate: true
+        has_certificate: false
         has_samples: true
         certificate:
           available: false
           label: "APDL Certificate"
           url: "/files/certificates/skills/apdl/certificate.pdf"
         samples:
-          - image: "/images/skills/apdl/sample-work-placeholder.svg"
-            alt: "Editable placeholder for APDL sample work"
-            caption: "Replace this placeholder with your APDL script, model, or output."
+          - image: "/images/skills/apdl/apdl-code1.png"
+            alt: "APDL sample code"
+            caption: "APDL Code for A Multistory Structural Frame Analysis."
+          - image: "/images/skills/apdl/apdl-output.png"
+            alt: "APDL sample code output"
+            caption: "A Multistory Structural Frame Analysis using ANSYS Mechanical APDL."
         resources: []
 
       - order: 2

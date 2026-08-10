@@ -413,10 +413,10 @@ skill_groups:
           label: "Python Certificate"
           url: "/files/certificates/skills/python/python-fundamentals.pdf"
         samples:
-          - image: "/images/skills/python/python-code1.svg"
+          - image: "/images/skills/python/python-code1.png"
             alt: "Python sample work"
             caption: "El-centro Earthquake Response Spectrum Plot-1."
-          - image: "/images/skills/python/python-code2.svg"
+          - image: "/images/skills/python/python-code2.png"
             alt: "Python sample work"
             caption: "El-centro Earthquake Response Spectrum Plot-2."
         resources: []

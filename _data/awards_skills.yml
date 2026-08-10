@@ -413,9 +413,12 @@ skill_groups:
           label: "Python Certificate"
           url: "/files/certificates/skills/python/python-fundamentals.pdf"
         samples:
-          - image: "/images/skills/python/sample-work-placeholder.svg"
-            alt: "Editable placeholder for Python sample work"
-            caption: "Replace this placeholder with your Python code, plot, notebook, or output."
+          - image: "/images/skills/python/pythone-code1.svg"
+            alt: "Python sample work"
+            caption: "El-centro Earthquake Response Spectrum Plot-1."
+          - image: "/images/skills/python/pythone-code2.svg"
+            alt: "Python sample work"
+            caption: "El-centro Earthquake Response Spectrum Plot-2."
         resources: []
 
       - order: 3
@@ -425,16 +428,19 @@ skill_groups:
         accent: "#d97706"
         summary: "Numerical computation, engineering analysis, GUI development, and plotting."
         detail_url: "/awards & skills/evidence/#matlab"
-        has_certificate: true
+        has_certificate: false
         has_samples: true
         certificate:
           available: false
           label: "MATLAB Certificate"
           url: "/files/certificates/skills/matlab/certificate.pdf"
         samples:
-          - image: "/images/skills/matlab/sample-work-placeholder.svg"
-            alt: "Editable placeholder for MATLAB sample work"
-            caption: "Replace this placeholder with your MATLAB GUI, diagram, code, or output."
+          - image: "/images/skills/matlab/matlab-code.png"
+            alt: "MATLAB sample work"
+            caption: "MATLAB Demonstration of Structural Beam Analysis Project."
+          - image: "/images/skills/matlab/matlab-output.png"
+            alt: "MATLAB sample work"
+            caption: "Structural Beam Analysis Project's Result Plot."
         resources:
           - label: "Structural Beam Analysis Code"
             url: "https://github.com/shahriare-mahmud-sakib/structural-beam-analysis"
@@ -453,11 +459,14 @@ skill_groups:
         certificate:
           available: false
           label: "C/C++ Certificate"
-          url: "/files/certificates/skills/c-cpp/certificate.pdf"
+          url: "/files/certificates/skills/c-cpp/C-fundamentals.pdf"
         samples:
-          - image: "/images/skills/c-cpp/sample-work-placeholder.svg"
-            alt: "Editable placeholder for C/C++ sample work"
-            caption: "Replace this placeholder with your C/C++ code, program, or output."
+          - image: "/images/skills/c-cpp/c-code1.png"
+            alt: "C/C++ sample work"
+            caption: "C++ Code for Class Practice-1."
+          - image: "/images/skills/c-cpp/c-code2.png"
+            alt: "C/C++ sample work"
+            caption: "C++ Code for Class Practice-2."
         resources: []
 
   # ---------------------------------------------------------------------------
@@ -477,7 +486,7 @@ skill_groups:
         accent: "#2563eb"
         summary: "IELTS overall band score: 6.5."
         detail_url: "/awards & skills/evidence/#english"
-        has_certificate: true
+        has_certificate: false
         has_samples: false
         certificate:
           available: false

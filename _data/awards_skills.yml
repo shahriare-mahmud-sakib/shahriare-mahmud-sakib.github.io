@@ -271,10 +271,10 @@ skill_groups:
         samples:
           - image: "/images/skills/ansys/nonlinear-fe-model.png"
             alt: "Nonlinear FE model of HSS stainless steel column"
-            caption: "Nonlinear ANSYS FE model of HSS stainless steel column for cyclic loading."
+            caption: "Nonlinear ANSYS FE Model of HSS Stainless-steel Column for Cyclic Loading."
           - image: "/images/skills/ansys/fem-validation.png"
             alt: "ANSYS FEM validation for cyclic loading"
-            caption: "Nonlinear ANSYS FE model validation for cyclic loading."
+            caption: "Nonlinear ANSYS FE Model Validation for Cyclic Loading."
         resources: []
 
       - order: 2
@@ -284,16 +284,19 @@ skill_groups:
         accent: "#2563eb"
         summary: "Structural modelling, analysis, and design workflows."
         detail_url: "/awards & skills/evidence/#sap2000"
-        has_certificate: true
+        has_certificate: false
         has_samples: true
         certificate:
           available: false
           label: "SAP2000 Certificate"
           url: "/files/certificates/skills/sap2000/certificate.pdf"
         samples:
-          - image: "/images/skills/sap2000/sample-work-placeholder.svg"
-            alt: "Editable placeholder for SAP2000 sample work"
-            caption: "Replace this placeholder with your SAP2000 model, result, or sample work."
+          - image: "/images/skills/sap2000/lrb-model.png"
+            alt: "Low Rise Building Model"
+            caption: "Low Rise Steel Building Analysis."
+          - image: "/images/skills/sap2000/sts-model.png"
+            alt: "Community waste processing station model"
+            caption: "Community Waste Processing Station Model and Loading Analysis."
         resources: []
 
       - order: 3
@@ -303,16 +306,19 @@ skill_groups:
         accent: "#7c3aed"
         summary: "Building analysis and structural-system modelling."
         detail_url: "/awards & skills/evidence/#etabs"
-        has_certificate: true
+        has_certificate: false
         has_samples: true
         certificate:
           available: false
           label: "ETABS Certificate"
           url: "/files/certificates/skills/etabs/certificate.pdf"
         samples:
-          - image: "/images/skills/etabs/sample-work-placeholder.svg"
-            alt: "Editable placeholder for ETABS sample work"
-            caption: "Replace this placeholder with your ETABS model, result, or sample work."
+          - image: "/images/skills/etabs/etabs-model.png"
+            alt: "High-rise building ETABS model"
+            caption: "High-rise Building Model and Mat Foundation Design."
+          - image: "/images/skills/etabs/etabs-model-analysis.png"
+            alt: "High-rise building ETABS model shear wall analysis"
+            caption: "High-rise Building Shear Wall Analysis and Design."
         resources: []
 
       - order: 4
@@ -322,16 +328,19 @@ skill_groups:
         accent: "#dc2626"
         summary: "Engineering drawings, drafting, plans, and details."
         detail_url: "/awards & skills/evidence/#autocad"
-        has_certificate: true
+        has_certificate: false
         has_samples: true
         certificate:
           available: false
           label: "AutoCAD Certificate"
           url: "/files/certificates/skills/autocad/certificate.pdf"
         samples:
-          - image: "/images/skills/autocad/sample-work-placeholder.svg"
-            alt: "Editable placeholder for AutoCAD sample work"
-            caption: "Replace this placeholder with your AutoCAD drawing, plan, or detail."
+          - image: "/images/skills/autocad/cad-design1.png"
+            alt: "General notes in the drawing sheet"
+            caption: "General Notes for Structural Construction."
+          - image: "/images/skills/autocad/cad-design2.png"
+            alt: "Footing layout in the drawing sheet"
+            caption: "A Typical Footing Layout."
         resources: []
 
       - order: 5

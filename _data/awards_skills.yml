@@ -272,7 +272,6 @@ skill_groups:
           - image: "/images/skills/ansys/nonlinear-fe-model.png"
             alt: "Nonlinear FE model of HSS stainless steel column"
             caption: "Nonlinear ANSYS FE model of HSS stainless steel column for cyclic loading."
-        samples:
           - image: "/images/skills/ansys/fem-validation.png"
             alt: "ANSYS FEM validation for cyclic loading"
             caption: "Nonlinear ANSYS FE model validation for cyclic loading."

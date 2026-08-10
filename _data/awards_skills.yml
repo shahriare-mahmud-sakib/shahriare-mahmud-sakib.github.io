@@ -262,16 +262,20 @@ skill_groups:
         accent: "#f97316"
         summary: "Finite-element analysis and engineering simulation."
         detail_url: "/awards & skills/evidence/#ansys"
-        has_certificate: true
+        has_certificate: false
         has_samples: true
         certificate:
           available: false
           label: "ANSYS Certificate"
           url: "/files/certificates/skills/ansys/certificate.pdf"
         samples:
-          - image: "/images/skills/ansys/sample-work-placeholder.svg"
-            alt: "Editable placeholder for ANSYS sample work"
-            caption: "Replace this placeholder with your ANSYS model, output, screenshot, or sample work."
+          - image: "/images/skills/ansys/nonlinear-fe-model.png"
+            alt: "Nonlinear FE model of HSS stainless steel column"
+            caption: "Nonlinear ANSYS FE model of HSS stainless steel column for cyclic loading."
+        samples:
+          - image: "/images/skills/ansys/fem-validation.png"
+            alt: "ANSYS FEM validation for cyclic loading"
+            caption: "Nonlinear ANSYS FE model validation for cyclic loading."
         resources: []
 
       - order: 2

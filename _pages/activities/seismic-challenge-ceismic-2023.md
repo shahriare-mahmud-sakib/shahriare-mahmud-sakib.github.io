@@ -15,7 +15,7 @@ summary: >-
 
 certificates:
   - label: "Participation Certificate"
-    url: "/files/activities/seismic-challenge-ceismic-2023/certificate.pdf"
+    url: "/files/activities/seismic-challenge-ceismic-2023/ceismic-certificate.pdf"
     available: false
 
 gallery:

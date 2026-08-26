@@ -15,7 +15,7 @@ summary: >-
 
 certificates:
   - label: "Participation Certificate"
-    url: "/files/activities/nature-based-technologies-2023/certificate.pdf"
+    url: "/files/activities/nature-based-technologies-2023/slope-stabilization-seminar-certificate.pdf"
     available: true
 
 gallery:

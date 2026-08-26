@@ -7,6 +7,7 @@ category: "COMPETITION"
 date: "March 2023"
 organization: "Cennovation, Islamic University of Technology"
 location: "Gazipur, Bangladesh"
+outcome: "Strengthened my confidence and knowledge about the seimic/cyclic loading behavior of the structure."
 icon: "fas fa-building-shield"
 accent: "#dc2626"
 summary: >-
@@ -25,7 +26,4 @@ gallery:
     alt: "Participation in the Seismic Challenge, Cennovation 2023."
     caption: "Participation in the Seismic Challenge Segment in Cennovation 2023 at IUT."
 
-## Overview
-
-I participated in the Seismic Challenge organized as part of Cennovation 2023 at the Islamic University of Technology with my classmates.
-This competition strengthened my confidence and knowledge about the seimic/cyclic loading behavior of the structure. 
+---

@@ -23,39 +23,8 @@ gallery:
     alt: "Editable placeholder for an event photograph"
     caption: "Replace this placeholder with a certificate preview, event photograph, team photograph, or competition/workshop image."
 
-resources: []
+
 ---
 
-## Overview
 
-This page records my participation in the 2019 Bangladesh Mathematical Olympiad in Tangail.
 
-## What to add to this page
-
-You can expand this page with:
-
-- the event objective and format;
-- your role, preparation, or contribution;
-- the task or challenge completed;
-- the knowledge or skills gained;
-- results, recognition, or reflections.
-
-## Add a certificate
-
-Place the PDF at:
-
-```text
-files/activities/bangladesh-mathematical-olympiad-2019/certificate.pdf
-```
-
-Then change `available: false` to `available: true` in this file.
-
-## Add event photos
-
-Copy photographs into:
-
-```text
-images/activities/bangladesh-mathematical-olympiad-2019/
-```
-
-Then replace the placeholder entry under `gallery:` with the new image paths.

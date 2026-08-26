@@ -15,7 +15,7 @@ summary: >-
 
 certificates:
   - label: "Participation Certificate"
-    url: "/files/activities/hands-on-ai-smart-appliances-2025/certificate.pdf"
+    url: "/files/activities/hands-on-ai-smart-appliances-2025/hands-on-ai-certificate.pdf"
     available: true
 
 gallery:

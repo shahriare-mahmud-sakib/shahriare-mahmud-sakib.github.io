@@ -7,7 +7,7 @@ category: "SEMINAR / WORKSHOP"
 date: "December 2022"
 organization: "Directorate of Continuing Education (DCE), BUET"
 location: "BUET, Dhaka"
-outcome: ""
+outcome: "Enlighten the significance of soft skills along with hard skills in our career."
 icon: "fas fa-people-group"
 accent: "#8b5cf6"
 summary: >-
@@ -15,47 +15,13 @@ summary: >-
 
 certificates:
   - label: "Participation Certificate"
-    url: "/files/activities/soft-skills-development-2022/certificate.pdf"
-    available: false
+    url: "/files/activities/soft-skills-development-2022/soft-skill-seminar-certificate.pdf"
+    available: true
 
 gallery:
-  - image: "/images/activities/event-photo-placeholder.svg"
-    alt: "Editable placeholder for an event photograph"
-    caption: "Replace this placeholder with a certificate preview, event photograph, team photograph, or competition/workshop image."
+  - image: "/images/activities/soft-skill-seminar/soft-skill-seminar-participation-certificate.jpg"
+    alt: "Soft Skill Development Seminar Participation Certificate"
+    caption: "Participation Certificate in Soft-Skill Development Seminar, DCE, BUET."
 
-resources: []
 ---
 
-## Overview
-
-The workshop focused on developing communication, teamwork, professional conduct, and other transferable skills relevant to academic and professional environments.
-
-## What to add to this page
-
-You can expand this page with:
-
-- the event objective and format;
-- your role, preparation, or contribution;
-- the task or challenge completed;
-- the knowledge or skills gained;
-- results, recognition, or reflections.
-
-## Add a certificate
-
-Place the PDF at:
-
-```text
-files/activities/soft-skills-development-2022/certificate.pdf
-```
-
-Then change `available: false` to `available: true` in this file.
-
-## Add event photos
-
-Copy photographs into:
-
-```text
-images/activities/soft-skills-development-2022/
-```
-
-Then replace the placeholder entry under `gallery:` with the new image paths.

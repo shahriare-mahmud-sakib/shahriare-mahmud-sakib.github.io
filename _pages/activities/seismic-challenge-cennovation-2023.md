@@ -17,12 +17,14 @@ certificates:
   - label: "Participation Certificate"
     url: "/files/activities/seismic-challenge-cennovation-2023/cennovation-certificate.pdf"
     available: true
-
+  - image: "/images/activities/Cennovation2023/cennovation2023-certificate.jpg"
+    alt: "Participation certificate of the Seismic Challenge, Cennovation 2023."
+    
 gallery:
-  - image: "/images/activities/cenovation2023.jpg"
+  - image: "/images/activities/Cennovation2023/cenovation2023.jpg"
     alt: "Participation in the Seismic Challenge, Cennovation 2023."
     caption: "Participation in the Seismic Challenge Segment in Cennovation 2023 at IUT."
-  - image: "/images/activities/cenovation2023_2.jpg"
+  - image: "/images/activities/Cennovation2023/cenovation2023_2.jpg"
     alt: "Participation in the Seismic Challenge, Cennovation 2023."
     caption: "Participation in the Seismic Challenge Segment in Cennovation 2023 at IUT."
 

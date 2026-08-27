@@ -4,7 +4,7 @@ title: "Soft Skills Development"
 permalink: /activities/soft-skills-development-2022/
 author_profile: true
 category: "SEMINAR / WORKSHOP"
-date: "December 2022"
+date: "11 December, 2022"
 organization: "Directorate of Continuing Education (DCE), BUET"
 location: "BUET, Dhaka"
 outcome: "Enlighten the significance of soft skills along with hard skills in our career."

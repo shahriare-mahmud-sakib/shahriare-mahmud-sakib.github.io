@@ -26,5 +26,3 @@ gallery:
 
 ---
 
-
-Then replace the placeholder entry under `gallery:` with the new image paths.

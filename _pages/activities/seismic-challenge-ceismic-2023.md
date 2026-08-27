@@ -4,7 +4,7 @@ title: "Seismic Challenge — Ceismic 2023"
 permalink: /activities/seismic-challenge-ceismic-2023/
 author_profile: true
 category: "COMPETITION"
-date: "February 2023"
+date: "17 February, 2023"
 organization: "Ceismic, Bangladesh University of Engineering and Technology (BUET)"
 location: "Dhaka, Bangladesh"
 outcome: "Broaden my knowledge about cyclic loading on structural systems."
@@ -27,5 +27,3 @@ gallery:
     caption: "Participated in the Seismic Challenge Segment at Ceismic 2023, BUET."
 
 ---
-
-

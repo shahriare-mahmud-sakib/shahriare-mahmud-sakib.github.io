@@ -4,7 +4,7 @@ title: "Seismic Challenge — Cennovation 2023"
 permalink: /activities/seismic-challenge-cennovation-2023/
 author_profile: true
 category: "COMPETITION"
-date: "March 2023"
+date: "10 March, 2023"
 organization: "Cennovation, Islamic University of Technology"
 location: "Gazipur, Bangladesh"
 outcome: "Strengthened my confidence and knowledge about the seimic/cyclic loading behavior of the structure."
